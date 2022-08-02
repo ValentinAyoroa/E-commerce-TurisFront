@@ -12,10 +12,10 @@
 ✔️ Valentin Ayoroa
 ✔️ Sebastian Rodriguez 
 
-Páginas de referencia:
+### Referencias del mercado 
 
-### https://www.argentinaextrema.com/
-### https://rupalnet.com/
-### https://www.suescalada.com/
-### https://www.thundra.co/
-### https://www.decathlon.es/
+#### 1. https://www.argentinaextrema.com/
+#### 2. https://rupalnet.com/
+#### 3. https://www.suescalada.com/
+#### 4. https://www.thundra.co/
+#### 5. https://www.decathlon.es/
