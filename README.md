@@ -15,7 +15,7 @@
 ***
 ### Quiénes somos
 
-✔️ Soraya Sanchez 
-✔️ Ramiro Sampaoli
-✔️ Valentin Ayoroa
-✔️ Sebastian Rodriguez 
+#### ✔️ Soraya Sanchez 
+#### ✔️ Ramiro Sampaoli
+#### ✔️ Valentin Ayoroa
+#### ✔️ Sebastian Rodriguez 
