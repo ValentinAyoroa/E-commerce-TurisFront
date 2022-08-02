@@ -8,3 +8,11 @@ Bienvenidos a nuestro sitio web 👋 👩🏾‍💻
 ✔️ Ramiro Sampaoli
 ✔️ Valentin Ayoroa
 ✔️ Sebastian Rodriguez 
+
+Páginas de referencia:
+
+### https://www.argentinaextrema.com/
+### https://rupalnet.com/
+### https://www.suescalada.com/
+### https://www.thundra.co/
+### https://www.decathlon.es/
