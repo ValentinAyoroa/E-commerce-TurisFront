@@ -7,11 +7,11 @@
 ***
 ### Referencias del mercado 
 
-#### 1. https://www.argentinaextrema.com/
-#### 2. https://rupalnet.com/
-#### 3. https://www.suescalada.com/
-#### 4. https://www.thundra.co/
-#### 5. https://www.decathlon.es/
+#### :one: https://www.argentinaextrema.com/
+#### :two: https://rupalnet.com/
+#### :three: https://www.suescalada.com/
+#### :four: https://www.thundra.co/
+#### :five: https://www.decathlon.es/
 
 ### Quiénes somos
 
