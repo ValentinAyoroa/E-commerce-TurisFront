@@ -12,7 +12,7 @@
 #### :three: https://www.suescalada.com/
 #### :four: https://www.thundra.co/
 #### :five: https://www.decathlon.es/
-
+***
 ### Quiénes somos
 
 ✔️ Soraya Sanchez 
