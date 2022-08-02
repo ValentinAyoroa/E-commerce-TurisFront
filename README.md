@@ -5,13 +5,6 @@
 
 ### Nuestra audiencia apuntara a las personas mayores de edad que les encante la naturaleza y los deportes extremos y tener una conexion directa con la naturaleza. 
 ***
-### Los integrantes del equipo somos: 
-
-✔️ Soraya Sanchez 
-✔️ Ramiro Sampaoli
-✔️ Valentin Ayoroa
-✔️ Sebastian Rodriguez 
-
 ### Referencias del mercado 
 
 #### 1. https://www.argentinaextrema.com/
@@ -19,3 +12,10 @@
 #### 3. https://www.suescalada.com/
 #### 4. https://www.thundra.co/
 #### 5. https://www.decathlon.es/
+
+### Quiénes somos
+
+✔️ Soraya Sanchez 
+✔️ Ramiro Sampaoli
+✔️ Valentin Ayoroa
+✔️ Sebastian Rodriguez 
