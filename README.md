@@ -17,5 +17,5 @@
 
 #### ✔️ Mi nombre es Soraya Sanchez, soy de Colombia, Licenciada en Informatica y Tecnologia,como actividades extracurriculares que realizo están: obras de arte, trabajo con origami 3D, estudio inglés, patinaje, ir al gimnasio y mejorar mi nivel como programadora.
 #### ✔️ Ramiro Sampaoli
-#### ✔️ Valentin Ayoroa
+#### ✔️ Mi nombre es Valentin Ayoroa, soy estudiante de Ingenieria en Informatica y actualmente trabajo en McDonals. Me gusta el futbol y pasar tiempo con mis amigos.
 #### ✔️ Sebastian Rodriguez 
