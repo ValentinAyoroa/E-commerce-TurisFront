@@ -19,3 +19,7 @@
 #### ✔️ Ramiro Sampaoli
 #### ✔️ Mi nombre es Valentin Ayoroa, soy estudiante de Ingenieria en Informatica y actualmente trabajo en McDonals. Me gusta el futbol y pasar tiempo con mis amigos.
 #### ✔️ Sebastian Rodriguez 
+
+***
+###Tablero de trabajo de cada sprint 
+https://trello.com/b/E38HGkpr/sprint-1-wireframes
