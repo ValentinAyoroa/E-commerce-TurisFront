@@ -21,5 +21,5 @@
 #### ✔️ Sebastian Rodriguez 
 
 ***
-###Tablero de trabajo de cada sprint 
-https://trello.com/b/E38HGkpr/sprint-1-wireframes
+### Tablero de trabajo de cada sprint 
+#### https://trello.com/b/E38HGkpr/sprint-1-wireframes
