@@ -16,7 +16,7 @@
 ### Quiénes somos
 
 #### ✔️ Mi nombre es Soraya Sanchez, soy de Colombia, Licenciada en Informatica y Tecnologia,como actividades extracurriculares que realizo están: obras de arte, trabajo con origami 3D, estudio inglés, patinaje, ir al gimnasio y mejorar mi nivel como programadora.
-#### ✔️ Ramiro Sampaoli
+#### ✔️ Soy Ramiro Sampaoli, estudiante de Licenciatura en Informatica. Me apasiona la tecnología y todo lo que tenga que ver con ella, siempre me gusta estar al tanto de las nuevas novedades de tecnología. Me gustan los videojuegos, la programación y los perros, de éstos ultimos actualmente tengo 8!  y amo pasar tiempo con ellos.
 #### ✔️ Mi nombre es Valentin Ayoroa, soy estudiante de Ingenieria en Informatica y actualmente trabajo en McDonals. Me gusta el futbol y pasar tiempo con mis amigos.
 #### ✔️ Soy Sebastian Rodriguez, de Uruguay. Estudie Analista Programador y trabajo como desarrollador. Me gustan los deportes de equipo, pasar el tiempo con mi perro y disfruto aprender de todo, no solo sobre tecnologias. 
 
