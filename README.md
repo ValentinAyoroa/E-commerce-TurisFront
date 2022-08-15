@@ -1,4 +1,4 @@
-# E-commerce Turisfront
+# Grupo_16_Turisfront
 ## Bienvenidos a nuestro sitio web 👋 👩🏾‍💻 
 ***
 ### Nuestro sitio web ofrecera una experiencia unica a la hora de experimentar una aventura extrema en la naturaleza :deciduous_tree: :sun_with_face: :blossom: , donde ofrecemos servicios de guia en montañismo :sunrise_over_mountains: :rainbow: rodeados de los mejores paisajes y accesorios necesarios :eyeglasses: :movie_camera: :flashlight: para que este viaje de aventura sea inolvidable. 
@@ -18,7 +18,7 @@
 #### ✔️ Mi nombre es Soraya Sanchez, soy de Colombia, Licenciada en Informatica y Tecnologia,como actividades extracurriculares que realizo están: obras de arte, trabajo con origami 3D, estudio inglés, patinaje, ir al gimnasio y mejorar mi nivel como programadora.
 #### ✔️ Ramiro Sampaoli
 #### ✔️ Mi nombre es Valentin Ayoroa, soy estudiante de Ingenieria en Informatica y actualmente trabajo en McDonals. Me gusta el futbol y pasar tiempo con mis amigos.
-#### ✔️ Sebastian Rodriguez 
+#### ✔️ Soy Sebastian Rodriguez, de Uruguay. Estudie Analista Programador y trabajo como desarrollador. Me gustan los deportes de equipo, pasar el tiempo con mi perro y disfruto aprender de todo, no solo sobre tecnologias. 
 
 ***
 ### Tablero de trabajo de cada sprint 
