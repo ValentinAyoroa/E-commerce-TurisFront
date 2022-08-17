@@ -11,7 +11,7 @@
 #### :two: https://rupalnet.com/: Por los productos que el sitio ofrece
 #### :three: https://www.suescalada.com/: Por las funcionalidades implementadas 
 #### :four: https://www.thundra.co/: Por los clientes a los que apunta 
-#### :five: https://www.decathlon.es/: Por la funcionalidad, estetica, cliente, productos y servicios que ofreccen
+#### :five: https://www.decathlon.es/: Por la funcionalidad, estetica, cliente, productos y servicios que ofrecen
 ***
 ### Quiénes somos
 
