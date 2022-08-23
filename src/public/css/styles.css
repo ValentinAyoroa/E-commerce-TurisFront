@@ -1,22 +1,27 @@
 * {
 }
 header {
-  background-color: azure;
+  background-color: black;
 }
 .header-top {
   display: flex;
   justify-content: space-between;
 }
 
-.boton-perfil {
+.boton-header {
   border: none;
+  background-color: transparent;
 }
-.boton-carrito {
-  border: none;
+.boton-header span {
+  font-size: 14px;
+  display: block;
+  color: blue;
 }
-.boton-home {
-  border: none;
+i {
+  font-size: 30px;
+  color: blue;
 }
+
 .logo {
   width: 150px;
   height: 100px;
