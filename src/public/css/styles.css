@@ -1,0 +1,27 @@
+* {
+}
+header {
+  background-color: azure;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boton-perfil {
+  border: none;
+}
+.boton-carrito {
+  border: none;
+}
+.boton-home {
+  border: none;
+}
+.logo {
+  width: 150px;
+  height: 100px;
+  padding: 6px;
+}
+.home {
+  padding: 40px;
+}
