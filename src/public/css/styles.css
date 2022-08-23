@@ -62,3 +62,7 @@ h1 {
   margin: 20px;
 }
 /*Banner*/
+footer {
+  text-align: center;
+  font-weight: bolder;
+}
