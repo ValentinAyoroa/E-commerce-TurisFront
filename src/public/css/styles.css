@@ -33,9 +33,32 @@ i {
 h1 {
   text-align: center;
 }
-
-/*Banner*/
-.banner-descripcion {
-  color: blue;
+/*Productos Destacados*/
+.caja-producto {
+  display: flex;
+  border: 2px solid gray;
+  border-radius: 5px;
+  height: 300px;
+  width: 500px;
+  padding: 8px;
+}
+.caja-producto img {
+  margin-top: 40px;
+  width: 150px;
+  height: 150px;
+}
+.caja-producto p {
+  text-align: justify;
+}
+.caja-producto h3 {
   text-align: center;
 }
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.productos > article {
+  margin: 20px;
+}
+/*Banner*/
