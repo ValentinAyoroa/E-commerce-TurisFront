@@ -1,0 +1,79 @@
+body{
+    margin:0
+}
+
+div.top-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #9c9d9e;
+}
+
+img.logo{
+    width: 20%;
+    padding-left: 15px;
+}
+
+a.nav-button{
+    padding-right: 25px;   
+}
+
+a.nav-button i{
+    font-size: 25px;
+    color:black
+}
+
+h2.copy-register{
+    padding-left: 12%;
+    margin-top: 10%;
+}
+
+form.form-register{
+    margin: 0 12%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+form.form-register div {
+    margin: 10%;
+}
+
+form.form-register div input{
+    width: 95%;
+    height: 25px;
+    text-align: center;
+    border: 1px solid black ;
+    border-radius: 10px;
+    background-color: #e7e7e4;
+}
+
+form.form-register div button{
+    width: 95%;
+    height: 25px;
+    border: 1px solid #0077C0 ;
+    border-radius: 10px;
+    color: white;
+    background-color: #0077C0;
+}
+
+div p.register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin:10%;
+}
+
+div a{
+    text-decoration: none;
+    color: black;
+}
+
+img.img-logo-app{
+    width: 15%;
+    margin:5%;
+    border: 1px solid white;
+    border-radius: 75px;
+}
