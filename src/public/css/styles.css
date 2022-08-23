@@ -30,3 +30,12 @@ i {
 .home {
   padding: 40px;
 }
+h1 {
+  text-align: center;
+}
+
+/*Banner*/
+.banner-descripcion {
+  color: blue;
+  text-align: center;
+}
