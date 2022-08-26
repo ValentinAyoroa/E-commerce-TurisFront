@@ -12,11 +12,16 @@ header {
   border: none;
   background-color: transparent;
 }
+.boton-header i:hover,
+.boton-header span:hover {
+  color: white;
+}
 .boton-header span {
   font-size: 14px;
   display: block;
   color: blue;
 }
+
 i {
   font-size: 30px;
   color: blue;
@@ -30,13 +35,25 @@ i {
 .home {
   padding: 40px;
 }
+
 h1 {
   text-align: center;
 }
 /*Productos Destacados*/
+article {
+  border-radius: 6px;
+  border: none;
+  -webkit-box-shadow: 0px 1px 18px 3px rgba(191, 191, 191, 255);
+  -moz-box-shadow: 0px 1px 18px 3px rgba(191, 191, 191, 255);
+  box-shadow: 0px 1px 18px 3px rgba(191, 191, 191, 255);
+}
+article:hover {
+  -webkit-box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
+  -moz-box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
+  box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
+}
 .caja-producto {
   display: flex;
-  border: 2px solid gray;
   border-radius: 5px;
   height: 300px;
   width: 500px;
@@ -140,4 +157,52 @@ footer {
 }
 .red:hover {
   background-position: 0 -46px;
+}
+/*Banner*/
+
+.banner {
+  display: flex;
+  background: yellow;
+  height: 400px;
+}
+.banner-item {
+  flex: 1;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: flex-grow 0.2s;
+}
+.banner-item:hover {
+  flex-grow: 8;
+}
+.banner-item:hover .banner-title {
+  transform: rotate(0);
+}
+.banner-item:nth-child(1) {
+  background-image: url(../images/banner1.jpg);
+  background-repeat: no-repeat;
+  background-position: center 10%;
+}
+.banner-item:nth-child(2) {
+  background-image: url(../images/banner2.webp);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.banner-item:nth-child(3) {
+  background-image: url(../images/banner3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.banner-item:nth-child(4) {
+  background-image: url(../images/banner4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.banner-title {
+  margin: 0;
+  transform: rotate(-90deg);
+  transition: transform 0.2s 0.2s;
 }
