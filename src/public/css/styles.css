@@ -4,6 +4,7 @@
 header {
   background-color: grey;
 }
+
 .header-top {
   display: flex;
   justify-content: space-between;
@@ -42,16 +43,19 @@ h1 {
 }
 /*Productos Destacados*/
 article {
+  background-color: white;
   border-radius: 6px;
   border: none;
   -webkit-box-shadow: 0px 1px 18px 3px rgba(191, 191, 191, 255);
   -moz-box-shadow: 0px 1px 18px 3px rgba(191, 191, 191, 255);
   box-shadow: 0px 1px 18px 3px rgba(191, 191, 191, 255);
+  transition: transform 0.2s;
 }
 article:hover {
   -webkit-box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
   -moz-box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
   box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
+  transform: scale(1.2);
 }
 .caja-producto {
   display: flex;
