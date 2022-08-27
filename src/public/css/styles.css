@@ -232,9 +232,51 @@ footer {
   flex-wrap: wrap;
 }
 
-.container-card > .card-slide {
-  margin: 30px;
+.container-card > .card-wrap {
+  margin-right: 50px;
 }
+.card-wrap {
+  margin: 10px;
+  perspective: 800px;
+  width: 293px;
+  height: 472px;
+}
+.card-wrap:hover .card-slide {
+  transform: rotateY(180deg);
+}
+
+.card1 {
+  background-image: url("../images/imagen-tarjeta.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.card-slide {
+  width: 400px;
+  height: 472px;
+  background: #f29720;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 0.7s ease;
+  border-radius: 8px;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.65);
+}
+
+.adelante-box,
+.atras-box {
+  position: absolute;
+  width: 100%;
+  height: 470px;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.atras-box {
+  transform: rotateY(180deg);
+  background: gray;
+}
+
 .card-slide:hover {
   -webkit-box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.75);
@@ -245,7 +287,6 @@ footer {
 .card {
   position: relative;
   background-color: #fff;
-  border-radius: 20px;
   height: 460px;
   width: 296px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -278,7 +319,6 @@ section .card .image img {
   position: absolute;
   width: 100%;
   height: 30%;
-  border-radius: 10px 10px 0, 0;
   background: linear-gradient(106.32deg, #f3a60f 14.23%, rgba(255, 25, 25, 0) 139.97%);
 }
 .rating {
