@@ -138,11 +138,13 @@ article:hover {
 }
 /*footer*/
 footer {
+  padding: 20px;
   text-align: center;
   font-weight: bolder;
 }
 /*Redes Sociales*/
 #redesSociales {
+  position: relative;
   width: 64px;
   height: 64px;
   border-radius: 75px;
@@ -162,7 +164,7 @@ footer {
   margin: 10px 0px 0px 20px;
   text-indent: -9999px;
   background: no-repeat;
-  left: 3px;
+  left: 0px;
 }
 #redesSociales:hover .red {
   opacity: 1;
@@ -175,29 +177,20 @@ footer {
 }
 #redesSociales:hover .red:nth-child(1) {
   position: absolute;
-  left: 65px;
+  left: 35px;
 }
 
 #redesSociales:hover .red:nth-child(2) {
   position: absolute;
-  left: 110px;
+  left: 80px;
 }
 #redesSociales:hover .red:nth-child(3) {
   position: absolute;
-  left: 155px;
+  left: 125px;
 }
 #redesSociales:hover .red:nth-child(4) {
   position: absolute;
-  left: 200px;
-}
-#redesSociales:hover .red:nth-child(5) {
-  position: absolute;
-  left: 245px;
-}
-
-#redesSociales:hover .red:nth-child(6) {
-  position: absolute;
-  left: 290px;
+  left: 170px;
 }
 
 .red.facebook {
@@ -251,12 +244,12 @@ footer {
   background-position: center;
 }
 .card2 {
-  background-image: url("../images/tarjeta2.jpg");
+  background-image: url("../images/tarjeta3.jpg");
   background-size: cover;
   background-position: center;
 }
 .card3 {
-  background-image: url("../images/tarjeta3.jpg");
+  background-image: url("../images/tarjeta2.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -349,4 +342,10 @@ section .card .about {
   color: #444;
   margin-top: 45px;
   margin-bottom: 5px;
+}
+
+/* footer */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
 }
