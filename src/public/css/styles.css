@@ -250,6 +250,16 @@ footer {
   background-size: cover;
   background-position: center;
 }
+.card2 {
+  background-image: url("../images/tarjeta2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.card3 {
+  background-image: url("../images/tarjeta3.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
 .card-slide {
   width: 400px;
