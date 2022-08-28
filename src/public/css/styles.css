@@ -1,6 +1,7 @@
 * {
   font-family: Copperplate, Papyrus, fantasy;
 }
+
 /*Header*/
 header {
   background-color: grey;
@@ -15,10 +16,12 @@ header {
   border: none;
   background-color: transparent;
 }
+
 .boton-header i:hover,
 .boton-header span:hover {
   color: white;
 }
+
 .boton-header span {
   font-size: 14px;
   display: block;
@@ -31,10 +34,13 @@ i {
 }
 
 .logo {
-  width: 150px;
+  display: block;
+  width: 250px;
   height: 100px;
-  padding: 6px;
+  margin: left;
+  margin-top: 1.8vh;
 }
+
 .home {
   padding: 40px;
 }
@@ -43,7 +49,13 @@ h1,
 h4 {
   text-align: center;
 }
+
 /*Productos Destacados*/
+
+.productos-destacados {
+  padding-top: 4vh;
+}
+
 article {
   position: relative;
   background-color: white;
@@ -56,6 +68,7 @@ article {
   transition: all 400ms;
 
 }
+
 article:hover {
   -webkit-box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
   -moz-box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
@@ -63,6 +76,7 @@ article:hover {
   transform: scale(1.2);
   z-index: 10;
 }
+
 .caja-producto {
   display: flex;
   border-radius: 5px;
@@ -70,28 +84,35 @@ article:hover {
   width: 500px;
   padding: 8px;
 }
+
 .caja-producto img {
   margin-top: 40px;
   width: 150px;
   height: 150px;
 }
+
 .caja-producto p {
   text-align: justify;
 }
+
 .caja-producto h3 {
   text-align: center;
 }
+
 .productos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.productos > article {
+
+.productos>article {
   margin: 20px;
 }
+
 .descripcion-producto {
   margin: 5px;
 }
+
 #informacion {
   color: red;
   visibility: hidden;
@@ -101,6 +122,7 @@ article:hover #informacion {
   visibility: visible;
   cursor: pointer;
 }
+
 #icono-heart {
   position: absolute;
   top: 8px;
@@ -108,9 +130,11 @@ article:hover #informacion {
   color: grey;
   visibility: hidden;
 }
+
 article:hover #icono-heart {
   visibility: visible;
 }
+
 #icono-heart:hover {
   color: red;
 }
@@ -120,8 +144,9 @@ article:hover #icono-heart {
 .banner {
   display: flex;
   background: yellow;
-  height: 400px;
+  height: 800px;
 }
+
 .banner-item {
   flex: 1;
   color: #fff;
@@ -132,44 +157,53 @@ article:hover #icono-heart {
   align-items: center;
   transition: flex-grow 500ms;
 }
+
 .banner-item:hover {
   flex-grow: 8;
 }
+
 .banner-item:hover .banner-title {
   transform: rotate(0);
 }
+
 .banner-item:nth-child(1) {
-  background-image: url(../images/banner1.jpg);
+  background-image: url(../images/banner1-2.jpg);
   background-repeat: no-repeat;
   background-position: center 10%;
 }
+
 .banner-item:nth-child(2) {
   background-image: url(../images/banner2.webp);
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 .banner-item:nth-child(3) {
   background-image: url(../images/banner3.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .banner-item:nth-child(4) {
   background-image: url(../images/banner4.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .banner-title {
   margin: 0;
   transform: rotate(-90deg);
   transition: transform 0.2s 0.2s;
   font-size: 35px;
 }
+
 /*footer*/
 footer {
   padding: 20px;
   text-align: center;
   font-weight: bolder;
 }
+
 /*Redes Sociales*/
 #redesSociales {
   position: relative;
@@ -179,6 +213,7 @@ footer {
   border: 5px solid #fff;
   background: url(https://4.bp.blogspot.com/-gKMIOgeaEBY/UWHsOA382oI/AAAAAAAABpI/5GdyRTAeKII/s1600/share_core_square.jpg);
 }
+
 .red {
   position: absolute;
   -webkit-transition: left 0.5s cubic-bezier(0.1, 0.8, 0.9, 1), opacity 1s linear;
@@ -194,6 +229,7 @@ footer {
   background: no-repeat;
   left: 0px;
 }
+
 #redesSociales:hover .red {
   opacity: 1;
   transform: translate(0px, 0);
@@ -203,6 +239,7 @@ footer {
   margin: 10px 0px 0px 20px;
   position: absolute;
 }
+
 #redesSociales:hover .red:nth-child(1) {
   position: absolute;
   left: 35px;
@@ -212,10 +249,12 @@ footer {
   position: absolute;
   left: 80px;
 }
+
 #redesSociales:hover .red:nth-child(3) {
   position: absolute;
   left: 125px;
 }
+
 #redesSociales:hover .red:nth-child(4) {
   position: absolute;
   left: 170px;
@@ -224,15 +263,19 @@ footer {
 .red.facebook {
   background: url(https://4.bp.blogspot.com/-49s_0_9mdVo/UWHsMIvJBNI/AAAAAAAABn8/6bVMlN4Qz7Y/s1600/bubble_facebook_share_button.png);
 }
+
 .red.twitter {
   background: url(https://2.bp.blogspot.com/-3r8sHe1Qy5M/UWHsNMDDzHI/AAAAAAAABog/q3V7mYirmOY/s1600/bubble_twitter_share_button.png);
 }
+
 .red.email {
   background: url(https://3.bp.blogspot.com/-ZhFqBhp79cA/UWHsMBmPxsI/AAAAAAAABn4/O8k_pGf1oCU/s1600/bubble_email_share_button.png);
 }
+
 .red.instagram {
   background: url(https://1.bp.blogspot.com/-FSkby0cXU_8/UWHsMis8c2I/AAAAAAAABoQ/y8coyc5ystc/s1600/bubble_instagram_share_button.png);
 }
+
 .red:hover {
   background-position: 0 -46px;
 }
@@ -253,15 +296,17 @@ footer {
   flex-wrap: wrap;
 }
 
-.container-card > .card-wrap {
+.container-card>.card-wrap {
   margin-right: 50px;
 }
+
 .card-wrap {
   margin: 10px;
   perspective: 800px;
   width: 293px;
   height: 472px;
 }
+
 .card-wrap:hover .card-slide {
   transform: rotateY(180deg);
 }
@@ -271,11 +316,13 @@ footer {
   background-size: cover;
   background-position: center;
 }
+
 .card2 {
   background-image: url("../images/tarjeta3.jpg");
   background-size: cover;
   background-position: center;
 }
+
 .card3 {
   background-image: url("../images/tarjeta2.jpg");
   background-size: cover;
@@ -322,6 +369,7 @@ footer {
   width: 296px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
+
 .card .card-content {
   display: flex;
   flex-direction: column;
@@ -339,6 +387,7 @@ section .card .image {
   background: #fff;
   box-shadow: 0px -1px 4px 2px rgba(0, 0, 0, 0.25);
 }
+
 section .card .image img {
   height: 100%;
   width: 100%;
@@ -346,24 +395,29 @@ section .card .image img {
   border-radius: 50%;
   border: 3px solid #fff;
 }
+
 .box {
   position: absolute;
   width: 100%;
   height: 30%;
   background: linear-gradient(106.32deg, #f3a60f 14.23%, rgba(255, 25, 25, 0) 139.97%);
 }
+
 .rating {
   display: flex;
   align-items: center;
   margin-top: 18px;
 }
+
 .rating i {
   font-size: 18px;
   margin: 0 2px;
 }
+
 .rating i:hover {
   color: orange;
 }
+
 section .card .about {
   display: flex;
   text-align: center;
