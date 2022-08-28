@@ -12,48 +12,50 @@
 <body>
     <header>
         <div class="top-header">
-            <a href="/">
+            <a href="/" class="home">
             <img src="/images/mountain.png" class="logo">
             </a>
             <a href="#" class="nav-button">
                 <i class="fas fa-bars"></i>
             </a>
         </div>
-        <h2 class="copy-register">Registrate</h2>
-        <form action="/register" method="post" class="form-register">
+    </header>
+        <div class="register">
+            <h2 class="copy-register">Registrate</h2>
+            <form action="/register" method="post" class="form-register">
+                <div>
+                    <input type="text" name="name" placeholder="Nombre">
+                </div>
+                <div>
+                    <input type="text" name="surname" placeholder="Apellido">
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="E-mail">
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Contraseña">
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Confirmar contraseña">
+                </div>
+                <div class="button">
+                    <button type="submit">Registrarse</button>
+                </div>
+            </form>
             <div>
-                <input type="text" name="name" placeholder="Nombre">
+                <a href="#"><p class="register">
+                    Registrarse con Google
+                    <img src="/images/google.png" class="img-logo-app">
+                </p></a>
+                <a href="#"><p class="register">
+                    Registrarse con Facebook
+                    <img src="/images/facebook.png" class="img-logo-app">
+                </p></a>
+                <a href="#"><p class="register">
+                    Registrarse con Apple
+                    <img src="/images/apple.png" class="img-logo-app">
+                </p></a>
             </div>
-            <div>
-                <input type="text" name="surname" placeholder="Apellido">
-            </div>
-            <div>
-                <input type="email" name="email" placeholder="E-mail">
-            </div>
-            <div>
-                <input type="password" name="password" placeholder="Contraseña">
-            </div>
-            <div>
-                <input type="password" name="password" placeholder="Confirmar contraseña">
-            </div>
-            <div class="button">
-                <button type="submit">Registrarse</button>
-            </div>
-        </form>
-        <div>
-            <a href="#"><p class="register">
-                Registrarse con Google
-                <img src="/images/google.png" class="img-logo-app">
-            </p></a>
-            <a href="#"><p class="register">
-                Registrarse con Facebook
-                <img src="/images/facebook.png" class="img-logo-app">
-            </p></a>
-            <a href="#"><p class="register">
-                Registrarse con Apple
-                <img src="/images/apple.png" class="img-logo-app">
-            </p></a>
-        </div>
-    </header>   
+        </div>   
 </body>
 </html>
