@@ -18,9 +18,15 @@
             <a href="#" class="nav-button">
                 <i class="fas fa-bars"></i>
             </a>
+            <ul class="nav-bar">
+                <li><a href="/tienda">Tienda</a></li>
+                <li><a href="/user">Usuario</a></li>
+                <li><a href="/carrito">Carrito</a></li>
+            </ul>
         </div>
     </header>
-        <div class="register">
+    <div class="register">
+        <div class="register-top">
             <h2 class="copy-register">Registrate</h2>
             <form action="/register" method="post" class="form-register">
                 <div>
@@ -41,8 +47,10 @@
                 <div class="button">
                     <button type="submit">Registrarse</button>
                 </div>
-            </form>
-            <div>
+            </form> 
+            <p class="copy-login">¿Ya tienes cuenta? Ingresa <a class="login-button" href="/login">aqui</a></p>
+        </div>
+            <div class="register-bottom">
                 <a href="#"><p class="register">
                     Registrarse con Google
                     <img src="/images/google.png" class="img-logo-app">
@@ -56,6 +64,6 @@
                     <img src="/images/apple.png" class="img-logo-app">
                 </p></a>
             </div>
-        </div>   
+    </div>   
 </body>
 </html>
