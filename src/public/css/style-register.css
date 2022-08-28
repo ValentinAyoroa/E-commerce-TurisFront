@@ -16,10 +16,6 @@ a.home{
     width: 120px;
 }
 
-img.logo{
-    width: 75%;
-    padding-left: 20px;
-}
 
 a.nav-button{
     padding-right: 25px;   
@@ -30,11 +26,33 @@ a.nav-button i{
     color:black
 }
 
-div.register{
+ul.nav-bar{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+ul.nav-bar li{
+    list-style-type: none;
+    padding: 10px;
+    margin-right: 30px;
+}
+
+ul.nav-bar li a{
+    font-size: 18px;
+    transition: border-bottom 100ms;
+}
+
+ul.nav-bar li a:hover{
+    border-bottom: 3px solid #0077C0;
+}
+
+div.register-top{
     border: 1px solid black;
     border-radius: 10px;
     margin: 30px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.733);
 }
 
 h2.copy-register{
@@ -78,14 +96,25 @@ form.form-register div button{
     font-weight: bold;
 }
 
+p.copy-login{
+    text-align: center;
+    margin: 20px 0;
+}
+
+a.login-button{
+    text-decoration: underline;
+    color: #0077C0;
+}
+
 div p.register{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    border: 1px solid #0077C0;
     border-radius: 10px;
     margin:10%;
-    padding: 5px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.712);
 }
 
 div a{
@@ -98,4 +127,55 @@ img.img-logo-app{
     margin:5%;
     border: 1px solid white;
     border-radius: 75px;
+}
+
+@media (max-width:450px) {
+    ul.nav-bar{
+        display: none;
+    }
+
+    img.logo{
+        width: 80%;
+        padding-left: 20px;
+    }
+}
+
+@media (min-width:901px) {
+    div.top-header{
+        padding-right: 50px;
+        height: 110px;
+    }
+
+    img.logo{
+        width: 100%;
+        padding-left: 40px;
+    }
+
+    a.nav-button{
+        display: none;
+    }
+
+    div.register{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div.register-top{
+        width: 200px;
+        flex-grow: 0.60;
+        margin-left: 50px ;
+        margin-top: 50px;
+        padding-bottom: 15px;
+    }
+
+    h2.copy-register{
+        font-size: 30px;
+    }
+
+    div.register-bottom{
+        width: 200px;
+        flex-grow: 0.30;
+        font-size: 22px;
+        margin-top: 60px;
+    }
 }
