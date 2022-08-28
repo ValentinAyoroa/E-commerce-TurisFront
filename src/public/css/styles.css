@@ -1,4 +1,5 @@
 * {
+  font-family: Copperplate, Papyrus, fantasy;
 }
 /*Header*/
 header {
@@ -86,6 +87,9 @@ article:hover {
 }
 .descripcion-producto {
   margin: px;
+}
+#informacion {
+  color: red;
 }
 /*Banner*/
 
