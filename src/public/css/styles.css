@@ -45,6 +45,7 @@ h4 {
 }
 /*Productos Destacados*/
 article {
+  position: relative;
   background-color: white;
   border-radius: 6px;
   border: none;
@@ -86,11 +87,31 @@ article:hover {
   margin: 20px;
 }
 .descripcion-producto {
-  margin: px;
+  margin: 5px;
 }
 #informacion {
   color: red;
+  visibility: hidden;
 }
+
+article:hover #informacion {
+  visibility: visible;
+  cursor: pointer;
+}
+#icono-heart {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  color: grey;
+  visibility: hidden;
+}
+article:hover #icono-heart {
+  visibility: visible;
+}
+#icono-heart:hover {
+  color: red;
+}
+
 /*Banner*/
 
 .banner {
