@@ -16,6 +16,14 @@ app.post('/register', (req, res) => {
   res.redirect('/')
 })
 
+app.get('/detalle-producto', (req, res) => {
+  res.sendFile(path.join(__dirname, '/src/views/detalle-producto.html'))
+})
+
+app.post('/detalle-producto', (req, res) => {
+  res.redirect('/')
+})
+
 app.listen(3030, () => {
   console.log("Servidor funcionando en el puerto 3030");
 });

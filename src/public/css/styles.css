@@ -1,5 +1,5 @@
 * {
-  font-family: Copperplate, Papyrus, fantasy;
+  font-family: 'Roboto';
 }
 
 /*Header*/
@@ -43,6 +43,20 @@ i {
 
 .home {
   padding: 40px;
+}
+
+.home ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.home a {
+  text-decoration: none;
+  color: #404040;
+  display: inline-block;
+  padding: 5px 0px;
+  font-size: 17px;
 }
 
 h1,
@@ -155,7 +169,7 @@ article:hover #icono-heart {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: flex-grow 500ms;
+  transition: flex-grow 600ms;
 }
 
 .banner-item:hover {
