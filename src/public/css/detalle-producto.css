@@ -1,216 +1,232 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Roboto';
+  box-sizing: border-box;
+  font-family: "Roboto";
 }
 
 body {
-    background-image: none;
+  background-image: none;
 }
 
 .titulo-producto {
-    padding-bottom: 8%;
-    padding-top: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
-    border-bottom: 1px #ebebeb solid;
+  padding-bottom: 8%;
+  padding-top: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-bottom: 1px #ebebeb solid;
 }
 
 .imagen-producto {
-    max-width: 50%;
-    display: block;
-    margin: auto;
-    padding-top: 2%;
+  max-width: 50%;
+  display: block;
+  margin: auto;
+  padding-top: 2%;
 }
 
 .color-producto {
-    display: flex;
-    justify-content: space-between;
-    background-color: #ebebeb;
-    margin-top: 5%;
-    margin-right: 10%;
-    margin-left: 10%;
-    border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ebebeb;
+  margin-top: 5%;
+  margin-right: 10%;
+  margin-left: 10%;
+  border-radius: 8px;
 }
 
 .imagen-color-producto {
-    max-width: 30px;
-    max-height: 40px;
-    margin-right: 5%;
-    margin-top: 2%;
+  max-width: 30px;
+  max-height: 40px;
+  margin-right: 5%;
+  margin-top: 2%;
 }
 
 .texto-color-producto {
-    margin-left: 5%;
+  margin-left: 5%;
 }
 
 .precio {
-    display: flex;
-    margin-right: 10%;
-    margin-left: 5%;
-    flex-direction: column;
+  display: flex;
+  margin-right: 10%;
+  margin-left: 5%;
+  flex-direction: column;
 }
 
 .precio-cuotas {
-    position: relative;
-    bottom: 15px;
+  position: relative;
+  bottom: 15px;
 }
 
 .precio-total {
-    position: relative;
-    top: 20px;
-    font-weight: 400;
+  position: relative;
+  top: 20px;
+  font-weight: 400;
 }
 
 .precio-total i {
-    position: relative;
-    color: #39b54a;
-    left: 2%;
+  position: relative;
+  color: #39b54a;
+  left: 2%;
 }
 
 .stock-disponible {
-    display: flex;
-    justify-content: space-between;
-    background-color: #ebebeb;
-    margin-right: 10%;
-    margin-left: 10%;
-    border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ebebeb;
+  margin-right: 10%;
+  margin-left: 10%;
+  border-radius: 8px;
 }
 
 .text-stock {
-    margin-left: 5%;
+  margin-left: 5%;
 }
 
 .iconos-stock {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-right: 5%;
-    background-color: white;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 2px;
-    padding-left: 3px;
-    padding-right: 3px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 5%;
+  background-color: white;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .cantidad-stock {
-    position: relative;
-    right: 28%;
+  position: relative;
+  right: 28%;
 }
 
 .icono-mas {
-    background-color: white;
-    border-bottom: #ebebeb solid 1px;
+  background-color: white;
+  border-bottom: #ebebeb solid 1px;
 }
 
 .botones-compra-carro {
-    display: flex;
-    flex-direction: column;
-    max-width: 80%;
-    margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin-left: 10%;
 }
 
 .boton-comprar {
-    background-color: #3483fa;
-    border-color: transparent;
-    color: #fff;
-    border-radius: 6px;
-    line-height: 30px;
-    margin-top: 10%;
+  background-color: #3483fa;
+  border-color: transparent;
+  color: #fff;
+  border-radius: 6px;
+  line-height: 30px;
+  margin-top: 10%;
 }
 
 .boton-carro {
-    background-color: rgba(65, 137, 230, .15);
-    border-color: transparent;
-    color: #3483fa;
-    border-radius: 6px;
-    line-height: 30px;
-    margin-top: 3%;
+  background-color: rgba(65, 137, 230, 0.15);
+  border-color: transparent;
+  color: #3483fa;
+  border-radius: 6px;
+  line-height: 30px;
+  margin-top: 3%;
 }
 
 .box-informacion {
-    border-top: #ebebeb solid 1px;
-    margin-top: 10%;
+  border-top: #ebebeb solid 1px;
+  margin-top: 10%;
 }
 
 .informacion-producto {
-    margin: 5%;
+  margin: 5%;
 }
 
 .titulo-informacion {
-    font-size: 20px;
-    font-weight: 400;
-    word-break: break-word;
-    color: rgba(0, 0, 0, .9)
+  font-size: 20px;
+  font-weight: 400;
+  word-break: break-word;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .texto-informacion {
-    font-size: 16px;
-    font-weight: 400;
-    word-break: break-word;
-    color: rgba(0, 0, 0, .9)
+  font-size: 16px;
+  font-weight: 400;
+  word-break: break-word;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 footer {
-    border: 2px black solid;
-    height: 200px;
+  position: relative;
+  border: 2px black solid;
+  height: 200px;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
+  div.top-header {
+    padding-right: 50px;
+    height: 110px;
+  }
 
-    div.top-header {
-        padding-right: 50px;
-        height: 110px;
+  img.logo {
+    width: 100%;
+    padding-left: 40px;
+  }
+
+  .hamburg-button {
+    display: none;
+  }
+
+  .titulo-producto {
+    position: relative;
+    top: 10px;
+    margin-bottom: 0;
+    margin-left: 5%;
+    margin-right: 15%;
+    font-size: 26px;
+  }
+
+  .imagen-producto {
+    margin-top: 0;
+  }
+
+  .color-producto {
+    max-width: 65%;
+    margin-left: 17%;
+    margin-top: 0;
+    margin-bottom: 2%;
+  }
+
+  .precio {
+    margin-left: 10%;
+    margin-bottom: 0;
+  }
+
+  .stock-disponible {
+    max-width: 65%;
+    margin-left: 17%;
+  }
+
+  .botones-compra-carro {
+    max-width: 65%;
+    margin-left: 17%;
+  }
+
+  .box-informacion {
+    margin-top: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+/*Para celulares*/
+@media (max-width: 768px) {
+  /*Para tablet falta*/
+  @media only screen and (min-width: 768px) {
+    .caja-producto {
+      margin: 5px;
     }
-
-    img.logo {
-        width: 100%;
-        padding-left: 40px;
+    .caja-producto {
+      width: 357px;
     }
+  }
 
-    .hamburg-button {
-        display: none;
-    }
-
-    .titulo-producto {
-        position: relative;
-        top: 10px;
-        margin-bottom: 0;
-        margin-left: 5%;
-        margin-right: 15%;
-        font-size: 26px;
-    }
-
-    .imagen-producto {
-        margin-top: 0;
-    }
-
-    .color-producto {
-        max-width: 65%;
-        margin-left: 17%;
-        margin-top: 0;
-         margin-bottom: 2%;
-    }
-
-    .precio {
-        margin-left: 10%;
-        margin-bottom: 0;
-    }
-
-    .stock-disponible {
-        max-width: 65%;
-        margin-left: 17%;
-    }
-
-    .botones-compra-carro {
-        max-width: 65%;
-        margin-left: 17%;
-    }
-
-    .box-informacion {
-        margin-top: 0;
-        margin-left: 10%;
-        margin-right: 10%;
-    }
-
+  /* / Large devices (laptops/desktops, 992px and up) / */
+  @media only screen and (min-width: 992px) {
+  }
 }
