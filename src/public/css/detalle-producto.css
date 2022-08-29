@@ -155,3 +155,62 @@ footer {
     border: 2px black solid;
     height: 200px;
 }
+
+@media (min-width:768px) {
+
+    div.top-header {
+        padding-right: 50px;
+        height: 110px;
+    }
+
+    img.logo {
+        width: 100%;
+        padding-left: 40px;
+    }
+
+    .hamburg-button {
+        display: none;
+    }
+
+    .titulo-producto {
+        position: relative;
+        top: 10px;
+        margin-bottom: 0;
+        margin-left: 5%;
+        margin-right: 15%;
+        font-size: 26px;
+    }
+
+    .imagen-producto {
+        margin-top: 0;
+    }
+
+    .color-producto {
+        max-width: 65%;
+        margin-left: 17%;
+        margin-top: 0;
+         margin-bottom: 2%;
+    }
+
+    .precio {
+        margin-left: 10%;
+        margin-bottom: 0;
+    }
+
+    .stock-disponible {
+        max-width: 65%;
+        margin-left: 17%;
+    }
+
+    .botones-compra-carro {
+        max-width: 65%;
+        margin-left: 17%;
+    }
+
+    .box-informacion {
+        margin-top: 0;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
