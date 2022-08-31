@@ -157,7 +157,7 @@ footer {
   height: 200px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 450px) {
   div.top-header {
     padding-right: 50px;
     height: 110px;
@@ -214,19 +214,3 @@ footer {
   }
 }
 
-/*Para celulares*/
-@media (max-width: 768px) {
-  /*Para tablet falta*/
-  @media only screen and (min-width: 768px) {
-    .caja-producto {
-      margin: 5px;
-    }
-    .caja-producto {
-      width: 357px;
-    }
-  }
-
-  /* / Large devices (laptops/desktops, 992px and up) / */
-  @media only screen and (min-width: 992px) {
-  }
-}
