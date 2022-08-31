@@ -160,10 +160,32 @@ article:hover #informacion {
 
 article:hover #icono-heart {
   visibility: visible;
+  cursor: pointer;
 }
 
 #icono-heart:hover {
   color: red;
+}
+
+figcaption {
+  display: none;
+  transition: all 0.5s;
+  visibility: hidden;
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  font-size: 10px;
+}
+figure:hover > figcaption {
+  display: block;
+  transition: all 0.5s;
+  visibility: visible;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
 /*Banner*/
@@ -221,7 +243,8 @@ article:hover #icono-heart {
   margin: 0;
   transform: rotate(-90deg);
   transition: transform 0.2s 0.2s;
-  font-size: 35px;
+  font-size: 20px;
+  text-align: center;
 }
 
 /*footer*/
