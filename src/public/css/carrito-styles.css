@@ -1,4 +1,27 @@
+body {
+  font-family: "Roboto";
+}
 .carrito-contenedor {
   width: 100%;
   height: 500px;
+}
+.imagen-productos {
+  margin: 20px;
+  width: 300px;
+  height: 200px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.item-carrito-body {
+  display: flex;
+  align-items: center;
+}
+.item-carrito-nombre {
+  font-size: 40px;
+
+  border: 2px solid black;
+  width: 500px;
+  height: 100px;
+  text-align: center;
 }
