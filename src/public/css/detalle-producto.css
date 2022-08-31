@@ -26,6 +26,7 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: #ebebeb;
+  margin-bottom: 5%;
   margin-top: 5%;
   margin-right: 10%;
   margin-left: 10%;
@@ -157,7 +158,7 @@ footer {
   height: 200px;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 535px) {
   div.top-header {
     padding-right: 50px;
     height: 110px;
