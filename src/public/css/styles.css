@@ -86,7 +86,7 @@ article:hover {
   -webkit-box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
   -moz-box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
   box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
-  transform: scale(1.2);
+  transform: scale(1.05);
   z-index: 10;
 }
 article:hover .imagen-producto {
