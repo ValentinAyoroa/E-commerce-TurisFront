@@ -1,5 +1,6 @@
 body {
   font-family: "Roboto";
+  background-color: #e4e4e4;
 }
 .carrito-contenedor {
   width: 100%;
@@ -7,8 +8,9 @@ body {
 }
 .imagen-productos {
   margin: 20px;
-  width: 300px;
-  height: 200px;
+  width: 20%;
+  max-width: 115px;
+  height: 20%;
   margin-top: 15px;
   text-align: center;
 }
@@ -21,6 +23,7 @@ body {
 .item-carrito-body {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .item-carrito-body > div {
@@ -28,16 +31,15 @@ body {
 }
 .item-carrito-nombre {
   font-size: 40px;
-  border: 2px solid black;
-  width: 500px;
+  width: 59%;
   height: 100px;
-  text-align: center;
+  text-align: left;
 }
 
 .contador-body {
   padding-left: 8px;
   position: relative;
-  width: 167px;
+  width: 12%;
   height: 70px;
   display: flex;
   justify-content: center;
@@ -79,4 +81,41 @@ span {
 .reset {
   width: 50px;
   height: 25px;
+}
+.eliminar {
+  border-radius: 5px;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  background-color: rgb(219, 76, 76);
+  color: white;
+  border: none;
+  margin: 10px;
+}
+.comprar {
+  border-radius: 5px;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+  background-color: #3483fa;
+  color: white;
+  border: none;
+}
+/*Para celulares*/
+@media (max-width: 768px) {
+  .item-carrito-nombre {
+    font-size: 18px;
+    width: 30%;
+  }
+  .contador-body {
+    width: 30%;
+  }
+}
+
+/*Para tablet falta*/
+@media only screen and (min-width: 768px) {
+}
+
+/* / Large devices (laptops/desktops, 992px and up) / */
+@media only screen and (min-width: 992px) {
 }

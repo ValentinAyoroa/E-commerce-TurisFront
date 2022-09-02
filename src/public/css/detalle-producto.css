@@ -280,7 +280,6 @@ footer {
 }
 
 @media (min-width: 1080px) {
-
   body {
     background-color: rgba(128, 128, 128, 0.212);
   }
@@ -349,7 +348,7 @@ footer {
   }
 
   .imagen-producto-muestra {
-    border: 1px solid rgba(0, 0, 0, .25);
+    border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
     width: 60px;
     margin-top: 15%;
@@ -358,7 +357,7 @@ footer {
     transition: all 300ms;
   }
 
-  .imagen-producto-muestra:hover{
+  .imagen-producto-muestra:hover {
     border: solid 2px #3483fa;
     transform: scale(1.1);
     z-index: 10;
