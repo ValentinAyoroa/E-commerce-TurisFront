@@ -16,7 +16,7 @@ body {
 }
 .item-carrito {
   background-color: rgb(246, 248, 248);
-  border: 2px solid grey;
+  margin: 15px;
   border-radius: 5px;
 }
 
@@ -37,15 +37,12 @@ body {
 }
 
 .contador-body {
-  padding-left: 8px;
   position: relative;
   width: 12%;
   height: 70px;
   display: flex;
-  justify-content: center;
   color: black;
   align-items: center;
-
   border-radius: 27px;
 }
 .item-carrito-titulo {
@@ -94,12 +91,22 @@ span {
 }
 .comprar {
   border-radius: 5px;
-  width: 80px;
+  width: 150px;
   height: 30px;
   cursor: pointer;
   background-color: #3483fa;
   color: white;
   border: none;
+}
+.continuar {
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #3483fa;
+  color: white;
+  border: none;
+  margin-left: 1400px;
 }
 /*Para celulares*/
 @media (max-width: 768px) {
