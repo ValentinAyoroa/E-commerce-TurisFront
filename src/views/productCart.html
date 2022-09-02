@@ -21,23 +21,48 @@
       <div class="item-carrito-body">
         <img class="imagen-productos" src="images/guantes-producto.avif" alt="">
         <h1 class="item-carrito-nombre">Nombre del producto</h1>
-      </div>
-      <button>Eliminar</button>
-      <button>comprar ahora</button>
-    </div>
-    <div class="contador">
-      <p class="item-carrito-titulo">Contador</p>
-      <p class="contar" id="contar">0</p>
-      <div class="botones-item-carrito">
-        <button class="incremento" id="incremento"><span class="material-symbols-rounded">add</span></button>
-        <button class="decremento" id="decremento"><span class="material-symbols-rounded">remove</span></button>
-        <button class="reset" id="reset"><span class="material-symbols-rounded">cached</span></button>
 
-      </div>
+        <div class="contador-body">
+          <p class="contar" id="contar">0</p>
+          <div class="botones-item-carrito">
+            <button class="incremento" id="incremento"><span class="material-icons-round">add</span></button>
+            <button class="decremento" id="decremento"><span class="material-icons-round">remove</span></button>
+            <button class="reset" id="reset"><span class="material-icons-round">cached</span></button>
 
+          </div>
+        </div>
+      </div>
+      <button class="eliminar">Eliminar</button>
+      <button class="comprar">comprar ahora</button>
     </div>
+
   </div>
 
+
 </body>
+<script>
+  const contador = document.getElementById("contar");
+  const sumar = document.getElementById("incremento");
+  const restar = document.getElementById("decremento");
+  const reset = document.getElementById("reset");
+
+  let numero = 0;
+
+  sumar.addEventListener("click", () => {
+    numero++;
+    contador.innerHTML = numero;
+  });
+  restar.addEventListener("click", () => {
+    if (numero == 0) { }
+    else {
+      numero--;
+      contador.innerHTML = numero;
+    }
+  });
+  reset.addEventListener("click", () => {
+    numero = 0;
+    contador.innerHTML = numero;
+  });
+</script>
 
 </html>

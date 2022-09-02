@@ -9,19 +9,74 @@ body {
   margin: 20px;
   width: 300px;
   height: 200px;
-  margin-top: 80px;
+  margin-top: 15px;
   text-align: center;
+}
+.item-carrito {
+  background-color: rgb(246, 248, 248);
+  border: 2px solid grey;
+  border-radius: 5px;
 }
 
 .item-carrito-body {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+.item-carrito-body > div {
+  margin-left: 10px;
 }
 .item-carrito-nombre {
   font-size: 40px;
-
   border: 2px solid black;
   width: 500px;
   height: 100px;
   text-align: center;
+}
+
+.contador-body {
+  padding-left: 8px;
+  position: relative;
+  width: 167px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  align-items: center;
+
+  border-radius: 27px;
+}
+.item-carrito-titulo {
+  font-size: 16px;
+  margin-top: 15px;
+  text-align: center;
+}
+.contar {
+  font-size: 5rem;
+  text-align: center;
+}
+.botones-item-carrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.botones-item-carrito button {
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: white;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding-left: 3px;
+  padding-bottom: 4px;
+}
+span {
+  color: black;
+}
+.reset {
+  width: 50px;
+  height: 25px;
 }
