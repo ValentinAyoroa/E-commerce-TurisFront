@@ -319,8 +319,8 @@ footer {
 
   .box-informacion {
     margin-top: 0;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   .titulo-producto {
@@ -496,8 +496,6 @@ footer {
     background-color: var(--negroOscuro);
     margin: 0;
     justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
   }
 
   .sector-descripcion {
@@ -507,8 +505,6 @@ footer {
   }
 
   .derechos-reserved {
-    margin-left: 10%;
-    margin-right: 10%;
     background-color: var(--negroClaro);
     color: var(--blanco);
     border-top: var(--grisOscuro) 1px solid;
