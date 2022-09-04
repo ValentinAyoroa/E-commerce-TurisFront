@@ -1,250 +1,267 @@
 :root {
-  --blanco: #f0f0f0;
-  --celeste: #0077c0;
-  --azul: #0022aa;
-  --negroClaro: #161616;
-  --negroOscuro: #0e0e0e;
-  --grisClaro: #dfdddd;
-  --grisOscuro: #636262;
-}
-
-* {
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  margin: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-div.top-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.712);
-  border-bottom: 1px solid #9c9d9e;
-}
-
-a.home {
-  width: 120px;
-}
-
-a.nav-button {
-  padding-right: 25px;
-}
-
-a.nav-button i {
-  font-size: 25px;
-  color: black;
-}
-
-ul.nav-bar {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 0;
-}
-
-ul.nav-bar li {
-  list-style-type: none;
-  padding: 10px;
-  margin-right: 30px;
-}
-
-ul.nav-bar li a {
-  font-size: 18px;
-  transition: border-bottom 100ms;
-}
-
-ul.nav-bar li a:hover {
-  border-bottom: 3px solid #0077c0;
-}
-
-div.register-top {   
-  border-radius: 10px;
-  margin: 30px;
-  background-color: rgba(255, 255, 255, 0.733);
-  box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
-}
-
-h2.copy-register {
-  margin: 10% auto 8%;
-  width: 80%;
-}
-
-form.form-register {
-  margin: auto;
-}
-
-form.form-register div {
-  width: 80%;
-  margin: auto;
-}
-
-form.form-register div input {
-  width: 100%;
-  max-width: -webkit-fill-available;
-  margin-bottom: 20px;
-  padding: 0.75rem 1rem;
-  border: 1px solid #a8a8a8;
-  border-radius: 10px;
-  background-color: white;
-}
-
-form.form-register div button {
-  width: 100%;
-  height: 40px;
-  margin-top: 20px;
-  border: 1px solid var(--celeste);
-  border-radius: 10px;
-  color: white;
-  background-color: var(--celeste);
-  font-size: 16px;
-  line-height: 1.2;
-}
-
-p.copy-login {
-  text-align: center;
-  margin: 5% 0 10%;
-}
-
-a.login-button {
-  text-decoration: underline;
-  color: #0077c0;
-}
-
-.register-bottom div.register{
+    --blanco: #f0f0f0;
+    --celeste: #0077c0;
+    --azul: #0022aa;
+    --negroClaro: #161616;
+    --negroOscuro: #0e0e0e;
+    --grisClaro: #dfdddd;
+    --grisOscuro: #636262;
+  }
+  
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    background-image: url("/images/img-register.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  div.top-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.712);
+    border-bottom: 1px solid #9c9d9e;
+  }
+  
+  a.home {
+    width: 120px;
+  }
+  
+  a.nav-button {
+    padding-right: 25px;
+  }
+  
+  a.nav-button i {
+    font-size: 25px;
+    color: black;
+  }
+  
+  ul.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  
+  ul.nav-bar li {
+    list-style-type: none;
+    padding: 10px;
+    margin-right: 30px;
+  }
+  
+  ul.nav-bar li a {
+    font-size: 18px;
+    transition: border-bottom 100ms;
+  }
+  
+  ul.nav-bar li a:hover {
+    border-bottom: 3px solid #0077c0;
+  }
+  
+  div.register-top {
+    border-radius: 10px;
+    margin: 30px;
+    background-color: rgba(255, 255, 255, 0.733);
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
+  }
+  
+  h2.copy-register {
+    margin: 10% auto 8%;
+    width: 80%;
+  }
+  
+  form.form-register {
+    margin: auto;
+  }
+  
+  form.form-register div {
+    width: 80%;
+    margin: auto;
+  }
+  
+  form.form-register div input {
+    width: 100%;
+    max-width: -webkit-fill-available;
+    margin-bottom: 20px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #a8a8a8;
+    border-radius: 10px;
+    background-color: white;
+  }
+  
+  form.form-register div button {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    border: 1px solid var(--celeste);
+    border-radius: 10px;
+    color: white;
+    background-color: var(--celeste);
+    font-size: 16px;
+    line-height: 1.2;
+  }
+  
+  p.copy-login {
+    text-align: center;
+    margin: 5% 0 10%;
+  }
+  
+  a.login-button {
+    text-decoration: underline;
+    color: #0077c0;
+  }
+  
+  .register-bottom div.register {
     height: 14%;
     min-height: 25%;
-}
-
-div .register {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  margin: 10%;
-  background-color: rgba(255, 255, 255, 0.712);
-  box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
-  cursor: pointer;
-}
-
-div .register p {
-  display: inline-block;
-  text-align: center;
-  width: 70%;
-  margin: 10% 0;
-}
-
-img.img-logo-app {
-  width: 15%;
-  border: 1px solid white;
-  border-radius: 75px;
-  display: inline-block;
-}
-
-div a {
-  text-decoration: none;
-  color: black;
-}
-
-/* Login */
-
-.create-account,
-.login-help {
-  font-size: 16px;
-  font-weight: bolder;
-  text-align: center;
-  color: var(--celeste);
-  cursor: pointer;
-  margin-bottom: 8% auto 10%;
-}
-
-.login-help {
-  border-top: 1px var(--grisOscuro) solid;
-  margin-bottom: 1.15rem;
-  padding: 1.15rem 1.15rem 0;
-}
-
-/* Phone : ancho hasta 599px */
-@media (width <= 599px) {
-  body {
-    background-size: cover;
   }
-
-  ul.nav-bar {
-    display: none;
-  }
-
-  img.logo {
-    width: 80%;
-    padding-left: 20px;
-  }
-
-  .register p {
-    font-size: 1.25rem;
-  }
-
-  .register-bottom .register p {
-    margin: 8% 0;
-  }
-
   
-}
-
-/* Tablets : ancho de 600 px a 899px */
-@media (600px <= width <= 899px) {
-  body {
-    background-size: cover;
-  }
-
-  .register p {
-    font-size: 1.25rem;
-  }
-
-  .register-bottom .register p {
-    margin: 8% 0;
-  }
-}
-
-/* Laptop - Desktop : ancho mayor a 900 px */
-@media (width >= 900px) {
-  div.top-header {
-    padding-right: 50px;
-    height: 110px;
-  }
-
-  img.logo {
-    width: 100%;
-    padding-left: 40px;
-  }
-
-  a.nav-button {
-    display: none;
-  }
-
-  div.register {
+  div .register {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 40px;
-    
+    border-radius: 10px;
+    margin: 10%;
+    background-color: rgba(255, 255, 255, 0.712);
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 50%);
+    cursor: pointer;
   }
-
-  div.register-top {
-    width: 200px;
-    flex-grow: 0.5;
+  
+  div .register p {
+    display: inline-block;
+    text-align: center;
+    width: 70%;
+    margin: 10% 0;
   }
-
-  h2.copy-register {
-    font-size: 20px;
+  
+  img.img-logo-app {
+    width: 15%;
+    border: 1px solid white;
+    border-radius: 75px;
+    display: inline-block;
   }
-
-  div.register-bottom {
-    width: 200px;
-    flex-grow: 0.4;
+  
+  div a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* Login */
+  
+  .create-account,
+  .login-help {
     font-size: 16px;
-    margin: auto 0;
+    font-weight: bolder;
+    text-align: center;
+    color: var(--celeste);
+    cursor: pointer;
+    margin-bottom: 8% auto 10%;
   }
-}
+  
+  .login-help {
+    border-top: 1px var(--grisOscuro) solid;
+    margin-bottom: 1.15rem;
+    padding: 1.15rem 1.15rem 0;
+  }
+  
+  /* Phone : ancho hasta 599px */
+  @media (width <= 599px) {
+  
+    body {
+      background-size: cover;    
+    }
+  
+    ul.nav-bar {
+      display: none;
+    }
+  
+    img.logo {
+      width: 80%;
+      padding-left: 20px;
+    }
+  
+    p.copy-login {
+      padding-bottom: 5%;
+    }
+  
+    h2.copy-register {
+      font-size: 1.25em;
+      padding-top: 5%;
+    }
+  
+    .register p {
+      font-size: 1.25rem;
+    }
+  
+    .register-bottom .register p {
+      margin: 8% 0;
+    }
+  }
+  
+  /* Tablets : ancho de 600 px a 899px */
+  @media (600px <= width <= 899px) {
+    body {
+      background-size: cover;
+    }
+  
+    p.copy-login {
+      padding-bottom: 5%;
+    }
+  
+    h2.copy-register {
+      padding-top: 5%;
+    }
+  
+    .register p {
+      font-size: 1.25rem;
+    }
+  
+    .register-bottom .register p {
+      margin: 8% 0;
+    }
+  }
+  
+  /* Laptop - Desktop : ancho mayor a 900 px */
+  @media (width >= 900px) {
+    div.top-header {
+      padding-right: 50px;
+      height: 110px;
+    }
+  
+    img.logo {
+      width: 100%;
+      padding-left: 40px;
+    }
+  
+    a.nav-button {
+      display: none;
+    }
+  
+    div.register {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+  
+    div.register-top {
+      width: 200px;
+      flex-grow: 0.5;
+    }
+  
+    h2.copy-register {
+      font-size: 20px;
+    }
+  
+    div.register-bottom {
+      width: 200px;
+      flex-grow: 0.4;
+      font-size: 16px;
+      margin: auto 0;
+    }
+  }
+  
