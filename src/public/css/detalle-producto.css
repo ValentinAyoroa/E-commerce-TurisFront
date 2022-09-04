@@ -388,11 +388,26 @@ footer {
     justify-content: space-between;
   }
 
+  .imagen-color-producto{
+    margin: 0;
+    margin-right: 1%;
+    margin-top: 1%;
+  }
+
   .imagenes-muestra {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 5%;
+  }
+
+  .icono-mas{
+    margin-bottom: 2;
+    cursor: pointer;
+  }
+
+  .icono-menos {
+    cursor: pointer;
   }
 
   .botones-compra-carro {
