@@ -14,6 +14,7 @@
 
 body {
   margin: 0;
+  background-image: url("/images/img-register.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -62,7 +63,7 @@ ul.nav-bar li a:hover {
   border-bottom: 3px solid #0077c0;
 }
 
-div.register-top {   
+div.register-top {
   border-radius: 10px;
   margin: 30px;
   background-color: rgba(255, 255, 255, 0.733);
@@ -115,9 +116,9 @@ a.login-button {
   color: #0077c0;
 }
 
-.register-bottom div.register{
-    height: 14%;
-    min-height: 25%;
+.register-bottom div.register {
+  height: 14%;
+  min-height: 25%;
 }
 
 div .register {
@@ -170,8 +171,9 @@ div a {
 
 /* Phone : ancho hasta 599px */
 @media (width <= 599px) {
+
   body {
-    background-size: cover;
+    background-size: cover;    
   }
 
   ul.nav-bar {
@@ -183,6 +185,15 @@ div a {
     padding-left: 20px;
   }
 
+  p.copy-login {
+    padding-bottom: 5%;
+  }
+
+  h2.copy-register {
+    font-size: 1.25em;
+    padding-top: 5%;
+  }
+
   .register p {
     font-size: 1.25rem;
   }
@@ -190,14 +201,20 @@ div a {
   .register-bottom .register p {
     margin: 8% 0;
   }
-
-  
 }
 
 /* Tablets : ancho de 600 px a 899px */
 @media (600px <= width <= 899px) {
   body {
     background-size: cover;
+  }
+
+  p.copy-login {
+    padding-bottom: 5%;
+  }
+
+  h2.copy-register {
+    padding-top: 5%;
   }
 
   .register p {
@@ -229,7 +246,6 @@ div a {
     display: flex;
     justify-content: center;
     margin-top: 40px;
-    
   }
 
   div.register-top {
