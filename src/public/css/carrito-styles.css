@@ -1,10 +1,20 @@
 body {
   font-family: "Roboto";
-  background-color: #e4e4e4;
+}
+.carrito {
+  background-color: rgb(219, 214, 214);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  border-radius: 8px;
 }
 .carrito-contenedor {
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   width: 100%;
   height: 500px;
+  position: relative;
 }
 .imagen-productos {
   margin: 20px;
@@ -23,7 +33,7 @@ body {
 .item-carrito-body {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 .item-carrito-body > div {
@@ -35,7 +45,12 @@ body {
   height: 100px;
   text-align: left;
 }
-
+.titulo {
+  margin-top: 5px;
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
 .contador-body {
   position: relative;
   width: 12%;
@@ -99,6 +114,13 @@ span {
   border: none;
 }
 .continuar {
+  position: relative;
+  width: 100%;
+}
+.continuar button {
+  position: absolute;
+  top: 0;
+  right: 15px;
   border-radius: 5px;
   width: 150px;
   height: 40px;
@@ -106,7 +128,6 @@ span {
   background-color: #3483fa;
   color: white;
   border: none;
-  margin-left: 1400px;
 }
 /*Para celulares*/
 @media (max-width: 768px) {
@@ -121,8 +142,15 @@ span {
 
 /*Para tablet falta*/
 @media only screen and (min-width: 768px) {
+  .item-carrito-nombre {
+    font-size: 18px;
+    width: 30%;
+  }
 }
 
 /* / Large devices (laptops/desktops, 992px and up) / */
 @media only screen and (min-width: 992px) {
+  .item-carrito-nombre {
+    font-size: 22px;
+  }
 }
