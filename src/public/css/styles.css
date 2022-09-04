@@ -2,7 +2,6 @@
   font-family: "Roboto";
 }
 
-
 /*Productos Destacados*/
 
 .productos-destacados {
@@ -35,14 +34,16 @@ article:hover .imagen-producto {
 
 .caja-producto {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 5px;
   height: 300px;
   width: 500px;
   padding: 8px;
+  cursor: pointer;
 }
 
 .caja-producto img {
-  margin-top: 40px;
   width: 150px;
   height: 150px;
 }
@@ -84,7 +85,6 @@ p {
 }
 article .imagen-producto {
   width: 230px;
-  padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
   border: 2px solid grey;
@@ -100,6 +100,11 @@ article:hover #informacion {
   cursor: pointer;
 }
 
+figure {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 #icono-heart {
   position: absolute;
   top: 8px;
@@ -196,8 +201,6 @@ figure:hover > figcaption {
   font-size: 20px;
   text-align: center;
 }
-
-
 
 /*Tarjetas clientes*/
 .section-clientes {
@@ -347,4 +350,3 @@ section .card .about {
   font-size: 15px;
   color: black;
 }
-
