@@ -3,6 +3,12 @@
 }
 
 /*Header*/
+
+.mainheader-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid black 1px;
+}
 header {
   background-color: grey;
 }
