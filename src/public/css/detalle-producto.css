@@ -205,9 +205,56 @@ main {
 }
 
 footer {
-  position: relative;
-  border: 2px black solid;
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.conjunto-footer {
+  background-color: rgba(128, 128, 128, 0.212);
+  margin-top: 4%;
+  margin-bottom: 0;
+  border-start-start-radius: 10px;
+  border-start-end-radius: 10px;
+
+}
+
+.sector-descripcion {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.titulo-footer {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: -3%;
+}
+
+.p1,
+.p2,
+.p3,
+.p4 {
+  text-align: center;
+}
+
+.informacion-footer {
+  display: block;
+  text-align: center;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.derechos-reserved {
+  display: flex;
+  align-content: top;
+  background-color: grey;
+  border-end-end-radius: 10px;
+  border-end-start-radius: 10px;
+  margin-top: 0;
+  justify-content: center;
 }
 
 .imagenes-muestra {
@@ -246,7 +293,7 @@ footer {
   }
 
   .precio {
-    margin-left: 10%;
+    margin-left: 20%;
     margin-bottom: 0;
   }
 
@@ -318,10 +365,11 @@ footer {
     margin: auto;
     padding: 0;
     text-align: left;
-    margin-left: 5%;
+    margin-left: 0%;
     margin-top: 2%;
     padding-top: 2%;
     padding-bottom: 2%;
+    padding-left: 3%;
   }
 
   .imagen-producto {
@@ -340,11 +388,30 @@ footer {
     justify-content: space-between;
   }
 
+  .imagen-color-producto{
+    margin: 0;
+    margin-right: 1%;
+    margin-top: 1%;
+  }
+
   .imagenes-muestra {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 5%;
+  }
+
+  .icono-mas{
+    margin-bottom: 2;
+    cursor: pointer;
+  }
+
+  .icono-menos {
+    cursor: pointer;
+  }
+
+  .botones-compra-carro {
+    margin-bottom: 2%;
   }
 
   .imagen-producto-muestra {
@@ -365,6 +432,7 @@ footer {
 
   .precio {
     margin-left: 18%;
+    margin-top: 2%;
   }
 
   .boton-carro {
@@ -386,4 +454,31 @@ footer {
   .boton-comprar:hover {
     background-color: #1c60c7;
   }
+
+  footer {
+    display: block;
+    flex-direction: row;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .conjunto-footer {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .sector-descripcion {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .derechos-reserved {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
 }
