@@ -258,8 +258,6 @@ footer {
   display: flex;
   align-content: top;
   background-color: grey;
-  border-end-end-radius: 10px;
-  border-end-start-radius: 10px;
   margin-top: 0;
   justify-content: center;
 }
