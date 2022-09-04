@@ -63,6 +63,25 @@ h1,
 h4 {
   text-align: center;
 }
+.burger-menu {
+  display: block;
+  color: white;
+  background-color: #03264c;
+  margin: 0 auto;
+  width: fit-content;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.burger-menu i {
+  color: white;
+}
+.burger-menu {
+  margin-top: 5px;
+}
 
 /*Productos Destacados*/
 
@@ -498,6 +517,9 @@ footer {
   .banner-item {
     width: 20%;
   }
+  .home {
+    display: none;
+  }
   .footer-container .footer-container {
     flex-direction: column;
   }
@@ -505,6 +527,9 @@ footer {
 
 /*Para tablet falta*/
 @media only screen and (min-width: 768px) {
+  .burger-menu {
+    display: none;
+  }
   .productos > article {
     margin: 5px;
   }
