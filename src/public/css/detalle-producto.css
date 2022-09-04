@@ -3,6 +3,16 @@
   font-family: "Roboto";
 }
 
+:root {
+  --blanco: #f0f0f0;
+  --celeste: #0077c0;
+  --azul: #0022aa;
+  --negroClaro: #161616;
+  --negroOscuro: #0e0e0e;
+  --grisClaro: #dfdddd;
+  --grisOscuro: #636262;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -11,7 +21,7 @@ body {
 .mainheader-top {
   display: flex;
   justify-content: space-between;
-  border-bottom: solid black 1px;
+  /*  border-bottom: solid black 1px; */
 }
 
 .pagina-logo {
@@ -331,9 +341,14 @@ footer {
     background-color: rgba(128, 128, 128, 0.212);
   }
 
+  .pagina-logo {
+    margin-top: 2%;
+    margin-left: 60%;
+  }
+
   .mainheader-top {
-    margin-left: 10%;
-    margin-right: 10%;
+    background-color: var(--celeste);
+    box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
   }
 
   main {
@@ -353,12 +368,17 @@ footer {
   .nav-bar {
     list-style: none;
     display: flex;
-    margin-right: 5%;
-    margin-top: 5%;
+    margin: 5% 5% 0 0;
+    color: var(--blanco);
+    margin-right: 15%;
   }
 
   .text-navbar {
     padding: 10px;
+  }
+
+  .text-navbar a {
+    color: var(--blanco);
   }
 
   .titulo-producto {
@@ -372,10 +392,18 @@ footer {
     padding-left: 3%;
   }
 
+  main {
+    display: block;
+    margin: auto;
+    margin-bottom: 1.5%;
+    width: 70%;
+  }
+
   .imagen-producto {
     margin-right: 15%;
     width: 2000px;
     padding-bottom: 20px;
+    margin-top: 7%;
   }
 
   .bloque-producto-desktop {
@@ -465,6 +493,7 @@ footer {
   .conjunto-footer {
     display: flex;
     flex-direction: row;
+    background-color: var(--negroOscuro);
     margin: 0;
     justify-content: space-between;
     margin-left: 10%;
@@ -472,6 +501,7 @@ footer {
   }
 
   .sector-descripcion {
+    color: var(--blanco);
     margin-left: 5%;
     margin-right: 5%;
   }
@@ -479,6 +509,11 @@ footer {
   .derechos-reserved {
     margin-left: 10%;
     margin-right: 10%;
+    background-color: var(--negroClaro);
+    color: var(--blanco);
+    border-top: var(--grisOscuro) 1px solid;
+    padding-top: 1%;
+    padding-bottom: 1%;
   }
 
 }
