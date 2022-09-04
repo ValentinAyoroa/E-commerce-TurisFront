@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles-forms.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fontawesome.com/icons" rel="stylesheet">
+    <title>Turist Front</title>
+</head>
+
+<body>
+    <header>
+        <div class="top-header">
+            <a href="/" class="home">
+                <img src="/images/mountain.png" class="logo">
+            </a>
+            <a href="#" class="nav-button">
+                <i class="fas fa-bars"></i>
+            </a>
+            <ul class="nav-bar">
+                <li><a href="/tienda">Tienda</a></li>
+                <li><a href="/user">Usuario</a></li>
+                <li><a href="/carrito">Carrito</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="register">
+        <div class="register-top">
+            <h2 class="copy-register">Hola! Para seguir ingresa tus datos</h2>
+            <form action="/register" method="post" class="form-register">
+                <div>
+                    <input type="text" name="name" placeholder="Nombre de usuario o correo">
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="Ingresá tu contraseña">
+                </div>
+                <div class="button">
+                    <button type="submit">Ingresar</button>
+                </div>
+            </form>
+            <p class="copy-login">¿No tienes cuenta? Crea una <a class="login-button" href="/login">aqui</a></p>
+            <p class="login-help">Necesito ayuda para ingresar</p>
+        </div>
+        <div class="register-bottom">
+            <div class="register" href="#">
+                <p>Ingresar con Google</p>
+                <img src="/images/google.png" class="img-logo-app">
+            </div>
+            <div class="register" href="#">
+                <p>Ingresar con Facebook</p>
+                <img src="/images/facebook.png" class="img-logo-app">
+            </div>
+            <div class="register" href="#">
+                <p>Ingresar con Apple</p>
+                <img src="/images/apple.png" class="img-logo-app">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

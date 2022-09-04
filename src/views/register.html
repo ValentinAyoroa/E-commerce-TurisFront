@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style-register.css">
+    <link rel="stylesheet" href="/css/styles-forms.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fontawesome.com/icons" rel="stylesheet">
     <title>Turist Front</title>
@@ -27,13 +27,13 @@
     </header>
     <div class="register">
         <div class="register-top">
-            <h2 class="copy-register">Registrate</h2>
+            <h2 class="copy-register">Registrate ingresando tus datos!</h2>
             <form action="/register" method="post" class="form-register">
                 <div>
-                    <input type="text" name="name" placeholder="Nombre">
+                    <input type="text" name="name" placeholder="Nombre y apellido">
                 </div>
                 <div>
-                    <input type="text" name="surname" placeholder="Apellido">
+                    <input type="text" name="surname" placeholder="Nombre de usuario">
                 </div>
                 <div>
                     <input type="email" name="email" placeholder="E-mail">
@@ -50,20 +50,20 @@
             </form> 
             <p class="copy-login">¿Ya tienes cuenta? Ingresa <a class="login-button" href="/login">aqui</a></p>
         </div>
-            <div class="register-bottom">
-                <a href="#"><p class="register">
-                    Registrarse con Google
-                    <img src="/images/google.png" class="img-logo-app">
-                </p></a>
-                <a href="#"><p class="register">
-                    Registrarse con Facebook
-                    <img src="/images/facebook.png" class="img-logo-app">
-                </p></a>
-                <a href="#"><p class="register">
-                    Registrarse con Apple
-                    <img src="/images/apple.png" class="img-logo-app">
-                </p></a>
+        <div class="register-bottom">
+            <div class="register" href="#">
+                <p>Registrarse con Google</p>
+                <img src="/images/google.png" class="img-logo-app">
             </div>
+            <div class="register" href="#">
+                <p>Registrarse con Facebook</p>
+                <img src="/images/facebook.png" class="img-logo-app">
+            </div>
+            <div class="register" href="#">
+                <p>Registrarse con Apple</p>
+                <img src="/images/apple.png" class="img-logo-app">
+            </div>
+        </div>
     </div>   
 </body>
 </html>
