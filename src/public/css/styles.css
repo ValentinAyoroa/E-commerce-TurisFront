@@ -67,14 +67,15 @@ h4 {
   display: block;
   color: white;
   background-color: #03264c;
-  margin: 0 auto;
+  margin: auto;
   width: fit-content;
   border-radius: 5px;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 10px;
+  margin-right: 8%;
   cursor: pointer;
+  text-align: center;
 }
 .burger-menu i {
   color: white;
@@ -520,7 +521,7 @@ footer {
   .home {
     display: none;
   }
-  .footer-container .footer-container {
+  .footer-container {
     flex-direction: column;
   }
 }
