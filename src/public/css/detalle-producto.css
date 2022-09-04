@@ -225,9 +225,6 @@ footer {
   background-color: rgba(128, 128, 128, 0.212);
   margin-top: 4%;
   margin-bottom: 0;
-  border-start-start-radius: 10px;
-  border-start-end-radius: 10px;
-
 }
 
 .sector-descripcion {
@@ -261,8 +258,6 @@ footer {
   display: flex;
   align-content: top;
   background-color: grey;
-  border-end-end-radius: 10px;
-  border-end-start-radius: 10px;
   margin-top: 0;
   justify-content: center;
 }

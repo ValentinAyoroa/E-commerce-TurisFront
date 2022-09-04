@@ -1,10 +1,5 @@
 /*Header*/
 
-.mainheader-top {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: solid black 1px;
-}
 header {
   background-color: #0077c0;
 }
@@ -67,7 +62,7 @@ h4 {
 }
 .burger-menu {
   display: block;
-  color: white;
+  color: red;
   background-color: #03264c;
   margin: auto;
   width: fit-content;
