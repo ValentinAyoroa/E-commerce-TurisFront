@@ -246,7 +246,7 @@ footer {
   }
 
   .precio {
-    margin-left: 10%;
+    margin-left: 20%;
     margin-bottom: 0;
   }
 
@@ -318,10 +318,11 @@ footer {
     margin: auto;
     padding: 0;
     text-align: left;
-    margin-left: 5%;
+    margin-left: 0%;
     margin-top: 2%;
     padding-top: 2%;
     padding-bottom: 2%;
+    padding-left: 3%;
   }
 
   .imagen-producto {
@@ -347,6 +348,10 @@ footer {
     margin-left: 5%;
   }
 
+  .botones-compra-carro {
+    margin-bottom: 2%;
+  }
+
   .imagen-producto-muestra {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
@@ -365,6 +370,7 @@ footer {
 
   .precio {
     margin-left: 18%;
+    margin-top: 2%;
   }
 
   .boton-carro {
