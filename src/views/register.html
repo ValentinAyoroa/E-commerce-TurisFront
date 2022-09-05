@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style-register.css">
+
+    <link rel="stylesheet" href="css/detalle-producto.css"> <!-- Estilo footer y header -->
+    <link rel="stylesheet" href="/css/styles-forms.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fontawesome.com/icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,31 +15,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <title>Turist Front</title>
 </head>
+
 <body>
-    <header>
-        <div class="top-header">
+    <header class="main-header">
+        <div class="mainheader-top">
             <a href="/" class="home">
-            <img src="/images/mountain.png" class="logo">
+                <img src="/images/mountain.png" class="pagina-logo">
             </a>
-            <a href="#" class="nav-button">
+            <a href="#" class="hamburger-button">
                 <i class="fas fa-bars"></i>
             </a>
             <ul class="nav-bar">
-                <li><a href="/tienda">Tienda</a></li>
-                <li><a href="/user">Usuario</a></li>
-                <li><a href="/carrito">Carrito</a></li>
+                <li class="text-navbar"><a href="/carrito">Carrito</a><i class="fas fa-shopping-cart"></i></li>
             </ul>
         </div>
     </header>
     <div class="register">
         <div class="register-top">
-            <h2 class="copy-register">Registrate</h2>
+            <h2 class="copy-register">Registrate ingresando tus datos!</h2>
             <form action="/register" method="post" class="form-register">
                 <div>
-                    <input type="text" name="name" placeholder="Nombre">
+                    <input type="text" name="name" placeholder="Nombre y apellido">
                 </div>
                 <div>
-                    <input type="text" name="surname" placeholder="Apellido">
+                    <input type="text" name="surname" placeholder="Nombre de usuario">
                 </div>
                 <div>
                     <input type="email" name="email" placeholder="E-mail">
@@ -50,7 +52,7 @@
                 <div class="button">
                     <button type="submit">Registrarse</button>
                 </div>
-            </form> 
+            </form>
             <p class="copy-login">¿Ya tienes cuenta? Ingresa <a class="login-button" href="/login">aqui</a></p>
         </div>
             <div class="register-bottom">
@@ -66,7 +68,59 @@
                     Registrarse con Apple
                     <img src="/images/apple.png" class="img-logo-app">
                 </p></a>
+        <div class="register-bottom">
+            <div class="register" href="#">
+                <p>Registrarse con Google</p>
+                <img src="/images/google.png" class="img-logo-app">
             </div>
-    </div>   
+            <div class="register" href="#">
+                <p>Registrarse con Facebook</p>
+                <img src="/images/facebook.png" class="img-logo-app">
+            </div>
+            <div class="register" href="#">
+                <p>Registrarse con Apple</p>
+                <img src="/images/apple.png" class="img-logo-app">
+            </div>
+        </div>
+    </div>
 </body>
+<footer>
+    <div class="conjunto-footer">
+        <div class="sector-descripcion">
+            <p class="titulo-footer">HORARIO</p>
+            <p class="informacion-footer">
+            <div class="p1">Lunes a Viernes Oficina: 8:30am – 4:30pm</div>
+            <div class="p2"> Sábado Oficina: 9:00am – 1:00pm</div>
+            <div class="p3"> Teléfono +57 601 764 8155</div>
+            <div class="p4">Celular: +57 314 358 0607</div>
+            </p>
+        </div>
+        <div class="sector-descripcion">
+            <p class="titulo-footer">INFORMACION</p>
+            <p class="informacion-footer">
+            <div class="p1">Políticas de Garantía</div>
+            <div class="p2">Preguntas Frecuentes</div>
+            <div class="p3">Cambios y Devoluciones</div>
+            </p>
+        </div>
+        <div class="sector-descripcion">
+            <p class="titulo-footer">SHOWROOM</p>
+            <p class="informacion-footer">
+            <div class="p1">Av. Cra 19 #84-85 Piso. 401</div>
+            <div class="p2">Buenos Aires, Argentina</div>
+            </p>
+        </div>
+        <div class="sector-descripcion">
+            <h1>Redes sociales</h1>
+            <div id="redesSociales">
+                <a class="red facebook" href="https://www.facebook.com/">Uno</a>
+                <a class="red twitter" href="https://twitter.com/?lang=es">Dos</a>
+                <a class="red instagram" href="https://www.instagram.com/">Tres</a>
+                <a class="red email" href="https://www.google.com/intl/es-419/gmail/about/">Cuatro</a>
+            </div>
+        </div>
+    </div>
+    <p class="derechos-reserved">© Copyright 2022 proyecto Integrador TurisFront</p>
+</footer>
+
 </html>

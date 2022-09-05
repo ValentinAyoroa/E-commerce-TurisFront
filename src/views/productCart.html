@@ -8,36 +8,132 @@
   <title>E-commerce Turisfront</title>
 
   <link rel="stylesheet" href="css/carrito-styles.css">
+  <link rel="stylesheet" href="css/header-styles.css">
+  <link rel="stylesheet" href="css/footer-styles.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
 <body>
-  <div>Carrito</div>
-  <div class="carrito-contenedor">
-    <div class="item-carrito">
-      <div class="item-carrito-body">
-        <img class="imagen-productos" src="images/guantes-producto.avif" alt="">
-        <h1 class="item-carrito-nombre">Nombre del producto</h1>
+  <header class="main-header">
+    <div class="mainheader-top">
+      <a href="/" class="home">
+        <img src="/images/mountain.png" class="pagina-logo">
+      </a>
+      <a href="#" class="hamburger-button">
+        <i class="fas fa-bars"></i>
+      </a>
+      <div class="botones-header">
+
+        <ul class="nav-bar">
+          <li class="text-navbar"><a href="/carrito">Carrito</a><i class="fas fa-shopping-cart"></i></li>
+        </ul>
       </div>
-      <button>Eliminar</button>
-      <button>comprar ahora</button>
     </div>
-    <div class="contador">
-      <p class="item-carrito-titulo">Contador</p>
-      <p class="contar" id="contar">0</p>
-      <div class="botones-item-carrito">
-        <button class="incremento" id="incremento"><span class="material-symbols-rounded">add</span></button>
-        <button class="decremento" id="decremento"><span class="material-symbols-rounded">remove</span></button>
-        <button class="reset" id="reset"><span class="material-symbols-rounded">cached</span></button>
+  </header>
+  <div class="titulo">Mi cesta</div>
 
+  <div class="carrito">
+    <div class="carrito-contenedor">
+      <div class="item-carrito">
+        <div class="item-carrito-body">
+          <img class="imagen-productos" src="images/guantes-producto.avif" alt="">
+          <h1 class="item-carrito-nombre">Guantes Interiores Polares Trekking y Montaña MT100 Negro Adulto</h1>
+
+          <div class="contador-body">
+            <p class="contar" id="contar">0</p>
+            <div class="botones-item-carrito">
+              <button class="incremento" id="incremento"><span class="material-icons-round">add</span></button>
+              <button class="decremento" id="decremento"><span class="material-icons-round">remove</span></button>
+              <button class="reset" id="reset"><span class="material-icons-round">cached</span></button>
+
+            </div>
+          </div>
+        </div>
+        <button class="eliminar">Eliminar</button>
+        <button class="comprar">comprar ahora</button>
       </div>
-
+      <div class="continuar">
+        <button>Continuar compra</button>
+      </div>
     </div>
   </div>
 
+
+
+  <footer>
+    <div class="conjunto-footer">
+      <div class="sector-descripcion">
+        <p class="titulo-footer">HORARIO</p>
+        <p class="informacion-footer">
+        <div class="p1">Lunes a Viernes Oficina: 8:30am – 4:30pm</div>
+        <div class="p2"> Sábado Oficina: 9:00am – 1:00pm</div>
+        <div class="p3"> Teléfono +57 601 764 8155</div>
+        <div class="p4">Celular: +57 314 358 0607</div>
+        </p>
+      </div>
+      <div class="sector-descripcion">
+        <p class="titulo-footer">INFORMACION</p>
+        <p class="informacion-footer">
+        <div class="p1">Políticas de Garantía</div>
+        <div class="p2">Preguntas Frecuentes</div>
+        <div class="p3">Cambios y Devoluciones</div>
+        </p>
+      </div>
+      <div class="sector-descripcion">
+        <p class="titulo-footer">SHOWROOM</p>
+        <p class="informacion-footer">
+        <div class="p1">Av. Cra 19 #84-85 Piso. 401</div>
+        <div class="p2">Buenos Aires, Argentina</div>
+        </p>
+      </div>
+      <div class="sector-descripcion">
+        <h1>Redes sociales</h1>
+        <div id="redesSociales">
+          <a class="red facebook" href="https://www.facebook.com/">Uno</a>
+          <a class="red twitter" href="https://twitter.com/?lang=es">Dos</a>
+          <a class="red instagram" href="https://www.instagram.com/">Tres</a>
+          <a class="red email" href="https://www.google.com/intl/es-419/gmail/about/">Cuatro</a>
+        </div>
+      </div>
+    </div>
+    <p class="derechos-reserved">© Copyright 2022 proyecto Integrador TurisFront</p>
+  </footer>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
 </body>
+<script>
+  const contador = document.getElementById("contar");
+  const sumar = document.getElementById("incremento");
+  const restar = document.getElementById("decremento");
+  const reset = document.getElementById("reset");
+
+  let numero = 0;
+
+  sumar.addEventListener("click", () => {
+    numero++;
+    contador.innerHTML = numero;
+  });
+  restar.addEventListener("click", () => {
+    if (numero == 0) { }
+    else {
+      numero--;
+      contador.innerHTML = numero;
+    }
+  });
+  reset.addEventListener("click", () => {
+    numero = 0;
+    contador.innerHTML = numero;
+  });
+</script>
 
 </html>

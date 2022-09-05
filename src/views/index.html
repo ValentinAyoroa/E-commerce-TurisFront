@@ -8,6 +8,8 @@
   <title>E-commerce Turisfront</title>
 
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header-styles.css">
+  <link rel="stylesheet" href="css/footer-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
@@ -19,16 +21,23 @@
 </head>
 
 <body>
-  <header>
-    <div class="header-top">
-      <img class="logo" src="images/logo" alt="Logo del proyecto">
-      <div class="home">
-        <button class="boton-header" type="submit"><i class="fas fa-home">
-          </i><span>HOME</span></button>
-        <button class="boton-header" type="submit"><i class="fas fa-user-friends"></i><span>MI PERFIL</span></button>
-        <button class="boton-header" type="submit"><i class="fas fa-shopping-cart"></i><span>MI CESTA</span></button>
-        </i>
-
+  <header class="main-header">
+    <div class="mainheader-top">
+      <a href="/" class="home">
+        <img src="/images/mountain.png" class="pagina-logo">
+      </a>
+      <a href="#" class="hamburger-button">
+        <i class="fas fa-bars"></i>
+      </a>
+      <div class="botones-header">
+        <a href="/register" class="boton-header">
+          <i class="fas fa-user-friends"></i>
+          <span>Login</span>
+        </a>
+        <a href="/productCart" class="boton-header">
+          <i class="fas fa-shopping-cart"></i>
+          <span>Mi carrito</span>
+        </a>
       </div>
     </div>
   </header>
@@ -52,261 +61,240 @@
       <div class="productos">
         <article class="caja-producto">
           <img class="imagen-producto" src="images/botas.jpg">
+          <figure>
+            <i id="icono-heart" class="fas fa-heart"></i>
+            <figcaption>Favoritos</figcaption>
+          </figure>
           <div class="descripcion-producto">
-            <h3>Botas</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
+            <p id="descripcion">Botas de cuero Domuyo - Montaña unisex<br></p>
+            <h5>$12.500,00</h5>
           </div>
         </article>
 
         <article class="caja-producto">
           <img class="imagen-producto" src="images/guantes.jpg">
+          <figure>
+            <i id="icono-heart" class="fas fa-heart"></i>
+            <figcaption>Favoritos</figcaption>
+          </figure>
           <div class="descripcion-producto">
-            <h3>Guantes</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
+            <p id="descripcion">Guantes WINTER Softshell</p>
+            <h5>$12.500,00</h5>
           </div>
         </article>
 
         <article class="caja-producto">
           <img class="imagen-producto" src="images/chaqueta.jpg">
+          <figure>
+            <i id="icono-heart" class="fas fa-heart"></i>
+            <figcaption>Favoritos</figcaption>
+          </figure>
           <div class="descripcion-producto">
-            <h3>Chaqueta</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
+            <p id="descripcion">Campera ANSILTA FUSIÓN 3 en 1 GORE-TEX</p>
+            <h5>$170.900,00</h5>
           </div>
         </article>
 
         <article class="caja-producto">
           <img class="imagen-producto" src="images/gorros.jpg">
+          <figure>
+            <i id="icono-heart" class="fas fa-heart"></i>
+            <figcaption>Favoritos</figcaption>
+          </figure>
           <div class="descripcion-producto">
-            <h3>Gorros</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
+            <p id="descripcion"> Sombrero Indico - Unisex</p>
+            <h5>$5.500,00</h5>
           </div>
         </article>
 
         <article class="caja-producto">
           <img class="imagen-producto" src="images/pantalon.jpg">
+          <figure>
+            <i id="icono-heart" class="fas fa-heart"></i>
+            <figcaption>Favoritos</figcaption>
+          </figure>
           <div class="descripcion-producto">
-            <h3>Licra</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
+            <p id="descripcion"> Calza interior térmica POWER DRY - Mujer</p>
+            <h5>$6.400,00</h5>
           </div>
         </article>
 
         <article class="caja-producto">
           <img class="imagen-producto" src="images/tubular.jpg">
+          <figure>
+            <i id="icono-heart" class="fas fa-heart"></i>
+            <figcaption>Favoritos</figcaption>
+          </figure>
           <div class="descripcion-producto">
-            <h3>Tubular</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
+            <p id="descripcion">Cuello Buff Trek500 azul</p>
+            <h5>$8.400,00</h5>
           </div>
         </article>
 
         <article class="caja-producto">
           <img class="imagen-producto" src="images/gafas.jpg">
+          <figure>
+            <i id="icono-heart" class="fas fa-heart"></i>
+            <figcaption>Favoritos</figcaption>
+          </figure>
           <div class="descripcion-producto">
-            <h3>Gafas</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
+            <p id="descripcion">Lentes RACE-Ski SALICE </p>
+            <h5>$19.500,00</h5>
           </div>
         </article>
 
         <article class="caja-producto">
-          <img class="imagen-producto" src="images/bolso.jpg">
+          <a href="/detalle-producto"><img class="imagen-producto" src="images/mochilai1-miniatura.png"></a>
+          <figure>
+            <i id="icono-heart" class="fas fa-heart"></i>
+            <figcaption>Favoritos</figcaption>
+          </figure>
           <div class="descripcion-producto">
-            <h3>Bolso</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
+            <p id="descripcion">Mochila camping montaña doite Natrang 70L</p>
+            <h5>$386,400</h5>
           </div>
         </article>
 
         <article class="caja-producto">
           <img class="imagen-producto" src="images/chaletos-hibratacion.jpg">
+          <figure>
+            <i id="icono-heart" class="fas fa-heart"></i>
+            <figcaption>Favoritos</figcaption>
+          </figure>
           <div class="descripcion-producto">
-            <h3>Chalecos Hidratacion</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
+            <p id="descripcion">Mochila de Hidratación 2 Litros - FOX</p>
+            <h5>$119.000</h5>
           </div>
         </article>
-
       </div>
     </section>
+    <div class="marcas-promos">
+      <img src="images/marcas.png" alt="">
+    </div>
   </main>
 
+  <div class="cajon-referencias">
+    <h1>VIVIR PARA CONTARLO</h1>
+    <h4>Historias de montaña y aventura</h4>
+    <section class="section-clientes">
+      <div class="container-card">
+        <div class="card-wrap">
+          <div class="card-slide card">
+            <div class="adelante-box card1"></div>
+            <div class="atras-box">
+              <div class="box"></div>
+              <div class="card-content">
+                <div class="image">
+                  <img src="images/perso1.jpg" alt="">
+                </div>
 
-  <h1>VIVIR PARA CONTARLO</h1>
-  <h4>Historias de montaña y aventura</h4>
-  <section class="section-clientes">
-    <div class="container-card">
-      <div class="card-wrap">
-        <div class="card-slide card">
-          <div class="adelante-box card1"></div>
-          <div class="atras-box">
-            <div class="box"></div>
-            <div class="card-content">
-              <div class="image">
-                <img src="images/perso1.jpg" alt="">
+                <div class="rating">
+                  <i class="fas -solid fa-star"></i>
+                  <i class="fas -solid fa-star"></i>
+                  <i class="fas -solid fa-star"></i>
+                  <i class="fas -solid fa-star"></i>
+                  <i class="fas -solid fa-star"></i>
+                </div>
+                <div class="about">
+                  <p>Es toda una experiencia, ir bordeando la montaña con esos picos nevados, y visitar los lagos.
+                    ¡hasta
+                    un pequeño deslizamiento de nieve pude ver! Los campamentos, justo como se
+                    describen.Fueron confiables: yo reservé con ellos y no tuve inconveniente
+                    alguno.
+                  </p>
+                </div>
               </div>
+            </div>
+          </div>
+        </div>
 
-              <div class="rating">
-                <i class="fas -solid fa-star"></i>
-                <i class="fas -solid fa-star"></i>
-                <i class="fas -solid fa-star"></i>
-                <i class="fas -solid fa-star"></i>
-                <i class="fas -solid fa-star"></i>
+        <div class="card-wrap">
+          <div class="card-slide card">
+            <div class="adelante-box card2"></div>
+            <div class="atras-box">
+              <div class="box"></div>
+              <div class="card-content">
+                <div class="image">
+                  <img src="images/perso2.jpg" alt="">
+                </div>
+
+                <div class="rating">
+                  <i class="fas -solid fa-star"></i>
+                  <i class="fas -solid fa-star"></i>
+                  <i class="fas -solid fa-star"></i>
+                  <i class="fas -solid fa-star"></i>
+                  <i class="fas -solid fa-star"></i>
+                </div>
+                <div class="about">
+                  <p>¡Esta es verdaderamente una experiencia única en la vida! Siempre habia sido un sueño mío hacer el
+                    recorrido. El viaje y toda la experiencia fue aún más increíble de lo que
+                    jamás hubiera imaginado. Fue realmente increíble. Los recomiendo completamente.
+                  </p>
+                </div>
               </div>
-              <div class="about">
-                <p>Es toda una experiencia, ir bordeando la montaña con esos picos nevados, y visitar los lagos. ¡hasta
-                  un pequeño deslizamiento de nieve pude ver! Los campamentos, justo como se
-                  describen.Fueron confiables: yo reservé con ellos y no tuve inconveniente
-                  alguno.
+            </div>
+          </div>
+        </div>
 
-                </p>
+        <div class="card-wrap">
+          <div class="card-slide card">
+            <div class="adelante-box card3"></div>
+            <div class="atras-box">
+              <div class="box"></div>
+              <div class="card-content">
+                <div class="image">
+                  <img src="images/perso3.jpg" alt="">
+                </div>
+
+                <div class="rating">
+                  <i class="fas -solid fa-star"></i>
+                  <i class="fas -solid fa-star"></i>
+                  <i class="fas -solid fa-star"></i>
+                  <i class="fas -solid fa-star"></i>
+                  <i class="fas -solid fa-star"></i>
+                </div>
+                <div class="about">
+                  <p>Esta ruta de trekking es espetacular y hacerla con esta agencia ha sido todo un acierto. Grupos
+                    reducidos con tu propio guía, cocinero y portador. El guía súper, sabía de todo
+                    (historia, leyendas, fauna, flora...), el cocinero espectacular, seguro que engordamos y todo con lo
+                    que nos mimó! y el portador muy amable, atento y simpático.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="card-wrap">
-        <div class="card-slide card">
-          <div class="adelante-box card2"></div>
-          <div class="atras-box">
-            <div class="box"></div>
-            <div class="card-content">
-              <div class="image">
-                <img src="images/perso2.jpg" alt="">
-              </div>
-
-              <div class="rating">
-                <i class="fas -solid fa-star"></i>
-                <i class="fas -solid fa-star"></i>
-                <i class="fas -solid fa-star"></i>
-                <i class="fas -solid fa-star"></i>
-                <i class="fas -solid fa-star"></i>
-              </div>
-              <div class="about">
-                <p>¡Esta es verdaderamente una experiencia única en la vida! Siempre habia sido un sueño mío hacer el
-                  recorrido. El viaje y toda la experiencia fue aún más increíble de lo que
-                  jamás hubiera imaginado. Fue realmente increíble. Los recomiendo completamente.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card-wrap">
-        <div class="card-slide card">
-          <div class="adelante-box card3"></div>
-          <div class="atras-box">
-            <div class="box"></div>
-            <div class="card-content">
-              <div class="image">
-                <img src="images/perso3.jpg" alt="">
-              </div>
-
-              <div class="rating">
-                <i class="fas -solid fa-star"></i>
-                <i class="fas -solid fa-star"></i>
-                <i class="fas -solid fa-star"></i>
-                <i class="fas -solid fa-star"></i>
-                <i class="fas -solid fa-star"></i>
-              </div>
-              <div class="about">
-                <p>Esta ruta de trekking es espetacular y hacerla con esta agencia ha sido todo un acierto. Grupos
-                  reducidos con tu propio guía, cocinero y portador. El guía súper, sabía de todo
-                  (historia, leyendas, fauna, flora...), el cocinero espectacular, seguro que engordamos y todo con lo
-                  que nos mimó! y el portador muy amable, atento y simpático.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
+    </section>
+  </div>
 
   <footer>
-    <div class="footer-container">
-      <div>
-        <h2>Quienes Somos</h2>
-        <p>Tienda especializada en equipos<br>
-          para montaña, escalada,<br>
-          rescate y trabajo en altura.</p>
-      </div>
-      <div>
-        <h2>Horario</h2>
-        <p>Lunes a Viernes<br>
-          Oficina: 8:30am – 4:30pm<br>
-          Sábado<br>
-          Oficina: 9:00am – 1:00pm<br>
-          Chat: 8:30am – 8:00pm<br>
-
-          Teléfono +57 639 754 8155<br>
-          Celular: +57 315 388 0647<br>
-          info@turisfront.co
+    <div class="conjunto-footer">
+      <div class="sector-descripcion">
+        <p class="titulo-footer">HORARIO</p>
+        <p class="informacion-footer">
+        <div class="p1">Lunes a Viernes Oficina: 8:30am – 4:30pm</div>
+        <div class="p2"> Sábado Oficina: 9:00am – 1:00pm</div>
+        <div class="p3"> Teléfono +57 601 764 8155</div>
+        <div class="p4">Celular: +57 314 358 0607</div>
         </p>
       </div>
-      <div>
+      <div class="sector-descripcion">
+        <p class="titulo-footer">INFORMACION</p>
+        <p class="informacion-footer">
+        <div class="p1">Políticas de Garantía</div>
+        <div class="p2">Preguntas Frecuentes</div>
+        <div class="p3">Cambios y Devoluciones</div>
+        </p>
+      </div>
+      <div class="sector-descripcion">
+        <p class="titulo-footer">SHOWROOM</p>
+        <p class="informacion-footer">
+        <div class="p1">Av. Cra 19 #84-85 Piso. 401</div>
+        <div class="p2">Buenos Aires, Argentina</div>
+        </p>
+      </div>
+      <div class="sector-descripcion">
         <h1>Redes sociales</h1>
         <div id="redesSociales">
           <a class="red facebook" href="https://www.facebook.com/">Uno</a>
@@ -315,16 +303,11 @@
           <a class="red email" href="https://www.google.com/intl/es-419/gmail/about/">Cuatro</a>
         </div>
       </div>
-
-
-
     </div>
-    <div id="copy">
-      <h4> &copy; Copyright 2022 proyecto Integrador TurisFront</h4>
-    </div>
-
-
+    <p class="derechos-reserved">© Copyright 2022 proyecto Integrador TurisFront</p>
   </footer>
+
+
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
