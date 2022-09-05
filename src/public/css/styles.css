@@ -39,6 +39,10 @@ article:hover {
   cursor: pointer;
 }
 
+.caja-producto a {
+  margin-top: 2.5%;
+}
+
 .caja-producto img {
   width: 150px;
   height: 150px;
