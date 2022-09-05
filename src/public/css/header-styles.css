@@ -12,16 +12,15 @@ header {
 .pagina-logo {
   width: 125px;
   cursor: pointer;
-  margin-left: 5%;
+  margin-left: 50%;
 }
 .botones-header {
   display: flex;
-  flex-wrap: wrap;
   margin-top: 40px;
-  margin-right: 15px;
+  margin-right: 5%;
 }
 .botones-header > a {
-  margin-right: 10px;
+  margin-right: 5%;
 }
 
 .boton-header {
@@ -50,7 +49,7 @@ i {
   display: block;
   width: 8%;
   height: 120px;
-  margin-left: 30px;
+  margin-left: 10%;
   margin-top: 1.8vh;
 }
 
