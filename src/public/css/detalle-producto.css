@@ -286,10 +286,6 @@ footer {
     font-size: 26px;
   }
 
-  .imagen-producto {
-    margin-top: 0;
-  }
-
   .color-producto {
     max-width: 65%;
     margin-left: 17%;
@@ -506,5 +502,4 @@ footer {
     padding-top: 1%;
     padding-bottom: 1%;
   }
-
 }
