@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/detalle-producto.css"> <!-- Estilo footer y header -->
     <link rel="stylesheet" href="/css/styles-forms.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fontawesome.com/icons" rel="stylesheet">
     <title>Turist Front</title>
 </head>
 <body>
-    <header>
-        <div class="top-header">
+    <header class="main-header">
+        <div class="mainheader-top">
             <a href="/" class="home">
-            <img src="/images/mountain.png" class="logo">
+                <img src="/images/mountain.png" class="pagina-logo">
             </a>
-            <a href="#" class="nav-button">
+            <a href="#" class="hamburger-button">
                 <i class="fas fa-bars"></i>
             </a>
             <ul class="nav-bar">
-                <li><a href="/tienda">Tienda</a></li>
-                <li><a href="/user">Usuario</a></li>
-                <li><a href="/carrito">Carrito</a></li>
+                <li class="text-navbar"><a href="/carrito">Carrito</a><i class="fas fa-shopping-cart"></i></li>
             </ul>
         </div>
     </header>
@@ -66,4 +66,37 @@
         </div>
     </div>   
 </body>
+<footer>
+    <div class="conjunto-footer">
+        <div class="sector-descripcion">
+            <p class="titulo-footer">HORARIO</p>
+            <p class="informacion-footer">
+            <div class="p1">Lunes a Viernes Oficina: 8:30am – 4:30pm</div>
+            <div class="p2"> Sábado Oficina: 9:00am – 1:00pm</div>
+            <div class="p3"> Teléfono +57 601 764 8155</div>
+            <div class="p4">Celular: +57 314 358 0607</div>
+            </p>
+        </div>
+        <div class="sector-descripcion">
+            <p class="titulo-footer">INFORMACION</p>
+            <p class="informacion-footer">
+            <div class="p1">Políticas de Garantía</div>
+            <div class="p2">Preguntas Frecuentes</div>
+            <div class="p3">Cambios y Devoluciones</div>
+            </p>
+        </div>
+        <div class="sector-descripcion">
+            <p class="titulo-footer">SHOWROOM</p>
+            <p class="informacion-footer">
+            <div class="p1">Av. Cra 19 #84-85 Piso. 401</div>
+            <div class="p2">Buenos Aires, Argentina</div>
+            </p>
+        </div>
+        <div class="sector-descripcion">
+            <p class="titulo-footer">SÍGUENOS</p>
+            <p class="informacion-footer">LOGOS</p>
+        </div>
+    </div>
+    <p class="derechos-reserved">© Copyright 2022 proyecto Integrador TurisFront</p>
+</footer>
 </html>
