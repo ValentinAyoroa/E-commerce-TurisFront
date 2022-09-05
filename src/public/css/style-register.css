@@ -1,6 +1,7 @@
 body{
     margin:0;
     background-image: url('/images/img-register.jpg');
+    font-family: 'Anek Telugu', sans-serif;
 }
 
 div.top-header{
@@ -94,6 +95,12 @@ form.form-register div button{
     color: white;
     background-color: #0077C0;
     font-weight: bold;
+    transition: background-color 300ms;
+}
+
+form.form-register div button:hover{
+    background-color: black;
+    border-color: white;
 }
 
 p.copy-login{
@@ -123,10 +130,8 @@ div a{
 }
 
 img.img-logo-app{
-    width: 15%;
+    width: 40px;
     margin:5%;
-    border: 1px solid white;
-    border-radius: 75px;
 }
 
 @media (max-width:450px) {
