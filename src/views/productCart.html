@@ -8,7 +8,9 @@
   <title>E-commerce Turisfront</title>
 
   <link rel="stylesheet" href="css/carrito-styles.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/header-styles.css">
+  <link rel="stylesheet" href="css/footer-styles.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
@@ -20,6 +22,22 @@
 </head>
 
 <body>
+  <header class="main-header">
+    <div class="mainheader-top">
+      <a href="/" class="home">
+        <img src="/images/mountain.png" class="pagina-logo">
+      </a>
+      <a href="#" class="hamburger-button">
+        <i class="fas fa-bars"></i>
+      </a>
+      <div class="botones-header">
+
+        <ul class="nav-bar">
+          <li class="text-navbar"><a href="/carrito">Carrito</a><i class="fas fa-shopping-cart"></i></li>
+        </ul>
+      </div>
+    </div>
+  </header>
   <div class="titulo">Mi cesta</div>
 
   <div class="carrito">
@@ -48,171 +66,35 @@
     </div>
   </div>
 
-  <main>
-    <section class="productos-destacados">
-      <h1>Productos que pueden interesarte</h1>
-      <div class="productos">
-        <article class="caja-producto">
-          <img class="imagen-producto" src="images/botas.jpg">
-          <div class="descripcion-producto">
-            <h3>Botas</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
-          </div>
-        </article>
 
-        <article class="caja-producto">
-          <img class="imagen-producto" src="images/guantes.jpg">
-          <div class="descripcion-producto">
-            <h3>Guantes</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
-          </div>
-        </article>
-
-        <article class="caja-producto">
-          <img class="imagen-producto" src="images/chaqueta.jpg">
-          <div class="descripcion-producto">
-            <h3>Chaqueta</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
-          </div>
-        </article>
-
-        <article class="caja-producto">
-          <img class="imagen-producto" src="images/gorros.jpg">
-          <div class="descripcion-producto">
-            <h3>Gorros</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
-          </div>
-        </article>
-
-        <article class="caja-producto">
-          <img class="imagen-producto" src="images/pantalon.jpg">
-          <div class="descripcion-producto">
-            <h3>Licra</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
-          </div>
-        </article>
-
-        <article class="caja-producto">
-          <img class="imagen-producto" src="images/tubular.jpg">
-          <div class="descripcion-producto">
-            <h3>Tubular</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
-          </div>
-        </article>
-
-        <article class="caja-producto">
-          <img class="imagen-producto" src="images/gafas.jpg">
-          <div class="descripcion-producto">
-            <h3>Gafas</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
-          </div>
-        </article>
-
-        <article class="caja-producto">
-          <img class="imagen-producto" src="images/bolso.jpg">
-          <div class="descripcion-producto">
-            <h3>Bolso</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
-          </div>
-        </article>
-
-        <article class="caja-producto">
-          <img class="imagen-producto" src="images/chaletos-hibratacion.jpg">
-          <div class="descripcion-producto">
-            <h3>Chalecos Hidratacion</h3>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <p id="descripcion"> Botas Domuyo, perfectas para montaña confeccionada íntegramente en una sola pieza con
-              cuero descarne hidrofugado, suela semirigida.<br></p>
-            <p>$140.000</p>
-            <h3 id="informacion">Mas info >></h3>
-          </div>
-        </article>
-
-      </div>
-    </section>
-  </main>
 
   <footer>
-    <div class="footer-container">
-      <div>
-        <h2>Quienes Somos</h2>
-        <p>Tienda especializada en equipos<br>
-          para montaña, escalada,<br>
-          rescate y trabajo en altura.</p>
-      </div>
-      <div>
-        <h2>Horario</h2>
-        <p>Lunes a Viernes<br>
-          Oficina: 8:30am – 4:30pm<br>
-          Sábado<br>
-          Oficina: 9:00am – 1:00pm<br>
-          Chat: 8:30am – 8:00pm<br>
-
-          Teléfono +57 639 754 8155<br>
-          Celular: +57 315 388 0647<br>
-          info@turisfront.co
+    <div class="conjunto-footer">
+      <div class="sector-descripcion">
+        <p class="titulo-footer">HORARIO</p>
+        <p class="informacion-footer">
+        <div class="p1">Lunes a Viernes Oficina: 8:30am – 4:30pm</div>
+        <div class="p2"> Sábado Oficina: 9:00am – 1:00pm</div>
+        <div class="p3"> Teléfono +57 601 764 8155</div>
+        <div class="p4">Celular: +57 314 358 0607</div>
         </p>
       </div>
-      <div>
+      <div class="sector-descripcion">
+        <p class="titulo-footer">INFORMACION</p>
+        <p class="informacion-footer">
+        <div class="p1">Políticas de Garantía</div>
+        <div class="p2">Preguntas Frecuentes</div>
+        <div class="p3">Cambios y Devoluciones</div>
+        </p>
+      </div>
+      <div class="sector-descripcion">
+        <p class="titulo-footer">SHOWROOM</p>
+        <p class="informacion-footer">
+        <div class="p1">Av. Cra 19 #84-85 Piso. 401</div>
+        <div class="p2">Buenos Aires, Argentina</div>
+        </p>
+      </div>
+      <div class="sector-descripcion">
         <h1>Redes sociales</h1>
         <div id="redesSociales">
           <a class="red facebook" href="https://www.facebook.com/">Uno</a>
@@ -221,15 +103,8 @@
           <a class="red email" href="https://www.google.com/intl/es-419/gmail/about/">Cuatro</a>
         </div>
       </div>
-
-
-
     </div>
-    <div id="copy">
-      <h4> &copy; Copyright 2022 proyecto Integrador TurisFront</h4>
-    </div>
-
-
+    <p class="derechos-reserved">© Copyright 2022 proyecto Integrador TurisFront</p>
   </footer>
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
