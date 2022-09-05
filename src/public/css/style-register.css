@@ -9,7 +9,7 @@ div.top-header{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.712);
+    background-color: #0076c0;
     border-bottom: 1px solid #9c9d9e;
 }
 
@@ -24,7 +24,7 @@ a.nav-button{
 
 a.nav-button i{
     font-size: 25px;
-    color:black
+    color:white
 }
 
 ul.nav-bar{
@@ -43,10 +43,11 @@ ul.nav-bar li{
 ul.nav-bar li a{
     font-size: 18px;
     transition: border-bottom 100ms;
+    color: white;
 }
 
 ul.nav-bar li a:hover{
-    border-bottom: 3px solid #0077C0;
+    border-bottom: 3px solid white;
 }
 
 div.register-top{
@@ -54,7 +55,9 @@ div.register-top{
     border-radius: 10px;
     margin: 30px;
     background-color: rgba(255, 255, 255, 0.733);
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
 }
+
 
 h2.copy-register{
     padding-left: 10%;
@@ -122,6 +125,7 @@ div p.register{
     margin:10%;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.712);
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
 }
 
 div a{

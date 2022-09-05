@@ -10,9 +10,9 @@
 
 footer {
   display: flex;
+  width: 100vw;
   flex-direction: column;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin: 0
 }
 
 .conjunto-footer {
@@ -47,7 +47,7 @@ footer {
   display: flex;
   align-content: top;
   background-color: grey;
-  margin-top: 0;
+  margin: 0;
   justify-content: center;
   background-color: var(--negroClaro);
   color: var(--blanco);
@@ -138,10 +138,10 @@ footer {
     justify-content: center;
   }
 
-  .conjunto-footer {
+  div.conjunto-footer {
     display: flex;
     flex-direction: row;
-    margin: 0;
+    margin-top: 25px;
     justify-content: space-between;
   }
 
@@ -154,5 +154,6 @@ footer {
     border-top: var(--grisOscuro) 1px solid;
     padding-top: 1%;
     padding-bottom: 1%;
+    margin: 0
   }
 }

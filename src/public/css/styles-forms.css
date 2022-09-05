@@ -24,7 +24,7 @@ div.top-header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.712);
+  background-color: #0077c0;
   border-bottom: 1px solid #9c9d9e;
 }
 
@@ -60,7 +60,7 @@ ul.nav-bar li a {
 }
 
 ul.nav-bar li a:hover {
-  border-bottom: 3px solid #0077c0;
+  border-bottom: 3px solid white;
 }
 
 div.register-top {
@@ -141,7 +141,6 @@ div .register p {
 
 img.img-logo-app {
   width: 15%;
-  border: 1px solid white;
   border-radius: 75px;
   display: inline-block;
 }
