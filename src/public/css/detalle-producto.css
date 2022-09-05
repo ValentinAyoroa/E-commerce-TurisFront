@@ -276,7 +276,7 @@ footer {
   display: none;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 768px) {
   div.top-header {
     padding-right: 50px;
     height: 110px;
@@ -294,6 +294,10 @@ footer {
     margin-left: 5%;
     margin-right: 15%;
     font-size: 26px;
+  }
+
+  .imagen-producto {
+    margin-top: 2%;
   }
 
   .color-producto {
@@ -337,7 +341,7 @@ footer {
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 900px) {
   body {
     background-color: rgba(128, 128, 128, 0.212);
   }
