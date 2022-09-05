@@ -56,23 +56,26 @@ article:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 5%;
 }
 
-.productos > article {
+.productos>article {
   margin: 20px;
 }
 
 .descripcion-producto {
   margin-top: 2%;
-  border-top:rgb(187, 187, 187) 1px solid;
+  border-top: rgb(187, 187, 187) 1px solid;
   width: 100%;
   padding: 0;
   position: relative;
 }
+
 #descripcion {
   margin-top: 5%;
   font-size: 16px;
 }
+
 .producto {
   width: 100%;
   padding: 15px;
@@ -101,6 +104,7 @@ p {
   left: 5px;
   font-size: 20px;
 }
+
 article .imagen-producto {
   margin-top: 5%;
   margin-bottom: 1%;
@@ -110,6 +114,7 @@ article .imagen-producto {
   border: 2px solid grey;
   border: none;
 }
+
 #informacion {
   color: red;
   visibility: hidden;
@@ -125,6 +130,7 @@ figure {
   top: 0;
   right: 0;
 }
+
 #icono-heart {
   position: absolute;
   top: 8px;
@@ -151,7 +157,8 @@ figcaption {
   right: 10px;
   font-size: 10px;
 }
-figure:hover > figcaption {
+
+figure:hover>figcaption {
   display: block;
   transition: all 0.5s;
   visibility: visible;
@@ -239,7 +246,7 @@ figure:hover > figcaption {
   flex-wrap: wrap;
 }
 
-.container-card > .card-wrap {
+.container-card>.card-wrap {
   margin-right: 50px;
 }
 
@@ -305,6 +312,28 @@ figure:hover > figcaption {
 }
 
 /*Tarjeta espalda*/
+
+.cajon-referencias {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.marcas-promos {
+  background-color: #dfdddd;
+  display: block;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin: auto;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.marcas-promos img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+
 .card {
   position: relative;
   background-color: #fff;
@@ -367,6 +396,7 @@ section .card .about {
   color: #444;
   margin-top: 10px;
 }
+
 .about p {
   font-size: 15px;
   color: black;
