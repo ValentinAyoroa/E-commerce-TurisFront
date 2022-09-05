@@ -1,27 +1,57 @@
-/* footer */
+:root {
+  --blanco: #f0f0f0;
+  --celeste: #0077c0;
+  --azul: #0022aa;
+  --negroClaro: #161616;
+  --negroOscuro: #0e0e0e;
+  --grisClaro: #dfdddd;
+  --grisOscuro: #636262;
+}
 
 footer {
-  position: relative;
-  text-align: center;
-  font-weight: bolder;
-  background-color: #0e0e0e;
-}
-.footer-container {
-  position: relative;
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  color: white;
+  flex-direction: column;
+  margin-right: 5%;
+  margin-left: 5%;
 }
-#copy {
-  background-color: gray;
-  width: 100%;
-  height: 50px;
+
+.conjunto-footer {
+  background-color: var(--negroOscuro);
+  margin-top: 4%;
+  margin-bottom: 0;
 }
-#copy h4:hover {
-  color: black;
+
+.sector-descripcion {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: var(--blanco);
+  align-items: center;
 }
-/*Redes Sociales*/
+
+.titulo-footer {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: -3%;
+}
+
+.informacion-footer {
+  display: block;
+  text-align: center;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.derechos-reserved {
+  display: flex;
+  align-content: top;
+  background-color: grey;
+  margin-top: 0;
+  justify-content: center;
+  background-color: var(--negroClaro);
+  color: var(--blanco);
+} /*Redes Sociales*/
 #redesSociales {
   position: relative;
   width: 64px;
@@ -95,4 +125,34 @@ footer {
 
 .red:hover {
   background-position: 0 -46px;
+}
+
+@media (min-width: 450px) {
+}
+
+@media (min-width: 1080px) {
+  footer {
+    display: block;
+    flex-direction: row;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .conjunto-footer {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    justify-content: space-between;
+  }
+
+  .sector-descripcion {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .derechos-reserved {
+    border-top: var(--grisOscuro) 1px solid;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
 }

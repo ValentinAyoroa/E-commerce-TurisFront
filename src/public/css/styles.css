@@ -27,10 +27,6 @@ article:hover {
   transform: scale(1.05);
   z-index: 10;
 }
-article:hover .imagen-producto {
-  border: 2px solid gray;
-  border-radius: 5px;
-}
 
 .caja-producto {
   display: flex;
@@ -148,7 +144,7 @@ figure:hover > figcaption {
 .banner {
   display: flex;
   background: yellow;
-  height: 800px;
+  height: 644px;
 }
 
 .banner-item {
@@ -164,6 +160,7 @@ figure:hover > figcaption {
 
 .banner-item:hover {
   flex-grow: 8;
+  max-height: 644px;
 }
 
 .banner-item:hover .banner-title {

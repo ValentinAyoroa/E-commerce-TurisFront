@@ -21,24 +21,25 @@
 </head>
 
 <body>
-  <header>
-    <div class="header-top">
-      <img class="logo" src="/images/mountain.png" alt="Logo del proyecto">
-      <div class="home">
-        <button class="boton-header" type="submit"><i class="fas fa-home">
-          </i><span>HOME</span></button>
-        <button class="boton-header" type="submit"><i class="fas fa-user-friends"></i><span>MI PERFIL</span></button>
-        <button class="boton-header" type="submit"><i class="fas fa-shopping-cart"></i><span>MI CESTA</span></button>
-        </i>
-
-      </div>
-      <div class="burger-menu">
+  <header class="main-header">
+    <div class="mainheader-top">
+      <a href="/" class="home">
+        <img src="/images/mountain.png" class="pagina-logo">
+      </a>
+      <a href="#" class="hamburger-button">
         <i class="fas fa-bars"></i>
+      </a>
+      <div class="botones-header">
+        <a href="/register" class="boton-header">
+          <i class="fas fa-user-friends"></i>
+          <span>MI PERFIL</span>
         </a>
-        <ul class="nav-bar">
-          <li class="text-navbar"><a href="/carrito">Carrito</a><i class="fas fa-shopping-cart"></i></li>
-        </ul>
+        <a class="boton-header">
+          <i class="fas fa-shopping-cart"></i>
+          <span>MI CESTA</span>
+        </a>
       </div>
+    </div>
   </header>
   <div class="banner">
     <div class="banner-item">
@@ -282,30 +283,33 @@
     </div>
   </section>
 
-
-
   <footer>
-    <div class="footer-container">
-      <div>
-        <h2>Quienes Somos</h2>
-        <p>Tienda especializada en equipos<br>
-          para montaña, escalada,<br>
-          rescate y trabajo en altura.</p>
-      </div>
-      <div>
-        <h2>Horario</h2>
-        <p>Lunes a Viernes<br>
-          Oficina: 8:30am – 4:30pm<br>
-          Sábado<br>
-          Oficina: 9:00am – 1:00pm<br>
-          Chat: 8:30am – 8:00pm<br>
-
-          Teléfono +57 639 754 8155<br>
-          Celular: +57 315 388 0647<br>
-          info@turisfront.co
+    <div class="conjunto-footer">
+      <div class="sector-descripcion">
+        <p class="titulo-footer">HORARIO</p>
+        <p class="informacion-footer">
+        <div class="p1">Lunes a Viernes Oficina: 8:30am – 4:30pm</div>
+        <div class="p2"> Sábado Oficina: 9:00am – 1:00pm</div>
+        <div class="p3"> Teléfono +57 601 764 8155</div>
+        <div class="p4">Celular: +57 314 358 0607</div>
         </p>
       </div>
-      <div>
+      <div class="sector-descripcion">
+        <p class="titulo-footer">INFORMACION</p>
+        <p class="informacion-footer">
+        <div class="p1">Políticas de Garantía</div>
+        <div class="p2">Preguntas Frecuentes</div>
+        <div class="p3">Cambios y Devoluciones</div>
+        </p>
+      </div>
+      <div class="sector-descripcion">
+        <p class="titulo-footer">SHOWROOM</p>
+        <p class="informacion-footer">
+        <div class="p1">Av. Cra 19 #84-85 Piso. 401</div>
+        <div class="p2">Buenos Aires, Argentina</div>
+        </p>
+      </div>
+      <div class="sector-descripcion">
         <h1>Redes sociales</h1>
         <div id="redesSociales">
           <a class="red facebook" href="https://www.facebook.com/">Uno</a>
@@ -314,16 +318,11 @@
           <a class="red email" href="https://www.google.com/intl/es-419/gmail/about/">Cuatro</a>
         </div>
       </div>
-
-
-
     </div>
-    <div id="copy">
-      <h4> &copy; Copyright 2022 proyecto Integrador TurisFront</h4>
-    </div>
-
-
+    <p class="derechos-reserved">© Copyright 2022 proyecto Integrador TurisFront</p>
   </footer>
+
+
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
