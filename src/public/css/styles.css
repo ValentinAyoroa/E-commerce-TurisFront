@@ -24,7 +24,7 @@ article:hover {
   -webkit-box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
   -moz-box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
   box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
-  transform: scale(1.05);
+  transform: scale(1.02);
   z-index: 10;
 }
 
@@ -63,12 +63,15 @@ article:hover {
 }
 
 .descripcion-producto {
+  margin-top: 2%;
+  border-top:rgb(187, 187, 187) 1px solid;
   width: 100%;
-  padding: 15px;
+  padding: 0;
   position: relative;
 }
 #descripcion {
-  font-size: 12px;
+  margin-top: 5%;
+  font-size: 16px;
 }
 .producto {
   width: 100%;
@@ -84,14 +87,26 @@ article:hover {
   text-align: center;
 }
 
+.caja-producto:hover h5 {
+  visibility: visible;
+}
+
+.descripcion-producto h5 {
+  text-align: center;
+  visibility: hidden;
+  transition: all 200ms;
+}
+
 p {
   left: 5px;
   font-size: 20px;
 }
 article .imagen-producto {
+  margin-top: 5%;
+  margin-bottom: 1%;
   width: 230px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
   border: 2px solid grey;
   border: none;
 }
