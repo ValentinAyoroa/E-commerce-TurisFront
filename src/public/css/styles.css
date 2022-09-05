@@ -75,6 +75,15 @@ article:hover {
   padding: 15px;
   position: relative;
 }
+
+.producto p {
+  text-align: center;
+}
+
+.descripcion-producto p {
+  text-align: center;
+}
+
 p {
   left: 5px;
   font-size: 20px;
