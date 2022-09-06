@@ -63,7 +63,7 @@ article:hover {
   margin-bottom: 5%;
 }
 
-.productos>article {
+.productos > article {
   margin: 20px;
 }
 
@@ -162,7 +162,7 @@ figcaption {
   font-size: 10px;
 }
 
-figure:hover>figcaption {
+figure:hover > figcaption {
   display: block;
   transition: all 0.5s;
   visibility: visible;
@@ -250,7 +250,7 @@ figure:hover>figcaption {
   flex-wrap: wrap;
 }
 
-.container-card>.card-wrap {
+.container-card > .card-wrap {
   margin-right: 50px;
 }
 

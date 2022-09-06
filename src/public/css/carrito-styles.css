@@ -1,3 +1,13 @@
+:root {
+  --blanco: #f0f0f0;
+  --celeste: #0077c0;
+  --azul: #0022aa;
+  --negroClaro: #161616;
+  --negroOscuro: #0e0e0e;
+  --grisClaro: #dfdddd;
+  --grisOscuro: #636262;
+}
+
 body {
   font-family: "Roboto";
 }
@@ -49,7 +59,7 @@ body {
   text-align: center;
 }
 .item-carrito {
-  background-color: rgb(246, 248, 248);
+  background-color: var(--grisClaro);
   margin: 15px;
   border-radius: 5px;
 }
@@ -153,6 +163,14 @@ span {
   color: white;
   border: none;
 }
+.sector-descripcion {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: var(--blanco);
+  align-items: center;
+}
 /*Para celulares*/
 @media (max-width: 768px) {
   .item-carrito-nombre {
@@ -176,5 +194,9 @@ span {
 @media only screen and (min-width: 992px) {
   .item-carrito-nombre {
     font-size: 22px;
+  }
+  .sector-descripcion {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
