@@ -12,13 +12,14 @@ footer {
   display: flex;
   width: 100%;
   flex-direction: column;
-  margin: 0
+  margin: 0;
 }
 
 .conjunto-footer {
   background-color: var(--negroOscuro);
   margin-top: 4%;
   margin-bottom: 0;
+  padding-top: 1%;
 }
 
 .sector-descripcion {
@@ -51,7 +52,9 @@ footer {
   justify-content: center;
   background-color: var(--negroClaro);
   color: var(--blanco);
-} /*Redes Sociales*/
+}
+
+/*Redes Sociales*/
 #redesSociales {
   position: relative;
   width: 64px;
@@ -128,8 +131,7 @@ footer {
   background-position: 0 -46px;
 }
 
-@media (min-width: 450px) {
-}
+@media (min-width: 450px) {}
 
 @media (min-width: 1080px) {
   footer {
