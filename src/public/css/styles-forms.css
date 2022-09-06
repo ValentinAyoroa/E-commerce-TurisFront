@@ -32,6 +32,16 @@ a.home {
   width: 120px;
 }
 
+.pagina-logo img{
+  width: 25%;
+  cursor: pointer;
+  margin-left: 5%;
+}
+
+.mainheader-top {
+  background-color: #0077c0;
+}
+
 a.nav-button {
   padding-right: 25px;
 }
