@@ -41,6 +41,11 @@ a.nav-button i {
   color: black;
 }
 
+.pagina-logo {
+  width: 100%;
+  padding-left: 0;
+}
+
 ul.nav-bar {
   display: flex;
   flex-wrap: wrap;
@@ -169,7 +174,7 @@ div a {
 }
 
 /* Phone : ancho hasta 599px */
-@media (width <= 599px) {
+@media (width <=599px) {
   body {
     background-size: cover;
   }
@@ -204,7 +209,7 @@ div a {
 }
 
 /* Tablets : ancho de 600 px a 899px */
-@media (600px <= width <= 899px) {
+@media (600px <=width <=899px) {
   body {
     background-size: cover;
   }
@@ -227,10 +232,11 @@ div a {
 }
 
 /* Laptop - Desktop : ancho mayor a 900 px */
-@media (width >= 900px) {
+@media (width >=900px) {
   body {
     background-size: cover;
   }
+
   div.top-header {
     padding-right: 50px;
     height: 110px;
