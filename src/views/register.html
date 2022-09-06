@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="css/detalle-producto.css"> <!-- Estilo footer y header -->
+    <link rel="stylesheet" href="/css/style-register.css">
+    <link rel="stylesheet" href="/css/footer-styles.css">
     <link rel="stylesheet" href="/css/styles-forms.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fontawesome.com/icons" rel="stylesheet">
@@ -14,28 +14,25 @@
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="mainheader-top">
+    <header>
+        <div class="top-header">
             <a href="/" class="home">
-                <img src="/images/mountain.png" class="pagina-logo">
+                <img src="/images/mountain.png" class="logo">
             </a>
-            <a href="#" class="hamburger-button">
+            <a href="#" class="nav-button">
                 <i class="fas fa-bars"></i>
             </a>
-            <ul class="nav-bar">
-                <li class="text-navbar"><a href="/carrito">Carrito</a><i class="fas fa-shopping-cart"></i></li>
-            </ul>
         </div>
     </header>
     <div class="register">
         <div class="register-top">
-            <h2 class="copy-register">Registrate ingresando tus datos!</h2>
+            <h2 class="copy-register">Ingresá tus datos</h2>
             <form action="/register" method="post" class="form-register">
                 <div>
-                    <input type="text" name="name" placeholder="Nombre y apellido">
+                    <input type="text" name="name" placeholder="Nombre">
                 </div>
                 <div>
-                    <input type="text" name="surname" placeholder="Nombre de usuario">
+                    <input type="text" name="surname" placeholder="Apellido">
                 </div>
                 <div>
                     <input type="email" name="email" placeholder="E-mail">
@@ -53,20 +50,27 @@
             <p class="copy-login">¿Ya tienes cuenta? Ingresa <a class="login-button" href="/login">aqui</a></p>
         </div>
         <div class="register-bottom">
-            <div class="register" href="#">
-                <p>Registrarse con Google</p>
-                <img src="/images/google.png" class="img-logo-app">
-            </div>
-            <div class="register" href="#">
-                <p>Registrarse con Facebook</p>
-                <img src="/images/facebook.png" class="img-logo-app">
-            </div>
-            <div class="register" href="#">
-                <p>Registrarse con Apple</p>
-                <img src="/images/apple.png" class="img-logo-app">
-            </div>
+            <a href="#">
+                <p class="register">
+                    Registrarse con Google
+                    <img src="/images/google.png" class="img-logo-app">
+                </p>
+            </a>
+            <a href="#">
+                <p class="register">
+                    Registrarse con Facebook
+                    <img src="/images/facebook.png" class="img-logo-app">
+                </p>
+            </a>
+            <a href="#">
+                <p class="register">
+                    Registrarse con Apple
+                    <img src="/images/apple.png" class="img-logo-app">
+                </p>
+            </a>
         </div>
     </div>
+
 </body>
 <footer>
     <div class="conjunto-footer">

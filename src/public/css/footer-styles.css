@@ -10,15 +10,16 @@
 
 footer {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin: 0;
 }
 
 .conjunto-footer {
   background-color: var(--negroOscuro);
   margin-top: 4%;
   margin-bottom: 0;
+  padding-top: 1%;
 }
 
 .sector-descripcion {
@@ -47,15 +48,18 @@ footer {
   display: flex;
   align-content: top;
   background-color: grey;
-  margin-top: 0;
+  margin: 0;
   justify-content: center;
   background-color: var(--negroClaro);
   color: var(--blanco);
-} /*Redes Sociales*/
+}
+
+/*Redes Sociales*/
 #redesSociales {
   position: relative;
   width: 64px;
   height: 64px;
+  right: 70px;
   border-radius: 75px;
   border: 5px solid #fff;
   background: url(https://4.bp.blogspot.com/-gKMIOgeaEBY/UWHsOA382oI/AAAAAAAABpI/5GdyRTAeKII/s1600/share_core_square.jpg);
@@ -127,8 +131,7 @@ footer {
   background-position: 0 -46px;
 }
 
-@media (min-width: 450px) {
-}
+@media (min-width: 450px) {}
 
 @media (min-width: 1080px) {
   footer {
@@ -138,10 +141,11 @@ footer {
     justify-content: center;
   }
 
-  .conjunto-footer {
+  div.conjunto-footer {
+    width: 100vw;
     display: flex;
     flex-direction: row;
-    margin: 0;
+    margin-top: 25px;
     justify-content: space-between;
   }
 
@@ -154,5 +158,6 @@ footer {
     border-top: var(--grisOscuro) 1px solid;
     padding-top: 1%;
     padding-bottom: 1%;
+    margin: 0
   }
 }
