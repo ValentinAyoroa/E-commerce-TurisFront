@@ -418,3 +418,9 @@ section .card .about {
     width: 348px;
   }
 }
+@media (min-width: 1080px) {
+  .caja-producto {
+    height: 300px;
+    width: 500px;
+  }
+}
