@@ -409,3 +409,12 @@ section .card .about {
     font-size: 10px;
   }
 }
+/*Para tablet*/
+@media (min-width: 768px) {
+  .productos {
+    flex-direction: row;
+  }
+  .caja-producto {
+    width: 348px;
+  }
+}
