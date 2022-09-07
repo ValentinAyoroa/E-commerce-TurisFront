@@ -404,3 +404,8 @@ section .card .about {
   font-size: 15px;
   color: black;
 }
+@media (max-width: 450px) {
+  .banner-title {
+    font-size: 10px;
+  }
+}
