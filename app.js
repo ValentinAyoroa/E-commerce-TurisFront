@@ -2,8 +2,11 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.use(express.static('src/public'))
+//MIDDLEWARE
+app.use(express.static('src/public'));
+app.set('puerto', process.env.PORT || 3030);
 
+//RUTAS
 //Ruteo Home
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/src/views/index.html')))
 
@@ -26,5 +29,7 @@ app.get('/productCart', (req, res) => {
 //Ruteo Carrito
 app.post('/productCart', (req, res) => res.redirect('/'))
 
-app.listen(process.env.PORT || 3030, () => console.log("Servidor funcionando en el puerto 3030"))
+app.listen(process.env.PORT || 3030, function () {
+  console.log("Servidor funcionando en el puerto 3030")
+});
 
