@@ -131,7 +131,11 @@ footer {
   background-position: 0 -46px;
 }
 
-@media (min-width: 450px) {}
+@media (max-width: 450px) {
+  .derechos-reserved {
+    text-align: center;
+  }
+}
 
 @media (min-width: 1080px) {
   footer {
@@ -158,6 +162,6 @@ footer {
     border-top: var(--grisOscuro) 1px solid;
     padding-top: 1%;
     padding-bottom: 1%;
-    margin: 0
+    margin: 0;
   }
 }
