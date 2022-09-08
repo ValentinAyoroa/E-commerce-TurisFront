@@ -1,35 +1,39 @@
-const express = require('express');
-const path = require('path');
-const app = express();
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-//MIDDLEWARE
-app.use(express.static('src/public'));
-app.set('puerto', process.env.PORT || 3030);
+var indexRouter = require('./routes/index');
 
-//RUTAS
-//Ruteo Home
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, '/src/views/index.html')))
+var app = express();
 
-//Ruteo Registro
-app.get('/register', (req, res) => res.sendFile(path.join(__dirname, '/src/views/register.html')))
-app.post('/register', (req, res) => res.redirect('/'))
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-//Ruteo Ingreso
-app.post('/login', (req, res) => res.redirect('/'))
-app.get('/login', (req, res) => res.sendFile(path.join(__dirname, '/src/views/login.html')))
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-//Ruteo Detalle 
-app.get('/detalle-producto', (req, res) => res.sendFile(path.join(__dirname, '/src/views/detalle-producto.html')))
-app.post('/detalle-producto', (req, res) => res.redirect('/'))
+app.use('/', indexRouter);
 
-app.get('/productCart', (req, res) => {
-  res.sendFile(path.join(__dirname, '/src/views/productCart.html'))
-})
-
-//Ruteo Carrito
-app.post('/productCart', (req, res) => res.redirect('/'))
-
-app.listen(process.env.PORT || 3030, function () {
-  console.log("Servidor funcionando en el puerto 3030")
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
+
+module.exports = app;
