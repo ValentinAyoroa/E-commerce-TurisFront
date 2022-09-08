@@ -21,14 +21,14 @@
 #### ✔️ Soy Sebastian Rodriguez, de Uruguay. Estudie Analista Programador y trabajo como desarrollador. Me gustan los deportes de equipo, pasar el tiempo con mi perro y disfruto aprender de todo, no solo sobre tecnologias. 
 ***
 ### Paleta de colores 
-:root {
-  --blanco: #f0f0f0;
-  --celeste: #0077c0;
-  --azul: #0022aa;
-  --negroClaro: #161616;
-  --negroOscuro: #0e0e0e;
-  --grisClaro: #dfdddd;
-  --grisOscuro: #636262;
+#### :root {
+####  --blanco: #f0f0f0;
+####  --celeste: #0077c0;
+####  --azul: #0022aa;
+####  --negroClaro: #161616;
+####  --negroOscuro: #0e0e0e;
+####  --grisClaro: #dfdddd;
+####  --grisOscuro: #636262;
 }
 ***
 ### Tablero de trabajo de cada sprint 
