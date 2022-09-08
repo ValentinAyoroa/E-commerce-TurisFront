@@ -19,13 +19,22 @@
 #### ✔️ Soy Ramiro Sampaoli, estudiante de Licenciatura en Informatica. Me apasiona la tecnología y todo lo que tenga que ver con ella, siempre me gusta estar al tanto de las nuevas novedades de tecnología. Me gustan los videojuegos, la programación y los perros, de éstos ultimos actualmente tengo 8!  y amo pasar tiempo con ellos.
 #### ✔️ Mi nombre es Valentin Ayoroa, soy estudiante de Ingenieria en Informatica y actualmente trabajo en McDonals. Me gusta el futbol y pasar tiempo con mis amigos.
 #### ✔️ Soy Sebastian Rodriguez, de Uruguay. Estudie Analista Programador y trabajo como desarrollador. Me gustan los deportes de equipo, pasar el tiempo con mi perro y disfruto aprender de todo, no solo sobre tecnologias. 
+***
+### Paleta de colores 
+:one:  --blanco: #f0f0f0;
+:two:  --celeste: #0077c0;
+:three: --azul: #0022aa;
+:four:  --negroClaro: #161616;
+:five:  --negroOscuro: #0e0e0e;
+:six: --grisClaro: #dfdddd;
+:seven:  --grisOscuro: #636262;
 
 ***
 ### Tablero de trabajo de cada sprint 
 #### https://trello.com/b/E38HGkpr/sprint-1-wireframes
 
 ***
-###Link del proyecto en Heroku
+### URL del proyecto
 #### https://e-commerce-turisfront.herokuapp.com/
 
 
