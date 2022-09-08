@@ -25,5 +25,5 @@
 #### https://trello.com/b/E38HGkpr/sprint-1-wireframes
 
 ***
-###Link del proyecto en Heroku
+### URL del proyecto
 #### https://e-commerce-turisfront.herokuapp.com/
