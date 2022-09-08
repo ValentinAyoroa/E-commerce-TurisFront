@@ -8,115 +8,71 @@
     <title>E-commerce Turisfront</title>
 
     <link rel="stylesheet" href="css/detalle-producto.css">
+    <link rel="stylesheet" href="css/header-styles.css">
+    <link rel="stylesheet" href="css/footer-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
 <body>
-    <header class="main-header">
-        <div class="mainheader-top">
-            <a href="/" class="home">
-                <img src="/images/mountain.png" class="pagina-logo">
-            </a>
-            <a href="#" class="hamburger-button">
-                <i class="fas fa-bars"></i>
-            </a>
-            <ul class="nav-bar">
-                <li class="text-navbar"><a href="/carrito">Carrito</a><i class="fas fa-shopping-cart"></i></li>
-            </ul>
-        </div>
-    </header>
-    <main>
-        <div class="main-prodcuto-pc">
-            <p class="titulo-producto">Mochila camping montaña doite Natrang 70L</p>
-            <div class="bloque-producto-desktop">
-                <div class="imagenes-totales-producto">
-                    <img class="imagen-producto" src="/images/mochilai1.png">
-                    <div class="imagenes-muestra">
-                        <img class="imagen-producto-muestra1" src="/images/mochilai1.png">
-                        <img class="imagen-producto-muestra2" src="/images/mochilai2.png">
-                        <img class="imagen-producto-muestra3" src="/images/mochilai3.png">
-                        <img class="imagen-producto-muestra4" src="/images/mochilai4.png">
-                        <img class="imagen-producto-muestra5" src="/images/mochilai5.png">
-                    </div>
-                </div>
-                <div class="descripcion-total-producto">
-                    <div class="precio">
-                        <h2 class="precio-total">$ 5.800<i class="fas fa-shipping-fast"></i></h2>
-                        <p class="precio-cuotas">en 12x $ 750</p>
-                    </div>
-                    <div class="color-producto">
-                        <p class="texto-color-producto">Color: Rojo</p>
-                        <img class="imagen-color-producto   " src="/images/mochilai1.png">
-                    </div>
-                    <div class="stock-disponible">
-                        <p class="text-stock">Cantidad:</p>
-                        <p class="cantidad-stock">1</p>
-                        <div class="iconos-stock">
-                            <div class="icono-mas">
-                                <i class="fas fa-plus"></i>
-                            </div>
-                            <div class="icono-menos">
-                                <i class="fas fa-minus"></i>
-                            </div>
+    <%- include("./partials/header.ejs") %>
+        <main>
+            <div class="main-prodcuto-pc">
+                <p class="titulo-producto">Mochila camping montaña doite Natrang 70L</p>
+                <div class="bloque-producto-desktop">
+                    <div class="imagenes-totales-producto">
+                        <img class="imagen-producto" src="/images/mochilai1.png">
+                        <div class="imagenes-muestra">
+                            <img class="imagen-producto-muestra1" src="/images/mochilai1.png">
+                            <img class="imagen-producto-muestra2" src="/images/mochilai2.png">
+                            <img class="imagen-producto-muestra3" src="/images/mochilai3.png">
+                            <img class="imagen-producto-muestra4" src="/images/mochilai4.png">
+                            <img class="imagen-producto-muestra5" src="/images/mochilai5.png">
                         </div>
                     </div>
-                    <div class="botones-compra-carro">
-                        <button class="boton-comprar" type="submit" value="compra">Comprar</button>
-                        <button class="boton-carro" type="submit" value="carro">Agregar al carrito</button>
-                    </div>
-                    <div class="box-informacion">
-                        <div class="informacion-producto">
-                            <p class="titulo-informacion">Informacion del producto</p>
-                            <p class="text-descripcion">
-                                Mochila de 70 litros ideal para trekking. Su espaldar permite ajustar la altura según el
-                                usuario y tiene canales de ventilación para mayor comodidad al andar. Incluye
-                                cubremochila para proteger de la lluvia.</p>
-                            <p>TECH BALANCE SYSTEM: Estructura interna, que transfiere el peso de la carga a la cadera,
-                                sin sobrecargar la espalda. Sistema que te permite modificar la altura de las correas de
-                                hombro y ajustar a la curvatura de la espalda.</p>
+                    <div class="descripcion-total-producto">
+                        <div class="precio">
+                            <h2 class="precio-total">$ 5.800<i class="fas fa-shipping-fast"></i></h2>
+                            <p class="precio-cuotas">en 12x $ 750</p>
+                        </div>
+                        <div class="color-producto">
+                            <p class="texto-color-producto">Color: Rojo</p>
+                            <img class="imagen-color-producto   " src="/images/mochilai1.png">
+                        </div>
+                        <div class="stock-disponible">
+                            <p class="text-stock">Cantidad:</p>
+                            <p class="cantidad-stock">1</p>
+                            <div class="iconos-stock">
+                                <div class="icono-mas">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="icono-menos">
+                                    <i class="fas fa-minus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="botones-compra-carro">
+                            <button class="boton-comprar" type="submit" value="compra">Comprar</button>
+                            <button class="boton-carro" type="submit" value="carro">Agregar al carrito</button>
+                        </div>
+                        <div class="box-informacion">
+                            <div class="informacion-producto">
+                                <p class="titulo-informacion">Informacion del producto</p>
+                                <p class="text-descripcion">
+                                    Mochila de 70 litros ideal para trekking. Su espaldar permite ajustar la altura
+                                    según el
+                                    usuario y tiene canales de ventilación para mayor comodidad al andar. Incluye
+                                    cubremochila para proteger de la lluvia.</p>
+                                <p>TECH BALANCE SYSTEM: Estructura interna, que transfiere el peso de la carga a la
+                                    cadera,
+                                    sin sobrecargar la espalda. Sistema que te permite modificar la altura de las
+                                    correas de
+                                    hombro y ajustar a la curvatura de la espalda.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        <div class="conjunto-footer">
-            <div class="sector-descripcion">
-                <p class="titulo-footer">HORARIO</p>
-                <p class="informacion-footer">
-                <div class="p1">Lunes a Viernes Oficina: 8:30am – 4:30pm</div>
-                <div class="p2"> Sábado Oficina: 9:00am – 1:00pm</div>
-                <div class="p3"> Teléfono +57 601 764 8155</div>
-                <div class="p4">Celular: +57 314 358 0607</div>
-                </p>
-            </div>
-            <div class="sector-descripcion">
-                <p class="titulo-footer">INFORMACION</p>
-                <p class="informacion-footer">
-                <div class="p1">Políticas de Garantía</div>
-                <div class="p2">Preguntas Frecuentes</div>
-                <div class="p3">Cambios y Devoluciones</div>
-                </p>
-            </div>
-            <div class="sector-descripcion">
-                <p class="titulo-footer">SHOWROOM</p>
-                <p class="informacion-footer">
-                <div class="p1">Av. Cra 19 #84-85 Piso. 401</div>
-                <div class="p2">Buenos Aires, Argentina</div>
-                </p>
-            </div>
-            <div class="sector-descripcion">
-                <p class="titulo-footer">SIGUENOS!</p>
-                <div id="redesSociales">
-                    <a class="red facebook" href="https://www.facebook.com/">Uno</a>
-                    <a class="red twitter" href="https://twitter.com/?lang=es">Dos</a>
-                    <a class="red instagram" href="https://www.instagram.com/">Tres</a>
-                    <a class="red email" href="https://www.google.com/intl/es-419/gmail/about/">Cuatro</a>
-                </div>
-            </div>
-        </div>
-        <p class="derechos-reserved">© Copyright 2022 proyecto Integrador TurisFront</p>
-    </footer>
+        </main>
+        <%- include("./partials/footer.ejs") %>
 </body>

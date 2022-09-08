@@ -13,16 +13,6 @@
   font-family: "Roboto";
 }
 
-:root {
-  --blanco: #f0f0f0;
-  --celeste: #0077c0;
-  --azul: #0022aa;
-  --negroClaro: #161616;
-  --negroOscuro: #0e0e0e;
-  --grisClaro: #dfdddd;
-  --grisOscuro: #636262;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -224,54 +214,6 @@ main {
   color: rgba(0, 0, 0, 0.9);
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5%;
-  margin-left: 5%;
-}
-
-.conjunto-footer {
-  background-color: rgba(128, 128, 128, 0.212);
-  margin-top: 4%;
-  margin-bottom: 0;
-}
-
-.sector-descripcion {
-  display: flex;
-  flex-direction: column;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.titulo-footer {
-  font-size: 22px;
-  text-align: center;
-  margin-bottom: -3%;
-}
-
-.p1,
-.p2,
-.p3,
-.p4 {
-  text-align: center;
-}
-
-.informacion-footer {
-  display: block;
-  text-align: center;
-  margin-right: 20%;
-  margin-left: 20%;
-}
-
-.derechos-reserved {
-  display: flex;
-  align-content: top;
-  background-color: grey;
-  margin-top: 0;
-  justify-content: center;
-}
-
 .imagenes-muestra {
   display: none;
 }
@@ -280,6 +222,10 @@ footer {
   div.top-header {
     padding-right: 50px;
     height: 110px;
+  }
+
+  .hamburger-button {
+    font-size: 30px;
   }
 
   img.logo {
@@ -336,9 +282,7 @@ footer {
     padding-left: 15%;
   }
 
-  .hamburger-button {
-    font-size: 30px;
-  }
+
 }
 
 @media (min-width: 1080px) {
@@ -356,18 +300,8 @@ footer {
     box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
   }
 
-  main {
-    background-color: white;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
   .nav-bar {
     display: block;
-  }
-
-  .hamburger-button {
-    display: none;
   }
 
   .nav-bar {
@@ -384,6 +318,16 @@ footer {
 
   .text-navbar a {
     color: var(--blanco);
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
+  main {
+    background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
   }
 
   .titulo-producto {
@@ -409,7 +353,7 @@ footer {
     margin-right: 12%;
     width: 2000px;
     top: 12%;
-   
+
   }
 
   .imagen-producto2,
@@ -506,35 +450,6 @@ footer {
   .boton-comprar:hover {
     background-color: #1c60c7;
   }
-
-  footer {
-    display: block;
-    flex-direction: row;
-    margin: 0;
-    justify-content: center;
-  }
-
-  .conjunto-footer {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--negroOscuro);
-    margin: 0;
-    justify-content: space-between;
-  }
-
-  .sector-descripcion {
-    color: var(--blanco);
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .derechos-reserved {
-    background-color: var(--negroClaro);
-    color: var(--blanco);
-    border-top: var(--grisOscuro) 1px solid;
-    padding-top: 1%;
-    padding-bottom: 1%;
-  }
 }
 
 @media (min-width: 1400px) {
@@ -601,7 +516,7 @@ footer {
   }
 
   .imagen-producto {
-   position: unset;
+    position: unset;
     margin-right: 12%;
     width: 1800px;
     padding-bottom: 0;
@@ -702,35 +617,6 @@ footer {
   .boton-comprar:hover {
     background-color: #1c60c7;
   }
-
-  footer {
-    display: block;
-    flex-direction: row;
-    margin: 0;
-    justify-content: center;
-  }
-
-  .conjunto-footer {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--negroOscuro);
-    margin: 0;
-    justify-content: space-between;
-  }
-
-  .sector-descripcion {
-    color: var(--blanco);
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .derechos-reserved {
-    background-color: var(--negroClaro);
-    color: var(--blanco);
-    border-top: var(--grisOscuro) 1px solid;
-    padding-top: 1%;
-    padding-bottom: 1%;
-  }
 }
 
 @media (min-width: 1800px) {
@@ -797,7 +683,7 @@ footer {
   }
 
   .imagen-producto {
-   position: unset;
+    position: unset;
     margin-right: 12%;
     width: 1800px;
     padding-bottom: 5%;
@@ -898,41 +784,12 @@ footer {
   .boton-comprar:hover {
     background-color: #1c60c7;
   }
-
-  footer {
-    display: block;
-    flex-direction: row;
-    margin: 0;
-    justify-content: center;
-  }
-
-  .conjunto-footer {
-    display: flex;
-    flex-direction: row;
-    background-color: var(--negroOscuro);
-    margin: 0;
-    justify-content: space-between;
-  }
-
-  .sector-descripcion {
-    color: var(--blanco);
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .derechos-reserved {
-    background-color: var(--negroClaro);
-    color: var(--blanco);
-    border-top: var(--grisOscuro) 1px solid;
-    padding-top: 1%;
-    padding-bottom: 1%;
-  }
 }
 
 /*Redes Sociales*/
 #redesSociales {
   margin-top: 15%;
-  
+
   position: relative;
   right: 50%;
   width: 50px;

@@ -1,3 +1,5 @@
+/* FOOTER BASE MOBILE */
+
 :root {
   --blanco: #f0f0f0;
   --celeste: #0077c0;
@@ -10,16 +12,15 @@
 
 footer {
   display: flex;
-  width: 100%;
   flex-direction: column;
-  margin: 0;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 .conjunto-footer {
-  background-color: var(--negroOscuro);
+  background-color: rgba(128, 128, 128, 0.212);
   margin-top: 4%;
   margin-bottom: 0;
-  padding-top: 1%;
 }
 
 .sector-descripcion {
@@ -27,14 +28,19 @@ footer {
   flex-direction: column;
   margin-left: 5%;
   margin-right: 5%;
-  color: var(--blanco);
-  align-items: center;
 }
 
 .titulo-footer {
   font-size: 22px;
   text-align: center;
   margin-bottom: -3%;
+}
+
+.p1,
+.p2,
+.p3,
+.p4 {
+  text-align: center;
 }
 
 .informacion-footer {
@@ -45,21 +51,58 @@ footer {
 }
 
 .derechos-reserved {
+  font-size: 16px;
   display: flex;
   align-content: top;
   background-color: grey;
-  margin: 0;
+  margin-top: 0;
   justify-content: center;
-  background-color: var(--negroClaro);
-  color: var(--blanco);
 }
 
-/*Redes Sociales*/
+@media (min-width: 768px) {}
+
+@media (min-width: 1080px) {
+
+  footer {
+    display: block;
+    flex-direction: row;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .conjunto-footer {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--negroOscuro);
+    margin: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    justify-content: space-between;
+  }
+
+  .sector-descripcion {
+    color: var(--blanco);
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .derechos-reserved {
+    background-color: var(--negroClaro);
+    color: var(--blanco);
+    border-top: var(--grisOscuro) 1px solid;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+}
+
+
 #redesSociales {
+  margin-top: 15%;
+
   position: relative;
-  width: 64px;
-  height: 64px;
-  right: 70px;
+  right: 50%;
+  width: 50px;
+  height: 50px;
   border-radius: 75px;
   border: 5px solid #fff;
   background: url(https://4.bp.blogspot.com/-gKMIOgeaEBY/UWHsOA382oI/AAAAAAAABpI/5GdyRTAeKII/s1600/share_core_square.jpg);
@@ -79,6 +122,7 @@ footer {
   text-indent: -9999px;
   background: no-repeat;
   left: 0px;
+  bottom: -9%;
 }
 
 #redesSociales:hover .red {
@@ -129,39 +173,4 @@ footer {
 
 .red:hover {
   background-position: 0 -46px;
-}
-
-@media (max-width: 450px) {
-  .derechos-reserved {
-    text-align: center;
-  }
-}
-
-@media (min-width: 1080px) {
-  footer {
-    display: block;
-    flex-direction: row;
-    margin: 0;
-    justify-content: center;
-  }
-
-  div.conjunto-footer {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    margin-top: 25px;
-    justify-content: space-between;
-  }
-
-  .sector-descripcion {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-
-  .derechos-reserved {
-    border-top: var(--grisOscuro) 1px solid;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin: 0;
-  }
 }
