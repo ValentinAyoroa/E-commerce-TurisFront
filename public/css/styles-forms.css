@@ -12,11 +12,19 @@
   font-family: "Roboto", sans-serif;
 }
 
+.nav-bar,
+.nav-bar i,
+.nav-bar ul,
+.nav-bar a {
+  display: none;
+}
+
 body {
   margin: 0;
   background-image: url("/images/img-register.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 div.top-header {
@@ -57,10 +65,8 @@ a.nav-button i {
 }
 
 ul.nav-bar {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 0;
+  display: none;
+
 }
 
 ul.nav-bar li {
@@ -88,6 +94,8 @@ div.register-top {
 h2.copy-register {
   margin: 10% auto 8%;
   width: 80%;
+  font-size: 1.15em;
+  padding-top: 5%;
 }
 
 form.form-register {
@@ -229,120 +237,7 @@ footer {
   color: var(--blanco);
 }
 
-/*Redes Sociales*/
-#redesSociales {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  right: 70px;
-  border-radius: 75px;
-  border: 5px solid #fff;
-  background: url(https://4.bp.blogspot.com/-gKMIOgeaEBY/UWHsOA382oI/AAAAAAAABpI/5GdyRTAeKII/s1600/share_core_square.jpg);
-}
-
-.red {
-  position: absolute;
-  -webkit-transition: left 0.5s cubic-bezier(0.1, 0.8, 0.9, 1), opacity 1s linear;
-  -moz-transition: left 0.5s cubic-bezier(0.1, 0.8, 0.9, 1), opacity 1s linear;
-  -o-transition: left 0.5s cubic-bezier(0.1, 0.8, 0.9, 1), opacity 1s linear;
-  display: inline;
-  opacity: 0;
-  width: 46px;
-  height: 46px;
-  z-index: 100;
-  margin: 10px 0px 0px 20px;
-  text-indent: -9999px;
-  background: no-repeat;
-  left: 0px;
-}
-
-#redesSociales:hover .red {
-  opacity: 1;
-  transform: translate(0px, 0);
-  -webkit-transform: translate(0px, 0);
-  -o-transform: translate(0px, 0);
-  -moz-transform: translate(0px, 0);
-  margin: 10px 0px 0px 20px;
-  position: absolute;
-}
-
-#redesSociales:hover .red:nth-child(1) {
-  position: absolute;
-  left: 35px;
-}
-
-#redesSociales:hover .red:nth-child(2) {
-  position: absolute;
-  left: 80px;
-}
-
-#redesSociales:hover .red:nth-child(3) {
-  position: absolute;
-  left: 125px;
-}
-
-#redesSociales:hover .red:nth-child(4) {
-  position: absolute;
-  left: 170px;
-}
-
-.red.facebook {
-  background: url(https://4.bp.blogspot.com/-49s_0_9mdVo/UWHsMIvJBNI/AAAAAAAABn8/6bVMlN4Qz7Y/s1600/bubble_facebook_share_button.png);
-}
-
-.red.twitter {
-  background: url(https://2.bp.blogspot.com/-3r8sHe1Qy5M/UWHsNMDDzHI/AAAAAAAABog/q3V7mYirmOY/s1600/bubble_twitter_share_button.png);
-}
-
-.red.email {
-  background: url(https://3.bp.blogspot.com/-ZhFqBhp79cA/UWHsMBmPxsI/AAAAAAAABn4/O8k_pGf1oCU/s1600/bubble_email_share_button.png);
-}
-
-.red.instagram {
-  background: url(https://1.bp.blogspot.com/-FSkby0cXU_8/UWHsMis8c2I/AAAAAAAABoQ/y8coyc5ystc/s1600/bubble_instagram_share_button.png);
-}
-
-.red:hover {
-  background-position: 0 -46px;
-}
-
-/* Phone : ancho hasta 599px */
-@media (width <=599px) {
-  body {
-    background-size: cover;
-  }
-
-  ul.nav-bar {
-    display: none;
-  }
-
-  img.logo {
-    width: 80%;
-    padding-left: 20px;
-  }
-
-  h2.copy-register {
-    font-size: 1.15em;
-    padding-top: 5%;
-  }
-
-  .register-top p.copy-login {
-    font-size: 1em;
-    padding-bottom: 5%;
-  }
-
-  .register p {
-    font-size: 1.15em;
-  }
-
-  .register-bottom .register p {
-    margin: 8% 0;
-    font-size: 1em;
-  }
-}
-
-/* Tablets : ancho de 600 px a 899px */
-@media (600px <=width <=899px) {
+@media (min-width: 768px) {
   body {
     background-size: cover;
   }
@@ -369,8 +264,7 @@ footer {
   }
 }
 
-/* Laptop - Desktop : ancho mayor a 900 px */
-@media (min-width: 900px) {
+@media (min-width: 1080px) {
   body {
     background-size: cover;
   }
