@@ -18,47 +18,6 @@ body {
   padding: 0;
 }
 
-.mainheader-top {
-  display: flex;
-  justify-content: space-between;
-  /*  border-bottom: solid black 1px; */
-}
-
-.pagina-logo {
-  width: 25%;
-  cursor: pointer;
-  margin-left: 5%;
-}
-
-.hamburger-button {
-  display: block;
-  max-width: 50px;
-  padding: 15px 0px;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 18px;
-  margin: auto;
-  margin-right: 10%;
-}
-
-.nav-bar {
-  display: none;
-}
-
-.nav-bar ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.nav-bar a {
-  text-decoration: none;
-  color: #404040;
-  display: inline-block;
-  padding: 5px 0px;
-  font-size: 17px;
-}
-
 main {
   background-color: rgba(128, 128, 128, 0.212);
   border-radius: 10px;
@@ -219,20 +178,6 @@ main {
 }
 
 @media (min-width: 768px) {
-  div.top-header {
-    padding-right: 50px;
-    height: 110px;
-  }
-
-  .hamburger-button {
-    font-size: 30px;
-  }
-
-  img.logo {
-    width: 100%;
-    padding-left: 40px;
-  }
-
   .titulo-producto {
     position: relative;
     top: 10px;
@@ -286,44 +231,6 @@ main {
 }
 
 @media (min-width: 1080px) {
-  body {
-    background-color: rgba(128, 128, 128, 0.212);
-  }
-
-  .pagina-logo {
-    margin-top: 2%;
-    margin-left: 60%;
-  }
-
-  .mainheader-top {
-    background-color: var(--celeste);
-    box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
-  }
-
-  .nav-bar {
-    display: block;
-  }
-
-  .nav-bar {
-    list-style: none;
-    display: flex;
-    margin: 5% 5% 0 0;
-    color: var(--blanco);
-    margin-right: 15%;
-  }
-
-  .text-navbar {
-    padding: 10px;
-  }
-
-  .text-navbar a {
-    color: var(--blanco);
-  }
-
-  .hamburger-button {
-    display: none;
-  }
-
   main {
     background-color: white;
     margin-left: 10%;
@@ -455,46 +362,12 @@ main {
 @media (min-width: 1400px) {
   body {
     background-color: rgba(128, 128, 128, 0.212);
-  }
-
-  .pagina-logo {
-    margin-top: 2%;
-    margin-left: 60%;
-  }
-
-  .mainheader-top {
-    background-color: var(--celeste);
-    box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
-  }
+  }  
 
   main {
     background-color: white;
     margin-left: 10%;
     margin-right: 10%;
-  }
-
-  .nav-bar {
-    display: block;
-  }
-
-  .hamburger-button {
-    display: none;
-  }
-
-  .nav-bar {
-    list-style: none;
-    display: flex;
-    margin: 5% 5% 0 0;
-    color: var(--blanco);
-    margin-right: 15%;
-  }
-
-  .text-navbar {
-    padding: 10px;
-  }
-
-  .text-navbar a {
-    color: var(--blanco);
   }
 
   .titulo-producto {

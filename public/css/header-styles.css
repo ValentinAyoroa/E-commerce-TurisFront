@@ -1,4 +1,13 @@
 /* HEADER BASE MOBILE */
+:root {
+  --blanco: #f0f0f0;
+  --celeste: #0077c0;
+  --azul: #0022aa;
+  --negroClaro: #161616;
+  --negroOscuro: #0e0e0e;
+  --grisClaro: #dfdddd;
+  --grisOscuro: #636262;
+}
 
 
 .mainheader-top {
@@ -23,6 +32,7 @@
   font-size: 18px;
   margin: auto;
   margin-right: 10%;
+  color: black;
 }
 
 .nav-bar {
@@ -62,6 +72,7 @@
     width: 100%;
     padding-left: 40px;
   }
+
 }
 
 @media (min-width: 1080px) {
