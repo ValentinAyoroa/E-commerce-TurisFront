@@ -21,6 +21,7 @@
 </head>
 
 <body>
+  <!--header-->
   <%- include("./partials/header.ejs") %>
     <div class="banner">
       <div class="banner-item">
@@ -39,114 +40,124 @@
     <main>
       <section class="productos-destacados">
         <h1>Productos destacados</h1>
+
         <div class="productos">
-          <article class="caja-producto">
-            <img class="imagen-producto" src="images/botas.jpg">
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <div class="descripcion-producto">
-              <p id="descripcion">Botas de cuero Domuyo - Montaña unisex<br></p>
-              <h5>$12.500,00</h5>
-            </div>
-          </article>
+          <% productos.forEach(producto=> { %>
+            <article class="caja-producto">
+              <img class="imagen-producto" src="<%= producto.imagen %>">
+              <figure>
+                <i id="icono-heart" class="fas fa-heart"></i>
+                <figcaption>Favoritos</figcaption>
+              </figure>
+              <div class="descripcion-producto">
+                <p id="descripcion">
+                  <%= producto.descripcion %><br>
+                </p>
+                <h5>
+                  <%= producto.precio %>
+                </h5>
+                <a href="/detalle-producto/<%=producto.id%>">Mas info>></a>
+                <br />
 
-          <article class="caja-producto">
-            <img class="imagen-producto" src="images/guantes.jpg">
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <div class="descripcion-producto">
-              <p id="descripcion">Guantes WINTER Softshell</p>
-              <h5>$12.500,00</h5>
-            </div>
-          </article>
+              </div>
+            </article>
+            <% }) %>
 
-          <article class="caja-producto">
-            <img class="imagen-producto" src="images/chaqueta.jpg">
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <div class="descripcion-producto">
-              <p id="descripcion">Campera ANSILTA FUSIÓN 3 en 1 GORE-TEX</p>
-              <h5>$170.900,00</h5>
-            </div>
-          </article>
+              <!--<article class="caja-producto">
+              <img class="imagen-producto" src="images/guantes.jpg">
+              <figure>
+                <i id="icono-heart" class="fas fa-heart"></i>
+                <figcaption>Favoritos</figcaption>
+              </figure>
+              <div class="descripcion-producto">
+                <p id="descripcion">Guantes WINTER Softshell</p>
+                <h5>$12.500,00</h5>
+              </div>
+            </article>
 
-          <article class="caja-producto">
-            <img class="imagen-producto" src="images/gorros.jpg">
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <div class="descripcion-producto">
-              <p id="descripcion"> Sombrero Indico - Unisex</p>
-              <h5>$5.500,00</h5>
-            </div>
-          </article>
+            <article class="caja-producto">
+              <img class="imagen-producto" src="images/chaqueta.jpg">
+              <figure>
+                <i id="icono-heart" class="fas fa-heart"></i>
+                <figcaption>Favoritos</figcaption>
+              </figure>
+              <div class="descripcion-producto">
+                <p id="descripcion">Campera ANSILTA FUSIÓN 3 en 1 GORE-TEX</p>
+                <h5>$170.900,00</h5>
+              </div>
+            </article>
 
-          <article class="caja-producto">
-            <img class="imagen-producto" src="images/pantalon.jpg">
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <div class="descripcion-producto">
-              <p id="descripcion"> Calza interior térmica POWER DRY - Mujer</p>
-              <h5>$6.400,00</h5>
-            </div>
-          </article>
+            <article class="caja-producto">
+              <img class="imagen-producto" src="images/gorros.jpg">
+              <figure>
+                <i id="icono-heart" class="fas fa-heart"></i>
+                <figcaption>Favoritos</figcaption>
+              </figure>
+              <div class="descripcion-producto">
+                <p id="descripcion"> Sombrero Indico - Unisex</p>
+                <h5>$5.500,00</h5>
+              </div>
+            </article>
 
-          <article class="caja-producto">
-            <img class="imagen-producto" src="images/tubular.jpg">
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <div class="descripcion-producto">
-              <p id="descripcion">Cuello Buff Trek500 azul</p>
-              <h5>$8.400,00</h5>
-            </div>
-          </article>
+            <article class="caja-producto">
+              <img class="imagen-producto" src="images/pantalon.jpg">
+              <figure>
+                <i id="icono-heart" class="fas fa-heart"></i>
+                <figcaption>Favoritos</figcaption>
+              </figure>
+              <div class="descripcion-producto">
+                <p id="descripcion"> Calza interior térmica POWER DRY - Mujer</p>
+                <h5>$6.400,00</h5>
+              </div>
+            </article>
 
-          <article class="caja-producto">
-            <img class="imagen-producto" src="images/gafas.jpg">
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <div class="descripcion-producto">
-              <p id="descripcion">Lentes RACE-Ski SALICE </p>
-              <h5>$19.500,00</h5>
-            </div>
-          </article>
+            <article class="caja-producto">
+              <img class="imagen-producto" src="images/tubular.jpg">
+              <figure>
+                <i id="icono-heart" class="fas fa-heart"></i>
+                <figcaption>Favoritos</figcaption>
+              </figure>
+              <div class="descripcion-producto">
+                <p id="descripcion">Cuello Buff Trek500 azul</p>
+                <h5>$8.400,00</h5>
+              </div>
+            </article>
 
-          <article class="caja-producto">
-            <a href="/detalle-producto"><img class="imagen-producto" src="images/mochilai1-miniatura.png"></a>
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <div class="descripcion-producto">
-              <p id="descripcion">Mochila camping montaña doite Natrang 70L</p>
-              <h5>$386,400</h5>
-            </div>
-          </article>
+            <article class="caja-producto">
+              <img class="imagen-producto" src="images/gafas.jpg">
+              <figure>
+                <i id="icono-heart" class="fas fa-heart"></i>
+                <figcaption>Favoritos</figcaption>
+              </figure>
+              <div class="descripcion-producto">
+                <p id="descripcion">Lentes RACE-Ski SALICE </p>
+                <h5>$19.500,00</h5>
+              </div>
+            </article>
 
-          <article class="caja-producto">
-            <img class="imagen-producto" src="images/chaletos-hibratacion.jpg">
-            <figure>
-              <i id="icono-heart" class="fas fa-heart"></i>
-              <figcaption>Favoritos</figcaption>
-            </figure>
-            <div class="descripcion-producto">
-              <p id="descripcion">Mochila de Hidratación 2 Litros - FOX</p>
-              <h5>$119.000</h5>
-            </div>
-          </article>
+            <article class="caja-producto">
+              <a href="/detalle-producto"><img class="imagen-producto" src="images/mochilai1-miniatura.png"></a>
+              <figure>
+                <i id="icono-heart" class="fas fa-heart"></i>
+                <figcaption>Favoritos</figcaption>
+              </figure>
+              <div class="descripcion-producto">
+                <p id="descripcion">Mochila camping montaña doite Natrang 70L</p>
+                <h5>$386,400</h5>
+              </div>
+            </article>
+
+            <article class="caja-producto">
+              <img class="imagen-producto" src="images/chaletos-hibratacion.jpg">
+              <figure>
+                <i id="icono-heart" class="fas fa-heart"></i>
+                <figcaption>Favoritos</figcaption>
+              </figure>
+              <div class="descripcion-producto">
+                <p id="descripcion">Mochila de Hidratación 2 Litros - FOX</p>
+                <h5>$119.000</h5>
+              </div>
+            </article>-->
         </div>
       </section>
       <div class="marcas-promos">
@@ -250,6 +261,7 @@
         </div>
       </section>
     </div>
+    <!--footer-->
     <%- include("./partials/footer.ejs") %>
 
       <!-- JavaScript Bundle with Popper -->

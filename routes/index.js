@@ -4,7 +4,7 @@ const mainController = require("../controllers/mainController");
 
 /* GET home page. */
 router.get('/', mainController.home);
-router.get('/detalle-producto', mainController.detalleproducto);
+router.get('/detalle-producto/:id', mainController.detalleproducto);
 router.get('/login', mainController.login);
 router.get('/register', mainController.register);
 
