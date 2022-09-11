@@ -7,7 +7,7 @@ let productos = [
     {
         id: 1,
         titulo: 'Botas de cuero Domuyo - Montaña unisex',
-        precio: '$12.500,00',
+        precio: 15000,
         color: 'Beige',
         imagen: '/images/botas.jpg',
         descripcion: "Bota de treckking realizada en cuero con doble costura recubierto con capa impermeabilizante. Ajute acordonado con alpinos. Plantilla desmontable acolchada de 3mm. Fondo de EVA liviano con suelin de caucho antideslizante. Interior forrado en textil. Muy comodos y livianos. ideales para zonas montañosas, trekking."
