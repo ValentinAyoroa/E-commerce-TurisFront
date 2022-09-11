@@ -65,8 +65,18 @@ footer {
   margin: 0;
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 450px) {
+  #redesSociales {
+    margin-top: 15px;
+    margin-left: 70px;
+  }
 }
+
+@media (min-width: 768px) {
+  #redesSociales {
+    margin-left: 190px;
+  }
+}*/
 
 @media (min-width: 1080px) {
   footer {

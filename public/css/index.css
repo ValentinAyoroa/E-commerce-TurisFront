@@ -408,9 +408,50 @@ section .card .about {
   font-size: 15px;
   color: black;
 }
+
+@media (min-width: 450px) {
+  .banner {
+    display: flex;
+  }
+  .banner-item {
+    display: flex;
+  }
+  .home-banner {
+    display: none;
+  }
+}
+
 @media (max-width: 450px) {
   .banner-title {
     font-size: 10px;
+  }
+  .banner {
+    display: none;
+  }
+  .banner-item {
+    display: none;
+  }
+
+  /*HOME*/
+  .home-banner {
+    position: relative;
+    width: 100vw;
+    margin: 0 auto;
+  }
+
+  .home-banner figure {
+    position: relative;
+    width: 500%;
+    height: 90%;
+    margin: 0;
+    left: 0;
+    animation: slide 15s infinite alternate ease-in-out;
+  }
+
+  .home-banner figure img {
+    width: 20%;
+    height: 200px;
+    float: left;
   }
 }
 /*Para tablet*/
@@ -426,5 +467,41 @@ section .card .about {
   .caja-producto {
     height: 350px;
     width: 500px;
+  }
+}
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  16% {
+    left: 0;
+  }
+
+  21% {
+    left: -100%;
+  }
+  38% {
+    left: -100%;
+  }
+
+  43% {
+    left: -200%;
+  }
+  60% {
+    left: -200%;
+  }
+
+  65% {
+    left: -300%;
+  }
+  82% {
+    left: -300%;
+  }
+
+  87% {
+    left: -400%;
+  }
+  100% {
+    left: -400%;
   }
 }

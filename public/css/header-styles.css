@@ -33,6 +33,9 @@
   margin-right: 10%;
   color: black;
 }
+.hamburger-button:hover {
+  color: white;
+}
 
 .nav-bar {
   display: none;
