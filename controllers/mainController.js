@@ -65,6 +65,12 @@ let productos = [
         imagen: '/images/mochilai1.png',
         descripcion: "Mochila de 70 litros ideal para trekking. Su espaldar permite ajustar la altura según el usuario y tiene canales de ventilación para mayor comodidad al andar. Incluye cubremochila para proteger de la lluvia TECH BALANCE SYSTEM: Estructura interna, que transfiere el peso de la carga a la cadera, sin sobrecargar la espalda. Sistema que te permite modificar la altura de las correas de hombro y ajustar a la curvatura de la espalda."
     },
+
+    //TENEMOS QUE HACER LAS IMÁGENES DE LOS PRODUCTOS DE RESOLUCION EN 600x870 px.
+    //PARA QUE DETALLE DE PRODUCTO NO TENGA PROBLEMAS DE RESOLUCIÓN.
+    //HAY QUE EDITARLAS, YO LO HICE CON EL PAINT, PONER "CAMBIAR TAMAÑO" Y ASIGNARLO.
+    //NO HACERLO POR CÓDIGO.
+
     {
         id: 9,
         titulo: 'Mochila de Hidratación 2 Litros - FOX ',
