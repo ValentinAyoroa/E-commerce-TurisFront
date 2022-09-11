@@ -18,10 +18,10 @@
     <%- include("./partials/header.ejs") %>
         <main>
             <div class="main-prodcuto-pc">
-                <p class="titulo-producto">Mochila camping montaña doite Natrang 70L</p>
+                <p class="titulo-producto"><%=producto.titulo%></p>
                 <div class="bloque-producto-desktop">
                     <div class="imagenes-totales-producto">
-                        <img class="imagen-producto" src="/images/mochilai1.png">
+                        <img class="imagen-producto" src=<%=producto.imagen%>>
                         <div class="imagenes-muestra">
                             <img class="imagen-producto-muestra1" src="/images/mochilai1.png">
                             <img class="imagen-producto-muestra2" src="/images/mochilai2.png">
@@ -32,12 +32,12 @@
                     </div>
                     <div class="descripcion-total-producto">
                         <div class="precio">
-                            <h2 class="precio-total">$ 5.800<i class="fas fa-shipping-fast"></i></h2>
-                            <p class="precio-cuotas">en 12x $ 750</p>
+                            <h2 class="precio-total">$ <%=producto.precio%><i class="fas fa-shipping-fast"></i></h2>
+                            <p class="precio-cuotas">en 12x $<%=producto.precio / 12%></p>
                         </div>
                         <div class="color-producto">
-                            <p class="texto-color-producto">Color: Rojo</p>
-                            <img class="imagen-color-producto   " src="/images/mochilai1.png">
+                            <p class="texto-color-producto">Color: <%=producto.color%></p>
+                            <img class="imagen-color-producto   " src=<%=producto.imagen%>>
                         </div>
                         <div class="stock-disponible">
                             <p class="text-stock">Cantidad:</p>
@@ -58,16 +58,9 @@
                         <div class="box-informacion">
                             <div class="informacion-producto">
                                 <p class="titulo-informacion">Informacion del producto</p>
-                                <p class="text-descripcion">
-                                    Mochila de 70 litros ideal para trekking. Su espaldar permite ajustar la altura
-                                    según el
-                                    usuario y tiene canales de ventilación para mayor comodidad al andar. Incluye
-                                    cubremochila para proteger de la lluvia.</p>
-                                <p>TECH BALANCE SYSTEM: Estructura interna, que transfiere el peso de la carga a la
-                                    cadera,
-                                    sin sobrecargar la espalda. Sistema que te permite modificar la altura de las
-                                    correas de
-                                    hombro y ajustar a la curvatura de la espalda.</p>
+                                <p class="texto-descripcion">
+                                    <%=producto.descripcion%>
+                                </p>
                             </div>
                         </div>
                     </div>
