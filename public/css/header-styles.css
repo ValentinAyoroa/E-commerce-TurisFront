@@ -9,7 +9,6 @@
   --grisOscuro: #636262;
 }
 
-
 .mainheader-top {
   display: flex;
   justify-content: space-between;
@@ -47,16 +46,12 @@
 
 .nav-bar a {
   text-decoration: none;
-  color: #404040;
   display: inline-block;
   padding: 5px 0px;
   font-size: 17px;
 }
 
-
-
 @media (min-width: 768px) {
-
   /* HEADER iPAD */
 
   div.top-header {
@@ -72,7 +67,6 @@
     width: 100%;
     padding-left: 40px;
   }
-
 }
 
 @media (min-width: 1080px) {
@@ -93,21 +87,36 @@
   .nav-bar {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     margin: 5% 5% 0 0;
     color: var(--blanco);
     margin-right: 15%;
+    margin-top: 25px;
   }
 
   .text-navbar {
     padding: 10px;
+    text-align: center;
   }
 
   .text-navbar a {
     color: var(--blanco);
+    font-size: 15px;
+    display: block;
+    padding-bottom: 5px;
+    font-weight: bold;
+  }
+  .text-navbar a:hover {
+    color: white;
+  }
+
+  .text-navbar i {
+    cursor: pointer;
+    text-align: center;
+    font-size: 25px;
   }
 
   .hamburger-button {
     display: none;
   }
-
 }

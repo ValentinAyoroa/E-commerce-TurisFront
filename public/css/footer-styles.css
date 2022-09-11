@@ -65,10 +65,10 @@ footer {
   margin: 0;
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+}
 
 @media (min-width: 1080px) {
-
   footer {
     display: block;
     flex-direction: row;
@@ -101,16 +101,14 @@ footer {
   }
 }
 
-
+/* redes sociales del footer */
 #redesSociales {
-  margin-top: 15%;
-
   position: relative;
-  right: 50%;
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
   border-radius: 75px;
   border: 5px solid #fff;
+  margin-right: 100px;
   background: url(https://4.bp.blogspot.com/-gKMIOgeaEBY/UWHsOA382oI/AAAAAAAABpI/5GdyRTAeKII/s1600/share_core_square.jpg);
 }
 
@@ -128,7 +126,6 @@ footer {
   text-indent: -9999px;
   background: no-repeat;
   left: 0px;
-  bottom: -9%;
 }
 
 #redesSociales:hover .red {
