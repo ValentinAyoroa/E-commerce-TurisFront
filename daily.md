@@ -1,4 +1,4 @@
-# Retrospectiva Grupo 16 (Daily)
+# Retrospectiva Grupo 16 (Daily-Sprint3)
 ## COMENZAR A HACER
 
 - Sebastian realizara el carrito de compras 
