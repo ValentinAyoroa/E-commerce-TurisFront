@@ -50,7 +50,7 @@
 .nav-bar a {
   text-decoration: none;
   display: inline-block;
-  padding: 5px 0px;
+  padding: 0 0px;
   font-size: 17px;
 }
 
@@ -98,6 +98,7 @@
   }
 
   .text-navbar {
+    margin-top: 30%;
     padding: 10px;
     text-align: center;
   }
