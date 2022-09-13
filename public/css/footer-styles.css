@@ -24,7 +24,7 @@ footer {
   flex-direction: column;
   background-color: var(--negroOscuro);
   margin: 0;
-  padding-top: 1%;
+  padding-top: 10%;
   padding-bottom: 1%;
   justify-content: space-between;
 }
@@ -63,7 +63,7 @@ footer {
   text-align: center;
   border-top: var(--grisOscuro) 1px solid;
   margin: 0;
-  padding: 10px;
+  padding: 5%;
 }
 
 div.conjunto-footer {
@@ -121,9 +121,10 @@ p.titulo-footer {
     justify-content: center;
   }
 
-  .titulo-footer{
+  .titulo-footer {
     font-size: 14px;
   }
+
   .p1,
   .p2,
   .p3,

@@ -55,12 +55,6 @@
   font-size: 17px;
 }
 
-@media (min-width: 360px){
-  .hamburger-button {
-    font-size: 30px;
-  }
-}
-
 @media (min-width: 768px) {
   /* HEADER iPAD */
 

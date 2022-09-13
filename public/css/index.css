@@ -447,7 +447,8 @@ section .card .about {
   float: left;
 }
 
-/*Para tablet*/
+/*iPad*/
+
 @media (min-width: 768px) {
   .productos {
     flex-direction: row;
@@ -457,6 +458,8 @@ section .card .about {
     width: 348px;
   }
 }
+
+/*Desktop*/
 
 @media (min-width: 1080px) {
   .caja-producto {
