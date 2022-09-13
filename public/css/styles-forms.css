@@ -124,14 +124,20 @@ form.form-register div button {
   border: 1px solid var(--celeste);
   border-radius: 10px;
   color: white;
-  background-color: var(--celeste);
+  background-color: #3483fa;
   font-size: 16px;
   line-height: 1.2;
+  transition: background-color 200ms;
+}
+
+form.form-register div button:hover {
+  background-color: #1c60c7;
 }
 
 p.copy-login {
   text-align: center;
   margin: 5% 0 10%;
+  padding-bottom: 20px;
 }
 
 a.login-button {
@@ -188,53 +194,7 @@ div a {
 .login-help {
   border-top: 1px var(--grisOscuro) solid;
   margin-bottom: 1.15rem;
-  padding: 1.15rem 1.15rem 0;
-}
-
-footer {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  margin: 0;
-}
-
-.conjunto-footer {
-  background-color: var(--negroOscuro);
-  margin-top: 4%;
-  margin-bottom: 0;
-  padding-top: 1%;
-}
-
-.sector-descripcion {
-  display: flex;
-  flex-direction: column;
-  margin-left: 5%;
-  margin-right: 5%;
-  color: var(--blanco);
-  align-items: center;
-}
-
-.titulo-footer {
-  font-size: 22px;
-  text-align: center;
-  margin-bottom: -3%;
-}
-
-.informacion-footer {
-  display: block;
-  text-align: center;
-  margin-right: 20%;
-  margin-left: 20%;
-}
-
-.derechos-reserved {
-  display: flex;
-  align-content: top;
-  background-color: grey;
-  margin: 0;
-  justify-content: center;
-  background-color: var(--negroClaro);
-  color: var(--blanco);
+  padding: 20px;
 }
 
 @media (min-width: 768px) {

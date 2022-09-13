@@ -19,7 +19,7 @@
 .pagina-logo {
   width: 25%;
   cursor: pointer;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 .hamburger-button {
@@ -52,6 +52,12 @@
   display: inline-block;
   padding: 0 0px;
   font-size: 17px;
+}
+
+@media (min-width: 360px){
+  .hamburger-button {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 768px) {
