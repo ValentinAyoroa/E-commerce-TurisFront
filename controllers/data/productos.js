@@ -5,6 +5,7 @@ let productos = [
         precio: 15000,
         color: 'Beige',
         imagen: '/images/botas.jpg',
+        imagenesMuestra: ['/images/mochilai1.png', '/images/mochilai2.png', '/images/mochilai3.png', '/images/mochilai4.png'],
         descripcion: "Bota de treckking realizada en cuero con doble costura recubierto con capa impermeabilizante. Ajute acordonado con alpinos. Plantilla desmontable acolchada de 3mm. Fondo de EVA liviano con suelin de caucho antideslizante. Interior forrado en textil. Muy comodos y livianos. ideales para zonas montañosas, trekking."
     },
     {

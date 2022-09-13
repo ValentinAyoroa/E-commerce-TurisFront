@@ -471,7 +471,7 @@ main {
   .imagen-producto-muestra2,
   .imagen-producto-muestra3,
   .imagen-producto-muestra4,
-  .imagen-producto-muestra5 {
+  .imagen-producto-muestra {
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 6px;
     width: 60px;
