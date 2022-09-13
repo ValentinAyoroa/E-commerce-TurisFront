@@ -1,9 +1,8 @@
-# Retrospectiva Grupo 16 (Daily)
+# Retrospectiva Grupo 16 (Daily-Sprint3)
 ## COMENZAR A HACER
 
-- Sebastian realizara el carrito de compras 
-- Valentin seguira trabajando en login y register 
+- Sebastian y Valentin realizara el carrito de compras 
 - Ramiro continuara trabajando detalle de productos 
-- Soraya seguira realizando modificaciones en el home 
+- Soraya seguira realizando modificaciones de estilos en el home 
 
 
