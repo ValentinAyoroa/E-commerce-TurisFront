@@ -198,6 +198,7 @@ main {
     margin-bottom: 2%;
   }
 
+
   .precio {
     margin-left: 20%;
     margin-bottom: 0;
@@ -522,44 +523,10 @@ main {
     background-color: rgba(128, 128, 128, 0.212);
   }
 
-  .pagina-logo {
-    margin-top: 2%;
-    margin-left: 60%;
-  }
-
-  .mainheader-top {
-    background-color: var(--celeste);
-    box-shadow: 0 0 5px 0 rgb(0 0 0 / 50%);
-  }
-
   main {
     background-color: white;
     margin-left: 10%;
     margin-right: 10%;
-  }
-
-  .nav-bar {
-    display: block;
-  }
-
-  .hamburger-button {
-    display: none;
-  }
-
-  .nav-bar {
-    list-style: none;
-    display: flex;
-    margin: 5% 5% 0 0;
-    color: var(--blanco);
-    margin-right: 15%;
-  }
-
-  .text-navbar {
-    padding: 10px;
-  }
-
-  .text-navbar a {
-    color: var(--blanco);
   }
 
   .titulo-producto {
@@ -696,4 +663,3 @@ main {
     background-color: #1c60c7;
   }
 }
-
