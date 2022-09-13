@@ -33,6 +33,7 @@
   margin-right: 10%;
   color: black;
 }
+
 .hamburger-button:hover {
   color: white;
 }
@@ -79,9 +80,10 @@
 }
 
 @media (min-width: 1080px) {
+
   .pagina-logo {
     margin-top: 2%;
-    margin-left: 60%;
+    margin-left: 25%;
   }
 
   .mainheader-top {
@@ -116,6 +118,7 @@
     padding-bottom: 5px;
     font-weight: bold;
   }
+
   .text-navbar a:hover {
     color: white;
   }

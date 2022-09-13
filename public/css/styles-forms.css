@@ -127,7 +127,7 @@ form.form-register div button {
   background-color: #3483fa;
   font-size: 16px;
   line-height: 1.2;
-  transition: background-color 200ms;
+  transition: background-color 450ms;
 }
 
 form.form-register div button:hover {
