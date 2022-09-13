@@ -124,14 +124,20 @@ form.form-register div button {
   border: 1px solid var(--celeste);
   border-radius: 10px;
   color: white;
-  background-color: var(--celeste);
+  background-color: #3483fa;
   font-size: 16px;
   line-height: 1.2;
+  transition: background-color 200ms;
+}
+
+form.form-register div button:hover {
+  background-color: #1c60c7;
 }
 
 p.copy-login {
   text-align: center;
   margin: 5% 0 10%;
+  padding-bottom: 20px;
 }
 
 a.login-button {
@@ -188,9 +194,8 @@ div a {
 .login-help {
   border-top: 1px var(--grisOscuro) solid;
   margin-bottom: 1.15rem;
-  padding: 1.15rem 1.15rem 0;
+  padding: 20px;
 }
-
 
 @media (min-width: 768px) {
   body {

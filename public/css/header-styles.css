@@ -19,7 +19,7 @@
 .pagina-logo {
   width: 25%;
   cursor: pointer;
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 .hamburger-button {
@@ -33,7 +33,6 @@
   margin-right: 10%;
   color: black;
 }
-
 .hamburger-button:hover {
   color: white;
 }
@@ -55,6 +54,12 @@
   font-size: 17px;
 }
 
+@media (min-width: 360px){
+  .hamburger-button {
+    font-size: 30px;
+  }
+}
+
 @media (min-width: 768px) {
   /* HEADER iPAD */
 
@@ -74,10 +79,9 @@
 }
 
 @media (min-width: 1080px) {
-
   .pagina-logo {
     margin-top: 2%;
-    margin-left: 25%;
+    margin-left: 60%;
   }
 
   .mainheader-top {
@@ -112,7 +116,6 @@
     padding-bottom: 5px;
     font-weight: bold;
   }
-
   .text-navbar a:hover {
     color: white;
   }

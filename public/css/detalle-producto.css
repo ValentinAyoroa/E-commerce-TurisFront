@@ -144,7 +144,7 @@ main {
 .boton-carro {
   background-color: rgba(65, 137, 230, 0.15);
   border-color: transparent;
-  color: #0077c0;
+  color: #3483fa;
   border-radius: 6px;
   line-height: 30px;
   margin-top: 3%;
@@ -687,7 +687,7 @@ main {
 
   .boton-comprar {
     cursor: pointer;
-    background-color: var(--celeste);
+    background-color: #3483fa;
     transition: all 300ms;
   }
 
