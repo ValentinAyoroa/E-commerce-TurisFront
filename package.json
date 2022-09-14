@@ -3,12 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-<<<<<<< HEAD
+
     "start": "node bin/www",
     "dev": "nodemon bin/www"
-=======
-    "start": "node ./bin/www"
->>>>>>> cc9981ebaf4feedba592d0950f908bb337bb8e85
+
+   
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
