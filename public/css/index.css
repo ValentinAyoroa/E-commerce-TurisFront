@@ -63,7 +63,7 @@ article:hover {
   margin-bottom: 5%;
 }
 
-.productos > article {
+.productos>article {
   margin: 20px;
 }
 
@@ -108,6 +108,7 @@ p {
   left: 5px;
   font-size: 20px;
 }
+
 h1,
 h4 {
   text-align: center;
@@ -116,7 +117,8 @@ h4 {
 article .imagen-producto {
   margin-top: 5%;
   margin-bottom: 1%;
-  width: 230px;
+  width: 40%;
+  height: 50%;
   padding-left: 5%;
   padding-right: 5%;
   border: 2px solid grey;
@@ -166,7 +168,7 @@ figcaption {
   font-size: 10px;
 }
 
-figure:hover > figcaption {
+figure:hover>figcaption {
   display: block;
   transition: all 0.5s;
   visibility: visible;
@@ -241,6 +243,7 @@ figure:hover > figcaption {
 .section-clientes {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .container-card {
@@ -253,7 +256,7 @@ figure:hover > figcaption {
   flex-wrap: wrap;
 }
 
-.container-card > .card-wrap {
+.container-card>.card-wrap {
   margin-right: 50px;
 }
 
@@ -409,70 +412,67 @@ section .card .about {
   color: black;
 }
 
-@media (min-width: 450px) {
-  .banner {
-    display: flex;
-  }
-  .banner-item {
-    display: flex;
-  }
-  .home-banner {
-    display: none;
-  }
+.banner {
+  display: flex;
 }
 
-@media (max-width: 450px) {
-  .banner-title {
-    font-size: 10px;
-  }
-  .banner {
-    display: none;
-  }
-  .banner-item {
-    display: none;
-  }
-
-  /*HOME*/
-  .home-banner {
-    position: relative;
-    width: 100vw;
-    margin: 0 auto;
-  }
-
-  .home-banner figure {
-    position: relative;
-    width: 500%;
-    height: 90%;
-    margin: 0;
-    left: 0;
-    animation: slide 15s infinite alternate ease-in-out;
-  }
-
-  .home-banner figure img {
-    width: 20%;
-    height: 200px;
-    float: left;
-  }
+.banner-item {
+  display: flex;
 }
-/*Para tablet*/
+
+.home-banner {
+  display: none;
+}
+
+
+/*HOME*/
+.home-banner {
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.home-banner figure {
+  position: relative;
+  width: 500%;
+  height: 90%;
+  margin: 0;
+  left: 0;
+  animation: slide 15s infinite alternate ease-in-out;
+}
+
+.home-banner figure img {
+  width: 20%;
+  height: 200px;
+  float: left;
+}
+
+/*iPad*/
+
 @media (min-width: 768px) {
   .productos {
     flex-direction: row;
   }
+
   .caja-producto {
     width: 348px;
   }
 }
+
+/*Desktop*/
+
 @media (min-width: 1080px) {
   .caja-producto {
     height: 350px;
     width: 500px;
   }
 }
+
 @keyframes slide {
   0% {
     left: 0;
   }
+
   16% {
     left: 0;
   }
@@ -480,6 +480,7 @@ section .card .about {
   21% {
     left: -100%;
   }
+
   38% {
     left: -100%;
   }
@@ -487,6 +488,7 @@ section .card .about {
   43% {
     left: -200%;
   }
+
   60% {
     left: -200%;
   }
@@ -494,6 +496,7 @@ section .card .about {
   65% {
     left: -300%;
   }
+
   82% {
     left: -300%;
   }
@@ -501,6 +504,7 @@ section .card .about {
   87% {
     left: -400%;
   }
+
   100% {
     left: -400%;
   }

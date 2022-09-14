@@ -2,9 +2,13 @@
 //PARA QUE DETALLE DE PRODUCTO NO TENGA PROBLEMAS DE RESOLUCIÓN.
 //HAY QUE EDITARLAS, YO LO HICE CON EL PAINT, PONER "CAMBIAR TAMAÑO" Y ASIGNARLO.
 //NO HACERLO POR CÓDIGO.
+<<<<<<< HEAD
 
 const productos = require('./data/productos')
 
+=======
+const productos = require("../data/productos");
+>>>>>>> f92fa11afa4a6cb303b0661b3aec02225c69e5ee
 controller = {
     home: function (req, res) {
         res.render('index', { productos: productos });
@@ -23,6 +27,9 @@ controller = {
 
     register: function (req, res) {
         res.render('register');
+    }, 
+    carrito: function (req, res) {
+        res.render('carrito');
     }
 }
 
