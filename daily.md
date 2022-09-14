@@ -5,4 +5,3 @@
 - Ramiro continuara trabajando detalle de productos 
 - Soraya seguira realizando modificaciones de estilos en el home 
 
-

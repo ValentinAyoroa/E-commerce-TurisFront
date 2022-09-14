@@ -27,7 +27,7 @@ main {
   padding-bottom: 5px;
 }
 
-.titulo-producto {
+.titulo-carrito {
   padding-bottom: 8%;
   padding-top: 3%;
   padding-left: 5%;
@@ -178,7 +178,7 @@ main {
 }
 
 @media (min-width: 768px) {
-  .titulo-producto {
+  .titulo-carrito {
     position: relative;
     top: 10px;
     margin-bottom: 0;
@@ -220,7 +220,7 @@ main {
     margin-right: 5%;
   }
 
-  .titulo-producto {
+  .titulo-carrito {
     font-size: 25px;
     text-align: left;
     font-weight: 400;
@@ -238,7 +238,7 @@ main {
     margin-right: 10%;
   }
 
-  .titulo-producto {
+  .titulo-carrito {
     margin: auto;
     padding: 0;
     text-align: left;
@@ -268,7 +268,7 @@ main {
     margin-right: 10%;
   }
 
-  .imagenes-totales-producto {
+  .productos-carrito {
     width: 600%;
   }
 
@@ -282,11 +282,11 @@ main {
     margin-top: 7%;
   }
 
-  .bloque-producto-desktop {
+  .bloque-carrito-desktop {
     display: flex;
   }
 
-  .imagenes-totales-producto {
+  .productos-carrito {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -379,7 +379,7 @@ main {
     margin-right: 10%;
   }
 
-  .titulo-producto {
+  .titulo-carrito {
     margin: auto;
     padding: 0;
     text-align: left;
@@ -405,11 +405,11 @@ main {
     margin-top: 20%;
   }
 
-  .imagenes-totales-producto {
+  .productos-carrito {
     width: 60%;
   }
 
-  .descripcion-total-producto {
+  .panel-compra {
     width: 500%;
   }
 
@@ -418,7 +418,7 @@ main {
     margin-right: 10%;
   }
 
-  .imagenes-totales-producto {
+  .productos-carrito {
     width: 600%;
   }
 
@@ -436,7 +436,7 @@ main {
     display: flex;
   }
 
-  .imagenes-totales-producto {
+  .productos-carrito {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -529,7 +529,7 @@ main {
     margin-right: 10%;
   }
 
-  .titulo-producto {
+  .titulo-carrito {
     margin: auto;
     padding: 0;
     text-align: left;
@@ -555,7 +555,7 @@ main {
     margin-top: 10%;
   }
 
-  .descripcion-total-producto {
+  .panel-compra {
     width: 300%;
   }
 
@@ -564,7 +564,7 @@ main {
     margin-right: 10%;
   }
 
-  .imagenes-totales-producto {
+  .productos-carrito {
     width: 300%;
   }
 
@@ -578,11 +578,11 @@ main {
     margin-top: 7%;
   }
 
-  .bloque-producto-desktop {
+  .bloque-carrito-desktop {
     display: flex;
   }
 
-  .imagenes-totales-producto {
+  .productos-carrito {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;

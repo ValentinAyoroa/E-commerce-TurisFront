@@ -3,53 +3,70 @@
 
 <!--head-->
 <%- include("./partials/head.ejs") %>
-<link rel="stylesheet" href="/css/carrito.css">
+    <link rel="stylesheet" href="/css/carrito-styles.css">
 
-<body>
-    <%- include("./partials/header.ejs") %>
-        <main>
-            <div class="main-prodcuto-pc">
-                <p class="titulo-producto">Mi carrito (1 Item)</p>
-                <div class="bloque-producto-desktop">
-                    <div class="imagenes-totales-producto">                        
-                        <div class="imagenes-muestra">
-                            <img class="imagen-producto-muestra1" src="/images/mochilai1.png">                            
-                        </div>
-                    </div>
-                    <div class="descripcion-total-producto">
-                        <div class="precio">
-                            <h2 class="precio-total">$ 12500<i class="fas fa-shipping-fast"></i></h2>
-                            <p class="precio-cuotas">en 12x $<%=12500 / 12%></p>  
-                        </div>
-                        <div class="color-producto">
-                            <p class="texto-color-producto">Color: color</p>
-                        </div>
-                        <div class="stock-disponible">
-                            <p class="text-stock">Cantidad:</p>
-                            <p class="cantidad-stock">1</p>
-                            <div class="iconos-stock">
-                                <div class="icono-mas">
-                                    <i class="fas fa-plus"></i>
+    <body>
+        <%- include("./partials/header.ejs") %>
+            <main>
+                <div class="main-carrito-pc">
+                    <p class="titulo-carrito">Mi carrito (1 Item)</p>
+                    <div class="bloque-carrito-desktop">
+                        <div class="productos-carrito">
+
+                            <div class="bloque-producto">
+                                <div class="imagen-muestra">
+                                    <img class="imagen-producto-muestra" src="/images/mochilai1.png">
+                                </div>    
+                                <div class="info-producto">
+                                    <p class="texto-descripcion"> Mochila trekin </p>
+                                    <p class="texto-color-producto">Color: rojo</p>
                                 </div>
-                                <div class="icono-menos">
-                                    <i class="fas fa-minus"></i>
+                                <div class="stock-disponible">
+                                    <p class="text-stock">Cantidad:</p>
+                                    <p class="cantidad-stock">1</p>
+                                    <div class="iconos-stock">
+                                        <div class="icono-mas">
+                                            <i class="fas fa-plus"></i>
+                                        </div>
+                                        <div class="icono-menos">
+                                            <i class="fas fa-minus"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
-                        <div class="botones-compra-carro">
-                            <button class="boton-comprar" type="submit" value="compra">Comprar</button>
-                            <button class="boton-carro" type="submit" value="carro">Agregar al carrito</button>
-                        </div>
-                        <div class="box-informacion">
-                            <div class="informacion-producto">
-                                <p class="titulo-informacion">Informacion del producto</p>
-                                <p class="texto-descripcion">                                    
-                                </p>
+                        <div class="panel-compra">
+                            <div class="resumen">
+                                <h2 class="resumen">Resumen de la compra<i class="fas fa-shipping-fast"></i></h2>
+                            </div>
+                            <div class="comprados">
+                                <p>Prodcuto 1 - $6250</p>
+                                <p>Prodcuto 2 - $6250</p>
+                            </div>
+                            <div class="precio">
+                                <div class="sub-total">
+                                    <h2 class="sub-total-titulo">Subtotal</h2>
+                                    <h2 class="sub-total-monto">$ 12500</h2>
+                                </div>
+                                <div class="cuotas">
+                                    <p class="titulo-cuotas">O en 12 cuotas de</p>
+                                    <p class="precio-cuotas">$<%=12500 / 12%>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="botones-compra-carro">
+                                <button class="boton-comprar" type="submit" value="compra">Finalizar Compra</button>
+                                <button class="boton-carro" type="submit" value="carro">Continua Comprando</button>
+                            </div>
+                            <div class="descuento">
+                                <h2>Tienes codigo de descuento?</h2>
+                                <input type="text" placeholder="Ingresa tu codigo de descuento">
+                                <button class="boton-carro" type="submit" value="carro">aplicar</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
-        <%- include("./partials/footer.ejs") %>
-</body>
+            </main>
+            <%- include("./partials/footer.ejs") %>
+    </body>
