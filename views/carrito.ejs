@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--head-->
+<%- include("./partials/head.ejs") %>
+<link rel="stylesheet" href="/css/carrito.css">
+
+<body>
+    <%- include("./partials/header.ejs") %>
+        <main>
+            <div class="main-prodcuto-pc">
+                <p class="titulo-producto">Mi carrito (1 Item)</p>
+                <div class="bloque-producto-desktop">
+                    <div class="imagenes-totales-producto">                        
+                        <div class="imagenes-muestra">
+                            <img class="imagen-producto-muestra1" src="/images/mochilai1.png">                            
+                        </div>
+                    </div>
+                    <div class="descripcion-total-producto">
+                        <div class="precio">
+                            <h2 class="precio-total">$ 12500<i class="fas fa-shipping-fast"></i></h2>
+                            <p class="precio-cuotas">en 12x $<%=12500 / 12%></p>  
+                        </div>
+                        <div class="color-producto">
+                            <p class="texto-color-producto">Color: color</p>
+                        </div>
+                        <div class="stock-disponible">
+                            <p class="text-stock">Cantidad:</p>
+                            <p class="cantidad-stock">1</p>
+                            <div class="iconos-stock">
+                                <div class="icono-mas">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="icono-menos">
+                                    <i class="fas fa-minus"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="botones-compra-carro">
+                            <button class="boton-comprar" type="submit" value="compra">Comprar</button>
+                            <button class="boton-carro" type="submit" value="carro">Agregar al carrito</button>
+                        </div>
+                        <div class="box-informacion">
+                            <div class="informacion-producto">
+                                <p class="titulo-informacion">Informacion del producto</p>
+                                <p class="texto-descripcion">                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include("./partials/footer.ejs") %>
+</body>
