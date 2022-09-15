@@ -16,15 +16,20 @@
 body {
   margin: 0;
   padding: 0;
+  background-image: url("/images/img-register.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 main {
-  background-color: rgba(128, 128, 128, 0.212);
   border-radius: 10px;
   margin-bottom: 2%;
   margin-left: 5%;
   margin-right: 5%;
   padding-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.733);
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
 }
 
 .titulo-carrito {
@@ -33,6 +38,19 @@ main {
   padding-left: 5%;
   padding-right: 5%;
   border-bottom: 1px #ebebeb solid;
+}
+
+/* Productos Carrito */
+
+.productos-carrito {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bloque-producto {
+  display: flex;
+  justify-content: space-between;
 }
 
 .imagen-producto {
@@ -54,6 +72,13 @@ main {
   border-radius: 8px;
 }
 
+.precio {
+  display: flex;
+  margin-right: 10%;
+  margin-left: 5%;
+  flex-direction: column;
+}
+
 .imagen-color-producto {
   max-width: 30px;
   max-height: 40px;
@@ -65,16 +90,37 @@ main {
   margin-left: 5%;
 }
 
-.precio {
+/* Panel Compra */
+
+.resumen, .lista-agregados, .total,
+.botones {
+  width: 90%;
   display: flex;
-  margin-right: 10%;
-  margin-left: 5%;
   flex-direction: column;
+  justify-content: center;
 }
 
-.precio-cuotas {
+.resumen .resumen-titulo {
   position: relative;
-  bottom: 15px;
+  margin: 10%;
+}
+
+.resumen-titulo i {
+  position: relative;
+  color: var(--celeste);
+  left: 10%;
+}
+
+.producto-agregado, .sub-total, .cuotas {
+  display: flex;
+  margin: 0 10% 0 10%;
+  justify-content: space-between;
+}
+
+.producto-agregado p {
+  margin: 0 0 5% 0;
+  font-size: 0.85rem;  
+  font-weight: bolder;
 }
 
 .precio-total {
@@ -83,11 +129,79 @@ main {
   font-weight: 400;
 }
 
-.precio-total i {
-  position: relative;
-  color: #39b54a;
-  left: 2%;
+.cuotas p{
+  font-size: 0.90rem;
+  font-weight: bold;
+  color: var(--azul);
+  margin-top: 0;
 }
+
+.boton-comprar {
+  background-color: var(--celeste);
+  border-color: transparent;
+  color: #fff;
+  border-radius: 6px;
+  line-height: 30px;
+  margin-top: 10%;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.boton-carro {
+  background-color: rgba(65, 137, 230, 0.15);
+  border-color: transparent;
+  color: #0077c0;
+  border-radius: 6px;
+  line-height: 30px;
+  margin-top: 3%;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.descuento {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.descuento h3 {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.descuento input,
+button {
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+}
+
+.descuento input[type="text"] {
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+  border: 1px var(--grisClaro) solid;
+  border-radius: 0.3rem;  
+  font-weight: bolder;
+}
+
+.descuento button {
+  margin-bottom: 10%;
+}
+
+.panel-compra button{
+  font-size: 1rem;
+}
+
+.boton-comprar:hover {
+  background-color: #1c60c7;
+}
+
+.boton-carro:hover {
+  background-color: rgba(40, 87, 150, 0.15);
+}
+
+/* Fin Panel Compra */
 
 .stock-disponible {
   display: flex;
@@ -123,31 +237,6 @@ main {
 .icono-mas {
   background-color: white;
   border-bottom: #ebebeb solid 1px;
-}
-
-.botones-compra-carro {
-  display: flex;
-  flex-direction: column;
-  max-width: 80%;
-  margin-left: 10%;
-}
-
-.boton-comprar {
-  background-color: #3483fa;
-  border-color: transparent;
-  color: #fff;
-  border-radius: 6px;
-  line-height: 30px;
-  margin-top: 10%;
-}
-
-.boton-carro {
-  background-color: rgba(65, 137, 230, 0.15);
-  border-color: transparent;
-  color: #0077c0;
-  border-radius: 6px;
-  line-height: 30px;
-  margin-top: 3%;
 }
 
 .box-informacion {
@@ -198,7 +287,6 @@ main {
     margin-bottom: 2%;
   }
 
-
   .precio {
     margin-left: 20%;
     margin-bottom: 0;
@@ -227,13 +315,10 @@ main {
     padding-top: 5%;
     padding-left: 15%;
   }
-
-
 }
 
 @media (min-width: 1080px) {
   main {
-    background-color: white;
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -286,11 +371,6 @@ main {
     display: flex;
   }
 
-  .productos-carrito {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
 
   .imagen-color-producto {
     margin: 0;
@@ -347,25 +427,6 @@ main {
     margin-top: 2%;
   }
 
-  .boton-carro {
-    cursor: pointer;
-    background-color: rgba(65, 137, 230, 0.15);
-    transition: all 300ms;
-  }
-
-  .boton-carro:hover {
-    background-color: rgba(40, 87, 150, 0.15);
-  }
-
-  .boton-comprar {
-    cursor: pointer;
-    background-color: #3483fa;
-    transition: all 300ms;
-  }
-
-  .boton-comprar:hover {
-    background-color: #1c60c7;
-  }
 }
 
 @media (min-width: 1400px) {
@@ -374,7 +435,6 @@ main {
   }
 
   main {
-    background-color: white;
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -413,7 +473,7 @@ main {
     width: 500%;
   }
 
-  .box-informacion {
+  .panel-compra h2.resumen .box-informacion {
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -430,16 +490,6 @@ main {
     width: 2000px;
     padding-bottom: 20px;
     margin-top: 7%;
-  }
-
-  .bloque-producto-desktop {
-    display: flex;
-  }
-
-  .productos-carrito {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
   }
 
   .imagen-color-producto {
@@ -497,25 +547,6 @@ main {
     margin-top: 2%;
   }
 
-  .boton-carro {
-    cursor: pointer;
-    background-color: rgba(65, 137, 230, 0.15);
-    transition: all 300ms;
-  }
-
-  .boton-carro:hover {
-    background-color: rgba(40, 87, 150, 0.15);
-  }
-
-  .boton-comprar {
-    cursor: pointer;
-    background-color: #3483fa;
-    transition: all 300ms;
-  }
-
-  .boton-comprar:hover {
-    background-color: #1c60c7;
-  }
 }
 
 @media (min-width: 1800px) {
@@ -524,7 +555,6 @@ main {
   }
 
   main {
-    background-color: white;
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -582,12 +612,6 @@ main {
     display: flex;
   }
 
-  .productos-carrito {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
   .imagen-color-producto {
     margin: 0;
     margin-right: 4%;
@@ -642,24 +666,5 @@ main {
     margin-left: 18%;
     margin-top: 2%;
   }
-
-  .boton-carro {
-    cursor: pointer;
-    background-color: rgba(65, 137, 230, 0.15);
-    transition: all 300ms;
-  }
-
-  .boton-carro:hover {
-    background-color: rgba(40, 87, 150, 0.15);
-  }
-
-  .boton-comprar {
-    cursor: pointer;
-    background-color: var(--celeste);
-    transition: all 300ms;
-  }
-
-  .boton-comprar:hover {
-    background-color: #1c60c7;
-  }
+  
 }
