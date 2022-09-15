@@ -4,6 +4,8 @@
 //NO HACERLO POR CÓDIGO.
 const productos = require("../data/productos");
 controller = {
+
+
     home: function (req, res) {
         res.render('index', { productos: productos });
     },
@@ -24,7 +26,15 @@ controller = {
     },
     carrito: function (req, res) {
         res.render('carrito');
+    },
+    edit: (req, res) => {
+        res.render('editar-producto');
+    },
+
+    create: (req, res) => {
+        res.render('crear-producto');
     }
+
 }
 
 module.exports = controller;
