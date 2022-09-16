@@ -35,6 +35,13 @@ main {
   border-bottom: 1px #ebebeb solid;
 }
 
+a.editar{
+  font-size: 16px;
+  padding-left: 25px;
+  text-decoration: none;
+  color: var(--celeste);
+}
+
 .imagen-producto {
   max-width: 50%;
   display: block;
