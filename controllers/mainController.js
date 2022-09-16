@@ -23,7 +23,9 @@ controller = {
     register: function (req, res) {
         res.render('register');
     },
+    
     carrito: (req, res) => res.render('carrito'),
+
     edit: (req, res) => {
         let productoEncontrado = productos.find(producto => {
             return producto.id == req.params.id

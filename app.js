@@ -7,6 +7,8 @@ var logger = require('morgan');
 var methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
+var productsRouter = require('./routes/productsRouter')
+var usersRouter = require('./routes/usersRouter');
 
 var app = express();
 
@@ -14,6 +16,7 @@ var app = express();
 app.set('views',[ path.join(__dirname, 'views'),('views', path.join(__dirname, 'views/users/')),('views', path.join(__dirname, 'views/products/'))]);
 app.set('view engine', 'ejs');
 
+app.use(methodOverride('_method'));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -21,6 +24,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/products', productsRouter);
+app.use('/users', usersRouter);
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('puerto', process.env.PORT || 3030);
