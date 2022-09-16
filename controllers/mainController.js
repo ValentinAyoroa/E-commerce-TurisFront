@@ -9,40 +9,13 @@ controller = {
         res.render('index', { productos: productos });
     },
 
-    detalleproducto: function (req, res) {
-        let productoEncontrado = productos.find(producto => {
-            return producto.id == req.params.id
-        })
-        res.render('detalle-producto', { producto: productoEncontrado });
-    },
-
     login: function (req, res) {
         res.render('login');
     },
 
     register: function (req, res) {
         res.render('register');
-    },
-    
-    carrito: (req, res) => res.render('carrito'),
-
-    edit: (req, res) => {
-        let productoEncontrado = productos.find(producto => {
-            return producto.id == req.params.id
-        })
-        res.render('editar-producto', { producto: productoEncontrado });
-    },
-    update: (req, res) => {
-        
-    },
-
-    create: (req, res) => {
-        res.render('crear-producto');
-    },
-    store: (req, res) =>{
-        
     }
-
 }
 
 module.exports = controller;

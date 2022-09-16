@@ -10,7 +10,7 @@
     <%- include("./partials/header.ejs") %>
     <h2 class="copy-create">Añadir nuevo producto</h2>
     <div class="create-product">
-        <form action='/create' method="POST">
+        <form action='/products/create' method="POST">
             <div class="imagen-product">
             <label for="imagen">Ingrese imagenes de su producto</label>
             <input type="file" name="imagen" class="imagen-product">
@@ -25,7 +25,7 @@
             <input type='text' name="color" class="color-product" placeholder="Color del producto">
             </div>
             <div>
-            <textarea name="description" class="description-product" placeholder="Descripcion del producto"></textarea>
+            <textarea name="descripcion" class="description-product" placeholder="Descripcion del producto"></textarea>
             </div>
             <div class="buttons">
             <button class="submit" type="submit">Publicar</button>
