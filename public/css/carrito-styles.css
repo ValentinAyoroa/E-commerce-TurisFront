@@ -59,6 +59,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 5%;
+  padding-left: 5%;
 }
 
 .bloque-producto {
@@ -82,12 +84,18 @@ main {
   z-index: 10;
 }
 
+.texto-descripcion{
+  margin-bottom: 1%;
+}
+.texto-color-producto {
+  margin-top: 1%;
+}
+
 .stock-disponible {
   display: flex;
   justify-content: space-between;
   background-color: #ebebeb;
   margin-right: 10%;
-  margin-left: 10%;
   border-radius: 8px;
 }
 
@@ -128,15 +136,8 @@ main {
 
 .precio {
   display: flex;
-  margin-right: 10%;
-  margin-left: 5%;
   flex-direction: column;
 }
-
-.texto-color-producto {
-  margin-left: 5%;
-}
-
 
 /* Panel Compra */
 
@@ -264,11 +265,6 @@ button {
   .precio {
     margin-left: 20%;
     margin-bottom: 0;
-  }
-
-  .stock-disponible {
-    max-width: 65%;
-    margin-left: 17%;
   }
 
   .botones-compra-carro {
