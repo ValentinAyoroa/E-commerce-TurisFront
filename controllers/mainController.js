@@ -22,9 +22,7 @@ controller = {
     register: function (req, res) {
         res.render('register');
     },
-    carrito: function (req, res) {
-        res.render('carrito');
-    }
+    carrito: (req, res) => res.render('carrito')
 }
 
 module.exports = controller;

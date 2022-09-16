@@ -40,6 +40,19 @@ main {
   border-bottom: 1px #ebebeb solid;
 }
 
+.titulo-carrito {
+  position: relative;
+  top: 10px;
+  margin-bottom: 0;
+  margin-left: 5%;
+  margin-right: 15%;
+  font-size: 26px;
+}
+
+.bloque-carrito-desktop {
+  display: flex;
+}
+
 /* Productos Carrito */
 
 .productos-carrito {
@@ -53,23 +66,64 @@ main {
   justify-content: space-between;
 }
 
-.imagen-producto {
-  max-width: 50%;
-  display: block;
-  margin: auto;
-  padding-top: 2%;
-  border-radius: 15px;
+.imagen-producto-muestra {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  width: 60px;
+  margin-top: 15%;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
+  transition: all 300ms;
 }
 
-.color-producto {
+.imagen-producto-muestra:hover {
+  border: solid 2px #3483fa;
+  transform: scale(1.1);
+  z-index: 10;
+}
+
+.stock-disponible {
   display: flex;
   justify-content: space-between;
   background-color: #ebebeb;
-  margin-bottom: 5%;
-  margin-top: 5%;
   margin-right: 10%;
   margin-left: 10%;
   border-radius: 8px;
+}
+
+.text-stock {
+  margin-left: 5%;
+}
+
+.iconos-stock {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5px 5% 0;
+  margin-bottom: 5px;  
+  padding: 0 3px;
+  border-radius: 2px;
+}
+
+.cantidad-stock {
+  position: relative;
+  right: 28%;
+}
+
+.icono-mas {
+  background-color: white;
+  border-bottom: #ebebeb solid 1px;
+  margin-bottom: 2;
+  cursor: pointer;
+}
+
+.icono-menos{
+  cursor: pointer;
+}
+
+.imagenes-muestra {
+  display: none;
 }
 
 .precio {
@@ -79,20 +133,16 @@ main {
   flex-direction: column;
 }
 
-.imagen-color-producto {
-  max-width: 30px;
-  max-height: 40px;
-  margin-right: 5%;
-  margin-top: 2%;
-}
-
 .texto-color-producto {
   margin-left: 5%;
 }
 
+
 /* Panel Compra */
 
-.resumen, .lista-agregados, .total,
+.resumen,
+.lista-agregados,
+.total,
 .botones {
   width: 90%;
   display: flex;
@@ -111,7 +161,9 @@ main {
   left: 10%;
 }
 
-.producto-agregado, .sub-total, .cuotas {
+.producto-agregado,
+.sub-total,
+.cuotas {
   display: flex;
   margin: 0 10% 0 10%;
   justify-content: space-between;
@@ -119,7 +171,7 @@ main {
 
 .producto-agregado p {
   margin: 0 0 5% 0;
-  font-size: 0.85rem;  
+  font-size: 0.85rem;
   font-weight: bolder;
 }
 
@@ -129,8 +181,8 @@ main {
   font-weight: 400;
 }
 
-.cuotas p{
-  font-size: 0.90rem;
+.cuotas p {
+  font-size: 0.9rem;
   font-weight: bold;
   color: var(--azul);
   margin-top: 0;
@@ -181,7 +233,7 @@ button {
   padding: 0.5rem 0.75rem;
   box-sizing: border-box;
   border: 1px var(--grisClaro) solid;
-  border-radius: 0.3rem;  
+  border-radius: 0.3rem;
   font-weight: bolder;
 }
 
@@ -189,7 +241,7 @@ button {
   margin-bottom: 10%;
 }
 
-.panel-compra button{
+.panel-compra button {
   font-size: 1rem;
 }
 
@@ -203,88 +255,10 @@ button {
 
 /* Fin Panel Compra */
 
-.stock-disponible {
-  display: flex;
-  justify-content: space-between;
-  background-color: #ebebeb;
-  margin-right: 10%;
-  margin-left: 10%;
-  border-radius: 8px;
-}
-
-.text-stock {
-  margin-left: 5%;
-}
-
-.iconos-stock {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-right: 5%;
-  background-color: white;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 2px;
-  padding-left: 3px;
-  padding-right: 3px;
-}
-
-.cantidad-stock {
-  position: relative;
-  right: 28%;
-}
-
-.icono-mas {
-  background-color: white;
-  border-bottom: #ebebeb solid 1px;
-}
-
-.box-informacion {
-  border-top: #ebebeb solid 1px;
-  margin-top: 10%;
-}
-
-.informacion-producto {
-  margin: 5%;
-}
-
-.titulo-informacion {
-  font-size: 20px;
-  font-weight: 400;
-  word-break: break-word;
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.texto-informacion {
-  font-size: 16px;
-  font-weight: 400;
-  word-break: break-word;
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.imagenes-muestra {
-  display: none;
-}
-
 @media (min-width: 768px) {
-  .titulo-carrito {
-    position: relative;
-    top: 10px;
-    margin-bottom: 0;
-    margin-left: 5%;
-    margin-right: 15%;
-    font-size: 26px;
-  }
-
+  
   .imagen-producto {
     margin-top: 2%;
-  }
-
-  .color-producto {
-    max-width: 65%;
-    margin-left: 17%;
-    margin-top: 0;
-    margin-bottom: 2%;
   }
 
   .precio {
@@ -317,22 +291,7 @@ button {
   }
 }
 
-@media (min-width: 1080px) {
-  main {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
-  .titulo-carrito {
-    margin: auto;
-    padding: 0;
-    text-align: left;
-    margin-left: 0%;
-    margin-top: 2%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 3%;
-  }
+@media (min-width: 1080px) { 
 
   main {
     display: block;
@@ -348,34 +307,8 @@ button {
     top: 20%;
   }
 
-  .box-informacion {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
   .productos-carrito {
     width: 600%;
-  }
-
-  .imagen-producto2,
-  .imagen-producto3,
-  .imagen-producto4,
-  .imagen-producto5 {
-    margin-right: 15%;
-    width: 2000px;
-    padding-bottom: 20px;
-    margin-top: 7%;
-  }
-
-  .bloque-carrito-desktop {
-    display: flex;
-  }
-
-
-  .imagen-color-producto {
-    margin: 0;
-    margin-right: 4%;
-    margin-top: 1%;
   }
 
   .imagenes-muestra {
@@ -385,84 +318,18 @@ button {
     margin-left: 5%;
   }
 
-  .icono-mas {
-    margin-bottom: 2;
-    cursor: pointer;
-  }
-
-  .icono-menos {
-    cursor: pointer;
-  }
-
   .botones-compra-carro {
     margin-bottom: 2%;
   }
-
-  .imagen-producto-muestra1,
-  .imagen-producto-muestra2,
-  .imagen-producto-muestra3,
-  .imagen-producto-muestra4,
-  .imagen-producto-muestra5 {
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    width: 60px;
-    margin-top: 15%;
-    cursor: pointer;
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
-    transition: all 300ms;
-  }
-
-  .imagen-producto-muestra1:hover,
-  .imagen-producto-muestra2:hover,
-  .imagen-producto-muestra3:hover,
-  .imagen-producto-muestra4:hover,
-  .imagen-producto-muestra5:hover {
-    border: solid 2px #3483fa;
-    transform: scale(1.1);
-    z-index: 10;
-  }
-
-  .precio {
-    margin-left: 18%;
-    margin-top: 2%;
-  }
-
 }
 
 @media (min-width: 1400px) {
-  body {
-    background-color: rgba(128, 128, 128, 0.212);
-  }
-
-  main {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
 
   .titulo-carrito {
-    margin: auto;
-    padding: 0;
     text-align: left;
+    padding: 2% 0 2% 3%;    
     margin-left: 0%;
     margin-top: 2%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 3%;
-  }
-
-  main {
-    display: block;
-    margin: auto;
-    margin-bottom: 1.5%;
-    width: 70%;
-  }
-
-  .imagen-producto {
-    position: unset;
-    margin-right: 12%;
-    width: 1000px;
-    padding-bottom: 0;
-    margin-top: 20%;
   }
 
   .productos-carrito {
@@ -473,198 +340,27 @@ button {
     width: 500%;
   }
 
-  .panel-compra h2.resumen .box-informacion {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
   .productos-carrito {
     width: 600%;
   }
 
-  .imagen-producto2,
-  .imagen-producto3,
-  .imagen-producto4,
-  .imagen-producto5 {
-    margin-right: 15%;
-    width: 2000px;
-    padding-bottom: 20px;
-    margin-top: 7%;
-  }
-
-  .imagen-color-producto {
-    margin: 0;
-    margin-right: 4%;
-    margin-top: 1%;
-  }
-
-  .imagenes-muestra {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 5%;
-  }
-
-  .icono-mas {
-    margin-bottom: 2;
-    cursor: pointer;
-  }
-
-  .icono-menos {
-    cursor: pointer;
-  }
-
   .botones-compra-carro {
     margin-bottom: 2%;
-  }
-
-  .imagen-producto-muestra1,
-  .imagen-producto-muestra2,
-  .imagen-producto-muestra3,
-  .imagen-producto-muestra4,
-  .imagen-producto-muestra {
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    width: 60px;
-    margin-top: 15%;
-    cursor: pointer;
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
-    transition: all 300ms;
-  }
-
-  .imagen-producto-muestra1:hover,
-  .imagen-producto-muestra2:hover,
-  .imagen-producto-muestra3:hover,
-  .imagen-producto-muestra4:hover,
-  .imagen-producto-muestra5:hover {
-    border: solid 2px #3483fa;
-    transform: scale(1.1);
-    z-index: 10;
   }
 
   .precio {
     margin-left: 18%;
     margin-top: 2%;
   }
-
 }
 
 @media (min-width: 1800px) {
-  body {
-    background-color: rgba(128, 128, 128, 0.212);
-  }
-
-  main {
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
-  .titulo-carrito {
-    margin: auto;
-    padding: 0;
-    text-align: left;
-    margin-left: 0%;
-    margin-top: 2%;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-left: 3%;
-  }
-
-  main {
-    display: block;
-    margin: auto;
-    margin-bottom: 1.5%;
-    width: 70%;
-  }
-
-  .imagen-producto {
-    position: unset;
-    margin-right: 12%;
-    width: 1800px;
-    padding-bottom: 5%;
-    margin-top: 10%;
-  }
-
   .panel-compra {
     width: 300%;
-  }
-
-  .box-informacion {
-    margin-left: 10%;
-    margin-right: 10%;
   }
 
   .productos-carrito {
     width: 300%;
   }
 
-  .imagen-producto2,
-  .imagen-producto3,
-  .imagen-producto4,
-  .imagen-producto5 {
-    margin-right: 15%;
-    width: 2000px;
-    padding-bottom: 20px;
-    margin-top: 7%;
-  }
-
-  .bloque-carrito-desktop {
-    display: flex;
-  }
-
-  .imagen-color-producto {
-    margin: 0;
-    margin-right: 4%;
-    margin-top: 1%;
-  }
-
-  .imagenes-muestra {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 5%;
-  }
-
-  .icono-mas {
-    margin-bottom: 2;
-    cursor: pointer;
-  }
-
-  .icono-menos {
-    cursor: pointer;
-  }
-
-  .botones-compra-carro {
-    margin-bottom: 2%;
-  }
-
-  .imagen-producto-muestra1,
-  .imagen-producto-muestra2,
-  .imagen-producto-muestra3,
-  .imagen-producto-muestra4,
-  .imagen-producto-muestra5 {
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    width: 60px;
-    margin-top: 15%;
-    cursor: pointer;
-    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 20%);
-    transition: all 300ms;
-  }
-
-  .imagen-producto-muestra1:hover,
-  .imagen-producto-muestra2:hover,
-  .imagen-producto-muestra3:hover,
-  .imagen-producto-muestra4:hover,
-  .imagen-producto-muestra5:hover {
-    border: solid 2px #3483fa;
-    transform: scale(1.1);
-    z-index: 10;
-  }
-
-  .precio {
-    margin-left: 18%;
-    margin-top: 2%;
-  }
-  
 }
