@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Roboto";
+}
+
+h2.copy-create{
+    margin-top: 40px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+div.create-product{
+    margin: 30px
+}
+
+div.create-product form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+div.create-product form div{
+    width: 90%;
+}
+
+div.create-product form div.imagen-product{
+    border: 1px solid var(--celeste);
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 30px;
+    background-color: #CEEDFF ;
+}
+
+div.create-product form div input.imagen-product{
+    border: none;
+}
+
+
+div.create-product form div input{
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0    
+}
+
+div.create-product form textarea{
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0
+}
+
+div.create-product form div.buttons{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin: 20px;
+}
+
+div.create-product form div.buttons button{
+    width: 100%;
+    margin: 10px;
+    padding: 10px
+}
+
+div.buttons button.submit{
+  background-color: #3483fa;
+  color: white;
+  border: 1px solid var(--celeste);
+  border-radius: 5px;
+  transition: background-color 200ms
+}
+
+div.buttons button.submit:hover {
+    background-color: #1c60c7;
+  }
+
+div.buttons button.reset{
+    background-color: black;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 5px;
+  transition: background-color 200ms
+
+}
+
+div.buttons button.reset:hover {
+    background-color: #242424 
+  }

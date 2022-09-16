@@ -84,6 +84,11 @@ footer {
     align-items: center;
     justify-content: center;
   }
+
+  .redes-container ul {
+    padding: 0;
+  }
+
   .redes-container ul li {
     display: inline-block;
     margin: 0 5px;
