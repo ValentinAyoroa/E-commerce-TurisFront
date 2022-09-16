@@ -37,7 +37,20 @@ controller = {
         res.render('editar-producto', { producto: productoEncontrado });
     },
     update: (req, res) => {
-        
+        let data = allProducts();
+
+        let productoEncontrado = data.find(producto => {
+            return producto.id == req.params.id
+        });
+
+        productoEncontrado.titulo = req.body.titulo;
+        productoEncontrado.precio = req.body.precio;
+        productoEncontrado.color = req.body.color;
+        productoEncontrado.descripcion = req.body.descripcion;
+
+        writeJson(data)
+
+        res.redirect('/')
     },
 
     create: (req, res) => {
@@ -60,7 +73,7 @@ controller = {
 
         writeJson(data);
 
-        res.redirect('/products/create');
+        res.redirect('/');
     }
 
 }
