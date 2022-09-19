@@ -2,49 +2,58 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
-    font-family: "Roboto";
-}
+    font-family: 'Roboto';
+    background-image: url("/images/img-register.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
 h2.copy-edit{
-    margin-top: 40px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-div.edit-product{
-    margin: 30px
+div.edit{
+    border-radius: 10px;
+    padding-top: 20px;
+    margin: 30px 20px;
+    background-color: rgba(255, 255, 255, 0.733);
+     box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
 }
 
 div.edit-product form{
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 div.edit-product form div{
     width: 90%;
 }
 
-div.edit-product form div.imagen-product{
+div.edit-product div.imagen-product{
     border: 1px solid var(--celeste);
     border-radius: 5px;
     padding: 15px;
-    margin: 15px 30px;
+    margin: 30px;
     background-color: #CEEDFF ;
 }
 
-div.edit-product form div.imagen-product img{
+div.edit-product div.imagen-product img{
     width: 100%;
     border-radius: 5px;
 }
 
-div.edit-product form div input.imagen-product{
+div.edit-product div input.imagen-product{
     border: none;
 }
 
+div.edit-product form div {
+    padding-top: 25px;
+}
 
 div.edit-product form div input{
     width: 100%;
@@ -63,14 +72,14 @@ div.edit-product form textarea{
     margin: 15px 0
 }
 
-div.edit-product form div.buttons{
+div.edit-product div.buttons{
     display: flex;
     justify-content: center;
     width: 95%;
     margin: 20px;
 }
 
-div.edit-product form div.buttons button{
+div.edit-product div.buttons button{
     width: 100%;
     margin: 10px;
     padding: 10px
@@ -101,26 +110,42 @@ div.buttons button.reset:hover {
     background-color: #242424 
   }
 
-@media (min-width: 1000px) {
-    div.edit-product form div.imagen-product{
-        width: 40%;
-        border: 1px solid var(--celeste);
-        border-radius: 5px;
-        padding: 15px;
-        margin: 15px 30px;
-        background-color: #CEEDFF ;
-    }
+@media (min-width: 500px){
 
-    div.edit-product form div.imagen-product img{
-        width: 100%;
-        border-radius: 5px;
+    div.edit-product div.imagen-product{
+        width: 60%;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    div.edit{
+        margin: 100px;
     }
 
     div.edit-product{
         display: flex;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        width: 80%;
+    }
+
+    div.edit-product form{
+        margin: 50px;
+    }
+
+    div.edit-product div.imagen-product{
+        width: 80%;
+        height: 80%;
         margin: 30px;
-        align-items: center;
-        justify-content: center;
+    }
+
+    div.edit-product div.imagen-product img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
     }
 
     div.edit-product form{

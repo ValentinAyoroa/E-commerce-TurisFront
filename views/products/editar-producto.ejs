@@ -8,22 +8,27 @@
 
 <body>
     <%- include("./partials/header.ejs") %>
+<div class="edit">
     <h2 class="copy-edit">Editar producto</h2>
     <div class="edit-product">
+        <div class="imagen-product">
+            <img src=<%=producto.imagen%>>
+        </div>
         <form action='/products/edit/<%=producto.id%>?_method=PUT' method="POST">
-            <div class="imagen-product">
-                <img src=<%=producto.imagen%>>
-            </div>
             <div>
+            <label for="titulo">Titulo del producto</label>
             <input type="text" name="titulo" class="titulo-product" value="<%=producto.titulo%>" placeholder="Ingrese el nombre del producto">
             </div>
             <div>
+            <label for="precio">Precio</label>
             <input type="number" name="precio" class="precio-product" value="<%=producto.precio%>" placeholder="Precio $ARS">
             </div>
             <div>
+            <label for="color">Color</label>
             <input type='text' name="color" class="color-product" value="<%=producto.color%>" placeholder="Color del producto">
             </div>
             <div>
+            <label for="descripcion">Descripcion</label>
             <textarea name="descripcion" class="description-product"  placeholder="Descripcion del producto"><%=producto.descripcion%></textarea>
             </div>
             <div class="buttons">
@@ -32,6 +37,7 @@
             </div>
         </form>
     </div>
+</div>
 </body>
 <footer>
     <%- include("./partials/footer.ejs") %>

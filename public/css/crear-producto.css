@@ -2,19 +2,27 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
-    font-family: "Roboto";
-}
+    font-family: 'Roboto';
+    background-image: url("/images/img-register.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
 h2.copy-create{
+    padding: 20px;
     margin-top: 40px;
     margin-bottom: 0px;
     text-align: center;
 }
 
 div.create-product{
-    margin:30px
+    border-radius: 10px;
+    margin: 30px;
+    background-color: rgba(255, 255, 255, 0.733);
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
 }
 
 div.create-product form{
@@ -96,18 +104,31 @@ div.buttons button.reset:hover {
     background-color: #242424 
   }
 
+  @media (min-width: 500px) {
+
+    div.create-product{
+        margin: auto;
+        width: 75%;
+        margin-bottom: 50px;
+    }
+
+    div.create-product form{
+        width: 100%;
+        margin: auto;
+    }
+}
+
 
 @media (min-width: 1000px) {
 
     div.create-product{
-        display: flex;
-        margin: 30px;
-        align-items: center;
-        justify-content: center;
+        margin: auto;
+        width: 65%;
+        margin-bottom: 50px;
     }
 
     div.create-product form{
-        width: 70vw;
-        margin: 0;
+        width: 100%;
+        margin: auto;
     }
 }
