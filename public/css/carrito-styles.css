@@ -37,7 +37,6 @@ main {
   padding-top: 3%;
   padding-left: 5%;
   padding-right: 5%;
-  border-bottom: 1px #ebebeb solid;
 }
 
 .titulo-carrito {
@@ -62,6 +61,18 @@ main {
   padding-left: 5%;
 }
 
+.resumen-compra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #6362623a;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin-right: 18%;
+  margin-left: 9%;
+  border-radius: 10px;
+}
+
 .bloque-producto {
   display: flex;
   justify-content: space-between;
@@ -84,11 +95,12 @@ main {
   z-index: 10;
 }
 
-.texto-descripcion{
+.texto-descripcion {
   margin-bottom: 1%;
   font-size: 0.90rem;
   font-weight: bolder;
 }
+
 .texto-color-producto {
   margin-top: 1%;
   font-size: 0.90rem;
@@ -102,7 +114,7 @@ main {
   height: fit-content;
 }
 
-.stock-disponible #mas{
+.stock-disponible #mas {
   background-color: var(--celeste);
   border-color: transparent;
   color: #fff;
@@ -111,25 +123,25 @@ main {
   cursor: pointer;
 }
 
-.stock-disponible input[type='text']{
-  width: 3rem ;
-  text-align: center;  
+.stock-disponible input[type='text'] {
+  width: 3rem;
+  text-align: center;
 }
 
-.stock-disponible #menos{
+.stock-disponible #menos {
   background-color: var(--celeste);
   border-color: transparent;
   color: #fff;
-  border-radius: 6px 0 0 6px ;
+  border-radius: 6px 0 0 6px;
   transition: all 300ms;
   cursor: pointer;
 }
 
-.stock-disponible i{  
-    position: relative;
-    color: var(--celeste);
-    padding-left: 10%; 
-    margin: auto; 
+.stock-disponible i {
+  position: relative;
+  color: var(--celeste);
+  padding-left: 10%;
+  margin: auto;
 }
 
 .text-stock {
@@ -149,7 +161,7 @@ main {
   font-weight: bolder;
 }
 
-.precio p{
+.precio p {
   margin: 0 1% auto;
 }
 
@@ -271,7 +283,7 @@ button {
 /* Fin Panel Compra */
 
 @media (min-width: 768px) {
-  
+
   .imagen-producto {
     margin-top: 2%;
   }
@@ -301,7 +313,7 @@ button {
   }
 }
 
-@media (min-width: (min-width: 768px)) { 
+@media (min-width: 768px) {
 
   main {
     display: block;
@@ -337,7 +349,7 @@ button {
 
   .titulo-carrito {
     text-align: left;
-    padding: 2% 0 2% 3%;    
+    padding: 2% 0 2% 3%;
     margin-left: 0%;
     margin-top: 2%;
   }
@@ -364,4 +376,27 @@ button {
   }
 }
 
+@media (min-width: 1080px) {
 
+  .panel-compra {
+    border-left: 2px #ebebeb solid;
+    margin-bottom: 1%;
+  }
+
+  .productos-carrito {
+    margin-right: 5%;
+  }
+
+  .bloque-producto {
+    border-bottom: 2px #ebebeb solid;
+    padding-bottom: 1%;
+  }
+
+  .sub-total {
+    border-top: 1px #ebebeb solid;
+  }
+
+
+
+
+}
