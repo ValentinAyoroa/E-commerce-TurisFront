@@ -100,3 +100,31 @@ div.buttons button.reset{
 div.buttons button.reset:hover {
     background-color: #242424 
   }
+
+@media (min-width: 1000px) {
+    div.edit-product form div.imagen-product{
+        width: 40%;
+        border: 1px solid var(--celeste);
+        border-radius: 5px;
+        padding: 15px;
+        margin: 15px 30px;
+        background-color: #CEEDFF ;
+    }
+
+    div.edit-product form div.imagen-product img{
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    div.edit-product{
+        display: flex;
+        margin: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.edit-product form{
+        width: 70vw;
+        margin: 0;
+    }
+}
