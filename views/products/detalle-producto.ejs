@@ -12,7 +12,7 @@
                     <p class="titulo-producto">
                         <%=producto.titulo%>
                     </p>
-                    <p>
+                    <p class="boton-editar">
                         <a class='editar' href="/products/edit/<%=producto.id%>">Editar producto</a>
                     </p>
 
@@ -32,7 +32,7 @@
                         <div class="descripcion-total-producto">
                             <div class="precio">
                                 <h2 class="precio-total">$ <%=producto.precio%><i class="fas fa-shipping-fast"></i></h2>
-                                <p class="precio-cuotas">en 12x $<%=Number(producto.precio / 12)%>
+                                <p class="precio-cuotas">en 12x $<%=Number(producto.precio / 12).toFixed(2)%>
                                 </p>
                             </div>
                             <div class="color-producto">
