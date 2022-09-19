@@ -9,29 +9,48 @@
         <%- include("./partials/header.ejs") %>
             <main>
                 <div class="main-carrito-pc">
-                    <p class="titulo-carrito">Mi carrito (1 Item)</p>
+                    <p class="titulo-carrito">Mi carrito (2 Item)</p>
                     <div class="bloque-carrito-desktop">
                         <div class="productos-carrito">
+
+                            <div class="bloque-producto">
+                                <div class="imagen-muestra">
+                                    <img class="imagen-producto-muestra" src="/images/mochila-producto.png">
+                                </div>
+                                <div class="info-producto">
+                                    <p class="texto-descripcion"> Mochila montaña 1 </p>
+                                    <p class="texto-color-producto">Color: negro</p>
+
+                                    <div class="stock-disponible">
+                                        <p class="text-stock">Cantidad:</p>
+                                        <button id="menos" type="button">-</button>
+                                        <input type="text" id="contador" class="form-control" value="1" min="1" />
+                                        <button id="mas" type="button">+</button>
+                                        <i id="icono-heart" class="fas fa-heart"></i>
+                                        <i class="fas fa-trash"></i>
+                                    </div>
+                                </div>
+                                <div class="precio">
+                                    <p>$1452</p>
+                                </div>
+
+                            </div>
 
                             <div class="bloque-producto">
                                 <div class="imagen-muestra">
                                     <img class="imagen-producto-muestra" src="/images/mochilai1.png">
                                 </div>
                                 <div class="info-producto">
-                                    <p class="texto-descripcion"> Mochila trekin </p>
+                                    <p class="texto-descripcion"> Mochila montaña 2 </p>
                                     <p class="texto-color-producto">Color: rojo</p>
 
                                     <div class="stock-disponible">
                                         <p class="text-stock">Cantidad:</p>
-                                        <p class="cantidad-stock">1</p>
-                                        <div class="iconos-stock">
-                                            <div class="icono-mas">
-                                                <i clas fass="fa-plus"></i>
-                                            </div>
-                                            <div class="icono-menos">
-                                                <i class="fas fa-minus"></i>
-                                            </div>
-                                        </div>
+                                        <button id="menos" type="button">-</button>
+                                        <input type="text" id="contador" class="form-control" value="1" min="1" />
+                                        <button id="mas" type="button">+</button>
+                                        <i id="icono-heart" class="fas fa-heart"></i>
+                                        <i class="fas fa-trash"></i>
                                     </div>
                                 </div>
                                 <div class="precio">

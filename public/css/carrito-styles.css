@@ -58,7 +58,6 @@ main {
 .productos-carrito {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   margin-top: 5%;
   padding-left: 5%;
 }
@@ -66,6 +65,7 @@ main {
 .bloque-producto {
   display: flex;
   justify-content: space-between;
+  margin-top: 2%;
 }
 
 .imagen-producto-muestra {
@@ -86,48 +86,56 @@ main {
 
 .texto-descripcion{
   margin-bottom: 1%;
+  font-size: 0.90rem;
+  font-weight: bolder;
 }
 .texto-color-producto {
   margin-top: 1%;
+  font-size: 0.90rem;
+  font-weight: bolder;
 }
 
 .stock-disponible {
   display: flex;
   justify-content: space-between;
-  background-color: #ebebeb;
-  margin-right: 10%;
   border-radius: 8px;
+  height: fit-content;
+}
+
+.stock-disponible #mas{
+  background-color: var(--celeste);
+  border-color: transparent;
+  color: #fff;
+  border-radius: 0 6px 6px 0;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.stock-disponible input[type='text']{
+  width: 3rem ;
+  text-align: center;  
+}
+
+.stock-disponible #menos{
+  background-color: var(--celeste);
+  border-color: transparent;
+  color: #fff;
+  border-radius: 6px 0 0 6px ;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.stock-disponible i{  
+    position: relative;
+    color: var(--celeste);
+    padding-left: 10%; 
+    margin: auto; 
 }
 
 .text-stock {
-  margin-left: 5%;
-}
-
-.iconos-stock {
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 5px 5% 0;
-  margin-bottom: 5px;  
-  padding: 0 3px;
-  border-radius: 2px;
-}
-
-.cantidad-stock {
-  position: relative;
-  right: 28%;
-}
-
-.icono-mas {
-  background-color: white;
-  border-bottom: #ebebeb solid 1px;
-  margin-bottom: 2;
-  cursor: pointer;
-}
-
-.icono-menos{
-  cursor: pointer;
+  margin: 0 5% 0 0;
+  font-size: 0.90rem;
+  font-weight: bolder;
 }
 
 .imagenes-muestra {
@@ -137,6 +145,12 @@ main {
 .precio {
   display: flex;
   flex-direction: column;
+  font-size: 0.90rem;
+  font-weight: bolder;
+}
+
+.precio p{
+  margin: 0 1% auto;
 }
 
 /* Panel Compra */
@@ -287,7 +301,7 @@ button {
   }
 }
 
-@media (min-width: 1080px) { 
+@media (min-width: (min-width: 768px)) { 
 
   main {
     display: block;
@@ -319,7 +333,7 @@ button {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1080px) {
 
   .titulo-carrito {
     text-align: left;
@@ -350,13 +364,4 @@ button {
   }
 }
 
-@media (min-width: 1800px) {
-  .panel-compra {
-    width: 300%;
-  }
 
-  .productos-carrito {
-    width: 300%;
-  }
-
-}
