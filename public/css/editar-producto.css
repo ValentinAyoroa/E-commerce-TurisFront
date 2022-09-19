@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -9,45 +9,45 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-  }
+}
 
-h2.copy-edit{
+h2.copy-edit {
     margin-bottom: 20px;
     text-align: center;
 }
 
-div.edit{
+div.edit {
     border-radius: 10px;
     padding-top: 20px;
     margin: 30px 20px;
     background-color: rgba(255, 255, 255, 0.733);
-     box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
 }
 
-div.edit-product form{
+div.edit-product form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-div.edit-product form div{
+div.edit-product form div {
     width: 90%;
 }
 
-div.edit-product div.imagen-product{
+div.edit-product div.imagen-product {
     border: 1px solid var(--celeste);
     border-radius: 5px;
     padding: 15px;
     margin: 30px;
-    background-color: #CEEDFF ;
+    background-color: #CEEDFF;
 }
 
-div.edit-product div.imagen-product img{
+div.edit-product div.imagen-product img {
     width: 100%;
     border-radius: 5px;
 }
 
-div.edit-product div input.imagen-product{
+div.edit-product div input.imagen-product {
     border: none;
 }
 
@@ -55,15 +55,15 @@ div.edit-product form div {
     padding-top: 25px;
 }
 
-div.edit-product form div input{
+div.edit-product form div input {
     width: 100%;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 15px;
-    margin: 15px 0    
+    margin: 15px 0
 }
 
-div.edit-product form textarea{
+div.edit-product form textarea {
     width: 100%;
     height: 200px;
     border: 1px solid grey;
@@ -72,47 +72,46 @@ div.edit-product form textarea{
     margin: 15px 0
 }
 
-div.edit-product div.buttons{
+div.edit-product div.buttons {
     display: flex;
     justify-content: center;
     width: 95%;
     margin: 20px;
 }
 
-div.edit-product div.buttons button{
+div.edit-product div.buttons button {
     width: 100%;
     margin: 10px;
     padding: 10px
 }
 
-div.buttons button.submit{
-  background-color: #3483fa;
-  color: white;
-  border: 1px solid var(--celeste);
-  border-radius: 5px;
-  transition: background-color 200ms
+div.buttons button.submit {
+    background-color: #3483fa;
+    color: white;
+    border: 1px solid var(--celeste);
+    border-radius: 5px;
+    transition: background-color 200ms
 }
 
 div.buttons button.submit:hover {
     background-color: #1c60c7;
-  }
+}
 
-div.buttons button.reset{
+div.buttons button.reset {
     background-color: black;
     color: white;
     border: 1px solid grey;
     border-radius: 5px;
-  transition: background-color 200ms
-
+    transition: background-color 200ms
 }
 
 div.buttons button.reset:hover {
-    background-color: #242424 
-  }
+    background-color: #242424
+}
 
-@media (min-width: 500px){
+@media (min-width: 500px) {
 
-    div.edit-product div.imagen-product{
+    div.edit-product div.imagen-product {
         width: 60%;
         margin: auto;
     }
@@ -120,11 +119,11 @@ div.buttons button.reset:hover {
 
 @media (min-width: 1000px) {
 
-    div.edit{
+    div.edit {
         margin: 100px;
     }
 
-    div.edit-product{
+    div.edit-product {
         display: flex;
         margin: auto;
         margin-top: 30px;
@@ -132,24 +131,32 @@ div.buttons button.reset:hover {
         width: 80%;
     }
 
-    div.edit-product form{
+    div.edit-product form {
         margin: 50px;
     }
 
-    div.edit-product div.imagen-product{
+    div.edit-product div.imagen-product {
         width: 80%;
         height: 80%;
         margin: 30px;
     }
 
-    div.edit-product div.imagen-product img{
+    div.edit-product div.imagen-product img {
         width: 100%;
         height: 100%;
         border-radius: 5px;
     }
 
-    div.edit-product form{
+    div.edit-product form {
         width: 70vw;
         margin: 0;
+    }
+
+    @media (min-width: 1800px) {
+        div.edit-product div.imagen-product {
+            width: 50%;
+            height: 50%;
+            margin: 30px;
+        }
     }
 }

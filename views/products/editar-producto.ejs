@@ -12,7 +12,7 @@
     <h2 class="copy-edit">Editar producto</h2>
     <div class="edit-product">
         <div class="imagen-product">
-            <img src=<%=producto.imagen%>>
+            <img class="imagen" src=<%=producto.imagen%>>
         </div>
         <form action='/products/edit/<%=producto.id%>?_method=PUT' method="POST">
             <div>
