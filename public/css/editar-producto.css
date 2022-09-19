@@ -35,7 +35,7 @@ div.edit-product form div {
 }
 
 div.edit-product div.imagen-product {
-    border: 1px solid var(--celeste);
+    box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
     border-radius: 5px;
     padding: 15px;
     margin: 30px;
@@ -125,11 +125,13 @@ div.buttons button.reset:hover {
 
     div.edit-product {
         display: flex;
+        justify-content: center;
         margin: auto;
         margin-top: 30px;
         margin-bottom: 50px;
         width: 80%;
     }
+
 
     div.edit-product form {
         margin: 50px;
@@ -151,12 +153,12 @@ div.buttons button.reset:hover {
         width: 70vw;
         margin: 0;
     }
+}
 
-    @media (min-width: 1800px) {
-        div.edit-product div.imagen-product {
-            width: 50%;
-            height: 50%;
-            margin: 30px;
-        }
+@media (min-width: 1800px) {
+    div.edit-product div.imagen-product {
+        width: 50%;
+        height: 50%;
+        margin: 30px;
     }
 }
