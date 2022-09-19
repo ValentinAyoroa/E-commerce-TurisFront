@@ -35,12 +35,13 @@ main {
   border-bottom: 1px #ebebeb solid;
 }
 
-a.editar {
-  text-align: right;
-  font-size: 16px;
-  padding-left: 25px;
+.boton-editar {
   text-decoration: none;
   color: var(--celeste);
+}
+
+.boton-editar p {
+  margin-left: 1%;
 }
 
 .imagen-producto {
@@ -240,7 +241,7 @@ a.editar {
 }
 
 @media (min-width: 1080px) {
-  
+
   body {
     background-color: rgba(128, 128, 128, 0.212);
   }
@@ -271,9 +272,9 @@ a.editar {
 
   .boton-editar {
     text-align: right;
-    padding: 0;
-    margin: 0;
-    margin-top: 1%;
+  }
+
+  .boton-editar p {
     margin-right: 1%;
   }
 
