@@ -55,7 +55,9 @@
                             </div>
                             <div class="botones-compra-carro">
                                 <button class="boton-comprar" type="submit" value="compra">Comprar</button>
-                                <button class="boton-carro" type="submit" value="carro">Agregar al carrito</button>
+                                <form class="boton-carro" action='/detalle-productos/<%=producto.id%>?_method=PUT' method="POST">
+                                    <button type="submit" value="carro">Agregar al carrito</button>
+                                </form>
                             </div>
                             <div class="box-informacion">
                                 <div class="informacion-producto">

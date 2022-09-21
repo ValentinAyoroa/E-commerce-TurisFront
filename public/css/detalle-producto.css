@@ -37,7 +37,7 @@ main {
 
 .boton-editar {
   text-decoration: none;
-  color: var(--celeste);  
+  color: var(--celeste);
   z-index: 10;
 }
 
@@ -150,15 +150,25 @@ main {
   border-radius: 6px;
   line-height: 30px;
   margin-top: 10%;
+  height: 3vh;
+
 }
 
 .boton-carro {
   background-color: rgba(65, 137, 230, 0.15);
   border-color: transparent;
-  color: #0077c0;
   border-radius: 6px;
   line-height: 30px;
   margin-top: 3%;
+}
+
+.boton-carro button {
+  display: block;
+  margin: auto;
+  border: none;
+  background: none;
+  height: 3vh;
+  color: #0077c0;
 }
 
 .box-informacion {

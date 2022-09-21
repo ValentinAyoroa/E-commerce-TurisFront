@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const multer = require('multer')
+
 function allProducts() {
     let jsonData = fs.readFileSync(path.join(__dirname, '../data/productos.json'));
     let data = JSON.parse(jsonData);
@@ -65,7 +66,7 @@ const controller = {
             titulo: req.body.titulo,
             precio: Number(req.body.precio),
             color: req.body.color,
-            imagen: req.file.filename,
+            imagen: '/images/productos/' + req.file.filename,
             descripcion: req.body.descripcion,
         }
 
