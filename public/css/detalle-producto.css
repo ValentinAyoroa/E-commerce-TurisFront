@@ -37,12 +37,14 @@ main {
 
 .boton-editar {
   text-decoration: none;
-  color: var(--celeste);
+  color: var(--celeste);  
+  z-index: 10;
 }
 
 .boton-editar p {
   margin-left: 1%;
 }
+
 
 .imagen-producto {
   max-width: 50%;
