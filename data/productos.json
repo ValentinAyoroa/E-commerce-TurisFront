@@ -10,7 +10,7 @@
       {
             "id": 2,
             "titulo": "Guantes WINTER Softshell",
-            "precio": 12500,
+            "precio": "12500",
             "color": "Negro y Amarillo",
             "imagen": "/images/guantes.jpg",
             "descripcion": "Diseño de la cremallera Deja que el guante no se caiga fácilmente. Duradero, suave y flexible, cómodo y transpirable. Diseño de dedo de pantalla táctil, sensible para tocar su teléfono. Adecuado para carreras de motos fuera de Ciclismo de Carretera, pesca, escalada y otros deportes al aire libre."

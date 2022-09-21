@@ -1,18 +1,18 @@
 const fs = require('fs');
 const path = require('path');
-
-function allProducts(){
+const multer = require('multer')
+function allProducts() {
     let jsonData = fs.readFileSync(path.join(__dirname, '../data/productos.json'));
     let data = JSON.parse(jsonData);
-    return data
+    return data;
 };
 
-function writeJson(data){
+function writeJson(data) {
     let JsonData = JSON.stringify(data, null, 6);
     fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JsonData);
 }
 
-controller = {
+const controller = {
 
     detalleproducto: function (req, res) {
 
@@ -56,7 +56,7 @@ controller = {
     create: (req, res) => {
         res.render('crear-producto');
     },
-    store: (req, res) =>{
+    store: (req, res) => {
 
         let data = allProducts()
 
@@ -65,7 +65,7 @@ controller = {
             titulo: req.body.titulo,
             precio: Number(req.body.precio),
             color: req.body.color,
-            imagen: req.body.imagen,
+            imagen: req.file.filename,
             descripcion: req.body.descripcion,
         }
 
