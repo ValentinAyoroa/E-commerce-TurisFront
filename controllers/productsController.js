@@ -15,14 +15,6 @@ function writeJson(data) {
     fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JsonData);
 };
 
-/* Encontrar producto  */
-
-function findProduct(data) {
-    data.find(producto => {
-        return producto.id == req.params.id
-    })
-};
-
 /* Analisis Carro */
 
 function allProductsCarrito() {
@@ -73,12 +65,18 @@ const controller = {
     edit: (req, res) => {
 
         let data = allProducts();
-        const productoEncontrado = findProduct(data);
+        const productoEncontrado = data.find(producto => {
+            return producto.id == req.params.id
+        });
         res.render('editar-producto', { producto: productoEncontrado });
     },
     update: (req, res) => {
         let data = allProducts();
-        const productoEncontrado = findProduct(data);
+
+        const productoEncontrado = data.find(producto => {
+            return producto.id == req.params.id
+        });
+
         productoEncontrado.titulo = req.body.titulo;
         productoEncontrado.precio = req.body.precio;
         productoEncontrado.color = req.body.color;
@@ -104,6 +102,20 @@ const controller = {
         }
 
         data.push(newProduct);
+
+        writeJson(data);
+
+        res.redirect('/');
+    },
+    delete: function (req, res) {
+
+        let data = allProducts()
+
+        const platoEncontrado = data.findIndex(function(plato){
+            return plato.id == req.params.id
+        })
+
+        data.splice(platoEncontrado, 1);
 
         writeJson(data);
 

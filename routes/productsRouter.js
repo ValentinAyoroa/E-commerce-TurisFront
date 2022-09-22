@@ -23,6 +23,7 @@ router.post('/detalle-producto/:id', productsController.agregarCarrito);
 router.get('/carrito', productsController.carrito);
 router.get('/edit/:id', productsController.edit);
 router.put('/edit/:id', productsController.update);
+router.delete('/delete/:id', productsController.delete);
 router.get('/create', productsController.create);
 router.post('/create', upload.single('imagen'), productsController.store);
 

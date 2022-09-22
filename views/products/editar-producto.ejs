@@ -10,6 +10,10 @@
     <%- include("./partials/header.ejs") %>
 <div class="edit">
     <h2 class="copy-edit">Editar producto</h2>
+    <!-- BOTON DELETE (Hay que ver donde ubicarlo)
+    <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+        <button>Borrar</button>
+    </form> -->
     <div class="edit-product">
         <div class="imagen-product">
             <img class="imagen" src=<%=producto.imagen%>>
