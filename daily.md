@@ -1,3 +1,8 @@
+# Retrospectiva Grupo 16 (Daily-Sprint4)
+## Novedades
+- El dia 21 de Septiembre en el espacio que los profes crearón por salas para revisar el proyecto, estuvmos los 4 integrantes trabajando en la parte de carrito para que fuera mas interactivo, se logro sacar esa parte. 
+
+
 # Retrospectiva Grupo 16 (Daily-Sprint3)
 ## Novedades
 
