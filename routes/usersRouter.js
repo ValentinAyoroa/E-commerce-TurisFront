@@ -2,8 +2,9 @@ var express = require('express');
 var path = require('path')
 var router = express.Router();
 const multer = require('multer')
-const { body } = require('express-validator'); //requiere express-validator, solo body.
 const usersController = require("../controllers/usersController");
+const { body } = require('express-validator'); //requiere express-validator, solo body.
+
 
 const { registerValidation } = require("../validations/userValidation"); //requiere validacion para register.
 
