@@ -96,7 +96,7 @@ div.register-top {
 }
 
 h2.copy-register {
-  margin: 10% auto 8%;
+  margin: 5% auto 8%;
   width: 80%;
   font-size: 1.15em;
   padding-top: 5%;
@@ -120,6 +120,15 @@ form.form-register div input {
   border-radius: 10px;
   background-color: white;
 }
+
+form.form-register div p.errors{
+  color: var(--celeste);
+  font-size: 15px;
+  font-weight: bolder;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 
 form.form-register div button {
   width: 100%;

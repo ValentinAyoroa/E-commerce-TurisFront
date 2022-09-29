@@ -14,19 +14,34 @@
                     <h2 class="copy-register">Ingresá tus datos</h2>
                     <form action="/users/register" method="POST" class="form-register">
                         <div>
+                            <% if (locals.errors && locals.errors.name) {%>
+                                <p class="errors"><%= errors.name.msg %></p>
+                            <% } %>
                             <input type="text" name="name" placeholder="Nombre">
                         </div>
                         <div>
+                            <% if (locals.errors && locals.errors.surname) {%>
+                                <p class="errors"><%= errors.surname.msg %></p>
+                            <% } %>
                             <input type="text" name="surname" placeholder="Apellido">
                         </div>
                         <div>
+                            <% if (locals.errors && locals.errors.email) {%>
+                                <p class="errors"><%= errors.email.msg %></p>
+                            <% } %>
                             <input type="email" name="email" placeholder="E-mail">
                         </div>
                         <div>
+                            <% if (locals.errors && locals.errors.password) {%>
+                                <p class="errors"><%= errors.password.msg %></p>
+                            <% } %>
                             <input type="password" name="password" placeholder="Contraseña">
                         </div>
                         <div>
-                            <input type="password" name="confirm-password" placeholder="Confirmar contraseña">
+                            <% if (locals.errors && locals.errors.confirm) {%>
+                                <p class="errors"><%= errors.confirm.msg %></p>
+                            <% } %>
+                            <input type="password" name="confirm" placeholder="Confirmar contraseña">
                         </div>
                         <div class="button">
                             <button type="submit">Registrarse</button>
@@ -50,19 +65,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- zona errores -->
-
-            <% if (locals.errors) {%>
-                <ul class="listado_errores">
-                    <% errors.forEach((error)=> { %>
-                        <p>
-                            <%= error.msg %>
-                        </p>
-                        <% }) %>
-                </ul>
-                <% } %>
-
                     <!--footer-->
                     <%- include("./partials/footer.ejs") %>
     </body>

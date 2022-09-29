@@ -31,7 +31,7 @@ controller = {
         console.log(errors); //llamamos la funcion para observar como salen los resultados.
         if (!errors.isEmpty()) {
             //si tenemos errores, los mostramos en pantalla.
-            res.render('register', { errors: errors.array() });
+            res.render('register', { errors: errors.mapped(), old: req.body });
         } else {
             //si no tenemos errores, creamos el usuario.
             const data = allUsers()

@@ -21,7 +21,7 @@ module.exports = {
             .bail()
             .isLength({ min: 5 })
             .withMessage("La contraseña debe tener minimo 5 caracteres"),
-        body("confirm-password")
+        body("confirm")
             .notEmpty()
             .withMessage("Debes completar la confirmacion de contraseña")
             .bail()
