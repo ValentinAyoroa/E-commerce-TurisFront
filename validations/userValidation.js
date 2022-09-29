@@ -11,19 +11,20 @@ module.exports = {
             .withMessage("El campo apellido tiene que estar completo"),
         body("email")
             .notEmpty()
-            .withMessage("El email debe estar completo")
+            .withMessage("El campo email debe estar completo")
             .bail()
             .isEmail()
             .withMessage("Ingrese un mail válido"),
         body("password")
             .notEmpty()
-            .withMessage("La contraseña debe estar completa")
+            .withMessage("El campo contraseña debe estar completo")
             .bail()
             .isLength({ min: 5 })
             .withMessage("La contraseña debe tener minimo 5 caracteres"),
         body("confirm-password")
             .notEmpty()
-            .withMessage("las contraseñas deben coincidir")
+            .withMessage("Debes completar la confirmacion de contraseña")
+            .bail()
             .custom(async (confirmPassword, { req }) => {
                 const password = req.body.password;
                 if (password !== confirmPassword) {
