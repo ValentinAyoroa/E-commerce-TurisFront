@@ -64,6 +64,10 @@ a.nav-button i {
   padding-left: 0;
 }
 
+.listado_errores {
+ text-decoration: none;
+}
+
 ul.nav-bar {
   display: none;
 

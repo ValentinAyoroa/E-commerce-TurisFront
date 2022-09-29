@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const multer = require('multer')
+const { validationResult } = require("express-validator");
 
 
 function allUsers() {
@@ -15,7 +16,7 @@ function writeProducts(data) {
 };
 
 controller = {
-    
+
     login: function (req, res) {
         res.render('login');
     },
@@ -26,21 +27,25 @@ controller = {
 
     registerUser: function (req, res) {
 
-        let data = allUsers()
-
-        const newUser = {
-            id: data.length + 1,
-            nombre: req.body.name,
-            apellido: req.body.surname,
-            email: req.body.email,
-            password: req.body.password,
+        const errors = validationResult(req)
+        console.log(errors); //llamamos la funcion para observar como salen los resultados.
+        if (!errors.isEmpty()) {
+            //si tenemos errores, los mostramos en pantalla.
+            res.render('register', { errors: errors.array() });
+        } else {
+            //si no tenemos errores, creamos el usuario.
+            const data = allUsers()
+            const newUser = {
+                id: data.length + 1,
+                nombre: req.body.name,
+                apellido: req.body.surname,
+                email: req.body.email,
+                password: req.body.password,
+            }
+            data.push(newUser);
+            writeProducts(data);
+            res.redirect('/users/register');
         }
-
-        data.push(newUser);
-
-        writeProducts(data);
-
-        res.redirect('/');
     }
 }
 
