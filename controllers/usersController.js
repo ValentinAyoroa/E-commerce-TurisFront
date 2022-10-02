@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const multer = require('multer')
 const { validationResult } = require("express-validator");
+const bcrypt = require('bcrypt');
 
 
 function allUsers() {
@@ -40,7 +41,7 @@ controller = {
                 nombre: req.body.name,
                 apellido: req.body.surname,
                 email: req.body.email,
-                password: req.body.password,
+                password: bcrypt.hashSync(req.body.password, 10),
             }
             data.push(newUser);
             writeProducts(data);

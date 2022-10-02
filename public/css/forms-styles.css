@@ -122,8 +122,8 @@ form.form-register div input {
 }
 
 form.form-register div p.errors{
-  color: var(--celeste);
-  font-size: 15px;
+  color: rgba(255, 0, 0, 0.767);
+  font-size: 13px;
   font-weight: bolder;
   margin: 0;
   margin-bottom: 10px;
