@@ -236,6 +236,12 @@ main {
   cursor: pointer;
   transition: all 300ms;
 }
+a:link,
+a:visited,
+a:active {
+  color: #0077c0;
+  text-decoration: none;
+}
 
 .descuento {
   width: 90%;
@@ -285,6 +291,9 @@ button {
   .bloque-carrito-desktop {
     display: flex;
     flex-direction: column;
+  }
+  .precio {
+    padding-right: 20px;
   }
 }
 @media (min-width: 768px) {

@@ -60,7 +60,7 @@ const controller = {
         res.render('detalle-producto', { producto: productoEncontrado });
     },
 
-    carrito: (req, res) => res.render('carrito'),
+    carrito: (req, res) => res.render('carrito', { productosCarrito: allProductsCarrito() }),
 
     edit: (req, res) => {
 
@@ -111,7 +111,7 @@ const controller = {
 
         let data = allProducts()
 
-        const platoEncontrado = data.findIndex(function(plato){
+        const platoEncontrado = data.findIndex(function (plato) {
             return plato.id == req.params.id
         })
 

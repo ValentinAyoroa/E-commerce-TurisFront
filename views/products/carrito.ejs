@@ -12,53 +12,36 @@
                     <p class="titulo-carrito">Mi carrito (2 Item)</p>
                     <div class="bloque-carrito-desktop">
                         <div class="productos-carrito">
-
-                            <div class="bloque-producto">
-                                <div class="imagen-muestra">
-                                    <img class="imagen-producto-muestra" src="/images/productos/mochila-producto.png">
-                                </div>
-                                <div class="info-producto">
-                                    <p class="texto-descripcion"> Mochila montaña 1 </p>
-                                    <p class="texto-color-producto">Color: negro</p>
-
-                                    <div class="stock-disponible">
-                                        <p class="text-stock">Cantidad:</p>
-                                        <button id="menos" type="button">-</button>
-                                        <input type="text" id="contador" class="form-control" value="1" min="1" />
-                                        <button id="mas" type="button">+</button>
-                                        <i id="icono-heart" class="fas fa-heart"></i>
-                                        <i class="fas fa-trash"></i>
+                            <% productosCarrito.forEach(productoCarrito=> { %>
+                                <div class="bloque-producto">
+                                    <div class="imagen-muestra">
+                                        <img class="imagen-producto-muestra" src="<%= productoCarrito.imagen%>">
                                     </div>
-                                </div>
-                                <div class="precio">
-                                    <p>$1452</p>
-                                </div>
+                                    <div class="info-producto">
+                                        <p class="titulo">
+                                            <%= productoCarrito.titulo%>
+                                        </p>
+                                        <p class="texto-descripcion">
+                                            <%= productoCarrito.descripcion%>
+                                        </p>
+                                        <p class="texto-color-producto">Color: <%= productoCarrito.color%>
+                                        </p>
 
-                            </div>
-
-                            <div class="bloque-producto">
-                                <div class="imagen-muestra">
-                                    <img class="imagen-producto-muestra" src="/images/productos/mochilai1.png">
-                                </div>
-                                <div class="info-producto">
-                                    <p class="texto-descripcion"> Mochila montaña 2 </p>
-                                    <p class="texto-color-producto">Color: rojo</p>
-
-                                    <div class="stock-disponible">
-                                        <p class="text-stock">Cantidad:</p>
-                                        <button id="menos" type="button">-</button>
-                                        <input type="text" id="contador" class="form-control" value="1" min="1" />
-                                        <button id="mas" type="button">+</button>
-                                        <i id="icono-heart" class="fas fa-heart"></i>
-                                        <i class="fas fa-trash"></i>
+                                        <div class="stock-disponible">
+                                            <p class="text-stock">Cantidad:</p>
+                                            <button id="menos" type="button">-</button>
+                                            <input type="text" id="contador" class="form-control" value="1" min="1" />
+                                            <button id="mas" type="button">+</button>
+                                            <i id="icono-heart" class="fas fa-heart"></i>
+                                            <i class="fas fa-trash"></i>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="precio">
-                                    <p>$1222</p>
-                                </div>
+                                    <div class="precio">
+                                        <%= productoCarrito.precio%>
+                                    </div>
 
-                            </div>
-
+                                </div>
+                                <% }) %>
                         </div>
 
                         <div class="panel-compra">
@@ -91,7 +74,9 @@
 
                             <div class="botones">
                                 <button class="boton-comprar" type="submit" value="compra">Finalizar Compra</button>
-                                <button class="boton-carro" type="submit" value="carro">Continua Comprando</button>
+                                <button class="boton-carro" type="submit" value="carro"><a href="/">Continua
+                                        Comprando</a></button>
+
                             </div>
                             <div class="descuento">
                                 <h3>Tienes codigo de descuento?</h3>
