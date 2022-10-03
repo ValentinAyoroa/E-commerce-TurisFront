@@ -97,13 +97,13 @@ main {
 
 .texto-descripcion {
   margin-bottom: 1%;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   font-weight: bolder;
 }
 
 .texto-color-producto {
   margin-top: 1%;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   font-weight: bolder;
 }
 
@@ -123,7 +123,7 @@ main {
   cursor: pointer;
 }
 
-.stock-disponible input[type='text'] {
+.stock-disponible input[type="text"] {
   width: 3rem;
   text-align: center;
 }
@@ -146,7 +146,7 @@ main {
 
 .text-stock {
   margin: 0 5% 0 0;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   font-weight: bolder;
 }
 
@@ -157,7 +157,7 @@ main {
 .precio {
   display: flex;
   flex-direction: column;
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   font-weight: bolder;
 }
 
@@ -281,9 +281,13 @@ button {
 }
 
 /* Fin Panel Compra */
-
+@media (max-width: 450px) {
+  .bloque-carrito-desktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
 @media (min-width: 768px) {
-
   .imagen-producto {
     margin-top: 2%;
   }
@@ -312,14 +316,13 @@ button {
     padding-left: 15%;
   }
 }
-
+/*Para tablet*/
 @media (min-width: 768px) {
-
   main {
     display: block;
     margin: auto;
     margin-bottom: 1.5%;
-    width: 70%;
+    width: 85%;
   }
 
   .imagen-producto {
@@ -330,7 +333,7 @@ button {
   }
 
   .productos-carrito {
-    width: 600%;
+    width: 66%;
   }
 
   .imagenes-muestra {
@@ -346,7 +349,6 @@ button {
 }
 
 @media (min-width: 1080px) {
-
   .titulo-carrito {
     text-align: left;
     padding: 2% 0 2% 3%;
@@ -377,7 +379,6 @@ button {
 }
 
 @media (min-width: 1080px) {
-
   .panel-compra {
     border-left: 2px #ebebeb solid;
     margin-bottom: 1%;
@@ -395,8 +396,4 @@ button {
   .sub-total {
     border-top: 1px #ebebeb solid;
   }
-
-
-
-
 }
