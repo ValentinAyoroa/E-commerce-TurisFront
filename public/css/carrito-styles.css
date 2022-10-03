@@ -94,17 +94,25 @@ main {
   transform: scale(1.1);
   z-index: 10;
 }
+.titulo {
+  text-align: justify;
+  margin-left: 10px;
+  font-weight: bolder;
+}
 
 .texto-descripcion {
   margin-bottom: 1%;
   font-size: 0.9rem;
-  font-weight: bolder;
+  text-align: justify;
+  margin-left: 10px;
 }
 
 .texto-color-producto {
   margin-top: 1%;
   font-size: 0.9rem;
   font-weight: bolder;
+  text-align: justify;
+  margin-left: 10px;
 }
 
 .stock-disponible {
@@ -148,6 +156,8 @@ main {
   margin: 0 5% 0 0;
   font-size: 0.9rem;
   font-weight: bolder;
+  text-align: justify;
+  margin-left: 10px;
 }
 
 .imagenes-muestra {
