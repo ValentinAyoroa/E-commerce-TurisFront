@@ -1,3 +1,38 @@
+# Retrospectiva Grupo 16 (Sprint 4)
+## COMENZAR A HACER
+- Realización de reuniones una vez por semana 
+- Coordinar reuniones para ponernos de acuerdo sobre los lineamientos generales
+- Determinar fechas para las entregas de cada una de las tareas asignadas, con el objetivo de poder cumplir con todos los parametros del Sprint
+
+
+
+## HACER MAS
+- Que Discord sea el canal principal para tener todo el seguimiento del proyecto en un solo lugar.
+- Estar sincronizados con todos los avances
+- Antes de realizar cambios al proyecto avisar a los compañeros 
+- Dedicarle más tiempo al proyecto
+- Mantener actualizado el tablero de trabajo (Trello)
+
+
+
+## CONTINUAR HACIENDO
+- Mantener el repositorio actualizado
+
+## HACER MENOS
+- No contestar a tiempo los mensajes del discord
+- Correr a último momento para llegar con un entregable
+- Comunicar poco las cosas que realizo 
+- Avisar a los compañeros si necesito una mano porque tal vez el tiempo no da para cumplir al 100 con la tarea
+
+
+## DEJAR DE HACER
+
+- 	No organizar reuniones para revisar avances de cada una de las tareas y verificar si se necesita ayuda  
+- 	No contestar los mensajes
+- 	Empezar a trabajar los Sprint sin una programación asignada 
+- 	No terminar las tareas asignadas
+
+
 # Retrospectiva Grupo 16 (Sprint 3)
 ## COMENZAR A HACER
 
@@ -61,7 +96,6 @@
 
 
 ## CONTINUAR HACIENDO
-
 
 - Mantener el repositorio actualizado
 
