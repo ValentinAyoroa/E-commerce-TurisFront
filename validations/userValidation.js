@@ -28,7 +28,7 @@ module.exports = {
             .custom(async (confirmPassword, { req }) => {
                 const password = req.body.password;
                 if (password !== confirmPassword) {
-                    throw new Error("*Las contraseñas deben coincidir")
+                    throw new Error("*Las contraseñas deben coincidir");
                 }
             })
     ]
