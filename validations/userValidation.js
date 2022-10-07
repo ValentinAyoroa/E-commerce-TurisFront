@@ -1,4 +1,13 @@
 const { body } = require('express-validator');
+//soraya
+const fs = require("fs");
+const path = require("path");
+
+function allUsers() {
+    let jsonData = fs.readFileSync(path.join(__dirname, '../data/users.json'));
+    let data = JSON.parse(jsonData);
+    return data;
+};
 
 module.exports = {
     //validacion register
@@ -9,12 +18,29 @@ module.exports = {
         body("surname")
             .notEmpty()
             .withMessage("*El campo apellido tiene que estar completo"),
+
         body("email")
             .notEmpty()
             .withMessage("*El campo email debe estar completo")
             .bail()
             .isEmail()
-            .withMessage("*Ingrese un mail válido"),
+            .withMessage("*Ingrese un mail válido")
+            //soraya
+            .custom(function (value, { req }) {
+                const data = allUsers()
+
+                const usuarioEncontrado = data.find(function (user) {
+                    return user.email == value;
+                })
+                if (usuarioEncontrado) {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+
+            }).withMessage("Email ya registrado"),
+
         body("password")
             .notEmpty()
             .withMessage("*El campo contraseña debe estar completo")
@@ -31,5 +57,14 @@ module.exports = {
                     throw new Error("*Las contraseñas deben coincidir");
                 }
             })
+    ],
+    //soraya
+    loginValidation: [
+        body("email")
+            .notEmpty()
+            .withMessage("Campo nombre incompleto"),
+        body("password")
+            .notEmpty()
+            .withMessage("Campo password incompleto")
     ]
 }

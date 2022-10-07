@@ -21,7 +21,15 @@ controller = {
     login: function (req, res) {
         res.render('login');
     },
-
+    //soraya
+    processLogin: (req, res) => {
+        const error = validationResult(req);
+        if (!error.isEmpty()) {
+            res.render("login", {
+                errors: error.mapped()
+            })
+        };
+    },
     register: function (req, res) {
         res.render('register');
     },
@@ -35,7 +43,8 @@ controller = {
             res.render('register', { errors: errors.mapped(), old: req.body });
         } else {
             //si no tenemos errores, creamos el usuario.
-            const data = allUsers()
+            const data = allUsers();
+
             const newUser = {
                 id: data.length + 1,
                 nombre: req.body.name,

@@ -3,45 +3,58 @@
 
 <!--head-->
 <%- include("./partials/head.ejs") %>
-<link rel="stylesheet" href="/css/forms-styles.css">
+    <link rel="stylesheet" href="/css/forms-styles.css">
 
-<body>
-    <!--header-->
-    <%- include("./partials/header.ejs") %>
-        <div class="register">
-            <div class="register-top">
-                <h2 class="copy-register">Hola! Para seguir ingresa tus datos</h2>
-                <form action="/users/login" method="post" class="form-register">
-                    <div>
-                        <input type="text" name="name" placeholder="Nombre de usuario o correo">
+    <body>
+        <!--header-->
+        <%- include("./partials/header.ejs") %>
+            <div class="register">
+                <div class="register-top">
+                    <h2 class="copy-register">Hola! Para seguir ingresa tus datos</h2>
+                    <form action="/users/login" method="post" class="form-register">
+                        <div>
+                            <input type="email" name="email" placeholder="Nombre de usuario o correo">
+                            <!--soraya-->
+                            <% if(locals.errors && locals.errors.email){ %>
+                                <p class="msg-error">
+                                    <%= locals.errors.email.msg %>
+                                </p>
+                                <% } %>
+                        </div>
+                        <div>
+                            <input type="password" name="password" placeholder="Ingresá tu contraseña">
+                            <!--soraya-->
+                            <% if(locals.errors && locals.errors.password){ %>
+                                <p class="msg-error">
+                                    <%= locals.errors.password.msg %>
+                                </p>
+                                <% } %>
+                        </div>
+                        <div class="button">
+                            <button type="submit">Ingresar</button>
+                        </div>
+                    </form>
+                    <p class="copy-login">¿No tienes cuenta? Crea una <a class="login-button" href="./register">aqui</a>
+                    </p>
+                    <p class="login-help">Necesito ayuda para ingresar</p>
+                </div>
+                <div class="register-bottom">
+                    <div class="register" href="#">
+                        <p>Ingresar con Google</p>
+                        <img src="/images/marcas/google.png" class="img-logo-app">
                     </div>
-                    <div>
-                        <input type="password" name="password" placeholder="Ingresá tu contraseña">
+                    <div class="register" href="#">
+                        <p>Ingresar con Facebook</p>
+                        <img src="/images/marcas/facebook.png" class="img-logo-app">
                     </div>
-                    <div class="button">
-                        <button type="submit">Ingresar</button>
+                    <div class="register" href="#">
+                        <p>Ingresar con Apple</p>
+                        <img src="/images/marcas/apple.png" class="img-logo-app">
                     </div>
-                </form>
-                <p class="copy-login">¿No tienes cuenta? Crea una <a class="login-button" href="./register">aqui</a></p>
-                <p class="login-help">Necesito ayuda para ingresar</p>
+                </div>
             </div>
-            <div class="register-bottom">
-                <div class="register" href="#">
-                    <p>Ingresar con Google</p>
-                    <img src="/images/marcas/google.png" class="img-logo-app">
-                </div>
-                <div class="register" href="#">
-                    <p>Ingresar con Facebook</p>
-                    <img src="/images/marcas/facebook.png" class="img-logo-app">
-                </div>
-                <div class="register" href="#">
-                    <p>Ingresar con Apple</p>
-                    <img src="/images/marcas/apple.png" class="img-logo-app">
-                </div>
-            </div>
-        </div>
-        <!--footer-->
-        <%- include("./partials/footer.ejs") %>
-</body>
+            <!--footer-->
+            <%- include("./partials/footer.ejs") %>
+    </body>
 
 </html>

@@ -6,7 +6,7 @@ const usersController = require("../controllers/usersController");
 const { body } = require('express-validator'); //requiere express-validator, solo body.
 
 
-const { registerValidation } = require("../validations/userValidation"); //requiere validacion para register.
+const { registerValidation, loginValidation } = require("../validations/userValidation"); //requiere validacion para register.
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -19,8 +19,12 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage: storage })
 
-router.get('/login', usersController.login);
-router.get('/register', usersController.register);
-router.post('/register', registerValidation, usersController.registerUser)
 
-module.exports = router;
+router.get('/register', usersController.register);
+router.post('/register', registerValidation, usersController.registerUser);
+
+//login 
+router.get('/login', usersController.login);
+router.post('/login', loginValidation, usersController.processLogin),
+
+  module.exports = router;
