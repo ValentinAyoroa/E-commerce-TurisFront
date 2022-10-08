@@ -14,7 +14,7 @@
                     <form action="/users/login" method="post" class="form-register">
                         <div>
                             <input type="email" name="email" placeholder="Nombre de usuario o correo">
-                            <!--soraya-->
+
                             <% if(locals.errors && locals.errors.email){ %>
                                 <p class="msg-error">
                                     <%= locals.errors.email.msg %>
@@ -23,7 +23,7 @@
                         </div>
                         <div>
                             <input type="password" name="password" placeholder="Ingresá tu contraseña">
-                            <!--soraya-->
+
                             <% if(locals.errors && locals.errors.password){ %>
                                 <p class="msg-error">
                                     <%= locals.errors.password.msg %>

@@ -3,16 +3,30 @@
         <a href="/" class="home">
             <img src="/images/mountain.png" class="pagina-logo">
         </a>
+
         <a href="#" class="hamburger-button">
             <i class="fas fa-bars"></i>
         </a>
+
+
         <ul class="nav-bar">
-            <a href="/users/login">
-                <li class="text-navbar"><i class="fas fa-user"></i><a href="/users/login">Login</a></li>
-            </a>
-            <a href="/products/carrito">
-                <li class="text-navbar"><i class="fas fa-shopping-cart"></i><a href="/products/carrito">Carrito</a></li>
-            </a>
+            <% if(!locals.usuario){ %>
+                <a href="/users/login">
+                    <li class="text-navbar"><i class="fas fa-user"></i><a href="/users/login">Login</a></li>
+                </a>
+                <a href="/products/carrito">
+                    <li class="text-navbar"><i class="fas fa-shopping-cart"></i><a href="/products/carrito">Carrito</a>
+                    </li>
+                </a>
+                <% }else{ %>
+
+                    <form action="/users/logout" method="post">
+                        <button class="boton-cerrar-sesion" type="submit">Cerrar sesion</button>
+                    </form>
+                    <p class="nombre-usuario">Holaa! <%= usuario.nombre %>
+                    </p>
+
+                    <% } %>
         </ul>
     </div>
 </header>

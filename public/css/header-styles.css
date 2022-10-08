@@ -74,7 +74,6 @@
 }
 
 @media (min-width: 1080px) {
-
   .pagina-logo {
     margin-top: 2%;
     margin-left: 25%;
@@ -126,4 +125,22 @@
   .hamburger-button {
     display: none;
   }
+}
+.boton-cerrar-sesion {
+  border-radius: 8px;
+  background-color: #555555;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  margin-top: 30px;
+}
+.boton-cerrar-sesion:hover {
+  background-color: #555555; /* Green */
+  color: white;
+}
+.nombre-usuario {
+  margin-top: 40px;
+  margin-left: 20px;
 }

@@ -25,6 +25,7 @@ router.post('/register', registerValidation, usersController.registerUser);
 
 //login 
 router.get('/login', usersController.login);
-router.post('/login', loginValidation, usersController.processLogin),
+router.post('/login', loginValidation, usersController.processLogin);
+router.post("/logout", usersController.logout);
 
-  module.exports = router;
+module.exports = router;

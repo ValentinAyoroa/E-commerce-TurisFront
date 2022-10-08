@@ -3,6 +3,7 @@ var path = require('path')
 var router = express.Router();
 const productsController = require("../controllers/productsController");
 const multer = require('multer')
+const middleware = require("../middleware/middleware");
 
 
 const storage = multer.diskStorage({
@@ -24,7 +25,7 @@ router.get('/carrito', productsController.carrito);
 router.get('/edit/:id', productsController.edit);
 router.put('/edit/:id', productsController.update);
 router.delete('/delete/:id', productsController.delete);
-router.get('/create', productsController.create);
+router.get('/create', middleware, productsController.create);
 router.post('/create', upload.single('imagen'), productsController.store);
 
 module.exports = router

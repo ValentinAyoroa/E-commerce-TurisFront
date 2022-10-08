@@ -10,6 +10,8 @@ var methodOverride = require('method-override');
 var indexRouter = require('./routes/index');
 var productsRouter = require('./routes/productsRouter')
 var usersRouter = require('./routes/usersRouter');
+const localsMiddleware = require("./middleware/localsMiddle");
+const recordameMiddleware = require("./middleware/recordameMiddle");
 
 var app = express();
 
@@ -28,6 +30,8 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+app.use(recordameMiddleware);
+app.use(localsMiddleware);
 
 app.use('/', indexRouter);
 app.use('/products', productsRouter);

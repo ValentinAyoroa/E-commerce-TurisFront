@@ -48,11 +48,14 @@ controller = {
             }
 
             res.redirect("/prueba");
-
         }
-
-
     },
+    logout: (req, res) => {
+        req.session.destroy()
+        res.clearCookie("recordame");
+        res.redirect("/")
+    },
+
     register: function (req, res) {
         res.render('register');
     },
