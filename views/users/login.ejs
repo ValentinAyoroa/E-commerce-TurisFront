@@ -30,9 +30,20 @@
                                 </p>
                                 <% } %>
                         </div>
-                        <div class="button">
-                            <button type="submit">Ingresar</button>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" name="remember" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Recordar usuario</label>
                         </div>
+
+                        <% if(locals.errorLogin){ %>
+                            <p class="msg-error">
+                                <%= errorLogin %>
+                            </p>
+                            <% } %>
+
+                                <div class="button">
+                                    <button type="submit">Ingresar</button>
+                                </div>
                     </form>
                     <p class="copy-login">¿No tienes cuenta? Crea una <a class="login-button" href="./register">aqui</a>
                     </p>

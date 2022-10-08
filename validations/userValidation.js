@@ -1,5 +1,5 @@
 const { body } = require('express-validator');
-//soraya
+
 const fs = require("fs");
 const path = require("path");
 
@@ -25,7 +25,7 @@ module.exports = {
             .bail()
             .isEmail()
             .withMessage("*Ingrese un mail válido")
-            //soraya
+
             .custom(function (value, { req }) {
                 const data = allUsers()
 
@@ -58,7 +58,7 @@ module.exports = {
                 }
             })
     ],
-    //soraya
+
     loginValidation: [
         body("email")
             .notEmpty()

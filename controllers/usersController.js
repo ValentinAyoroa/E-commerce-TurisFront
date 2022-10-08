@@ -3,6 +3,7 @@ const path = require('path');
 const multer = require('multer')
 const { validationResult } = require("express-validator");
 const bcrypt = require('bcrypt');
+const { use } = require('../routes');
 
 
 function allUsers() {
@@ -21,14 +22,36 @@ controller = {
     login: function (req, res) {
         res.render('login');
     },
-    //soraya
+
     processLogin: (req, res) => {
         const error = validationResult(req);
         if (!error.isEmpty()) {
-            res.render("login", {
+            return res.render("login", {
                 errors: error.mapped()
             })
+
         };
+        const data = allUsers();
+        const userFound = data.find(function (user) {
+            return user.email == req.body.email && bcrypt.compareSync(req.body.password, user.password)
+        })
+        if (!userFound) {
+            res.render("login", { errorLogin: 'credenciales invalidas' })
+        } else {
+            req.session.usuarioLogueado = {
+                id: userFound.id,
+                nombre: userFound.nombre,
+                email: userFound.email
+            };
+            if (req.body.remember) {
+                res.cookie("recordame", userFound.id)
+            }
+
+            res.redirect("/prueba");
+
+        }
+
+
     },
     register: function (req, res) {
         res.render('register');

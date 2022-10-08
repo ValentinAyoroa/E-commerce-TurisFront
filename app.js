@@ -2,6 +2,7 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+const session = require("express-session");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
@@ -13,7 +14,7 @@ var usersRouter = require('./routes/usersRouter');
 var app = express();
 
 // view engine setup
-app.set('views',[ path.join(__dirname, 'views'),('views', path.join(__dirname, 'views/users/')),('views', path.join(__dirname, 'views/products/'))]);
+app.set('views', [path.join(__dirname, 'views'), ('views', path.join(__dirname, 'views/users/')), ('views', path.join(__dirname, 'views/products/'))]);
 app.set('view engine', 'ejs');
 
 app.use(methodOverride('_method'));
@@ -22,6 +23,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: "Secreto",
+  resave: false,
+  saveUninitialized: true
+}));
 
 app.use('/', indexRouter);
 app.use('/products', productsRouter);

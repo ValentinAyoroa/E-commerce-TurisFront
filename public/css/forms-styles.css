@@ -65,12 +65,11 @@ a.nav-button i {
 }
 
 .listado_errores {
- text-decoration: none;
+  text-decoration: none;
 }
 
 ul.nav-bar {
   display: none;
-
 }
 
 ul.nav-bar li {
@@ -121,14 +120,13 @@ form.form-register div input {
   background-color: white;
 }
 
-form.form-register div p.errors{
+form.form-register div p.errors {
   color: rgba(255, 0, 0, 0.767);
   font-size: 13px;
   font-weight: bolder;
   margin: 0;
   margin-bottom: 10px;
 }
-
 
 form.form-register div button {
   width: 100%;
@@ -302,8 +300,9 @@ div a {
     border-top: var(--grisOscuro) 1px solid;
     padding-top: 1%;
     padding-bottom: 1%;
-    margin: 0
+    margin: 0;
   }
-
 }
-
+.msg-error {
+  color: red;
+}
