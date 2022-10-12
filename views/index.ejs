@@ -1,178 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <!--head-->
 <%- include("./partials/head.ejs") %>
-<link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/index.css">
 
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-</head>
+  </head>
 
-<body>
-  <!--header-->
-  <%- include("./partials/header.ejs") %>
-    <div class="banner">
-      <div class="banner-item">
-        <p class="banner-title">APRECIA la vida desde la cima de la montaña.</p>
-      </div>
-      <div class="banner-item">
-        <p class="banner-title">EXPLORA el mundo con Trekking</p>
-      </div>
-      <div class="banner-item">
-        <p class="banner-title">PRESENCIA la maravillosa naturaleza</p>
-      </div>
-      <div class="banner-item">
-        <p class="banner-title">CONTEMPLA un hermoso atardecer </p>
-      </div>
-    </div>
-
-    <section class="home-banner">
-      <figure>
-        <img src="images/banner1.jpg" alt="">
-        <img src="images/banner2.webp" alt="">
-        <img src="images/banner3.jpg" alt="">
-        <img src="images/banner4.jpg" alt="">
-        <img src="images/banner1-2.jpg" alt="">
-      </figure>
-    </section>
-    <main>
-      <section class="productos-destacados">
-        <h1>Productos destacados</h1>
-
-        <div class="productos">
-          <% productos.forEach(producto=> { %>
-            <article class="caja-producto">
-              <img class="imagen-producto" src="<%= producto.imagen %>">
-              <figure>
-                <i id="icono-heart" class="fas fa-heart"></i>
-                <figcaption>Favoritos</figcaption>
-              </figure>
-              <div class="descripcion-producto">
-                <p id="descripcion">
-                  <%= producto.titulo %><br>
-                </p>
-                <h5>
-                  $ <%= producto.precio %>
-                </h5>
-                <a href="products/detalle-producto/<%=producto.id%>">Mas info>></a>
-                <br />
-              </div>
-            </article>
-            <% }) %>
+  <body>
+    <!--header-->
+    <%- include("./partials/header.ejs") %>
+      <div class="banner">
+        <div class="banner-item">
+          <p class="banner-title">APRECIA la vida desde la cima de la montaña.</p>
         </div>
-      </section>
-      <div class="marcas-promos">
-        <img src="images/marcas/marcas.png" alt="">
-      </div>
-    </main>
-
-    <div class="cajon-referencias">
-      <h1>VIVIR PARA CONTARLO</h1>
-      <h4>Historias de montaña y aventura</h4>
-      <section class="section-clientes">
-        <div class="container-card">
-          <div class="card-wrap">
-            <div class="card-slide card">
-              <div class="adelante-box card1"></div>
-              <div class="atras-box">
-                <div class="box"></div>
-                <div class="card-content">
-                  <div class="image">
-                    <img src="images/perso1.jpg" alt="">
-                  </div>
-
-                  <div class="rating">
-                    <i class="fas -solid fa-star"></i>
-                    <i class="fas -solid fa-star"></i>
-                    <i class="fas -solid fa-star"></i>
-                    <i class="fas -solid fa-star"></i>
-                    <i class="fas -solid fa-star"></i>
-                  </div>
-                  <div class="about">
-                    <p>Es toda una experiencia, ir bordeando la montaña con esos picos nevados, y visitar los lagos.
-                      ¡hasta
-                      un pequeño deslizamiento de nieve pude ver! Los campamentos, justo como se
-                      describen.Fueron confiables: yo reservé con ellos y no tuve inconveniente
-                      alguno.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-wrap">
-            <div class="card-slide card">
-              <div class="adelante-box card2"></div>
-              <div class="atras-box">
-                <div class="box"></div>
-                <div class="card-content">
-                  <div class="image">
-                    <img src="images/perso2.jpg" alt="">
-                  </div>
-
-                  <div class="rating">
-                    <i class="fas -solid fa-star"></i>
-                    <i class="fas -solid fa-star"></i>
-                    <i class="fas -solid fa-star"></i>
-                    <i class="fas -solid fa-star"></i>
-                    <i class="fas -solid fa-star"></i>
-                  </div>
-                  <div class="about">
-                    <p>¡Esta es verdaderamente una experiencia única en la vida! Siempre habia sido un sueño mío hacer
-                      el
-                      recorrido. El viaje y toda la experiencia fue aún más increíble de lo que
-                      jamás hubiera imaginado. Fue realmente increíble. Los recomiendo completamente.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card-wrap">
-            <div class="card-slide card">
-              <div class="adelante-box card3"></div>
-              <div class="atras-box">
-                <div class="box"></div>
-                <div class="card-content">
-                  <div class="image">
-                    <img src="images/perso3.jpg" alt="">
-                  </div>
-
-                  <div class="rating">
-                    <i class="fas -solid fa-star"></i>
-                    <i class="fas -solid fa-star"></i>
-                    <i class="fas -solid fa-star"></i>
-                    <i class="fas -solid fa-star"></i>
-                    <i class="fas -solid fa-star"></i>
-                  </div>
-                  <div class="about">
-                    <p>Esta ruta de trekking es espetacular y hacerla con esta agencia ha sido todo un acierto. Grupos
-                      reducidos con tu propio guía, cocinero y portador. El guía súper, sabía de todo
-                      (historia, leyendas, fauna, flora...), el cocinero espectacular, seguro que engordamos y todo con
-                      lo
-                      que nos mimó! y el portador muy amable, atento y simpático.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="banner-item">
+          <p class="banner-title">EXPLORA el mundo con Trekking</p>
         </div>
+        <div class="banner-item">
+          <p class="banner-title">PRESENCIA la maravillosa naturaleza</p>
+        </div>
+        <div class="banner-item">
+          <p class="banner-title">CONTEMPLA un hermoso atardecer </p>
+        </div>
+      </div>
+
+      <section class="home-banner">
+        <figure>
+          <img src="images/banner1.jpg" alt="">
+          <img src="images/banner2.webp" alt="">
+          <img src="images/banner3.jpg" alt="">
+          <img src="images/banner4.jpg" alt="">
+          <img src="images/banner1-2.jpg" alt="">
+        </figure>
       </section>
-    </div>
-    <!--footer-->
-    <%- include("./partials/footer.ejs") %>
+      <main>
+        <section class="productos-destacados">
+          <h1>Productos destacados</h1>
 
-      <!-- JavaScript Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-        crossorigin="anonymous"></script>
+          <div class="productos">
+            <% productos.slice(-6).forEach(producto=> { %>
+              <article class="caja-producto">
+                <img class="imagen-producto" src="<%= producto.imagen %>">
+                <figure>
+                  <i id="icono-heart" class="fas fa-heart"></i>
+                  <figcaption>Favoritos</figcaption>
+                </figure>
+                <div class="descripcion-producto">
+                  <p id="descripcion">
+                    <%= producto.titulo %><br>
+                  </p>
+                  <h5>
+                    $ <%= producto.precio %>
+                  </h5>
+                  <a href="products/detalle-producto/<%=producto.id%>">Mas info>></a>
+                  <br />
+                </div>
+              </article>
+              <% }) %>
+          </div>
+        </section>
+        <div class="marcas-promos">
+          <img src="images/marcas/marcas.png" alt="">
+        </div>
+      </main>
 
+      <div class="cajon-referencias">
+        <h1>VIVIR PARA CONTARLO</h1>
+        <h4>Historias de montaña y aventura</h4>
+        <section class="section-clientes">
+          <div class="container-card">
+            <div class="card-wrap">
+              <div class="card-slide card">
+                <div class="adelante-box card1"></div>
+                <div class="atras-box">
+                  <div class="box"></div>
+                  <div class="card-content">
+                    <div class="image">
+                      <img src="images/perso1.jpg" alt="">
+                    </div>
 
-</body>
+                    <div class="rating">
+                      <i class="fas -solid fa-star"></i>
+                      <i class="fas -solid fa-star"></i>
+                      <i class="fas -solid fa-star"></i>
+                      <i class="fas -solid fa-star"></i>
+                      <i class="fas -solid fa-star"></i>
+                    </div>
+                    <div class="about">
+                      <p>Es toda una experiencia, ir bordeando la montaña con esos picos nevados, y visitar los lagos.
+                        ¡hasta
+                        un pequeño deslizamiento de nieve pude ver! Los campamentos, justo como se
+                        describen.Fueron confiables: yo reservé con ellos y no tuve inconveniente
+                        alguno.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-wrap">
+              <div class="card-slide card">
+                <div class="adelante-box card2"></div>
+                <div class="atras-box">
+                  <div class="box"></div>
+                  <div class="card-content">
+                    <div class="image">
+                      <img src="images/perso2.jpg" alt="">
+                    </div>
+
+                    <div class="rating">
+                      <i class="fas -solid fa-star"></i>
+                      <i class="fas -solid fa-star"></i>
+                      <i class="fas -solid fa-star"></i>
+                      <i class="fas -solid fa-star"></i>
+                      <i class="fas -solid fa-star"></i>
+                    </div>
+                    <div class="about">
+                      <p>¡Esta es verdaderamente una experiencia única en la vida! Siempre habia sido un sueño mío hacer
+                        el
+                        recorrido. El viaje y toda la experiencia fue aún más increíble de lo que
+                        jamás hubiera imaginado. Fue realmente increíble. Los recomiendo completamente.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-wrap">
+              <div class="card-slide card">
+                <div class="adelante-box card3"></div>
+                <div class="atras-box">
+                  <div class="box"></div>
+                  <div class="card-content">
+                    <div class="image">
+                      <img src="images/perso3.jpg" alt="">
+                    </div>
+
+                    <div class="rating">
+                      <i class="fas -solid fa-star"></i>
+                      <i class="fas -solid fa-star"></i>
+                      <i class="fas -solid fa-star"></i>
+                      <i class="fas -solid fa-star"></i>
+                      <i class="fas -solid fa-star"></i>
+                    </div>
+                    <div class="about">
+                      <p>Esta ruta de trekking es espetacular y hacerla con esta agencia ha sido todo un acierto. Grupos
+                        reducidos con tu propio guía, cocinero y portador. El guía súper, sabía de todo
+                        (historia, leyendas, fauna, flora...), el cocinero espectacular, seguro que engordamos y todo
+                        con
+                        lo
+                        que nos mimó! y el portador muy amable, atento y simpático.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!--footer-->
+      <%- include("./partials/footer.ejs") %>
+
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+          crossorigin="anonymous"></script>
+  </body>
 
 </html>

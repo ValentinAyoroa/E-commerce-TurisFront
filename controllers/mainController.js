@@ -11,6 +11,10 @@ controller = {
     home: function (req, res) {
         let data = allProducts();
         res.render('index', { productos: data });
+    },
+    tienda: (req, res) => {
+        let data = allProducts();
+        res.render('tienda', { productos: data });
     }
 }
 

@@ -4,6 +4,7 @@ const mainController = require("../controllers/mainController");
 
 /* GET home page. */
 router.get('/', mainController.home);
+router.get('/tienda', mainController.tienda);
 router.get("/prueba", function (req, res) {
   if (req.session.usuarioLogueado) {
     res.send(req.session.usuarioLogueado.nombre)
