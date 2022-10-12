@@ -2,6 +2,17 @@
   font-family: "Roboto";
 }
 
+:root {
+  --blanco: #f0f0f0;
+  --celeste: #0077c0;
+  --azul: #0022aa;
+  --negroClaro: #161616;
+  --negroOscuro: #0e0e0e;
+  --grisClaro: #dfdddd;
+  --grisOscuro: #636262;
+}
+
+
 /*Productos Destacados*/
 
 .productos-destacados {
@@ -63,7 +74,7 @@ article:hover {
   margin-bottom: 5%;
 }
 
-.productos > article {
+.productos>article {
   margin: 20px;
 }
 
@@ -73,6 +84,27 @@ article:hover {
   width: 100%;
   padding: 0;
   position: relative;
+}
+
+.mostrar-mas a {
+  color: var(--blanco);
+  margin: auto;
+  text-decoration: none;
+}
+
+.mostrar-mas {
+  display: flex;
+  margin: auto;
+  margin-bottom: 4em;
+  margin-top: -1em;
+  align-content: center;
+  background-color: #3483fa;
+  border-color: transparent;
+  max-width: 10em;
+  color: #fff;
+  border-radius: 6px;
+  line-height: 30px;
+  height: 3vh;
 }
 
 #descripcion {
@@ -168,7 +200,7 @@ figcaption {
   font-size: 10px;
 }
 
-figure:hover > figcaption {
+figure:hover>figcaption {
   display: block;
   transition: all 0.5s;
   visibility: visible;
@@ -256,7 +288,7 @@ figure:hover > figcaption {
   flex-wrap: wrap;
 }
 
-.container-card > .card-wrap {
+.container-card>.card-wrap {
   margin-right: 50px;
 }
 
@@ -416,9 +448,11 @@ section .card .about {
   .banner {
     display: flex;
   }
+
   .banner-item {
     display: flex;
   }
+
   .home-banner {
     display: none;
   }
@@ -428,9 +462,11 @@ section .card .about {
   .banner-title {
     font-size: 10px;
   }
+
   .banner {
     display: none;
   }
+
   .banner-item {
     display: none;
   }
@@ -463,10 +499,12 @@ section .card .about {
   .productos {
     flex-direction: row;
   }
+
   .caja-producto {
     width: 348px;
   }
 }
+
 @media (min-width: 1080px) {
   .caja-producto {
     height: 350px;
@@ -478,6 +516,7 @@ section .card .about {
   0% {
     left: 0;
   }
+
   16% {
     left: 0;
   }
@@ -485,6 +524,7 @@ section .card .about {
   21% {
     left: -100%;
   }
+
   38% {
     left: -100%;
   }
@@ -492,6 +532,7 @@ section .card .about {
   43% {
     left: -200%;
   }
+
   60% {
     left: -200%;
   }
@@ -499,6 +540,7 @@ section .card .about {
   65% {
     left: -300%;
   }
+
   82% {
     left: -300%;
   }
@@ -506,6 +548,7 @@ section .card .about {
   87% {
     left: -400%;
   }
+
   100% {
     left: -400%;
   }

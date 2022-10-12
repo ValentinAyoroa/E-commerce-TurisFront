@@ -1,1 +1,72 @@
+* {
+    font-family: "Roboto";
+}
 
+:root {
+    --blanco: #f0f0f0;
+    --celeste: #0077c0;
+    --azul: #0022aa;
+    --negroClaro: #161616;
+    --negroOscuro: #0e0e0e;
+    --grisClaro: #dfdddd;
+    --grisOscuro: #636262;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--grisClaro);
+    height: 3em;
+
+}
+
+.main-checkbox {
+    width: 70em;
+    margin-top: 2em;
+    padding-right: 1em;
+    border-right: solid 2px #eeee;
+}
+
+.checkbox {
+    border: 2px solid #eeee;
+    padding-bottom: 10em;
+}
+
+.checkbox input {
+    margin: 5%;
+    padding-bottom: 10%;
+}
+
+.checkbox label {
+    font-size: 20px;
+}
+
+.caja-producto {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+div.main-div {
+    background-color: var(--grisClaro);
+
+}
+
+.cat-titulo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #0077c0;
+    color: blanchedalmond;
+    height: 3%;
+}
+
+.main-div {
+    display: flex;
+}
+
+main {
+    margin: auto;
+}
