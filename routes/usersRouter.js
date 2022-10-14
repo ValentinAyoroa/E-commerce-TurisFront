@@ -28,4 +28,6 @@ router.get('/login', usersController.login);
 router.post('/login', loginValidation, usersController.processLogin);
 router.post("/logout", usersController.logout);
 
+router.get('/perfil', usersController.perfil);
+
 module.exports = router;

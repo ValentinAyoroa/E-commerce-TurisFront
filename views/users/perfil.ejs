@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--head-->
+<%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/perfil.css">
+
+<body>
+    <!--header-->
+    <%- include("./partials/header.ejs") %>
+    <div class="profile">
+        <h2 class="title-profile">Mi perfil</h2>
+        <div class="box-profile">
+            <img src="/images/users/perfil-default.jpg">
+            <p>
+                Personaliza tu imagen de perfil. Tu imagen se mostrara cada vez 
+                que inicies sesion en esta cuenta.
+            </p>
+            <form action="/users/perfil?_method=PUT" method="POST">
+            <label for="add-image"><span>Cambiar imagen</span></label>
+            <span class="add-image"><input type="file" name="image" id="add-image"></span>
+            <br>
+            <button type="submit">Confirmar</button>
+            </form>
+        </div>
+        <div class="information-profile">
+            <div class="information-top">
+            <span class="copy-information">Informacion personal</span>
+            <a href="/users/perfil/edit" class="edit-link"><span class="copy-edit">Editar informacion</span></a>
+            </div>
+            <ul class="information-list">
+                <li>Nombre
+                <span class="information-user">ejemplo@gmail.com</span>
+                </li>
+                <li>Apellido
+                <span class="information-user">ejemplo@gmail.com</span>
+                </li>
+                <li>Email
+                <span class="information-user">ejemplo@gmail.com</span>
+                </li>
+                <li>Celular
+                <span class="information-user">ejemplo@gmail.com</span>
+                </li>
+            </ul>
+        </div>
+        <form action="/users/perfil/logout" method="post">
+            <button class="logout" type="submit">Cerrar sesion</button>
+        </form>
+        <div class="compras-user">
+            <h2 class="title-profile">Mis compras</h2>
+            <div class="box-profile">
+                <p>¡No tienes compras aun!</p>
+                <p>Cuando realices compras se mostraran aqui.</p>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <%- include("./partials/footer.ejs") %>
+</body>
+
+</html>

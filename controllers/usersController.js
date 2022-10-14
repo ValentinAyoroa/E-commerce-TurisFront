@@ -82,6 +82,9 @@ controller = {
             writeProducts(data);
             res.redirect('/users/register');
         }
+    },
+    perfil: function (req, res) {
+        res.render('perfil')
     }
 }
 

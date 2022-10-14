@@ -5,5 +5,12 @@
             "apellido": "Sánchez Chavita",
             "email": "sorayasanchez0503@gmail.com",
             "password": "$2b$10$6AfFPHlZdG0UBjoGvkdXSejnY.Dj7cNUB4U1VtJtF1Kr2oVCizTZa"
+      },
+      {
+            "id": 2,
+            "nombre": "Valentin",
+            "apellido": "Ayoroa",
+            "email": "valentinayoroa@gmail.com",
+            "password": "$2b$10$ze6rzntq3CYiIjG/LhImv.znUXcRqE.0FOusMQHmQLC4g1qOAozcC"
       }
 ]
