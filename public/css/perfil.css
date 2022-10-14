@@ -23,6 +23,7 @@ div.profile{
 }
 
 div.box-profile {
+    display: flex;
     padding: 15px;
     border-radius: 5px;
     background-color: white;
@@ -61,11 +62,16 @@ div.box-profile label {
 div.box-profile button{
     border: none;
     border-radius: 5px;
-    margin-top: 15px;
     padding: 10px;
     background-color: #0077c0;
     color: white;
+    transition: background-color 450ms;
 }
+
+div.box-profile button:hover{
+    background-color: #033b91;
+}
+
 
 div.information-profile{
     font-size: 15px;
@@ -115,15 +121,16 @@ span.information-user{
     color: rgb(50, 49, 48);;
 }
 
-div button.logout{
+
+div button.logout-button{
     border: none;
     color: rgb(177, 15, 15);
     font-size: 15px;
-    padding: 15px 0 ;
+    margin: 15px 0 ;
     background-color: rgb(242 242 242);
 }
 
-@media (max-width:500px) {
+@media (max-width:550px) {
     
     div.profile{
         display: flex;
@@ -141,11 +148,101 @@ div button.logout{
     }
     
     div.box-profile img {
-        width: 35%
+        width: 30%
     }
 
-    ul.nav-bar-profile{
-        display: none;
+    div.box-profile button{
+        margin-top: 15px; 
     }
 
+}
+
+@media ( min-width: 551px) and (max-width:1080px) {
+
+    div.box-image{
+        display: flex;
+        align-items: center;
+    }
+
+    div.box-image form{
+        display: flex;
+        align-items: center;
+    }
+
+    form button.confirm {
+        margin-left: 15px;
+    }
+    
+    div.box-information-image{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 24px;
+    }
+    
+    div.space-box{
+        width: calc(50% - 8px);
+    }
+
+    div.box-profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+     
+}
+
+@media (min-width:1081px){
+
+    div.profile{
+        padding: 3% 5%;
+    }
+
+    div.box-user{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.box-profile{
+        width: 40vw;
+        padding: 15px
+    }
+
+    div.box-profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    div.box-image{
+        display: flex;
+        align-items: center;
+    }
+
+    div.box-image form{
+        display: flex;
+        align-items: center;
+    }
+
+    form button.confirm {
+        margin-left: 15px;
+    }
+
+    div.information-profile{
+        width: 45vw;
+        margin-top:  0;
+    }
+
+    div.box-information-image{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 24px;
+    }
+
+    div.profile form.logout{
+        display: flex;
+        justify-content: end;
+    }
+    
 }

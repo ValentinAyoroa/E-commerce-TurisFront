@@ -10,47 +10,56 @@
     <%- include("./partials/header.ejs") %>
     <div class="profile">
         <h2 class="title-profile">Mi perfil</h2>
-        <div class="box-profile">
-            <img src="/images/users/perfil-default.jpg">
-            <p>
-                Personaliza tu imagen de perfil. Tu imagen se mostrara cada vez 
-                que inicies sesion en esta cuenta.
-            </p>
-            <form action="/users/perfil?_method=PUT" method="POST">
-            <label for="add-image"><span>Cambiar imagen</span></label>
-            <span class="add-image"><input type="file" name="image" id="add-image"></span>
-            <br>
-            <button type="submit">Confirmar</button>
-            </form>
-        </div>
-        <div class="information-profile">
-            <div class="information-top">
-            <span class="copy-information">Informacion personal</span>
-            <a href="/users/perfil/edit" class="edit-link"><span class="copy-edit">Editar informacion</span></a>
+        <div class= 'box-user'>
+            <div class="box-profile">
+                <div class="box-image">
+                    <img src="/images/users/perfil-default.jpg">
+                    <div class="box-information-image">
+                        <p>
+                            Personaliza tu imagen de perfil. Tu imagen se mostrara cada vez 
+                            que inicies sesion en esta cuenta.
+                        </p>
+                        <form action="/users/perfil?_method=PUT" method="POST">
+                        <label for="add-image"><span>Cambiar imagen</span></label>
+                        <span class="add-image"><input type="file" name="image" id="add-image"></span>
+                        <br>
+                        <button class="confirm" type="submit">Confirmar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="space-box"></div>
             </div>
-            <ul class="information-list">
-                <li>Nombre
-                <span class="information-user">ejemplo@gmail.com</span>
-                </li>
-                <li>Apellido
-                <span class="information-user">ejemplo@gmail.com</span>
-                </li>
-                <li>Email
-                <span class="information-user">ejemplo@gmail.com</span>
-                </li>
-                <li>Celular
-                <span class="information-user">ejemplo@gmail.com</span>
-                </li>
-            </ul>
+            <div class="information-profile">
+                <div class="information-top">
+                <span class="copy-information">Informacion personal</span>
+                <a href="/users/profile/edit" class="edit-link"><span class="copy-edit">Editar informacion</span></a>
+                </div>
+                <ul class="information-list">
+                    <li>Nombre
+                    <span class="information-user"><%= usuario.nombre %></span>
+                    </li>
+                    <li>Apellido
+                    <span class="information-user"><%= usuario.apellido %></span>
+                    </li>
+                    <li>Email
+                    <span class="information-user"><%= usuario.email %></span>
+                    </li>
+                    <li>Celular
+                    <span class="information-user"><%= usuario.celular ? usuario.celular : 'Ninguno'%></span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <form action="/users/perfil/logout" method="post">
-            <button class="logout" type="submit">Cerrar sesion</button>
+        <form class='logout' action="/users/perfil/logout" method="post">
+            <button class="logout-button" type="submit">Cerrar sesion</button>
         </form>
         <div class="compras-user">
             <h2 class="title-profile">Mis compras</h2>
             <div class="box-profile">
-                <p>¡No tienes compras aun!</p>
-                <p>Cuando realices compras se mostraran aqui.</p>
+                <div class="box-store">
+                    <p>¡No tienes compras aun!</p>
+                    <p>Cuando realices compras se mostraran aqui.</p>
+                </div>
             </div>
         </div>
     </div>

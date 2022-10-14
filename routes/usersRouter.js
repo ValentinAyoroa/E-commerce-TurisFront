@@ -3,6 +3,7 @@ var path = require('path')
 var router = express.Router();
 const multer = require('multer')
 const usersController = require("../controllers/usersController");
+const login = require("../middleware/login");
 const { body } = require('express-validator'); //requiere express-validator, solo body.
 
 
@@ -28,6 +29,9 @@ router.get('/login', usersController.login);
 router.post('/login', loginValidation, usersController.processLogin);
 router.post("/logout", usersController.logout);
 
-router.get('/perfil', usersController.perfil);
+//profile
+router.get('/profile', login, usersController.profile);
+router.get('/profile/edit', login, usersController.edit);
+
 
 module.exports = router;

@@ -41,7 +41,9 @@ controller = {
             req.session.usuarioLogueado = {
                 id: userFound.id,
                 nombre: userFound.nombre,
-                email: userFound.email
+                apellido: userFound.apellido,
+                email: userFound.email,
+                celular: userFound.celular
             };
             if (req.body.remember) {
                 res.cookie("recordame", userFound.id)
@@ -83,8 +85,19 @@ controller = {
             res.redirect('/users/register');
         }
     },
-    perfil: function (req, res) {
-        res.render('perfil')
+    profile: function (req, res) {
+        if(req.session.usuarioLogueado){
+            res.render('perfil', {usuario: req.session.usuarioLogueado})
+        }else{
+        res.render('login')
+    }
+    },
+    edit: function (req, res) {
+        if(req.session.usuarioLogueado){
+            res.render('editar-perfil', {usuario: req.session.usuarioLogueado})
+        }else{
+        res.render('login')
+    }
     }
 }
 

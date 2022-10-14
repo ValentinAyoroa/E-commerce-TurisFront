@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+body {
+    margin: 0;
+    background-color: rgb(242 242 242);
+}
+
+div.edit{
+    padding: 5% 5%;
+}
+
+h2{
+    text-align: center;
+}
+
+form.information-list{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+form.information-list label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(96, 94, 92);
+    border-bottom: 1px solid rgb(242 242 242);
+}
+
+input.information-user{
+    border: none;
+    margin-top: 10px;
+    font-weight: bold;
+    color: rgb(50, 49, 48);;
+}

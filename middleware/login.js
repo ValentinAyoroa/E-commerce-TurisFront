@@ -1,4 +1,4 @@
-function middleware(req, res, next) {
+function login(req, res, next) {
   if (req.session.usuarioLogueado) {
     next()
   } else {
@@ -6,4 +6,4 @@ function middleware(req, res, next) {
   }
 
 }
-module.exports = middleware;
+module.exports = login;

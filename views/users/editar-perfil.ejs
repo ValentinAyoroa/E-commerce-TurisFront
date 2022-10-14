@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--head-->
+<%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/editar-perfil.css">
+
+<body>
+    <!--header-->
+    <%- include("./partials/header.ejs") %>
+    <div class="edit">
+        <div class="information-profile">
+            <div class="information-top">
+            <h2 class="copy-information">Editar informacion personal</h2>
+            </div>
+            <form class="information-list" action="/users/profile/edit">
+                <label>Nombre</label>
+                <input class="information-user" name="nombre" type="text" value="<%= usuario.nombre %>">
+                <label>Apellido</label>
+                <input class="information-user" name="apellido" type="text" value="<%= usuario.apellido %>">
+                <label>Email</label>
+                <input class="information-user" name="email" type="email" value="<%= usuario.email %>">
+                <label>Celular</label>
+                <input class="information-user" name="celular" type="tel" value="<%= usuario.celular ? usuario.celular : ''%>">
+            </form>
+        </div>
+    </div>
+
+    <!--footer-->
+    <%- include("./partials/footer.ejs") %>
+</body>
+
+</html>

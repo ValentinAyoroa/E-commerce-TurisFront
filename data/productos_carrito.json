@@ -30,5 +30,13 @@
             "color": "Azul",
             "imagen": "/images/productos/chaqueta.jpg",
             "descripcion": "El relleno de la campera Fusión (interior) es un plumón que ofrece más abrigo en relación a su peso que cualquier otro material. Cada onza (28,34 gramos) de plumón de calidad tiene cerca de dos millones de filamentos mullidos que se entrelazan y superponen para formar una capa protectora de aire no conductivo que mantiene el calor adentro y el frio afuera. El plumón tiene la capacidad de moldearse al cuerpo, además, es respirable y evacua la transpiración. Los laterales están confeccionados con POLARTEC Power Stretch, éste es un tejido muy elástico que le proporciona mayor libertad de movimiento y transpirabilidad, también la hace más cómoda cuando es usada junto a la prenda exterior, ya que evita el exceso de volumen en esa zona. El tejido de la campera exterior es de GORE-TEX®, ofrece una impermeabilidad duradera, es cortaviento, altamente transpirable, proporciona una máxima comodidad y protección en una amplia variedad de actividades."
+      },
+      {
+            "id": 8,
+            "titulo": "Mochila de Hidratación 2 Litros - FOX ",
+            "color": "Azul",
+            "precio": "24000",
+            "imagen": "/images/productos/chaletos-hibratacion.jpg",
+            "descripcion": "Diseño elegante de bajo perfil para una sensación sin restricciones Correas de hombro de malla ligera para mayor transpirabilidad y comodidad Compartimento de almacenamiento de herramientas separado Soporte para casco enrollable Bolsillo para gafas de sol / multimedia con forro polar Depósito Hydrapak® de 2 litros con abertura superior deslizante para facilitar el llenado y la limpieza Válvula de compensación de mordida en ángulo de 45 Alto flujo con cierre giratorio Panel trasero moldeado de EVA con canal de flujo de aire."
       }
 ]
