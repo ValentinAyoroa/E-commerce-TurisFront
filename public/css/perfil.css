@@ -148,7 +148,8 @@ div button.logout-button{
     }
     
     div.box-profile img {
-        width: 30%
+        width: 110px;
+        height: 110px;
     }
 
     div.box-profile button{
