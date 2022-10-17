@@ -11,7 +11,7 @@ const { registerValidation, loginValidation } = require("../validations/userVali
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, '../public/images/productos'))
+    cb(null, path.join(__dirname, '../public/images/users'))
   },
   filename: function (req, file, cb) {
     const newFileName = file.fieldname + Date.now() + path.extname(file.originalname)
@@ -32,6 +32,6 @@ router.post("/logout", usersController.logout);
 //profile
 router.get('/profile', login, usersController.profile);
 router.get('/profile/edit', login, usersController.edit);
-
+router.post('/profile', login, upload.single('avatar'), usersController.avatar)
 
 module.exports = router;

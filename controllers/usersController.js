@@ -27,7 +27,8 @@ controller = {
         const error = validationResult(req);
         if (!error.isEmpty()) {
             return res.render("login", {
-                errors: error.mapped()
+                errors: error.mapped(),
+                old : req.body
             })
 
         };
@@ -43,13 +44,15 @@ controller = {
                 nombre: userFound.nombre,
                 apellido: userFound.apellido,
                 email: userFound.email,
-                celular: userFound.celular
+                celular: userFound.celular,
+                imagen: userFound.image
             };
+
             if (req.body.remember) {
                 res.cookie("recordame", userFound.id)
             }
 
-            res.redirect("/prueba");
+            res.redirect("/");
         }
     },
     logout: (req, res) => {
@@ -91,6 +94,18 @@ controller = {
         }else{
         res.render('login')
     }
+    },
+    avatar: function (req, res){
+        const data = allUsers()
+        const userFound = data.find(function (user) {
+            return user.id == req.session.usuarioLogueado.id
+        })
+
+       userFound.image = '/images/users/' + req.file.filename
+       req.session.usuarioLogueado.imagen = userFound.image
+       writeProducts(data);
+            res.redirect('/users/profile');
+
     },
     edit: function (req, res) {
         if(req.session.usuarioLogueado){

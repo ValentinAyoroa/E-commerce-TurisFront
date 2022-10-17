@@ -13,15 +13,19 @@
         <div class= 'box-user'>
             <div class="box-profile">
                 <div class="box-image">
+                    <% if(locals.usuario.imagen){ %>
+                    <img src="<%= usuario.imagen %>" >
+                    <% } else{ %>
                     <img src="/images/users/perfil-default.jpg">
+                    <% } %>
                     <div class="box-information-image">
                         <p>
                             Personaliza tu imagen de perfil. Tu imagen se mostrara cada vez 
                             que inicies sesion en esta cuenta.
                         </p>
-                        <form action="/users/perfil?_method=PUT" method="POST">
+                        <form action="/users/profile" enctype="multipart/form-data" method="POST">
                         <label for="add-image"><span>Cambiar imagen</span></label>
-                        <span class="add-image"><input type="file" name="image" id="add-image"></span>
+                        <span class="add-image"><input type="file" name="avatar" id="add-image"></span>
                         <br>
                         <button class="confirm" type="submit">Confirmar</button>
                         </form>

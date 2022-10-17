@@ -13,7 +13,7 @@
                     <h2 class="copy-register">Hola! Para seguir ingresa tus datos</h2>
                     <form action="/users/login" method="post" class="form-register">
                         <div>
-                            <input type="email" name="email" placeholder="Nombre de usuario o correo">
+                            <input type="email" name="email" value= '<%= locals.old && !locals.errors.email ? old.email : "" %>' placeholder="Nombre de usuario o correo">
 
                             <% if(locals.errors && locals.errors.email){ %>
                                 <p class="msg-error">

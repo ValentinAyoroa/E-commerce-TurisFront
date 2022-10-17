@@ -17,19 +17,19 @@
                             <% if (locals.errors && locals.errors.name) {%>
                                 <p class="errors"><%= errors.name.msg %></p>
                             <% } %>
-                            <input type="text" name="name" placeholder="Nombre">
+                            <input type="text" name="name" value= '<%= locals.old && !locals.errors.name ? old.name : "" %>' placeholder="Nombre">
                         </div>
                         <div>
                             <% if (locals.errors && locals.errors.surname) {%>
                                 <p class="errors"><%= errors.surname.msg %></p>
                             <% } %>
-                            <input type="text" name="surname" placeholder="Apellido">
+                            <input type="text" name="surname" value= '<%= locals.old && !locals.errors.surname ? old.surname : "" %>' placeholder="Apellido">
                         </div>
                         <div>
                             <% if (locals.errors && locals.errors.email) {%>
                                 <p class="errors"><%= errors.email.msg %></p>
                             <% } %>
-                            <input type="email" name="email" placeholder="E-mail">
+                            <input type="email" name="email" value= '<%= locals.old && !locals.errors.email ? old.email : "" %>' placeholder="E-mail">
                         </div>
                         <div>
                             <% if (locals.errors && locals.errors.password) {%>
