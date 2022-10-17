@@ -113,7 +113,30 @@ controller = {
         }else{
         res.render('login')
     }
-    }
+    },
+    upload: function (req, res) {
+        const data = allUsers();
+        const userFound = data.find(function (user) {
+            return user.id == req.session.usuarioLogueado.id
+        })
+
+        userFound.nombre = req.body.nombre
+        userFound.apellido = req.body.apellido
+        userFound.email = req.body.email
+        userFound.celular = req.body.celular
+
+        req.session.usuarioLogueado = {
+            id: userFound.id,
+            nombre: userFound.nombre,
+            apellido: userFound.apellido,
+            email: userFound.email,
+            celular: userFound.celular,
+            imagen: userFound.image
+        };
+
+        writeProducts(data);
+            res.redirect('/users/profile');
+        }
 }
 
 module.exports = controller;

@@ -33,5 +33,6 @@ router.post("/logout", usersController.logout);
 router.get('/profile', login, usersController.profile);
 router.get('/profile/edit', login, usersController.edit);
 router.post('/profile', login, upload.single('avatar'), usersController.avatar)
+router.put('/profile/edit', login, usersController.upload)
 
 module.exports = router;

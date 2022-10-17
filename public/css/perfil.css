@@ -65,6 +65,7 @@ div.box-profile button{
     padding: 10px;
     background-color: #0077c0;
     color: white;
+    cursor: pointer;
     transition: background-color 450ms;
 }
 
@@ -128,6 +129,7 @@ div button.logout-button{
     font-size: 15px;
     margin: 15px 0 ;
     background-color: rgb(242 242 242);
+    cursor: pointer;
 }
 
 @media (max-width:550px) {
