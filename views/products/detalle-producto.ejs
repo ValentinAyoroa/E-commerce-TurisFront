@@ -12,11 +12,13 @@
                     <p class="titulo-producto">
                         <%=producto.titulo%>
                     </p>
+                    <% if (locals.usuario){ %>
                     <a class="boton-editar" href="/products/edit/<%=producto.id%>">
                         <p>
                             Editar Producto
                         </p>
                     </a>
+                    <% } %>
                     <div class="bloque-producto-desktop">
                         <!-- <div class="imagenes-totales-producto"> -->
                         <div class="cuadro-imagen-producto">
