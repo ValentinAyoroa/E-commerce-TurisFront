@@ -42,6 +42,10 @@ input:focus {
     font-size: 15px;
   }
 
+p.errors{
+    color: rgb(212, 3, 3)
+}
+
 div.buttons{
     display: flex;
     justify-content: space-around;

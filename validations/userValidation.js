@@ -66,5 +66,36 @@ module.exports = {
         body("password")
             .notEmpty()
             .withMessage("Campo password incompleto")
+    ],
+
+    avatarValidation: [
+        body('avatar')
+            .custom(function(value, {req}){
+                return req.file
+            }).withMessage('No se ha cargado ninguna imagen')
+            .bail()
+            .custom(function(value, {req}){
+                const extensiones = ['.jpg', '.png', '.jfif', '.svg', '.tif']
+                const info = path.extname(req.file.originalname)
+                return extensiones.includes(info)
+            }).withMessage('Imagen invalida')
+    ],
+
+    profileValidation: [
+        body("nombre")
+            .notEmpty()
+            .withMessage("El campo nombre tiene que estar completo"),
+        body("apellido")
+            .notEmpty()
+            .withMessage("El campo apellido tiene que estar completo"),
+        body("email")
+            .notEmpty()
+            .withMessage("El campo email debe estar completo")
+            .bail()
+            .isEmail()
+            .withMessage("Ingrese un mail válido"),
+        body('celular')        
+            .isLength({max : 15})
+            .withMessage('El numero ingresado es demasiado largo')
     ]
 }

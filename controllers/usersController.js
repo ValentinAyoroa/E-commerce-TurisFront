@@ -96,15 +96,20 @@ controller = {
     }
     },
     avatar: function (req, res){
+        const errors = validationResult(req)
+        
+        if (errors.isEmpty()){
         const data = allUsers()
         const userFound = data.find(function (user) {
             return user.id == req.session.usuarioLogueado.id
         })
-
        userFound.image = '/images/users/' + req.file.filename
        req.session.usuarioLogueado.imagen = userFound.image
        writeProducts(data);
             res.redirect('/users/profile');
+        }else{
+            res.render('perfil', { errors: errors.mapped(), old: req.body });
+        }
 
     },
     edit: function (req, res) {
@@ -115,8 +120,12 @@ controller = {
     }
     },
     upload: function (req, res) {
-        const data = allUsers();
-        const userFound = data.find(function (user) {
+        const errors = validationResult(req)
+
+        if (errors.isEmpty()) {
+
+            const data = allUsers();
+            const userFound = data.find(function (user) {
             return user.id == req.session.usuarioLogueado.id
         })
 
@@ -136,7 +145,10 @@ controller = {
 
         writeProducts(data);
             res.redirect('/users/profile');
+        } else {
+            res.render('editar-perfil', { errors: errors.mapped(), old: req.body });
         }
+    }
 }
 
 module.exports = controller;

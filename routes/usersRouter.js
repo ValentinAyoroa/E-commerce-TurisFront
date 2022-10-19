@@ -7,7 +7,7 @@ const login = require("../middleware/login");
 const { body } = require('express-validator'); //requiere express-validator, solo body.
 
 
-const { registerValidation, loginValidation } = require("../validations/userValidation"); //requiere validacion para register.
+const { registerValidation, loginValidation, profileValidation, avatarValidation } = require("../validations/userValidation"); //requiere validacion para register.
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -18,7 +18,19 @@ const storage = multer.diskStorage({
     cb(null, newFileName)
   }
 })
-const upload = multer({ storage: storage })
+const upload = multer({ 
+  storage: storage,
+  fileFilter: (req, file, cb) => {
+    const extensiones = ['.jpg', '.png', '.jfif', '.svg', '.tif']
+    const info = path.extname(file.originalname)
+    const result = extensiones.includes(info)
+
+    if(!result){
+      req.file =  file
+    }
+
+    cb(null, result);
+  }})
 
 
 router.get('/register', usersController.register);
@@ -32,7 +44,7 @@ router.post("/logout", usersController.logout);
 //profile
 router.get('/profile', login, usersController.profile);
 router.get('/profile/edit', login, usersController.edit);
-router.post('/profile', login, upload.single('avatar'), usersController.avatar)
-router.put('/profile/edit', login, usersController.upload)
+router.post('/profile', login, upload.single('avatar'), avatarValidation, usersController.avatar)
+router.put('/profile/edit', login, profileValidation, usersController.upload)
 
 module.exports = router;

@@ -15,8 +15,20 @@ const storage = multer.diskStorage({
     cb(null, newFileName)
   }
 })
-const upload = multer({ storage: storage })
+const upload = multer({ 
+  storage: storage,
+  fileFilter: (req, file, cb) => {
+    const extensiones = ['.jpg', '.png', '.jfif', '.svg', '.tif']
+    const info = path.extname(file.originalname)
+    const result = extensiones.includes(info)
 
+    if(!result){
+      req.file =  file
+    }
+
+    cb(null, result);
+
+  }})
 
 
 router.get('/detalle-producto/:id', productsController.detalleproducto);

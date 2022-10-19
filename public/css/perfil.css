@@ -40,6 +40,10 @@ div.box-profile p{
     color: rgb(96, 94, 92);
 }
 
+div.box-profile p.errors{
+    color: rgb(212, 3, 3)
+}
+
 div.box-profile label {
     font-size: 14px;
     font-weight: bold;
@@ -167,12 +171,24 @@ div button.logout-button{
         align-items: center;
     }
 
+    div.box-profile{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.box-profile p.errors{
+        width: 30%;
+        margin-left: 10px;
+        color: rgb(212, 3, 3)
+    }
+
     div.box-image form{
         display: flex;
         align-items: center;
     }
 
     form button.confirm {
+        flex-grow: 0.5;
         margin-left: 15px;
     }
     
@@ -216,6 +232,11 @@ div button.logout-button{
         height: 120px;
     }
 
+    div.box-profile p.errors{
+        width: 30%;
+        margin-left: 10px;
+        color: rgb(212, 3, 3)
+    }
 
     div.box-image{
         display: flex;
@@ -228,6 +249,7 @@ div button.logout-button{
     }
 
     form button.confirm {
+        width: 100px;
         margin-left: 15px;
     }
 

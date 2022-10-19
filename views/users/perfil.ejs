@@ -28,6 +28,9 @@
                         <span class="add-image"><input type="file" name="avatar" id="add-image"></span>
                         <br>
                         <button class="confirm" type="submit">Confirmar</button>
+                        <% if (locals.errors && locals.errors.avatar) {%>
+                            <p class="errors"><%= errors.avatar.msg %></p>
+                        <% } %>
                         </form>
                     </div>
                 </div>

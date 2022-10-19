@@ -15,12 +15,24 @@
             <form class="information-list" action="/users/profile/edit?_method=PUT" method="POST">
                 <label>Nombre</label>
                 <input class="information-user" name="nombre" type="text" value="<%= usuario.nombre %>">
+                <% if (locals.errors && locals.errors.nombre) {%>
+                    <p class="errors"><%= errors.nombre.msg %></p>
+                <% } %>
                 <label>Apellido</label>
                 <input class="information-user" name="apellido" type="text" value="<%= usuario.apellido %>">
+                <% if (locals.errors && locals.errors.apellido) {%>
+                    <p class="errors"><%= errors.apellido.msg %></p>
+                <% } %>
                 <label>Email</label>
                 <input class="information-user" name="email" type="email" value="<%= usuario.email %>">
+                <% if (locals.errors && locals.errors.email) {%>
+                    <p class="errors"><%= errors.email.msg %></p>
+                <% } %>
                 <label>Celular</label>
                 <input class="information-user" name="celular" type="tel" value="<%= usuario.celular ? usuario.celular : ''%>">
+                <% if (locals.errors && locals.errors.celular) {%>
+                    <p class="errors"><%= errors.celular.msg %></p>
+                <% } %>
                 <div class="buttons">
                     <button class='submit' type="submit">Editar</button>
                     <button class='reset' type="reset">Cancelar</button>

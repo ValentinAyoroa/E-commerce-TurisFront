@@ -91,16 +91,20 @@
   .nav-bar {
     list-style: none;
     display: flex;
+    align-items: flex-end;
     flex-wrap: wrap;
-    margin: 5% 5% 0 0;
+    padding-bottom: 10px;
+    padding-right: 10%;
     color: var(--blanco);
-    margin-right: 15%;
-    margin-top: 25px;
+  }
+
+  .welcome{
+    padding: 0 20px;
+    
   }
 
   .text-navbar {
-    margin-top: 30%;
-    padding: 10px;
+    padding: 0 10px;
     text-align: center;
   }
 
@@ -108,7 +112,6 @@
     color: var(--blanco);
     font-size: 15px;
     display: block;
-    padding-bottom: 5px;
     font-weight: bold;
   }
 
@@ -128,19 +131,14 @@
 }
 .boton-cerrar-sesion {
   border-radius: 8px;
-  background-color: #555555;
+  background-color:rgba(255, 255, 255, 0.836);
+  width: 150px;
+  height: 30px;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
-  width: 150px;
-  height: 50px;
-  font-size: 20px;
-  margin-top: 30px;
+  margin-left: 40px;
 }
 .boton-cerrar-sesion:hover {
-  background-color: #555555; /* Green */
+  background-color: #bd0505d5;
   color: white;
-}
-.nombre-usuario {
-  margin-top: 40px;
-  margin-left: 20px;
 }
