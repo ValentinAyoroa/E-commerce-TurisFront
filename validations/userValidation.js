@@ -28,7 +28,6 @@ module.exports = {
 
             .custom(function (value, { req }) {
                 const data = allUsers()
-
                 const usuarioEncontrado = data.find(function (user) {
                     return user.email == value;
                 })
@@ -38,7 +37,6 @@ module.exports = {
                 else {
                     return true;
                 }
-
             }).withMessage("Email ya registrado"),
 
         body("password")
