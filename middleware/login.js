@@ -1,9 +1,8 @@
 function login(req, res, next) {
   if (req.session.usuarioLogueado) {
-    next()
+    next();
   } else {
-    res.redirect("/users/login")
+    res.redirect('/users/login');
   }
-
 }
 module.exports = login;

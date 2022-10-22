@@ -1,19 +1,19 @@
-/*require('dotenv').config()*/
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-const session = require("express-session");
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-var methodOverride = require('method-override');
+/* require('dotenv').config() */
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const methodOverride = require('method-override');
 
-var indexRouter = require('./routes/index');
-var productsRouter = require('./routes/productsRouter')
-var usersRouter = require('./routes/usersRouter');
-const localsMiddleware = require("./middleware/localsMiddle");
-const recordameMiddleware = require("./middleware/recordameMiddle");
+const indexRouter = require('./routes/index');
+const productsRouter = require('./routes/productsRouter');
+const usersRouter = require('./routes/usersRouter');
+const localsMiddleware = require('./middleware/localsMiddle');
+const recordameMiddleware = require('./middleware/recordameMiddle');
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', [path.join(__dirname, 'views'), ('views', path.join(__dirname, 'views/users/')), ('views', path.join(__dirname, 'views/products/'))]);
@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
-  secret: "Secreto",
+  secret: 'Secreto',
   resave: false,
   saveUninitialized: true
 }));
@@ -54,6 +54,5 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 
 module.exports = app;

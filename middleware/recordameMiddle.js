@@ -1,10 +1,9 @@
-const fs = require("fs");
-const path = require("path");
-
+const fs = require('fs');
+const path = require('path');
 
 function allUsers() {
-  let jsonData = fs.readFileSync(path.join(__dirname, '../data/users.json'));
-  let data = JSON.parse(jsonData);
+  const jsonData = fs.readFileSync(path.join(__dirname, '../data/users.json'));
+  const data = JSON.parse(jsonData);
   return data;
 };
 
@@ -14,15 +13,14 @@ function recordame(req, res, next) {
 
     const userFound = data.find(function (user) {
       return user.id == req.cookies.recordame;
-    })
+    });
     req.session.usuarioLogueado = {
       id: userFound.id,
       nombre: userFound.nombre,
-      email: userFound.email,
-    }
-    return next()
+      email: userFound.email
+    };
+    return next();
   }
-  return next()
-
+  return next();
 }
 module.exports = recordame;

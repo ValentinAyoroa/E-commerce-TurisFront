@@ -1,135 +1,129 @@
 const fs = require('fs');
 const path = require('path');
-const multer = require('multer')
 
-const filePathProductos = '../data/productos.json'
-const filePathProductosCarrito = '../data/productos_carrito.json'
+const filePathProductos = '../data/productos.json';
+const filePathProductosCarrito = '../data/productos_carrito.json';
 /* Analisas Productos */
 
 function allProducts() {
-    let jsonData = fs.readFileSync(path.join(__dirname, '../data/productos.json'));
-    let data = JSON.parse(jsonData);
-    return data;
+  const jsonData = fs.readFileSync(path.join(__dirname, '../data/productos.json'));
+  const data = JSON.parse(jsonData);
+  return data;
 };
 /* escribir en JSON con un filePath */
 function writeJson(data, filePath) {
-    let JsonData = JSON.stringify(data, null, 6);
-    fs.writeFileSync(path.join(__dirname, filePath), JsonData);
+  const JsonData = JSON.stringify(data, null, 6);
+  fs.writeFileSync(path.join(__dirname, filePath), JsonData);
 };
 
 /* Analisis Carro */
 
 function allProductsCarrito() {
-    let jsonData = fs.readFileSync(path.join(__dirname, '../data/productos_carrito.json'));
-    let data = JSON.parse(jsonData);
-    return data;
+  const jsonData = fs.readFileSync(path.join(__dirname, '../data/productos_carrito.json'));
+  const data = JSON.parse(jsonData);
+  return data;
 };
-
 
 /* Controlador */
 
 const controller = {
 
-    agregarCarrito: (req, res) => {
-        const dataProductos = allProducts();
-        const dataCarro = allProductsCarrito();
-        const productoEncontrado = dataProductos.find(producto => {
-            return producto.id == req.params.id
-        });
-        /* const newProduct = {
-            id: productoEncontrado.id,
-            titulo: productoEncontrado.titulo,
-            precio: productoEncontrado.precio,
-            color: productoEncontrado.color,
-            imagen: productoEncontrado.imagen,
-            descripcion: productoEncontrado.descripcion,
-        }; */
-        dataCarro.push(productoEncontrado);
-        writeJson(dataCarro, filePathProductosCarrito);
-        res.redirect('/products/carrito');
-    },
+  agregarCarrito: (req, res) => {
+    const dataProductos = allProducts();
+    const dataCarro = allProductsCarrito();
+    const productoEncontrado = dataProductos.find(producto => {
+      return producto.id == req.params.id;
+    });
+    /* const newProduct = {
+                id: productoEncontrado.id,
+                titulo: productoEncontrado.titulo,
+                precio: productoEncontrado.precio,
+                color: productoEncontrado.color,
+                imagen: productoEncontrado.imagen,
+                descripcion: productoEncontrado.descripcion,
+            }; */
+    dataCarro.push(productoEncontrado);
+    writeJson(dataCarro, filePathProductosCarrito);
+    res.redirect('/products/carrito');
+  },
 
-    detalleproducto: function (req, res) {
+  detalleproducto: function (req, res) {
+    const data = allProducts();
+    const productoEncontrado = data.find(producto => {
+      return producto.id == req.params.id;
+    });
+    res.render('detalle-producto', { producto: productoEncontrado });
+  },
 
-        let data = allProducts();
-        const productoEncontrado = data.find(producto => {
-            return producto.id == req.params.id
-        });
-        res.render('detalle-producto', { producto: productoEncontrado });
-    },
+  carrito: (req, res) => res.render('carrito', { productosCarrito: allProductsCarrito() }),
 
-    carrito: (req, res) => res.render('carrito', { productosCarrito: allProductsCarrito() }),
+  edit: (req, res) => {
+    const data = allProducts();
+    const productoEncontrado = data.find(producto => {
+      return producto.id == req.params.id;
+    });
+    res.render('editar-producto', { producto: productoEncontrado });
+  },
+  update: (req, res) => {
+    const data = allProducts();
 
-    edit: (req, res) => {
+    const productoEncontrado = data.find(producto => {
+      return producto.id == req.params.id;
+    });
 
-        let data = allProducts();
-        const productoEncontrado = data.find(producto => {
-            return producto.id == req.params.id
-        });
-        res.render('editar-producto', { producto: productoEncontrado });
-    },
-    update: (req, res) => {
-        let data = allProducts();
+    productoEncontrado.titulo = req.body.titulo;
+    productoEncontrado.precio = req.body.precio;
+    productoEncontrado.color = req.body.color;
+    productoEncontrado.descripcion = req.body.descripcion;
+    writeJson(data, filePathProductos);
+    res.redirect('/');
+  },
 
-        const productoEncontrado = data.find(producto => {
-            return producto.id == req.params.id
-        });
+  create: (req, res) => {
+    res.render('crear-producto');
+  },
+  store: (req, res) => {
+    const data = allProducts();
 
-        productoEncontrado.titulo = req.body.titulo;
-        productoEncontrado.precio = req.body.precio;
-        productoEncontrado.color = req.body.color;
-        productoEncontrado.descripcion = req.body.descripcion;
-        writeJson(data, filePathProductos)
-        res.redirect('/')
-    },
+    const newProduct = {
+      id: data.length + 1,
+      titulo: req.body.titulo,
+      precio: Number(req.body.precio),
+      color: req.body.color,
+      imagen: '/images/productos/' + req.file.filename,
+      descripcion: req.body.descripcion
+    };
 
-    create: (req, res) => {
-        res.render('crear-producto');
-    },
-    store: (req, res) => {
+    data.push(newProduct);
 
-        let data = allProducts()
+    writeJson(data, filePathProductos);
 
-        const newProduct = {
-            id: data.length + 1,
-            titulo: req.body.titulo,
-            precio: Number(req.body.precio),
-            color: req.body.color,
-            imagen: '/images/productos/' + req.file.filename,
-            descripcion: req.body.descripcion,
-        }
+    res.redirect('/');
+  },
+  delete: function (req, res) {
+    const data = allProducts();
 
-        data.push(newProduct);
+    const platoEncontrado = data.findIndex(function (plato) {
+      return plato.id == req.params.id;
+    });
 
-        writeJson(data, filePathProductos);
+    data.splice(platoEncontrado, 1);
 
-        res.redirect('/');
-    },
-    delete: function (req, res) {
+    writeJson(data, filePathProductos);
 
-        let data = allProducts()
+    res.redirect('/');
+  },
+  productosCarritoDelete: function (req, res) {
+    const id = req.params.id;
+    const data = allProductsCarrito();
 
-        const platoEncontrado = data.findIndex(function (plato) {
-            return plato.id == req.params.id
-        })
+    const sinCarritoEliminado = data.filter((productoCarrito) => {
+      return productoCarrito.id != id;
+    });
+    writeJson(sinCarritoEliminado, filePathProductosCarrito);
+    res.redirect('/products/carrito');
+  }
 
-        data.splice(platoEncontrado, 1);
+};
 
-        writeJson(data, filePathProductos);
-
-        res.redirect('/');
-    },
-    productosCarritoDelete: function (req, res) {
-        const id = req.params.id
-        const data = allProductsCarrito()
-
-        const sinCarritoEliminado = data.filter((productoCarrito) => {
-            return productoCarrito.id != id
-        })
-        writeJson(sinCarritoEliminado, filePathProductosCarrito)
-        res.redirect('/products/carrito');
-    },
-
-}
-
-module.exports = controller
+module.exports = controller;

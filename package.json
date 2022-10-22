@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node bin/www",
-    "dev": "nodemon bin/www"
+    "dev": "nodemon bin/www",
+    "formateador": "eslint --fix ./"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -23,6 +24,11 @@
     "sequelize": "5.21"
   },
   "devDependencies": {
+    "eslint": "^8.26.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
+    "eslint-plugin-promise": "^6.1.1",
     "nodemon": "^2.0.19"
   }
 }

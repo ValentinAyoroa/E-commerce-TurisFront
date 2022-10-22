@@ -5,7 +5,6 @@ function localsMiddleware(req, res, next) {
     res.locals.usuario = req.session.usuarioLogueado;
   }
 
-  next()
-
+  next();
 }
 module.exports = localsMiddleware;
