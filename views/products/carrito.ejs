@@ -29,7 +29,13 @@
                                             <input type="text" id="contador" class="form-control" value="1" min="1" />
                                             <button id="mas" type="button">+</button>
                                             <i id="icono-heart" class="fas fa-heart"></i>
-                                            <i class="fas fa-trash"></i>
+                                            <form action="/products/productosCarrito/delete/<%= productoCarrito.id %>"
+                                                method="post">
+                                                <!-- -->
+                                                <button type=" submit">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="precio">

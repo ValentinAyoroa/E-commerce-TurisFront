@@ -15,20 +15,21 @@ const storage = multer.diskStorage({
     cb(null, newFileName)
   }
 })
-const upload = multer({ 
+const upload = multer({
   storage: storage,
   fileFilter: (req, file, cb) => {
     const extensiones = ['.jpg', '.png', '.jfif', '.svg', '.tif']
     const info = path.extname(file.originalname)
     const result = extensiones.includes(info)
 
-    if(!result){
-      req.file =  file
+    if (!result) {
+      req.file = file
     }
 
     cb(null, result);
 
-  }})
+  }
+})
 
 
 router.get('/detalle-producto/:id', productsController.detalleproducto);
@@ -37,6 +38,7 @@ router.get('/carrito', productsController.carrito);
 router.get('/edit/:id', login, productsController.edit);
 router.put('/edit/:id', productsController.update);
 router.delete('/delete/:id', login, productsController.delete);
+router.post('/productosCarrito/delete/:id', login, productsController.productosCarritoDelete);
 router.get('/create', login, productsController.create);
 router.post('/create', upload.single('imagen'), productsController.store);
 

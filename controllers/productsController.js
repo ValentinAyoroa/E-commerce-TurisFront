@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const multer = require('multer')
 
+const filePathProductos = '../data/productos.json'
+const filePathProductosCarrito = '../data/productos_carrito.json'
 /* Analisas Productos */
 
 function allProducts() {
@@ -9,10 +11,10 @@ function allProducts() {
     let data = JSON.parse(jsonData);
     return data;
 };
-
-function writeJson(data) {
+/* escribir en JSON con un filePath */
+function writeJson(data, filePath) {
     let JsonData = JSON.stringify(data, null, 6);
-    fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JsonData);
+    fs.writeFileSync(path.join(__dirname, filePath), JsonData);
 };
 
 /* Analisis Carro */
@@ -23,10 +25,6 @@ function allProductsCarrito() {
     return data;
 };
 
-function writeJsonCarrito(data) {
-    let JsonData = JSON.stringify(data, null, 6);
-    fs.writeFileSync(path.join(__dirname, '../data/productos_carrito.json'), JsonData);
-}
 
 /* Controlador */
 
@@ -47,7 +45,7 @@ const controller = {
             descripcion: productoEncontrado.descripcion,
         }; */
         dataCarro.push(productoEncontrado);
-        writeJsonCarrito(dataCarro);
+        writeJson(dataCarro, filePathProductosCarrito);
         res.redirect('/products/carrito');
     },
 
@@ -81,7 +79,7 @@ const controller = {
         productoEncontrado.precio = req.body.precio;
         productoEncontrado.color = req.body.color;
         productoEncontrado.descripcion = req.body.descripcion;
-        writeJson(data)
+        writeJson(data, filePathProductos)
         res.redirect('/')
     },
 
@@ -103,7 +101,7 @@ const controller = {
 
         data.push(newProduct);
 
-        writeJson(data);
+        writeJson(data, filePathProductos);
 
         res.redirect('/');
     },
@@ -117,10 +115,20 @@ const controller = {
 
         data.splice(platoEncontrado, 1);
 
-        writeJson(data);
+        writeJson(data, filePathProductos);
 
         res.redirect('/');
-    }
+    },
+    productosCarritoDelete: function (req, res) {
+        const id = req.params.id
+        const data = allProductsCarrito()
+
+        const sinCarritoEliminado = data.filter((productoCarrito) => {
+            return productoCarrito.id != id
+        })
+        writeJson(sinCarritoEliminado, filePathProductosCarrito)
+        res.redirect('/products/carrito');
+    },
 
 }
 
