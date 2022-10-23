@@ -75,6 +75,7 @@ main {
 
 .bloque-producto {
   display: flex;
+  justify-content: space-around;
   margin-top: 2%;
 }
 
@@ -173,6 +174,7 @@ main {
 
 .info-producto {
   margin-left: 10%;
+  width: 55%;
 }
 
 .precio p {
@@ -423,4 +425,8 @@ button {
   .sub-total {
     border-top: 1px #ebebeb solid;
   }
+}
+.borrar {
+  border: none;
+  background-color: transparent;
 }
