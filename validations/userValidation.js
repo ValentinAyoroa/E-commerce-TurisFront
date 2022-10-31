@@ -67,11 +67,11 @@ module.exports = {
 
   avatarValidation: [
     body('avatar')
-      .custom(function(value, { req }) {
+      .custom(function (value, { req }) {
         return req.file;
       }).withMessage('No se ha cargado ninguna imagen')
       .bail()
-      .custom(function(value, { req }) {
+      .custom(function (value, { req }) {
         const extensiones = ['.jpg', '.png', '.jfif', '.svg', '.tif'];
         const info = path.extname(req.file.originalname);
         return extensiones.includes(info);

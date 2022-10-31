@@ -18,7 +18,7 @@ body {
     --grisOscuro: #636262;
 }
 
-div.profile{
+div.profile {
     padding: 5% 5%;
 }
 
@@ -34,13 +34,13 @@ div.box-profile img {
     border-radius: 50%
 }
 
-div.box-profile p{
+div.box-profile p {
     font-size: 14px;
     font-weight: 400;
     color: rgb(96, 94, 92);
 }
 
-div.box-profile p.errors{
+div.box-profile p.errors {
     color: rgb(212, 3, 3)
 }
 
@@ -57,13 +57,13 @@ div.box-profile label {
     padding: 10px;
     width: fit-content;
     text-align: center;
-    }
+}
 
-#add-image{
+#add-image {
     display: none;
 }
 
-div.box-profile button{
+div.box-profile button {
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -73,12 +73,12 @@ div.box-profile button{
     transition: background-color 450ms;
 }
 
-div.box-profile button:hover{
+div.box-profile button:hover {
     background-color: #033b91;
 }
 
 
-div.information-profile{
+div.information-profile {
     font-size: 15px;
     margin-top: 24px;
     border-radius: 5px;
@@ -86,33 +86,33 @@ div.information-profile{
     box-shadow: 0 0 8px 0 rgba(187, 187, 187, 0.5);
 }
 
-div.information-top{
+div.information-top {
     display: flex;
     justify-content: space-between;
     padding: 12px 0px 12px 16px;
     border-bottom: 1px solid rgb(242 242 242);
 }
 
-span.copy-information{
+span.copy-information {
     font-weight: bold;
 }
 
-span.copy-edit{
-    color:#0077c0;
+span.copy-edit {
+    color: #0077c0;
     padding-right: 8px;
 }
 
-a.edit-link{
+a.edit-link {
     text-decoration: none;
 }
 
-ul.information-list{
+ul.information-list {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-ul.information-list li{
+ul.information-list li {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,30 +121,31 @@ ul.information-list li{
     border-bottom: 1px solid rgb(242 242 242);
 }
 
-span.information-user{
+span.information-user {
     font-weight: bold;
-    color: rgb(50, 49, 48);;
+    color: rgb(50, 49, 48);
+    ;
 }
 
 
-div button.logout-button{
+div button.logout-button {
     border: none;
     color: rgb(177, 15, 15);
     font-size: 15px;
-    margin: 15px 0 ;
+    margin: 15px 0;
     background-color: rgb(242 242 242);
     cursor: pointer;
 }
 
 @media (max-width:550px) {
-    
-    div.profile{
+
+    div.profile {
         display: flex;
         flex-direction: column;
         flex-flow: column nowrap;
     }
 
-    h2.title-profile{
+    h2.title-profile {
         font-size: 20px;
     }
 
@@ -152,37 +153,37 @@ div button.logout-button{
         display: flex;
         flex-direction: column;
     }
-    
+
     div.box-profile img {
         width: 110px;
         height: 110px;
     }
 
-    div.box-profile button{
-        margin-top: 15px; 
+    div.box-profile button {
+        margin-top: 15px;
     }
 
 }
 
-@media ( min-width: 551px) and (max-width:1080px) {
+@media (min-width: 551px) and (max-width:1080px) {
 
-    div.box-image{
+    div.box-image {
         display: flex;
         align-items: center;
     }
 
-    div.box-profile{
+    div.box-profile {
         display: flex;
         flex-direction: column;
     }
 
-    div.box-profile p.errors{
+    div.box-profile p.errors {
         width: 30%;
         margin-left: 10px;
         color: rgb(212, 3, 3)
     }
 
-    div.box-image form{
+    div.box-image form {
         display: flex;
         align-items: center;
     }
@@ -191,15 +192,15 @@ div button.logout-button{
         flex-grow: 0.5;
         margin-left: 15px;
     }
-    
-    div.box-information-image{
+
+    div.box-information-image {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-left: 24px;
     }
-    
-    div.space-box{
+
+    div.space-box {
         width: calc(50% - 8px);
     }
 
@@ -208,21 +209,21 @@ div button.logout-button{
         height: 120px;
     }
 
-     
+
 }
 
-@media (min-width:1081px){
+@media (min-width:1081px) {
 
-    div.profile{
+    div.profile {
         padding: 3% 5%;
     }
 
-    div.box-user{
+    div.box-user {
         display: flex;
         justify-content: space-between;
     }
 
-    div.box-profile{
+    div.box-profile {
         width: 40vw;
         padding: 15px
     }
@@ -230,20 +231,21 @@ div button.logout-button{
     div.box-profile img {
         width: 120px;
         height: 120px;
+        object-fit: cover;
     }
 
-    div.box-profile p.errors{
+    div.box-profile p.errors {
         width: 30%;
         margin-left: 10px;
         color: rgb(212, 3, 3)
     }
 
-    div.box-image{
+    div.box-image {
         display: flex;
         align-items: center;
     }
 
-    div.box-image form{
+    div.box-image form {
         display: flex;
         align-items: center;
     }
@@ -253,21 +255,21 @@ div button.logout-button{
         margin-left: 15px;
     }
 
-    div.information-profile{
+    div.information-profile {
         width: 45vw;
-        margin-top:  0;
+        margin-top: 0;
     }
 
-    div.box-information-image{
+    div.box-information-image {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-left: 24px;
     }
 
-    div.profile form.logout{
+    div.profile form.logout {
         display: flex;
         justify-content: end;
     }
-    
+
 }

@@ -92,12 +92,17 @@ controller = {
   },
   avatar: function (req, res) {
     const errors = validationResult(req);
-
     if (errors.isEmpty()) {
       const data = allUsers();
       const userFound = data.find(function (user) {
         return user.id == req.session.usuarioLogueado.id;
       });
+      if (userFound.image) {
+        fs.unlink('./public' + userFound.image, (err) => {
+          if (err) throw err;
+          console.log('path/file.txt was deleted');
+        })
+      };
       userFound.image = '/images/users/' + req.file.filename;
       req.session.usuarioLogueado.imagen = userFound.image;
       writeProducts(data);
