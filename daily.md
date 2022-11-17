@@ -1,6 +1,12 @@
+# Retrospectiva Grupo 16 (Daily-Sprint5)
+## Novedades
+- Sebastian nos comento que ha tenido algunas cuestiones de salud con su madre, los demas integrantes del grupo hemos estado dispuesto ayudarlo en el desarrollo del proyecto. 
+- El dia 31 de octubre en el espacio que los profes crearón por salas para revisar el proyecto, estuvimos los 4 integrantes trabajando en la parte de poder cambiar la foto de perfil.
+
+
 # Retrospectiva Grupo 16 (Daily-Sprint4)
 ## Novedades
-- El dia 21 de Septiembre en el espacio que los profes crearón por salas para revisar el proyecto, estuvmos los 4 integrantes trabajando en la parte de carrito para que fuera mas interactivo, se logro sacar esa parte. 
+- El dia 21 de Septiembre en el espacio que los profes crearón por salas para revisar el proyecto, estuvimos los 4 integrantes trabajando en la parte de carrito para que fuera mas interactivo, se logro sacar esa parte. 
  - Soraya se encuentra en cuestiones de mudanza. 
 
 
