@@ -38,5 +38,13 @@
             "color": "Rosa",
             "imagen": "/images/productos/gafas.jpg",
             "descripcion": "Estas gafas han sido cuidadosamente diseñadas. La correa elástica de la banda para la cabeza es ajustable y antideslizante, puede aflojar o apretar la banda para ajustar el tamaño, la tensión y la comodidad, tanto para hombres como para mujeres;  Adecuado para táctica, todoterreno, motocicleta, senderismo, escalada, camping, pesca, montañismo, viajes de aventura, entrenamiento militar, SWAT u otros deportes al aire libre."
+      },
+      {
+            "id": 8,
+            "titulo": "Mochila de Hidratación 2 Litros - FOX ",
+            "color": "Azul",
+            "precio": "24000",
+            "imagen": "/images/productos/chaletos-hibratacion.jpg",
+            "descripcion": "Diseño elegante de bajo perfil para una sensación sin restricciones Correas de hombro de malla ligera para mayor transpirabilidad y comodidad Compartimento de almacenamiento de herramientas separado Soporte para casco enrollable Bolsillo para gafas de sol / multimedia con forro polar Depósito Hydrapak® de 2 litros con abertura superior deslizante para facilitar el llenado y la limpieza Válvula de compensación de mordida en ángulo de 45 Alto flujo con cierre giratorio Panel trasero moldeado de EVA con canal de flujo de aire."
       }
 ]

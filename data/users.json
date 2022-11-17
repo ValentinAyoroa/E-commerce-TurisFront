@@ -4,7 +4,8 @@
             "nombre": "Soraya",
             "apellido": "Sánchez Chavita",
             "email": "sorayasanchez0503@gmail.com",
-            "password": "$2b$10$6AfFPHlZdG0UBjoGvkdXSejnY.Dj7cNUB4U1VtJtF1Kr2oVCizTZa"
+            "password": "$2b$10$6AfFPHlZdG0UBjoGvkdXSejnY.Dj7cNUB4U1VtJtF1Kr2oVCizTZa",
+            "image": "/images/users/avatar1667862252408.png"
       },
       {
             "id": 2,
