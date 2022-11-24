@@ -1,3 +1,8 @@
+# Retrospectiva Grupo 16 (Daily-Sprint6)
+## Novedades
+- El dia 17 de noviembre nos reunimos para poder trabajar conjuntamente en el desarrollo del Sprint6 , realizamos la creacion del diagrama de la base de datos y el script de estructura en SQL. 
+
+
 # Retrospectiva Grupo 16 (Daily-Sprint5)
 ## Novedades
 - Sebastian nos comento que ha tenido algunas cuestiones de salud con su madre, los demas integrantes del grupo hemos estado dispuesto ayudarlo en el desarrollo del proyecto. 
