@@ -1,59 +1,46 @@
-const { DataTypes } = require('sequelize');
-const Product = require('./Product');
-const User = require('./User');
-
-module.exports = () => {
-  const alias = 'carrito';
-
-  const cols = {
-
+module.exports = (sequelize, dataTypes) => {
+  const Product = require('./Product');
+  const User = require('./User');
+  let alias = 'carrito';
+  let cols = {
     id: {
-      type: DataTypes.INTEGER,
+      type: dataTypes.INTEGER,
       primaryKey: true,
       allowNull: false
     },
     quantity: {
-      type: DataTypes.INTEGER,
+      type: dataTypes.INTEGER,
       allowNull: false
     },
     total: {
-      type: DataTypes.FLOAT,
+      type: dataTypes.FLOAT,
       allowNull: false
     },
     product_id: {
-      type: DataTypes.INTEGER,
+      type: dataTypes.INTEGER,
       allowNull: false
     },
     user_id: {
-      type: DataTypes.INTEGER,
+      type: dataTypes.INTEGER,
       allowNull: false
     }
-
   };
-
-  const config = {
-
+  let config = {
     timeStamps: false,
     tableName: 'carrito'
   };
-
-  const Carrito = Sequelize.define(alias, cols, config);
-
-  Carrito.associate = (models) => {
-    Product.belongToMany(models.Product, {
+  const Carrito = sequelize.define(alias, cols, config);
+ /*  Carrito.associate = (models) => {
+    Product.belongsToMany(models.Product, {
       as: 'products',
       foreingKey: 'product_id'
-
     });
   };
-
   Carrito.associate = (models) => {
-    User.belongToMany(models.User, {
+    User.belongsToMany(models.User, {
       as: 'users',
       foreingKey: 'user_id'
-
     });
-  };
-
+  }; */
   return Carrito;
 };

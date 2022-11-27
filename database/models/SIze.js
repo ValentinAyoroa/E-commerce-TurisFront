@@ -1,29 +1,20 @@
-const { DataTypes } = require('sequelize');
-
-module.exports = () => {
-  const alias = 'sizes';
-
-  const cols = {
-
+module.exports = (sequelize, dataTypes) => {
+  let alias = 'sizes';
+  let cols = {
     id: {
-      type: DataTypes.INTEGER,
+      type: dataTypes.INTEGER,
       primaryKey: true,
       allowNull: false
     },
     size: {
-      type: DataTypes.STRING,
+      type: dataTypes.STRING,
       allowNull: false
     }
-
   };
-
-  const config = {
-
+  let config = {
     timeStamps: false,
     tableName: 'size'
   };
-
-  const Size = Sequelize.define(alias, cols, config);
-
+  const Size = sequelize.define(alias, cols, config);
   return Size;
 };

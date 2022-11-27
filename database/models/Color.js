@@ -1,29 +1,21 @@
-const { DataTypes } = require('sequelize');
-
-module.exports = () => {
-  const alias = 'colors';
-
-  const cols = {
-
+module.exports = (sequelize, dataTypes) => {
+  let alias = 'colors';
+  let cols = {
     id: {
-      type: DataTypes.INTEGER,
+      type: dataTypes.INTEGER,
       primaryKey: true,
       allowNull: false
     },
     name: {
-      type: DataTypes.STRING,
+      type: dataTypes.STRING,
       allowNull: false
     }
-
   };
-
-  const config = {
+  let config = {
 
     timeStamps: false,
     tableName: 'color'
   };
-
-  const Color = Sequelize.define(alias, cols, config);
-
+  const Color = sequelize.define(alias, cols, config);
   return Color;
 };

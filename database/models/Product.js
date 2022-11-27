@@ -1,54 +1,47 @@
-const { DataTypes } = require('sequelize');
-const Color = require('./Color');
-
-module.exports = () => {
-  const alias = 'products';
-
-  const cols = {
-
+module.exports = (sequelize, dataTypes) => {
+  let alias = 'products';
+  let cols = {
     id: {
-      type: DataTypes.INTEGER,
+      type: dataTypes.INTEGER,
       primaryKey: true,
       allowNull: false
     },
     name: {
-      type: DataTypes.STRING,
+      type: dataTypes.STRING,
       allowNull: false
     },
     description: {
-      type: DataTypes.TEXT,
+      type: dataTypes.TEXT,
       allowNull: false
     },
     price: {
-      type: DataTypes.DECIMAL,
+      type: dataTypes.DECIMAL,
       allowNull: false
     },
     image: {
-      type: DataTypes.STRING,
+      type: dataTypes.STRING,
       allowNull: false
 
     },
     color_id: {
-      type: DataTypes.INTEGER,
+      type: dataTypes.INTEGER,
       allowNull: false
     },
     size_id: {
-      type: DataTypes.INTEGER,
+      type: dataTypes.INTEGER,
       allowNull: false
     }
-
   };
 
-  const config = {
-
-    timeStamps: false,
-    tableName: 'products'
+  let config = {
+    tableName: 'products',
+    timeStamps: false
   };
 
-  const Product = Sequelize.define(alias, cols, config);
+  const Product = sequelize.define(alias, cols, config);
 
-  Product.associate = (models) => {
-    Color.belongToMany(models.Color, {
+  /* Product.associate = (models) => {
+    Color.belongsToMany(models.Color, {
       as: 'colors',
       foreingKey: 'color_id'
 
@@ -56,12 +49,12 @@ module.exports = () => {
   };
 
   Product.associate = (models) => {
-    Size.belongToMany(models.Size, {
+    Size.belongsToMany(models.Size, {
       as: 'sizes',
       foreingKey: 'size_id'
 
     });
-  };
+  }; */
 
   return Product;
 };
