@@ -1,8 +1,8 @@
 module.exports = (sequelize, dataTypes) => {
   const Product = require('./Product');
   const User = require('./User');
-  let alias = 'carrito';
-  let cols = {
+  const alias = 'carrito';
+  const cols = {
     id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
@@ -25,12 +25,12 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false
     }
   };
-  let config = {
-    timeStamps: false,
+  const config = {
+    timestamps: false,
     tableName: 'carrito'
   };
   const Carrito = sequelize.define(alias, cols, config);
- /*  Carrito.associate = (models) => {
+  /*  Carrito.associate = (models) => {
     Product.belongsToMany(models.Product, {
       as: 'products',
       foreingKey: 'product_id'

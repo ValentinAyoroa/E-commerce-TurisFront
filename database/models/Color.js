@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = 'colors';
-  let cols = {
+  const alias = 'colors';
+  const cols = {
     id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
@@ -11,9 +11,9 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false
     }
   };
-  let config = {
+  const config = {
 
-    timeStamps: false,
+    timestamps: false,
     tableName: 'color'
   };
   const Color = sequelize.define(alias, cols, config);

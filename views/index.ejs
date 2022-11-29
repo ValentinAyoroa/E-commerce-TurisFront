@@ -44,17 +44,17 @@
           <div class="productos">
             <% productos.slice(-6).forEach(producto=> { %>
               <article class="caja-producto">
-                <img class="imagen-producto" src="<%= producto.imagen %>">
+                <img class="imagen-producto" src="<%= producto.image %>">
                 <figure>
                   <i id="icono-heart" class="fas fa-heart"></i>
                   <figcaption>Favoritos</figcaption>
                 </figure>
                 <div class="descripcion-producto">
                   <p id="descripcion">
-                    <%= producto.titulo %><br>
+                    <%= producto.name %><br>
                   </p>
                   <h5>
-                    $ <%= producto.precio %>
+                    $ <%= producto.price %>
                   </h5>
                   <a class="vista-rapida" href="products/detalle-producto/<%=producto.id%>">Vista rápida ></a>
                   <br />
