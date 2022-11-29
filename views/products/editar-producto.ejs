@@ -3,45 +3,49 @@
 
 <head>
     <%- include("./partials/head.ejs") %>
-    <link rel="stylesheet" href="/css/editar-producto.css">
+        <link rel="stylesheet" href="/css/editar-producto.css">
 </head>
 
 <body>
     <%- include("./partials/header.ejs") %>
-<div class="edit">
-    <h2 class="copy-edit">Editar producto</h2>
-    <!-- BOTON DELETE (Hay que ver donde ubicarlo)
+        <div class="edit">
+            <h2 class="copy-edit">Editar producto</h2>
+            <!-- BOTON DELETE (Hay que ver donde ubicarlo)
     <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
         <button>Borrar</button>
     </form> -->
-    <div class="edit-product">
-        <div class="imagen-product">
-            <img class="imagen" src=<%=producto.imagen%>>
+            <div class="edit-product">
+                <div class="imagen-product">
+                    <img class="imagen" src=<%=producto.image%>>
+                </div>
+                <form action='/products/edit/<%=producto.id%>?_method=PUT' method="POST">
+                    <div>
+                        <label for="titulo">Titulo del producto</label>
+                        <input type="text" name="titulo" class="titulo-product" value="<%=producto.name%>"
+                            placeholder="Ingrese el nombre del producto">
+                    </div>
+                    <div>
+                        <label for="precio">Precio</label>
+                        <input type="number" name="precio" class="precio-product" value="<%=producto.price%>"
+                            placeholder="Precio $ARS">
+                    </div>
+                    <div>
+                        <label for="color">Color</label>
+                        <input type='text' name="color" class="color-product" value="<%=producto.color%>"
+                            placeholder="Color del producto">
+                    </div>
+                    <div>
+                        <label for="descripcion">Descripcion</label>
+                        <textarea name="descripcion" class="description-product"
+                            placeholder="Descripcion del producto"><%=producto.description%></textarea>
+                    </div>
+                    <div class="buttons">
+                        <button class="submit" type="submit">Editar</button>
+                        <button class="reset" type="reset">Cancelar</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <form action='/products/edit/<%=producto.id%>?_method=PUT' method="POST">
-            <div>
-            <label for="titulo">Titulo del producto</label>
-            <input type="text" name="titulo" class="titulo-product" value="<%=producto.titulo%>" placeholder="Ingrese el nombre del producto">
-            </div>
-            <div>
-            <label for="precio">Precio</label>
-            <input type="number" name="precio" class="precio-product" value="<%=producto.precio%>" placeholder="Precio $ARS">
-            </div>
-            <div>
-            <label for="color">Color</label>
-            <input type='text' name="color" class="color-product" value="<%=producto.color%>" placeholder="Color del producto">
-            </div>
-            <div>
-            <label for="descripcion">Descripcion</label>
-            <textarea name="descripcion" class="description-product"  placeholder="Descripcion del producto"><%=producto.descripcion%></textarea>
-            </div>
-            <div class="buttons">
-            <button class="submit" type="submit">Editar</button>
-            <button class="reset" type="reset">Cancelar</button>
-            </div>
-        </form>
-    </div>
-</div>
 </body>
 <footer>
     <%- include("./partials/footer.ejs") %>

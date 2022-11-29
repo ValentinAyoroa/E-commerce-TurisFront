@@ -23,7 +23,7 @@ h2 {
 }
 
 .main-checkbox {
-    width: 70em;
+    width: 25%;
     margin-top: 2em;
     padding-right: 1em;
     border-right: solid 2px #eeee;
@@ -31,7 +31,7 @@ h2 {
 
 .checkbox {
     border: 2px solid #eeee;
-    padding-bottom: 10em;
+    
 }
 
 .checkbox input {
@@ -60,7 +60,7 @@ div.main-div {
     text-align: center;
     background-color: #0077c0;
     color: blanchedalmond;
-    height: 3%;
+    height: 10%;
 }
 
 .main-div {

@@ -20,7 +20,7 @@ const dbUserController = {
     };
     const userFound = User.findOne({
       where: {
-        email: req.body.email && bcrypt.compareSync(req.body.password, user.password)
+        email: req.body.email && bcrypt.compareSync(req.body.password, User.password)
       }
     });
     if (userFound == null) {

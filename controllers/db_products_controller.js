@@ -35,15 +35,16 @@ const dbProductsController = {
       name: req.body.titulo,
       description: req.body.descripcion,
       price: req.body.precio,
-      image: '',
+      image: '/images/productos/' + req.file.filename,
       color_id: 1, // cambiar
       size_id: 2 // cambiar
     }).then(() => {
       res.redirect('/tienda');
+      console.log(Products.image)
     }).catch(error => res.send(error));
   },
   edit: (req, res) => {
-    const productId = req.params.id;
+    let productId = req.params.id;
     Products.findByPk(productId)
       .then((product) => {
         res.render('editar-producto', { producto: product });
@@ -75,6 +76,21 @@ const dbProductsController = {
       res.redirect('/');
     }).catch(error => res.send(error));
   },
+  detalleproducto: function (req, res) {
+
+    let productId = req.params.id;
+    Products.findByPk(productId)
+      .then((product) => {
+        res.render('detalle-producto', { producto: product })
+      }).catch(error => res.send(error));
+
+    /* 
+        const data = allProducts();
+        const productoEncontrado = data.find(producto => {
+          return producto.id == req.params.id;
+        });
+        res.render('detalle-producto', { producto: productoEncontrado }); */
+  },
   agregarCarrito: (req, res) => {
     const dataProductos = allProducts();
     const dataCarro = allProductsCarrito();
@@ -94,13 +110,6 @@ const dbProductsController = {
     res.redirect('/products/carrito');
   },
 
-  detalleproducto: function (req, res) {
-    const data = allProducts();
-    const productoEncontrado = data.find(producto => {
-      return producto.id == req.params.id;
-    });
-    res.render('detalle-producto', { producto: productoEncontrado });
-  },
   productosCarritoDelete: function (req, res) {
     const id = req.params.id;
     const data = allProductsCarrito();

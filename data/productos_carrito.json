@@ -22,5 +22,13 @@
             "color": "Rojo",
             "imagen": "/images/productos/mochilai1.png",
             "descripcion": "Mochila de 70 litros ideal para trekking. Su espaldar permite ajustar la altura según el usuario y tiene canales de ventilación para mayor comodidad al andar. Incluye cubremochila para proteger de la lluvia TECH BALANCE SYSTEM: Estructura interna, que transfiere el peso de la carga a la cadera, sin sobrecargar la espalda. Sistema que te permite modificar la altura de las correas de hombro y ajustar a la curvatura de la espalda."
+      },
+      {
+            "id": 4,
+            "titulo": "Calza interior térmica POWER DRY - Mujer",
+            "precio": 6000,
+            "color": "Negro",
+            "imagen": "/images/productos/pantalon.jpg",
+            "descripcion": "Interior de abrigo intermedio para dama, diseñado para todo tipo de actividades aeróbicas en climas fríos. Seca rápido. Gran libertad de movimiento. Regulación térmica óptima del cuerpo. Tejido POLARTEC® Power Dry® Midweight. Dependiendo el talle algunas de las opciones estan fabricadas Con Pontetorto."
       }
 ]

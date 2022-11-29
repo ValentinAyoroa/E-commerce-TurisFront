@@ -10,67 +10,69 @@
             <main>
                 <div class="main-prodcuto-pc">
                     <p class="titulo-producto">
-                        <%=producto.titulo%>
+                        <%=producto.name%>
                     </p>
                     <% if (locals.usuario){ %>
-                    <a class="boton-editar" href="/products/edit/<%=producto.id%>">
-                        <p>
-                            Editar Producto
-                        </p>
-                    </a>
-                    <% } %>
-                    <div class="bloque-producto-desktop">
-                        <!-- <div class="imagenes-totales-producto"> -->
-                        <div class="cuadro-imagen-producto">
-                            <img class="imagen-producto" src=<%=producto.imagen%>>
-                        </div>
-                        <!--  <div class="imagenes-muestra">
+                        <a class="boton-editar" href="/products/edit/<%=producto.id%>">
+                            <p>
+                                Editar Producto
+                            </p>
+                        </a>
+                        <% } %>
+                            <div class="bloque-producto-desktop">
+                                <!-- <div class="imagenes-totales-producto"> -->
+                                <div class="cuadro-imagen-producto">
+                                    <img class="imagen-producto" src=<%=producto.image%>>
+                                </div>
+                                <!--  <div class="imagenes-muestra">
                                 <img class="imagen-producto-muestra1" src="/images/mochilai1.png">
                                 <img class="imagen-producto-muestra2" src="/images/mochilai2.png">
                                 <img class="imagen-producto-muestra3" src="/images/mochilai3.png">
                                 <img class="imagen-producto-muestra4" src="/images/mochilai4.png">
                                 <img class="imagen-producto-muestra5" src="/images/mochilai5.png">
                             </div> -->
-                        <!--   </div> -->
-                        <div class="descripcion-total-producto">
-                            <div class="precio">
-                                <h2 class="precio-total">$ <%=producto.precio%><i class="fas fa-shipping-fast"></i></h2>
-                                <p class="precio-cuotas">en 12x $<%=Number(producto.precio / 12).toFixed(2)%>
-                                </p>
-                            </div>
-                            <div class="color-producto">
-                                <p class="texto-color-producto">Color: <%=producto.color%>
-                                </p>
-                                <img class="imagen-color-producto   " src=<%=producto.imagen%>>
-                            </div>
-                            <div class="stock-disponible">
-                                <p class="text-stock">Cantidad:</p>
-                                <p class="cantidad-stock">1</p>
-                                <div class="iconos-stock">
-                                    <div class="icono-mas">
-                                        <i class="fas fa-plus"></i>
+                                <!--   </div> -->
+                                <div class="descripcion-total-producto">
+                                    <div class="precio">
+                                        <h2 class="precio-total">$ <%=producto.price%><i
+                                                    class="fas fa-shipping-fast"></i></h2>
+                                        <p class="precio-cuotas">en 12x $<%=Number(producto.price / 12).toFixed(2)%>
+                                        </p>
                                     </div>
-                                    <div class="icono-menos">
-                                        <i class="fas fa-minus"></i>
+                                    <div class="color-producto">
+                                        <p class="texto-color-producto">Color: <%=producto.color%>
+                                        </p>
+                                        <img class="imagen-color-producto" src=<%=producto.image%>>
+                                    </div>
+                                    <div class="stock-disponible">
+                                        <p class="text-stock">Cantidad:</p>
+                                        <p class="cantidad-stock">1</p>
+                                        <div class="iconos-stock">
+                                            <div class="icono-mas">
+                                                <i class="fas fa-plus"></i>
+                                            </div>
+                                            <div class="icono-menos">
+                                                <i class="fas fa-minus"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="botones-compra-carro">
+                                        <button class="boton-comprar" type="submit" value="compra">Comprar</button>
+                                        <form class="boton-carro" action='/products/detalle-producto/<%=producto.id%>'
+                                            method="POST">
+                                            <button type="submit" value="carro">Agregar al carrito</button>
+                                        </form>
+                                    </div>
+                                    <div class="box-informacion">
+                                        <div class="informacion-producto">
+                                            <p class="titulo-informacion">Informacion del producto</p>
+                                            <p class="texto-descripcion">
+                                                <%=producto.description%>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="botones-compra-carro">
-                                <button class="boton-comprar" type="submit" value="compra">Comprar</button>
-                                <form class="boton-carro" action='/products/detalle-producto/<%=producto.id%>' method="POST">
-                                    <button type="submit" value="carro">Agregar al carrito</button>
-                                </form>
-                            </div>
-                            <div class="box-informacion">
-                                <div class="informacion-producto">
-                                    <p class="titulo-informacion">Informacion del producto</p>
-                                    <p class="texto-descripcion">
-                                        <%=producto.descripcion%>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </main>
             <%- include("./partials/footer.ejs") %>
