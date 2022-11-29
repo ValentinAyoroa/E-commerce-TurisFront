@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
     id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
-      allowNull: false
+      autoIncrement: true
     },
     name: {
       type: dataTypes.STRING,
@@ -21,7 +21,6 @@ module.exports = (sequelize, dataTypes) => {
     image: {
       type: dataTypes.STRING,
       allowNull: false
-
     },
     color_id: {
       type: dataTypes.INTEGER,

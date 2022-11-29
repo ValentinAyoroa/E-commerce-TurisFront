@@ -15,11 +15,11 @@
                             <% productosCarrito.forEach(productoCarrito=> { %>
                                 <div class="bloque-producto">
                                     <div class="imagen-muestra">
-                                        <img class="imagen-producto-muestra" src="<%= productoCarrito.imagen%>">
+                                        <img class="imagen-producto-muestra" src="<%= productoCarrito.image%>">
                                     </div>
                                     <div class="info-producto">
                                         <p class="titulo">
-                                            <%= productoCarrito.titulo%>
+                                            <%= productoCarrito.name%>
                                         </p>
                                         <p class="texto-color-producto">Color: <%= productoCarrito.color%>
                                         </p>
@@ -39,7 +39,7 @@
                                         </div>
                                     </div>
                                     <div class="precio">
-                                        <%= productoCarrito.precio%>
+                                        <%= productoCarrito.price%>
                                     </div>
 
                                 </div>

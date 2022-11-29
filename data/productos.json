@@ -70,5 +70,69 @@
             "color": "Gris",
             "imagen": "/images/productos/imagen1663934265155.jpg",
             "descripcion": "especialmente diseñadas para trekking avanzado, montaña. Es, sin dudas, una muy buena opción para reemplazar en ocasiones a las botas dobles o plásticas."
+      },
+      {
+            "id": 10,
+            "titulo": "",
+            "precio": 0,
+            "color": "",
+            "imagen": "/images/productos/imagen1669751511902.jpg",
+            "descripcion": ""
+      },
+      {
+            "id": 11,
+            "titulo": "",
+            "precio": 0,
+            "color": "",
+            "imagen": "/images/productos/imagen1669751529186.jpg",
+            "descripcion": ""
+      },
+      {
+            "id": 12,
+            "titulo": "",
+            "precio": 0,
+            "color": "",
+            "imagen": "/images/productos/imagen1669751596263.jpg",
+            "descripcion": ""
+      },
+      {
+            "id": 13,
+            "titulo": "",
+            "precio": 0,
+            "color": "",
+            "imagen": "/images/productos/imagen1669751628329.jpg",
+            "descripcion": ""
+      },
+      {
+            "id": 14,
+            "titulo": "",
+            "precio": 0,
+            "color": "",
+            "imagen": "/images/productos/imagen1669751641984.jpg",
+            "descripcion": ""
+      },
+      {
+            "id": 15,
+            "titulo": "",
+            "precio": 0,
+            "color": "",
+            "imagen": "/images/productos/imagen1669751781545.jpg",
+            "descripcion": ""
+      },
+      {
+            "id": 16,
+            "titulo": "",
+            "precio": 0,
+            "color": "",
+            "imagen": "/images/productos/imagen1669751899447.jpg",
+            "descripcion": ""
+      },
+      {
+            "id": 17,
+            "titulo": "",
+            "precio": 0,
+            "color": "",
+            "imagen": "/images/productos/imagen1669751956444.jpg",
+            "descripcion": ""
       }
 ]

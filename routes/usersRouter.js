@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const router = express.Router();
 const multer = require('multer');
-const usersController = require('../controllers/usersController');
+const usersController = require('../controllers/db_user_controller');
 const login = require('../middleware/login');
 
 const { registerValidation, loginValidation, profileValidation, avatarValidation } = require('../validations/userValidation'); // requiere validacion para register.
