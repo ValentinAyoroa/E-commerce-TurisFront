@@ -10,7 +10,7 @@ const dbUserController = {
   login: (req, res) => {
     res.render('login');
   },
-  processLogin: (req, res) => {
+  processLogin: async(req, res) => {
     const error = validationResult(req);
     if (!error.isEmpty()) {
       return res.render('login', {
@@ -18,12 +18,13 @@ const dbUserController = {
         old: req.body
       });
     };
-    const userFound = User.findOne({
+    const userFound = await User.findOne({
       where: {
-        email: req.body.email && bcrypt.compareSync(req.body.password, User.password)
+        email: req.body.email
       }
     });
-    if (userFound == null) {
+    const isPasswordEqual = bcrypt.compareSync(req.body.password, userFound.dataValues.password);
+    if (userFound == null || !isPasswordEqual) {
       res.render('login', { errorLogin: 'credenciales invalidas' });
     } else {
       req.session.usuarioLogueado = {
@@ -48,7 +49,7 @@ const dbUserController = {
   register: function (req, res) {
     res.render('register');
   },
-  registerUser: function (req, res) {
+  registerUser: async function (req, res) {
     const errors = validationResult(req);
     console.log(errors); // llamamos la funcion para observar como salen los resultados.
     if (!errors.isEmpty()) {
@@ -59,9 +60,10 @@ const dbUserController = {
       User.create({
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
-        firstname: req.body.name,
+        first_name: req.body.name,
         last_name: req.body.surname,
-        phone: req.body.phone
+        cellphone: '', // TODO: actualizar  porque no existe campo cellphone en el formulario
+        avatar: '' // TODO: actualizar
       }).then(() => {
         res.redirect('/users/register');
       }).catch(error => res.send(error));

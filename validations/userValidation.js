@@ -1,13 +1,6 @@
 const { body } = require('express-validator');
-
-const fs = require('fs');
-const path = require('path');
-
-function allUsers() {
-  const jsonData = fs.readFileSync(path.join(__dirname, '../data/users.json'));
-  const data = JSON.parse(jsonData);
-  return data;
-};
+const db = require('../database/models');
+const User = db.users;
 
 module.exports = {
   // validacion register
@@ -26,15 +19,11 @@ module.exports = {
       .isEmail()
       .withMessage('*Ingrese un mail válido')
 
-      .custom(function (value, { req }) {
-        const data = allUsers();
-        const usuarioEncontrado = data.find(function (user) {
-          return user.email == value;
-        });
-        if (usuarioEncontrado) {
-          return false;
-        } else {
-          return true;
+      .custom(async function (value, { req }) {
+        console.log('inicio validacion');
+        const user = await User.findOne({ where: { email: value } });
+        if (user) {
+          return Promise.reject(new Error('correo ya existe en la base de datos'));
         }
       }).withMessage('Email ya registrado'),
 

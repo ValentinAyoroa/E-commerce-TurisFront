@@ -4,7 +4,7 @@ module.exports = (sequelize, dataTypes) => {
     id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
-      allowNull: false
+      autoIncrement: true
     },
     email: {
       type: dataTypes.STRING,
@@ -14,15 +14,15 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING,
       allowNull: false
     },
-    firstname: {
+    first_name: {
       type: dataTypes.STRING,
       allowNull: false
     },
-    lastname: {
+    last_name: {
       type: dataTypes.STRING,
       allowNull: false
     },
-    phone: {
+    cellphone: {
       type: dataTypes.STRING,
       allowNull: false
     },
