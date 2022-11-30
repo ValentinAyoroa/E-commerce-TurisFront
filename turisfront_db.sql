@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-11-2022 a las 00:31:55
+-- Tiempo de generación: 01-12-2022 a las 00:28:21
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `carrito` (
   `id` int(5) NOT NULL,
-  `product_id` int(255) NOT NULL,
+  `product_id` int(30) NOT NULL,
   `quantity` int(15) NOT NULL,
   `total` float(7,2) NOT NULL,
-  `user_id` int(15) NOT NULL
+  `user_id` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -46,14 +46,6 @@ CREATE TABLE `colors` (
   `name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `colors`
---
-
-INSERT INTO `colors` (`id`, `name`) VALUES
-(1, 'Rojo'),
-(2, 'Verde');
-
 -- --------------------------------------------------------
 
 --
@@ -64,22 +56,11 @@ CREATE TABLE `products` (
   `id` int(5) NOT NULL,
   `name` varchar(30) NOT NULL,
   `price` float(7,2) NOT NULL,
-  `description` varchar(50) NOT NULL,
+  `description` varchar(30) NOT NULL,
   `image` varchar(255) NOT NULL,
-  `color_id` int(15) NOT NULL,
-  `size_id` int(15) NOT NULL
+  `color_id` int(30) NOT NULL,
+  `size_id` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `products`
---
-
-INSERT INTO `products` (`id`, `name`, `price`, `description`, `image`, `color_id`, `size_id`) VALUES
-(1, '[un producto]', 0.00, '[una descripcion]', '[value-5]', 0, 0),
-(2, 'Doctor Strange', 123.00, 'detallw', '', 1, 2),
-(3, 'Doctor Strange 2', 12344.00, 'detallw444', '', 1, 2),
-(4, 'Doctor Strange 2333', 99999.99, 'DESCRIPTION EDITADAAAAA detallw444', '/images/productos/imagen1669762434716.jpg', 1, 2),
-(5, 'Doctor Strange 2', 12344.00, 'detallw444', '/images/productos/imagen1669762472025.jpg', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -89,15 +70,8 @@ INSERT INTO `products` (`id`, `name`, `price`, `description`, `image`, `color_id
 
 CREATE TABLE `size` (
   `id` int(5) NOT NULL,
-  `size` varchar(15) NOT NULL
+  `size` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `size`
---
-
-INSERT INTO `size` (`id`, `size`) VALUES
-(1, 'S');
 
 -- --------------------------------------------------------
 
@@ -106,13 +80,7 @@ INSERT INTO `size` (`id`, `size`) VALUES
 --
 
 CREATE TABLE `users` (
-  `id` int(5) NOT NULL,
-  `first_name` varchar(30) NOT NULL,
-  `last_name` varchar(30) NOT NULL,
-  `email` varchar(30) NOT NULL UNIQUE,
-  `password` varchar(10) NOT NULL,
-  `avatar` varchar(255) NOT NULL,
-  `cellphone` int(15) NOT NULL
+  `id` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -157,33 +125,34 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `carrito`
 --
 ALTER TABLE `carrito`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `colors`
 --
 ALTER TABLE `colors`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `size`
 --
 ALTER TABLE `size`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
