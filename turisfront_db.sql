@@ -109,7 +109,7 @@ CREATE TABLE `users` (
   `id` int(255) NOT NULL,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL UNIQUE,
   `password` varchar(255) NOT NULL,
   `avatar` varchar(255) NOT NULL,
   `cellphone` int(255) NOT NULL
