@@ -1,6 +1,10 @@
 # Retrospectiva Grupo 16 (Daily-Sprint6)
 ## Novedades
 - El dia 17 de noviembre nos reunimos para poder trabajar conjuntamente en el desarrollo del Sprint6 , realizamos la creacion del diagrama de la base de datos y el script de estructura en SQL. 
+- El dia 24 de noviembre se estuvo trabajando en la creacion de los archivos de modelos. 
+- El dia 27 de noviembre se realizo la implementación de sequelize y la creacion de los CRUD. 
+- El dia 29 de noviembre se trabajo en algunas correcciones en elos modelos que estabana generando algunos errores, actualización de variables a camelCase y se llamo en el router el nuevo controller, se realizo el create, edition del producto totalmente funcionales y se realizo la validación de registro y login de usuario. 
+-  Aun tenemos pendiente agregar algunos campos al formulario de registro de usuario, no tenemos aun funcionando las asociaciones de las tablas, colors y size. 
 
 
 # Retrospectiva Grupo 16 (Daily-Sprint5)
