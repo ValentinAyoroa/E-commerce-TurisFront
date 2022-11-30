@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `carrito` (
-  `id` int(255) NOT NULL,
+  `id` int(5) NOT NULL,
   `product_id` int(255) NOT NULL,
-  `quantity` int(255) NOT NULL,
+  `quantity` int(15) NOT NULL,
   `total` float(7,2) NOT NULL,
-  `user_id` int(255) NOT NULL
+  `user_id` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -42,8 +42,8 @@ CREATE TABLE `carrito` (
 --
 
 CREATE TABLE `colors` (
-  `id` int(255) NOT NULL,
-  `name` varchar(255) NOT NULL
+  `id` int(5) NOT NULL,
+  `name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -61,13 +61,13 @@ INSERT INTO `colors` (`id`, `name`) VALUES
 --
 
 CREATE TABLE `products` (
-  `id` int(255) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `id` int(5) NOT NULL,
+  `name` varchar(30) NOT NULL,
   `price` float(7,2) NOT NULL,
-  `description` varchar(255) NOT NULL,
+  `description` varchar(50) NOT NULL,
   `image` varchar(255) NOT NULL,
-  `color_id` int(255) NOT NULL,
-  `size_id` int(255) NOT NULL
+  `color_id` int(15) NOT NULL,
+  `size_id` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -88,8 +88,8 @@ INSERT INTO `products` (`id`, `name`, `price`, `description`, `image`, `color_id
 --
 
 CREATE TABLE `size` (
-  `id` int(255) NOT NULL,
-  `size` varchar(255) NOT NULL
+  `id` int(5) NOT NULL,
+  `size` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -106,13 +106,13 @@ INSERT INTO `size` (`id`, `size`) VALUES
 --
 
 CREATE TABLE `users` (
-  `id` int(255) NOT NULL,
-  `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL UNIQUE,
-  `password` varchar(255) NOT NULL,
+  `id` int(5) NOT NULL,
+  `first_name` varchar(30) NOT NULL,
+  `last_name` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL UNIQUE,
+  `password` varchar(10) NOT NULL,
   `avatar` varchar(255) NOT NULL,
-  `cellphone` int(255) NOT NULL
+  `cellphone` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
