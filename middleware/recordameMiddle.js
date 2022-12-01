@@ -14,11 +14,15 @@ function recordame(req, res, next) {
     const userFound = data.find(function (user) {
       return user.id == req.cookies.recordame;
     });
-    req.session.usuarioLogueado = {
-      id: userFound.id,
-      nombre: userFound.nombre,
-      email: userFound.email
-    };
+
+    if (userFound) {
+      req.session.usuarioLogueado = {
+        id: userFound.id,
+        nombre: userFound.nombre,
+        email: userFound.email
+      };
+    }
+
     return next();
   }
   return next();
