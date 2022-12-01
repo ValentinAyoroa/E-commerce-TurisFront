@@ -4,7 +4,17 @@
 - El dia 24 de noviembre se estuvo trabajando en la creacion de los archivos de modelos. 
 - El dia 27 de noviembre se realizo la implementación de sequelize y la creacion de los CRUD. 
 - El dia 29 de noviembre se trabajo en algunas correcciones en elos modelos que estabana generando algunos errores, actualización de variables a camelCase y se llamo en el router el nuevo controller, se realizo el create, edition del producto totalmente funcionales y se realizo la validación de registro y login de usuario. 
--  Aun tenemos pendiente agregar algunos campos al formulario de registro de usuario, no tenemos aun funcionando las asociaciones de las tablas, colors y size y tambien parte del CRUD.  
+ 
+
+## IMPORTANTE
+-se creo un usuario como administrador con el cual podran loguearse: 
+usuario:sorayasanchez0503@gmail.com
+contraseña: 12345
+
+## FALTANTES
+-  Aun tenemos pendiente agregar algunos campos al formulario de registro de usuario
+-  diseño en algunas partes del proyecto
+-  En la parte de recuerdameMiddle no esta actualizada aun
 
 
 # Retrospectiva Grupo 16 (Daily-Sprint5)
