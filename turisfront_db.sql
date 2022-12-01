@@ -37,9 +37,9 @@ CREATE TABLE `carrito` (
   `id` int(5) NOT NULL,
   `product_id` int(30) NOT NULL,
   `quantity` int(15) NOT NULL,
-  `total` float(7, 2) NOT NULL,
+  `total` float(7,2) NOT NULL,
   `user_id` int(30) NOT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 --
@@ -48,7 +48,7 @@ CREATE TABLE `carrito` (
 CREATE TABLE `colors` (
   `id` int(5) NOT NULL,
   `name` varchar(30) NOT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 --
@@ -125,12 +125,9 @@ ADD
 --
 -- Indices de la tabla `users`
 --
-ALTER TABLE
-  `users`
-ADD
-  PRIMARY KEY (`id`),
-ADD
-  UNIQUE KEY `email` (`email`);
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -138,53 +135,35 @@ ADD
 --
 -- AUTO_INCREMENT de la tabla `carrito`
 --
-ALTER TABLE
-  `carrito`
-MODIFY
-  `id` int(5) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `carrito`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `colors`
 --
-ALTER TABLE
-  `colors`
-MODIFY
-  `id` int(5) NOT NULL AUTO_INCREMENT,
-  AUTO_INCREMENT = 3;
+ALTER TABLE `colors`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
-ALTER TABLE
-  `products`
-MODIFY
-  `id` int(5) NOT NULL AUTO_INCREMENT,
-  AUTO_INCREMENT = 11;
+ALTER TABLE `products`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `size`
 --
-ALTER TABLE
-  `size`
-MODIFY
-  `id` int(5) NOT NULL AUTO_INCREMENT,
-  AUTO_INCREMENT = 3;
+ALTER TABLE `size`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
-ALTER TABLE
-  `users`
-MODIFY
-  `id` int(5) NOT NULL AUTO_INCREMENT;
-
+ALTER TABLE `users`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */
-;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */
-;
-
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */
-;

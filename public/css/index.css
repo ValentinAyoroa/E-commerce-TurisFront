@@ -34,7 +34,6 @@ article:hover {
   -webkit-box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
   -moz-box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
   box-shadow: 0px 2px 5px 8px rgba(143, 141, 143, 1);
-  transform: scale(1.02);
   z-index: 10;
 }
 
@@ -73,7 +72,7 @@ article:hover {
   margin-bottom: 5%;
 }
 
-.productos > article {
+.productos>article {
   margin: 20px;
 }
 
@@ -106,6 +105,11 @@ article:hover {
   height: 4vh;
   font-weight: bold;
 }
+
+a.vista-rapida {
+  display: none;
+}
+
 .vista-rapida {
   text-decoration: none;
   display: block;
@@ -118,6 +122,7 @@ article:hover {
   padding-top: 6px;
   padding-left: 5px;
 }
+
 .vista-rapida:hover,
 .vista-rapida:visited {
   border-radius: 2px;
@@ -200,7 +205,9 @@ figure {
   color: grey;
   visibility: hidden;
 }
-
+article:hover a.vista-rapida{
+  display: block;
+}
 article:hover #icono-heart {
   visibility: visible;
   cursor: pointer;
@@ -220,7 +227,7 @@ figcaption {
   font-size: 10px;
 }
 
-figure:hover > figcaption {
+figure:hover>figcaption {
   display: block;
   transition: all 0.5s;
   visibility: visible;
@@ -308,7 +315,7 @@ figure:hover > figcaption {
   flex-wrap: wrap;
 }
 
-.container-card > .card-wrap {
+.container-card>.card-wrap {
   margin-right: 50px;
 }
 
