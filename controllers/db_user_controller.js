@@ -23,7 +23,12 @@ const dbUserController = {
         email: req.body.email
       }
     });
-    const isPasswordEqual = bcrypt.compareSync(req.body.password, userFound.dataValues.password);
+    console.log(userFound?.dataValues.password);
+    console.log(req.body.password);
+    const isPasswordEqual = bcrypt.compareSync(req.body.password, userFound?.dataValues.password);
+
+    console.log(isPasswordEqual);
+
     if (userFound == null || !isPasswordEqual) {
       res.render('login', { errorLogin: 'credenciales invalidas' });
     } else {
