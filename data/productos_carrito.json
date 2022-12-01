@@ -30,5 +30,13 @@
             "color": "Negro",
             "imagen": "/images/productos/pantalon.jpg",
             "descripcion": "Interior de abrigo intermedio para dama, diseñado para todo tipo de actividades aeróbicas en climas fríos. Seca rápido. Gran libertad de movimiento. Regulación térmica óptima del cuerpo. Tejido POLARTEC® Power Dry® Midweight. Dependiendo el talle algunas de las opciones estan fabricadas Con Pontetorto."
+      },
+      {
+            "id": 10,
+            "titulo": "",
+            "precio": 0,
+            "color": "",
+            "imagen": "/images/productos/imagen1669751511902.jpg",
+            "descripcion": ""
       }
 ]

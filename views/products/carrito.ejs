@@ -12,24 +12,25 @@
                     <p class="titulo-carrito">Mi carrito (2 Item)</p>
                     <div class="bloque-carrito-desktop">
                         <div class="productos-carrito">
-                            <% productosCarrito.forEach(productoCarrito=> { %>
+                            <% productsCarrito.forEach(productCarrito=> { %>
                                 <div class="bloque-producto">
                                     <div class="imagen-muestra">
-                                        <img class="imagen-producto-muestra" src="<%= productoCarrito.image%>">
+                                        <img class="imagen-producto-muestra" src="<%= productCarrito.image%>">
                                     </div>
                                     <div class="info-producto">
                                         <p class="titulo">
-                                            <%= productoCarrito.name%>
+                                            <%= productCarrito.name%>
                                         </p>
-                                        <p class="texto-color-producto">Color: <%= productoCarrito.color%>
+                                        <p class="texto-color-producto">Color: <%= productCarrito.color%>
                                         </p>
                                         <div class="stock-disponible">
                                             <p class="text-stock">Cantidad:</p>
                                             <button id="menos" type="button">-</button>
-                                            <input type="text" id="contador" class="form-control" value="1" min="1" />
+                                            <input type="text" id="contador" class="form-control"
+                                                value="<%= productCarrito.quantity%>" min="1" />
                                             <button id="mas" type="button">+</button>
                                             <i id="icono-heart" class="fas fa-heart"></i>
-                                            <form action="/products/productosCarrito/delete/<%= productoCarrito.id %>"
+                                            <form action="/products/productosCarrito/delete/<%= productCarrito.id %>"
                                                 method="post">
                                                 <!-- -->
                                                 <button class="borrar" type=" submit">
@@ -39,7 +40,7 @@
                                         </div>
                                     </div>
                                     <div class="precio">
-                                        <%= productoCarrito.price%>
+                                        <%= productCarrito.price%>
                                     </div>
 
                                 </div>

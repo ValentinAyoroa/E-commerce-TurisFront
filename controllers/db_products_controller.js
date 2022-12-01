@@ -25,6 +25,8 @@ function allProductsCarrito() {
   return data;
 };
 const Products = db.products;
+const Carrito = db.carrito;
+const Color = db.colors;
 
 const dbProductsController = {
   getCreateProduct: (req, res) => {
@@ -40,17 +42,17 @@ const dbProductsController = {
       size_id: 2 // cambiar
     }).then(() => {
       res.redirect('/tienda');
-      console.log(Products.image)
+      console.log(Products.image);
     }).catch(error => res.send(error));
   },
-  edit: (req, res) => {
-    let productId = req.params.id;
+  getEditProduct: (req, res) => {
+    const productId = req.params.id;
     Products.findByPk(productId)
       .then((product) => {
         res.render('editar-producto', { producto: product });
       }).catch(error => res.send(error));
   },
-  update: (req, res) => {
+  putEditProduct: (req, res) => {
     const productId = req.params.id;
     Products.update({
       name: req.body.titulo,
@@ -65,7 +67,7 @@ const dbProductsController = {
       res.redirect('/');
     }).catch(error => res.send(error));
   },
-  delete: (req, res) => {
+  deleteDeleteProduct: (req, res) => {
     const productId = req.params.id;
     Products.destroy({
       where: {
@@ -76,22 +78,21 @@ const dbProductsController = {
       res.redirect('/');
     }).catch(error => res.send(error));
   },
-  detalleproducto: function (req, res) {
-
-    let productId = req.params.id;
+  getProductById: function (req, res) {
+    const productId = req.params.id;
     Products.findByPk(productId)
       .then((product) => {
-        res.render('detalle-producto', { producto: product })
+        res.render('detalle-producto', { producto: product });
       }).catch(error => res.send(error));
 
-    /* 
+    /*
         const data = allProducts();
         const productoEncontrado = data.find(producto => {
           return producto.id == req.params.id;
         });
         res.render('detalle-producto', { producto: productoEncontrado }); */
   },
-  agregarCarrito: (req, res) => {
+  postCarrito: (req, res) => {
     const dataProductos = allProducts();
     const dataCarro = allProductsCarrito();
     const productoEncontrado = dataProductos.find(producto => {
@@ -109,8 +110,7 @@ const dbProductsController = {
     writeJson(dataCarro, filePathProductosCarrito);
     res.redirect('/products/carrito');
   },
-
-  productosCarritoDelete: function (req, res) {
+  deleteProductCarrito: function (req, res) {
     const id = req.params.id;
     const data = allProductsCarrito();
 
@@ -120,6 +120,23 @@ const dbProductsController = {
     writeJson(sinCarritoEliminado, filePathProductosCarrito);
     res.redirect('/products/carrito');
   },
-  carrito: (req, res) => res.render('carrito', { productosCarrito: allProductsCarrito() })
+  getCarrito: async (req, res) => {
+    const responseCarrito = await Carrito.findAll();
+
+    const productsCarrito = await Promise.all(await responseCarrito.map(async(itemProductCarrito) => {
+      const responseProduct = await Products.findByPk(itemProductCarrito.dataValues.product_id);
+      const product = responseProduct.dataValues;
+      const responseColor = await Color.findByPk(product.color_id);
+      const color = responseColor.dataValues;
+      return {
+        name: product.name,
+        price: product.price,
+        color: color.name,
+        image: product.image,
+        quantity: itemProductCarrito.dataValues.quantity
+      };
+    }));
+    res.render('carrito', { productsCarrito });
+  }
 };
 module.exports = dbProductsController;

@@ -14,7 +14,7 @@ module.exports = (sequelize, dataTypes) => {
   const config = {
 
     timestamps: false,
-    tableName: 'color'
+    tableName: 'colors'
   };
   const Color = sequelize.define(alias, cols, config);
   return Color;
