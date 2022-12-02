@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false
     },
     avatar: {
-      type: dataTypes.DATE,
+      type: dataTypes.STRING,
       allowNull: false
     }
   };

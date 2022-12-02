@@ -121,7 +121,7 @@ const dbProductsController = {
               }; */
     dataCarro.push(productoEncontrado);
     writeJson(dataCarro, filePathProductosCarrito);
-    res.redirect('/products/carrito'); * /
+    res.redirect('/products/carrito'); 
   },
   deleteProductCarrito: function (req, res) {
     const id = req.params.id;
