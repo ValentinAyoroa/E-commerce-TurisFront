@@ -93,22 +93,35 @@ const dbProductsController = {
         res.render('detalle-producto', { producto: productoEncontrado }); */
   },
   postCarrito: (req, res) => {
-    const dataProductos = allProducts();
-    const dataCarro = allProductsCarrito();
-    const productoEncontrado = dataProductos.find(producto => {
-      return producto.id == req.params.id;
-    });
-    /* const newProduct = {
-                id: productoEncontrado.id,
-                titulo: productoEncontrado.titulo,
-                precio: productoEncontrado.precio,
-                color: productoEncontrado.color,
-                imagen: productoEncontrado.imagen,
-                descripcion: productoEncontrado.descripcion,
-            }; */
+
+    let data = localStorage.getItem('data');
+    if (data !== null) {
+      let arr = data.split(',');
+      arr.push(req.params.id);
+      localStorage.setItem('data', arr);
+    } else {
+      localStorage.setItem('data', arr)
+    };
+
+
+
+
+    /*   const dataProductos = allProducts();
+      const dataCarro = allProductsCarrito();
+      const productoEncontrado = dataProductos.find(producto => {
+        return producto.id == req.params.id;
+      });
+      const newProduct = {
+                  id: productoEncontrado.id,
+                  titulo: productoEncontrado.titulo,
+                  precio: productoEncontrado.precio,
+                  color: productoEncontrado.color,
+                  imagen: productoEncontrado.imagen,
+                  descripcion: productoEncontrado.descripcion,
+              }; */
     dataCarro.push(productoEncontrado);
     writeJson(dataCarro, filePathProductosCarrito);
-    res.redirect('/products/carrito');
+    res.redirect('/products/carrito'); * /
   },
   deleteProductCarrito: function (req, res) {
     const id = req.params.id;
@@ -123,7 +136,7 @@ const dbProductsController = {
   getCarrito: async (req, res) => {
     const responseCarrito = await Carrito.findAll();
 
-    const productsCarrito = await Promise.all(await responseCarrito.map(async(itemProductCarrito) => {
+    const productsCarrito = await Promise.all(await responseCarrito.map(async (itemProductCarrito) => {
       const responseProduct = await Products.findByPk(itemProductCarrito.dataValues.product_id);
       const product = responseProduct.dataValues;
       const responseColor = await Color.findByPk(product.color_id);
