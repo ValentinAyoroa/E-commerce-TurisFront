@@ -7,10 +7,17 @@ module.exports = {
   registerValidation: [
     body('name')
       .notEmpty()
-      .withMessage('*El campo nombre tiene que estar completo'),
+      .withMessage('*El campo nombre tiene que estar completo')
+      .bail()
+      .isLength({ min: 2 })
+      .withMessage('*El nombre debe tener al menos 2 caracteres'),
+
     body('surname')
       .notEmpty()
-      .withMessage('*El campo apellido tiene que estar completo'),
+      .withMessage('*El campo apellido tiene que estar completo')
+      .bail()
+      .isLength({ min: 2 })
+      .withMessage('*El nombre debe tener al menos 2 caracteres'),
 
     body('email')
       .notEmpty()
@@ -18,7 +25,6 @@ module.exports = {
       .bail()
       .isEmail()
       .withMessage('*Ingrese un mail válido')
-
       .custom(async function (value, { req }) {
         console.log('inicio validacion');
         const user = await User.findOne({ where: { email: value } });
@@ -31,8 +37,17 @@ module.exports = {
       .notEmpty()
       .withMessage('*El campo contraseña debe estar completo')
       .bail()
-      .isLength({ min: 5 })
-      .withMessage('*La contraseña debe tener minimo 5 caracteres'),
+      .isLength({ min: 8 })
+      .withMessage('*La contraseña debe tener minimo 8 caracteres')
+      .bail()
+      .custom(function(value, {req}){
+        const passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+          if(value.match(passw)){
+            return true
+          } else {
+            throw new Error('*La contraseña debe contener al menos una letra minúscula, una letra mayúscula, un dígito numérico y un carácter especial')
+          }
+      }),
     body('confirm')
       .notEmpty()
       .withMessage('*Debes completar la confirmacion de contraseña')
@@ -61,7 +76,7 @@ module.exports = {
       }).withMessage('No se ha cargado ninguna imagen')
       .bail()
       .custom(function (value, { req }) {
-        const extensiones = ['.jpg', '.png', '.jfif', '.svg', '.tif'];
+        const extensiones = ['.jpg', '.png', '.jfif', '.svg', '.tif', '.jpeg'];
         const info = path.extname(req.file.originalname);
         return extensiones.includes(info);
       }).withMessage('Imagen invalida')

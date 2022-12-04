@@ -34,11 +34,11 @@ const dbUserController = {
     } else {
       req.session.usuarioLogueado = {
         id: userFound.id,
-        first_name: userFound.nombre,
-        last_name: userFound.apellido,
+        first_name: userFound.first_name,
+        last_name: userFound.last_name,
         email: userFound.email,
-        avatar: userFound.image,
-        cellphone: userFound.celular
+        avatar: userFound.avatar,
+        cellphone: userFound.cellphone
       };
       if (req.body.remember) {
         res.cookie('recordame', userFound.id);
@@ -84,7 +84,7 @@ const dbUserController = {
   avatar: function (req, res) {
     const userId = req.session.usuarioLogueado.id;
     User.update({
-      avatar: req.body.file
+      avatar: '/images/users/' + req.file.filename
     }, {
       where: {
         id: userId
@@ -104,9 +104,9 @@ const dbUserController = {
       const userId = req.session.usuarioLogueado.id;
       User.update({
         email: req.body.email,
-        firstname: req.body.nombre,
+        first_name: req.body.nombre,
         last_name: req.body.apellido,
-        phone: req.body.celular
+        cellphone: req.body.celular
       },
       {
         where: {
@@ -114,10 +114,10 @@ const dbUserController = {
         }
       }).then((req, res) => {
         req.session.usuarioLogueado = {
-          nombre: req.body.nombre,
-          apellido: req.body.apellido,
+          first_name: req.body.nombre,
+          last_name: req.body.apellido,
           email: userFound.email,
-          celular: req.body.celular
+          cellphone: req.body.celular
           // falta imagen, estoy medio perdido en este punto con sesssion y como
           // editarlo para adaptarlo a db
         };

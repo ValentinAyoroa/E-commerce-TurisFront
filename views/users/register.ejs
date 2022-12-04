@@ -17,7 +17,7 @@
                             <% if (locals.errors && locals.errors.name) {%>
                                 <p class="errors"><%= errors.name.msg %></p>
                             <% } %>
-                            <input type="text" name="name" value= '<%= locals.old && !locals.errors.name ? old.name : "" %>' placeholder="Nombre">
+                            <input type="text" id='name' name="name" value= '<%= locals.old && !locals.errors.name ? old.name : "" %>' placeholder="Nombre">
                         </div>
                         <div>
                             <% if (locals.errors && locals.errors.surname) {%>

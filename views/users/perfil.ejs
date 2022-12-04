@@ -14,7 +14,7 @@
             <div class="box-profile">
                 <div class="box-image">
                     <% if(locals.usuario.imagen){ %>
-                    <img src="<%= usuario.imagen %>" >
+                    <img src="<%= usuario.avatar %>" >
                     <% } else{ %>
                     <img src="/images/users/perfil-default.jpg">
                     <% } %>
@@ -43,16 +43,16 @@
                 </div>
                 <ul class="information-list">
                     <li>Nombre
-                    <span class="information-user"><%= usuario.nombre %></span>
+                    <span class="information-user"><%= usuario.first_name %></span>
                     </li>
                     <li>Apellido
-                    <span class="information-user"><%= usuario.apellido %></span>
+                    <span class="information-user"><%= usuario.last_name %></span>
                     </li>
                     <li>Email
                     <span class="information-user"><%= usuario.email %></span>
                     </li>
                     <li>Celular
-                    <span class="information-user"><%= usuario.celular ? usuario.celular : 'Ninguno'%></span>
+                    <span class="information-user"><%= usuario.cellphone ? usuario.cellphone : 'Ninguno'%></span>
                     </li>
                 </ul>
             </div>

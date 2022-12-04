@@ -1,6 +1,7 @@
 const db = require('../database/models');
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 const filePathProductos = '../data/productos.json';
 const filePathProductosCarrito = '../data/productos_carrito.json';
@@ -33,17 +34,23 @@ const dbProductsController = {
     res.render('crear-producto');
   },
   postCreateProduct: (req, res) => {
-    Products.create({
-      name: req.body.titulo,
-      description: req.body.descripcion,
-      price: req.body.precio,
-      image: '/images/productos/' + req.file.filename,
-      color_id: 1, // cambiar
-      size_id: 2 // cambiar
-    }).then(() => {
-      res.redirect('/tienda');
-      console.log(Products.image);
-    }).catch(error => res.send(error));
+    let errors = validationResult(req)
+    if (!errors.isEmpty()) {
+      // si tenemos errores, los mostramos en pantalla.
+      res.render('crear-producto', { errors: errors.mapped(), old: req.body });
+    } else {
+      Products.create({
+        name: req.body.titulo,
+        description: req.body.descripcion,
+        price: req.body.precio,
+        image: '/images/productos/' + req.file.filename,
+        color_id: 1, // cambiar
+        size_id: 2 // cambiar
+      }).then(() => {
+        res.redirect('/tienda');
+        console.log(Products.image);
+      }).catch(error => res.send(error));
+    }
   },
   getEditProduct: (req, res) => {
     const productId = req.params.id;

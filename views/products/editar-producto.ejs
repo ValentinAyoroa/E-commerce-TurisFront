@@ -20,21 +20,33 @@
                 </div>
                 <form action='/products/edit/<%=producto.id%>?_method=PUT' method="POST">
                     <div>
+                        <% if (locals.errors && locals.errors.precio) {%>
+                            <p class="errors"><%= errors.precio.msg %></p>
+                        <% } %>
                         <label for="titulo">Titulo del producto</label>
                         <input type="text" name="titulo" class="titulo-product" value="<%=producto.name%>"
                             placeholder="Ingrese el nombre del producto">
                     </div>
                     <div>
+                        <% if (locals.errors && locals.errors.precio) {%>
+                            <p class="errors"><%= errors.precio.msg %></p>
+                        <% } %>
                         <label for="precio">Precio</label>
                         <input type="number" name="precio" class="precio-product" value="<%=producto.price%>"
                             placeholder="Precio $ARS">
                     </div>
                     <div>
+                        <% if (locals.errors && locals.errors.precio) {%>
+                            <p class="errors"><%= errors.precio.msg %></p>
+                        <% } %>
                         <label for="color">Color</label>
                         <input type='text' name="color" class="color-product" value="<%=producto.color%>"
                             placeholder="Color del producto">
                     </div>
                     <div>
+                        <% if (locals.errors && locals.errors.precio) {%>
+                            <p class="errors"><%= errors.precio.msg %></p>
+                        <% } %>
                         <label for="descripcion">Descripcion</label>
                         <textarea name="descripcion" class="description-product"
                             placeholder="Descripcion del producto"><%=producto.description%></textarea>
