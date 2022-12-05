@@ -17,16 +17,28 @@
                     <input type="file" name="imagen" class="imagen-product">
                 </div>
                 <div>
+                    <% if (locals.errors && locals.errors.titulo) {%>
+                        <p class="errors"><%= errors.titulo.msg %></p>
+                    <% } %>
                     <input type="text" name="titulo" class="titulo-product" placeholder="Ingrese el nombre del producto"
                         required>
                 </div>
                 <div>
+                    <% if (locals.errors && locals.errors.precio) {%>
+                        <p class="errors"><%= errors.precio.msg %></p>
+                    <% } %>
                     <input type="number" name="precio" class="precio-product" placeholder="Precio $ARS" required>
                 </div>
                 <div>
+                    <% if (locals.errors && locals.errors.color) {%>
+                        <p class="errors"><%= errors.color.msg %></p>
+                    <% } %>
                     <input type='text' name="color" class="color-product" placeholder="Color del producto" required>
                 </div>
                 <div>
+                    <% if (locals.errors && locals.errors.descripcion) {%>
+                        <p class="errors"><%= errors.descripcion.msg %></p>
+                    <% } %>
                     <textarea name="descripcion" class="description-product" placeholder="Descripcion del producto"
                         required></textarea>
                 </div>

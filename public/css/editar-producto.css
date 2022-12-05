@@ -55,6 +55,14 @@ div.edit-product form div {
   padding-top: 25px;
 }
 
+p.errors {
+  color: rgba(255, 0, 0, 0.767);
+  font-size: 13px;
+  font-weight: bolder;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 div.edit-product form div input {
   width: 100%;
   border: 1px solid grey;

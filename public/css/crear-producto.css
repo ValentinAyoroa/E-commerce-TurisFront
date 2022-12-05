@@ -11,6 +11,14 @@ body {
   background-size: cover;
 }
 
+p.errors {
+  color: rgba(255, 0, 0, 0.767);
+  font-size: 13px;
+  font-weight: bolder;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 h2.copy-create {
   padding: 20px;
   margin-top: 40px;
