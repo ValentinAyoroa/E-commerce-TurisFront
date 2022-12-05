@@ -134,8 +134,8 @@ const dbProductsController = {
     res.redirect('/products/carrito');
   },
   getCarrito: async (req, res) => {
-    const responseCarrito = await Carrito.findAll();
-
+    res.send('en remodelación')
+    /* const responseCarrito = await Carrito.findAll();
     const productsCarrito = await Promise.all(await responseCarrito.map(async (itemProductCarrito) => {
       const responseProduct = await Products.findByPk(itemProductCarrito.dataValues.product_id);
       const product = responseProduct.dataValues;
@@ -149,7 +149,7 @@ const dbProductsController = {
         quantity: itemProductCarrito.dataValues.quantity
       };
     }));
-    res.render('carrito', { productsCarrito });
+    res.render('carrito', { productsCarrito }); */
   }
 };
 module.exports = dbProductsController;
