@@ -74,16 +74,22 @@ const dbProductsController = {
       res.redirect('/');
     }).catch(error => res.send(error));
   },
-  deleteDeleteProduct: (req, res) => {
+  delete: function (req, res) {
+    const productId = req.params.id;
+    Products.findByPk(productId)
+      .then((product) => {
+        res.render('productDelete', { producto: product });
+      }).catch(error => res.send(error));
+  },
+
+  destroy: (req, res) => {
     const productId = req.params.id;
     Products.destroy({
-      where: {
-        id: productId
-      },
-      force: true
-    }).then(() => {
-      res.redirect('/');
-    }).catch(error => res.send(error));
+      where: { id: productId }, force: true
+    })
+      .then(() => {
+        return res.redirect('/');
+      }).catch(error => res.send(error));
   },
   getProductById: function (req, res) {
     const productId = req.params.id;
@@ -128,7 +134,7 @@ const dbProductsController = {
               }; */
     dataCarro.push(productoEncontrado);
     writeJson(dataCarro, filePathProductosCarrito);
-    res.redirect('/products/carrito'); 
+    res.redirect('/products/carrito');
   },
   deleteProductCarrito: function (req, res) {
     const id = req.params.id;

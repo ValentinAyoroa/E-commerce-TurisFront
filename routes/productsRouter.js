@@ -16,8 +16,9 @@ router.get('/carrito', dbProductsController.getCarrito);
 router.get('/edit/:id', loginValidation, dbProductsController.getEditProduct);
 router.put('/edit/:id', productValidation, dbProductsController.putEditProduct);
 
-router.delete('/delete/:id', loginValidation, dbProductsController.deleteDeleteProduct);
-router.delete('/productosCarrito/delete/:id', loginValidation, dbProductsController.deleteProductCarrito);
+router.get('/delete/:id', dbProductsController.delete);
+router.delete('/delete/:id', dbProductsController.destroy);
+
 
 router.get('/create', loginValidation, dbProductsController.getCreateProduct);
 router.post('/create', upload.single('imagen'), productValidation, dbProductsController.postCreateProduct);

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head.ejs") %>
+        <link rel="stylesheet" href="/css/editar-producto.css">
+</head>
+
+<body>
+    <%- include("./partials/header.ejs") %>
+        <h1>Estas seguro de querer borrar éste producto: <%= producto.title %>???</h1>
+        <p>
+        <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+            <br>
+            <p> <button type="submit">Borrar</button>
+                <a href="/tienda">Tienda</a>
+            </p>
+        </form>
+        </p>
+</body>
+<footer>
+    <%- include("./partials/footer.ejs") %>
+</footer>
+
+</html>
