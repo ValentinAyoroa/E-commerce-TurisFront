@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-  const alias = 'products';
+  const alias = 'Product';
   const cols = {
     id: {
       type: dataTypes.INTEGER,
@@ -39,21 +39,16 @@ module.exports = (sequelize, dataTypes) => {
 
   const Product = sequelize.define(alias, cols, config);
 
-  /* Product.associate = (models) => {
-    Color.belongsToMany(models.Color, {
-      as: 'colors',
-      foreingKey: 'color_id'
-
+  Product.associate = (models) => {
+    Product.belongsTo(models.Color, {
+      as: 'color',
+      foreignKey: 'color_id'
+    });
+    Product.belongsTo(models.Size, {
+      as: 'size',
+      foreignKey: 'size_id'
     });
   };
-
-  Product.associate = (models) => {
-    Size.belongsToMany(models.Size, {
-      as: 'sizes',
-      foreingKey: 'size_id'
-
-    });
-  }; */
 
   return Product;
 };

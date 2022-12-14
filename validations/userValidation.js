@@ -1,3 +1,4 @@
+const path = require('path');
 const { body } = require('express-validator');
 const db = require('../database/models');
 const User = db.users;
@@ -26,7 +27,6 @@ module.exports = {
       .isEmail()
       .withMessage('*Ingrese un mail válido')
       .custom(async function (value, { req }) {
-        console.log('inicio validacion');
         const user = await User.findOne({ where: { email: value } });
         if (user) {
           return Promise.reject(new Error('correo ya existe en la base de datos'));
@@ -40,13 +40,13 @@ module.exports = {
       .isLength({ min: 8 })
       .withMessage('*La contraseña debe tener minimo 8 caracteres')
       .bail()
-      .custom(function(value, {req}){
+      .custom(function(value, { req }) {
         const passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
-          if(value.match(passw)){
-            return true
-          } else {
-            throw new Error('*La contraseña debe contener al menos una letra minúscula, una letra mayúscula, un dígito numérico y un carácter especial')
-          }
+        if (value.match(passw)) {
+          return true;
+        } else {
+          throw new Error('*La contraseña debe contener al menos una letra minúscula, una letra mayúscula, un dígito numérico y un carácter especial');
+        }
       }),
     body('confirm')
       .notEmpty()

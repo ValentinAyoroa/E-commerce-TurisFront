@@ -1,17 +1,19 @@
 const db = require('../database/models');
 const fs = require('fs');
 const path = require('path');
+const getDataDB = require('../utils/getDataDB');
 const { validationResult } = require('express-validator');
 
-const filePathProductos = '../data/productos.json';
+// const filePathProductos = '../data/productos.json';
 const filePathProductosCarrito = '../data/productos_carrito.json';
 /* Analisas Productos */
 
-function allProducts() {
-  const jsonData = fs.readFileSync(path.join(__dirname, '../data/productos.json'));
-  const data = JSON.parse(jsonData);
-  return data;
-};
+// function allProducts() {
+//   const jsonData = fs.readFileSync(path.join(__dirname, '../data/productos.json'));
+//   const data = JSON.parse(jsonData);
+//   return data;
+// };
+
 /* escribir en JSON con un filePath */
 function writeJson(data, filePath) {
   const JsonData = JSON.stringify(data, null, 6);
@@ -25,43 +27,51 @@ function allProductsCarrito() {
   const data = JSON.parse(jsonData);
   return data;
 };
-const Products = db.products;
-const Carrito = db.carrito;
-const Color = db.colors;
+const { Product, Color, Size } = db;
 
 const dbProductsController = {
-  getCreateProduct: (req, res) => {
-    res.render('crear-producto');
+  getCreateProduct: async(req, res) => {
+    const responseColors = await Color.findAll();
+    const colors = getDataDB(responseColors);
+
+    const responseSize = await Size.findAll();
+    const sizes = getDataDB(responseSize);
+
+    res.render('crear-producto', { colors, sizes });
   },
-  postCreateProduct: (req, res) => {
-    let errors = validationResult(req)
+  postCreateProduct: async(req, res) => {
+    const errors = validationResult(req);
     if (!errors.isEmpty()) {
       // si tenemos errores, los mostramos en pantalla.
-      res.render('crear-producto', { errors: errors.mapped(), old: req.body });
+      const response = await Color.findAll();
+      const colors = getDataDB(response);
+      const responseSize = await Size.findAll();
+      const sizes = getDataDB(responseSize);
+
+      res.render('crear-producto', { errors: errors.mapped(), old: req.body, colors, sizes });
     } else {
-      Products.create({
+      Product.create({
         name: req.body.titulo,
         description: req.body.descripcion,
         price: req.body.precio,
         image: '/images/productos/' + req.file.filename,
-        color_id: 1, // cambiar
-        size_id: 2 // cambiar
+        color_id: Number(req.body.color),
+        size_id: Number(req.body.size)
       }).then(() => {
         res.redirect('/tienda');
-        console.log(Products.image);
       }).catch(error => res.send(error));
     }
   },
   getEditProduct: (req, res) => {
     const productId = req.params.id;
-    Products.findByPk(productId)
+    Product.findByPk(productId)
       .then((product) => {
         res.render('editar-producto', { producto: product });
       }).catch(error => res.send(error));
   },
   putEditProduct: (req, res) => {
     const productId = req.params.id;
-    Products.update({
+    Product.update({
       name: req.body.titulo,
       description: req.body.descripcion,
       price: req.body.precio,
@@ -76,15 +86,14 @@ const dbProductsController = {
   },
   delete: function (req, res) {
     const productId = req.params.id;
-    Products.findByPk(productId)
+    Product.findByPk(productId)
       .then((product) => {
         res.render('productDelete', { producto: product });
       }).catch(error => res.send(error));
   },
-
   destroy: (req, res) => {
     const productId = req.params.id;
-    Products.destroy({
+    Product.destroy({
       where: { id: productId }, force: true
     })
       .then(() => {
@@ -93,7 +102,7 @@ const dbProductsController = {
   },
   getProductById: function (req, res) {
     const productId = req.params.id;
-    Products.findByPk(productId)
+    Product.findByPk(productId)
       .then((product) => {
         res.render('detalle-producto', { producto: product });
       }).catch(error => res.send(error));
@@ -106,18 +115,14 @@ const dbProductsController = {
         res.render('detalle-producto', { producto: productoEncontrado }); */
   },
   postCarrito: (req, res) => {
-
-    let data = localStorage.getItem('data');
+    const data = localStorage.getItem('data');
     if (data !== null) {
-      let arr = data.split(',');
+      const arr = data.split(',');
       arr.push(req.params.id);
       localStorage.setItem('data', arr);
     } else {
-      localStorage.setItem('data', arr)
+      localStorage.setItem('data', arr);
     };
-
-
-
 
     /*   const dataProductos = allProducts();
       const dataCarro = allProductsCarrito();
@@ -147,7 +152,7 @@ const dbProductsController = {
     res.redirect('/products/carrito');
   },
   getCarrito: async (req, res) => {
-    res.send('en remodelación')
+    res.send('en remodelación');
     /* const responseCarrito = await Carrito.findAll();
     const productsCarrito = await Promise.all(await responseCarrito.map(async (itemProductCarrito) => {
       const responseProduct = await Products.findByPk(itemProductCarrito.dataValues.product_id);

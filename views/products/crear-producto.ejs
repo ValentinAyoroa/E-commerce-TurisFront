@@ -2,55 +2,86 @@
 <html lang="en">
 
 <head>
-    <%- include("./partials/head.ejs") %>
-        <link rel="stylesheet" href="/css/crear-producto.css">
+  <%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/crear-producto.css">
 </head>
 
 <body>
-    <%- include("./partials/header.ejs") %>
+  <%- include("./partials/header.ejs") %>
 
-        <div class="create-product">
-            <h2 class="copy-create">Añadir nuevo producto</h2>
-            <form action='/products/create' enctype="multipart/form-data" method="POST">
-                <div class="imagen-product">
-                    <label for="imagen">Ingrese imagenes de su producto</label>
-                    <input type="file" name="imagen" class="imagen-product">
-                </div>
-                <div>
-                    <% if (locals.errors && locals.errors.titulo) {%>
-                        <p class="errors"><%= errors.titulo.msg %></p>
-                    <% } %>
-                    <input type="text" name="titulo" class="titulo-product" placeholder="Ingrese el nombre del producto"
-                        required>
-                </div>
-                <div>
-                    <% if (locals.errors && locals.errors.precio) {%>
-                        <p class="errors"><%= errors.precio.msg %></p>
-                    <% } %>
-                    <input type="number" name="precio" class="precio-product" placeholder="Precio $ARS" required>
-                </div>
-                <div>
-                    <% if (locals.errors && locals.errors.color) {%>
-                        <p class="errors"><%= errors.color.msg %></p>
-                    <% } %>
-                    <input type='text' name="color" class="color-product" placeholder="Color del producto" required>
-                </div>
-                <div>
-                    <% if (locals.errors && locals.errors.descripcion) {%>
-                        <p class="errors"><%= errors.descripcion.msg %></p>
-                    <% } %>
-                    <textarea name="descripcion" class="description-product" placeholder="Descripcion del producto"
-                        required></textarea>
-                </div>
-                <div class="buttons">
-                    <button class="submit" type="submit">Publicar</button>
-                    <button class="reset" type="reset">Cancelar</button>
-                </div>
-            </form>
+    <div class="create-product">
+      <h2 class="copy-create">Añadir nuevo producto</h2>
+      <form action='/products/create' enctype="multipart/form-data" method="POST">
+        <div class="imagen-product">
+          <label for="imagen">Ingrese imagenes de su producto</label>
+          <input type="file" name="imagen" class="imagen-product">
+          <% if (locals.errors && locals.errors.imagen) {%>
+            <p class="errors">
+              <%= errors.imagen.msg %>
+            </p>
+            <% } %>
         </div>
+        <div>
+          <% if (locals.errors && locals.errors.titulo) {%>
+            <p class="errors">
+              <%= errors.titulo.msg %>
+            </p>
+            <% } %>
+              <input type="text" name="titulo" class="titulo-product" placeholder="Ingrese el nombre del producto"
+                required>
+        </div>
+        <div>
+          <% if (locals.errors && locals.errors.precio) {%>
+            <p class="errors">
+              <%= errors.precio.msg %>
+            </p>
+            <% } %>
+              <input type="number" name="precio" class="precio-product" placeholder="Precio $ARS" required>
+        </div>
+        <div>
+          <% if (locals.errors && locals.errors.color) {%>
+            <p class="errors">
+              <%= errors.color.msg %>
+            </p>
+            <% } %>
+              <!-- <input type='text' name="color" class="color-product" placeholder="Color del producto"
+                                required> -->
+              <select name="color">
+                <% colors.forEach((color)=>{ %>
+                  <option value="<%= color.id %>">
+                    <%= color.name %>
+                  </option>
+                  <% }) %>
+              </select>
+
+              <select name="size">
+                <% sizes.forEach((size)=>{ %>
+                  <option value="<%= size.id %>">
+                    <%= size.size %>
+                  </option>
+                  <% }) %>
+              </select>
+
+        </div>
+        <div>
+          <textarea name="descripcion" class="description-product" placeholder="Descripcion del producto"
+            required></textarea>
+          <% if (locals.errors && locals.errors.descripcion) {%>
+            <p class="errors">
+              <%= errors.descripcion.msg %>
+            </p>
+            <% } %>
+        </div>
+        <div class="buttons">
+          <button class="submit" type="submit">Publicar</button>
+          <button class="reset" type="reset">Cancelar</button>
+        </div>
+      </form>
+    </div>
 </body>
+
 <footer>
-    <%- include("./partials/footer.ejs") %>
+  <%- include("./partials/footer.ejs") %>
 </footer>
 
 </html>

@@ -2,51 +2,58 @@
 <html lang="en">
 
 <head>
-    <%- include("./partials/head.ejs") %>
-        <title>Document</title>
-        <link rel="stylesheet" href="/css/tienda.css">
-        <link rel="stylesheet" href="/css/index.css">
+  <%- include("./partials/head.ejs") %>
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/tienda.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
-    <%- include("./partials/header.ejs") %>
-        <h2>Tienda</h2>
-        <div class="main-div">
-            <div class="main-checkbox">
-                <p class="cat-titulo">Categorias</p>
-                <div class="checkbox">
-                    <label><input type="checkbox" id="checkHead" value="cabeza"> Cabeza</label><br>
-                    <label><input type="checkbox" id="checkBody" value="torso"> Torso</label><br>
-                    <label><input type="checkbox" id="checkLegs" value="piernas"> Piernas</label><br>
-                    <label><input type="checkbox" id="checkHands" value="manos"> Manos</label><br>
-                </div>
-            </div>
-            <main>
-                <section class="productos-destacados">
-                    <div class="productos">
-                        <% productos.forEach(producto=> { %>
-                          <article class="caja-producto">
-                            <img class="imagen-producto" src="<%= producto.image %>">
-                            <figure>
-                              <i id="icono-heart" class="fas fa-heart"></i>
-                              <figcaption>Favoritos</figcaption>
-                            </figure>
-                            <div class="descripcion-producto">
-                              <p id="descripcion">
-                                <%= producto.name %><br>
-                              </p>
-                              <h5>
-                                $ <%= producto.price %>
-                              </h5>
-                              <a class="vista-rapida" href="products/detalle-producto/<%=producto.id%>">Vista rápida ></a>
-                              <br />
-                            </div>
-                          </article>
-                          <% }) %>
-                      </div>
-                </section>
-            </main>
+  <%- include("./partials/header.ejs") %>
+    <h2>Tienda</h2>
+    <div class="main-div">
+      <div class="main-checkbox">
+        <p class="cat-titulo">Categorias</p>
+        <div class="checkbox">
+          <label><input type="checkbox" id="checkHead" value="cabeza"> Cabeza</label><br>
+          <label><input type="checkbox" id="checkBody" value="torso"> Torso</label><br>
+          <label><input type="checkbox" id="checkLegs" value="piernas"> Piernas</label><br>
+          <label><input type="checkbox" id="checkHands" value="manos"> Manos</label><br>
         </div>
+      </div>
+      <main>
+        <section class="productos-destacados">
+          <div class="productos">
+            <% products.forEach(product=> { %>
+              <article class="caja-producto">
+                <img class="imagen-producto" src="<%= product.image %>">
+                <figure>
+                  <i id="icono-heart" class="fas fa-heart"></i>
+                  <figcaption>Favoritos</figcaption>
+                </figure>
+                <div class="descripcion-producto">
+                  <p id="descripcion">
+                    <%= product.name %><br>
+                      <span>
+                        <%= product.color.name %>
+                      </span><br>
+                      <span>
+                        <%= product.size.size %>
+                      </span>
+                  </p>
+
+                  <h5>
+                    $ <%= product.price %>
+                  </h5>
+                  <a class="vista-rapida" href="products/detalle-producto/<%=product.id%>">Vista rápida ></a>
+                  <br />
+                </div>
+              </article>
+              <% }) %>
+          </div>
+        </section>
+      </main>
+    </div>
 </body>
 <%- include("./partials/footer.ejs") %>
 

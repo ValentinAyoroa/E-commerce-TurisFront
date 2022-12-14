@@ -111,8 +111,9 @@ ADD
 --
 ALTER TABLE
   `products`
-ADD
-  PRIMARY KEY (`id`);
+ADD PRIMARY KEY (`id`)
+ADD FOREIGN KEY (color_id) REFERENCES colors (id)
+ADD FOREIGN KEY (size_id) REFERENCES size (id);
 
 --
 -- Indices de la tabla `size`

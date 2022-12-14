@@ -19,7 +19,6 @@ router.put('/edit/:id', productValidation, dbProductsController.putEditProduct);
 router.get('/delete/:id', dbProductsController.delete);
 router.delete('/delete/:id', dbProductsController.destroy);
 
-
 router.get('/create', loginValidation, dbProductsController.getCreateProduct);
 router.post('/create', upload.single('imagen'), productValidation, dbProductsController.postCreateProduct);
 
