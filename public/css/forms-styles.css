@@ -128,6 +128,14 @@ form.form-register div p.errors {
   margin-bottom: 10px;
 }
 
+form.form-register div p.errorFront {
+  color: rgba(255, 0, 0, 0.767);
+  font-size: 13px;
+  font-weight: bolder;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 form.form-register div button {
   width: 100%;
   height: 40px;
@@ -303,9 +311,7 @@ div a {
     margin: 0;
   }
 }
-.msg-error {
-  color: red;
-}
+
 #exampleCheck1 {
   width: 5%;
 }

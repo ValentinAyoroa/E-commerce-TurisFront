@@ -28,7 +28,7 @@ const dbUserController = {
     console.log(isPasswordEqual);
 
     if (userFound == null || !isPasswordEqual) {
-      res.render('login', { errorLogin: 'credenciales invalidas' });
+      res.render('login', { errorLogin: 'Credenciales invalidas' });
     } else {
       req.session.usuarioLogueado = {
         id: userFound.id,
