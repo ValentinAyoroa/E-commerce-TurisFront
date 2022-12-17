@@ -115,12 +115,32 @@ form.form-register div input {
   max-width: -webkit-fill-available;
   margin-bottom: 20px;
   padding: 0.75rem 1rem;
-  border: 1px solid #a8a8a8;
+  outline: none;
   border-radius: 10px;
   background-color: white;
+  transition: .3s ease all;
+
 }
 
-form.form-register div p.errors {
+form.form-register div input:focus {
+  border: 2px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.estado-input{
+  border: 1px solid #a8a8a8;
+}
+
+.succes-input{
+  border: 1px solid rgba(0, 209, 17, 0.767);
+}
+
+.error-input{
+  border: 1px solid rgba(255, 0, 0, 0.767);
+}
+
+form.form-register p.errors {
   color: rgba(255, 0, 0, 0.767);
   font-size: 13px;
   font-weight: bolder;
@@ -128,7 +148,7 @@ form.form-register div p.errors {
   margin-bottom: 10px;
 }
 
-form.form-register div p.errorFront {
+form.form-register  p.errorFront {
   color: rgba(255, 0, 0, 0.767);
   font-size: 13px;
   font-weight: bolder;

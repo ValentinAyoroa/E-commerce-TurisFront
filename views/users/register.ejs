@@ -18,37 +18,38 @@
                                 <p class="errors"><%= errors.name.msg %></p>
                             <% } %>
                             <p class="errorFront"></p>
-                            <input type="text" id='name' name="name" value= '<%= locals.old && !locals.errors.name ? old.name : "" %>' placeholder="Nombre">
+                            <input type="text" id='name' class='inputs estado-input' name="name" value= '<%= locals.old && !locals.errors.name ? old.name : "" %>' placeholder="Nombre">
                         </div>
                         <div>
                             <% if (locals.errors && locals.errors.surname) {%>
                                 <p class="errors"><%= errors.surname.msg %></p>
                             <% } %>
                             <p class="errorFront"> </p>
-                            <input type="text" id="surname" name="surname" value= '<%= locals.old && !locals.errors.surname ? old.surname : "" %>' placeholder="Apellido">
+                            <input type="text" id="surname" class='inputs estado-input' name="surname" value= '<%= locals.old && !locals.errors.surname ? old.surname : "" %>' placeholder="Apellido">
                         </div>
                         <div>
                             <% if (locals.errors && locals.errors.email) {%>
                                 <p class="errors"><%= errors.email.msg %></p>
                             <% } %>
                             <p class="errorFront"></p>
-                            <input type="email" id="email" name="email" value= '<%= locals.old && !locals.errors.email ? old.email : "" %>' placeholder="E-mail">
+                            <input type="email" id="email" class='inputs estado-input' name="email" value= '<%= locals.old && !locals.errors.email ? old.email : "" %>' placeholder="E-mail">
                         </div>
                         <div>
                             <% if (locals.errors && locals.errors.password) {%>
                                 <p class="errors"><%= errors.password.msg %></p>
                             <% } %>
                             <p class="errorFront"></p>
-                            <input type="password" id="password" name="password" placeholder="Contraseña">
+                            <input type="password" id="password" class='inputs estado-input' name="password" placeholder="Contraseña">
                         </div>
                         <div>
                             <% if (locals.errors && locals.errors.confirm) {%>
                                 <p class="errors"><%= errors.confirm.msg %></p>
                             <% } %>
                             <p class="errorFront"></p>
-                            <input type="password" id="confirm" name="confirm" placeholder="Confirmar contraseña">
+                            <input type="password" id="confirm" class='inputs estado-input' name="confirm" placeholder="Confirmar contraseña">
                         </div>
                         <div class="button">
+                            <p class="errorFront"></p>
                             <button type="submit">Registrarse</button>
                         </div>
                     </form>
@@ -73,6 +74,6 @@
                     <!--footer-->
                     <%- include("./partials/footer.ejs") %>
     </body>
-    <script src="/js/registerValidations.js"></script>
+    <script src="/js/registerValidation.js"></script>
 
 </html>
