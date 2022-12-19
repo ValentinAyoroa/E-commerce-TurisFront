@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const getDataDB = require('../utils/getDataDB');
 const { validationResult } = require('express-validator');
+const { Product, Color, Size, Carrito } = db;
 
 // const filePathProductos = '../data/productos.json';
 const filePathProductosCarrito = '../data/productos_carrito.json';
@@ -27,7 +28,6 @@ function allProductsCarrito() {
   const data = JSON.parse(jsonData);
   return data;
 };
-const { Product, Color, Size } = db;
 
 const dbProductsController = {
   getCreateProduct: async(req, res) => {
@@ -152,22 +152,39 @@ const dbProductsController = {
     res.redirect('/products/carrito');
   },
   getCarrito: async (req, res) => {
-    res.send('en remodelación');
-    /* const responseCarrito = await Carrito.findAll();
-    const productsCarrito = await Promise.all(await responseCarrito.map(async (itemProductCarrito) => {
-      const responseProduct = await Products.findByPk(itemProductCarrito.dataValues.product_id);
-      const product = responseProduct.dataValues;
-      const responseColor = await Color.findByPk(product.color_id);
-      const color = responseColor.dataValues;
+    const response = await Carrito.findAll({
+      include: [
+        {
+          model: Product,
+          as: 'product',
+          include: [
+            {
+              model: Size,
+              as: 'size'
+            },
+            {
+              model: Color,
+              as: 'color'
+            }
+          ]
+        }
+      ]
+    });
+    const productsCarritoResponse = getDataDB(response);
+
+    const productsCarrito = productsCarritoResponse.map((productCarritoResponse) => {
       return {
-        name: product.name,
-        price: product.price,
-        color: color.name,
-        image: product.image,
-        quantity: itemProductCarrito.dataValues.quantity
+        name: productCarritoResponse.product.name,
+        price: productCarritoResponse.product.price,
+        color: productCarritoResponse.product.color.name,
+        image: productCarritoResponse.product.image,
+        quantity: productCarritoResponse.quantity,
+        total: productCarritoResponse.total,
+        size: productCarritoResponse.product.size.size
       };
-    }));
-    res.render('carrito', { productsCarrito }); */
+    });
+
+    res.render('carrito', { productsCarrito });
   }
 };
 module.exports = dbProductsController;

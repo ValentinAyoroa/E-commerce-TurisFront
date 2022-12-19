@@ -95,9 +95,9 @@ CREATE TABLE `users` (
 --
 ALTER TABLE
   `carrito`
-ADD
-  PRIMARY KEY (`id`);
-
+ADD PRIMARY KEY (`id`),
+ADD FOREIGN KEY (product_id) REFERENCES products (id),
+ADD FOREIGN KEY (user_id) REFERENCES users (id);
 --
 -- Indices de la tabla `colors`
 --
@@ -111,8 +111,8 @@ ADD
 --
 ALTER TABLE
   `products`
-ADD PRIMARY KEY (`id`)
-ADD FOREIGN KEY (color_id) REFERENCES colors (id)
+ADD PRIMARY KEY (`id`),
+ADD FOREIGN KEY (color_id) REFERENCES colors (id),
 ADD FOREIGN KEY (size_id) REFERENCES size (id);
 
 --
@@ -138,6 +138,7 @@ ALTER TABLE `users`
 --
 ALTER TABLE `carrito`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+
 
 --
 -- AUTO_INCREMENT de la tabla `colors`

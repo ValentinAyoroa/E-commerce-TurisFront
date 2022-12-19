@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
   const Product = require('./Product');
   const User = require('./User');
-  const alias = 'carrito';
+  const alias = 'Carrito';
   const cols = {
     id: {
       type: dataTypes.INTEGER,
@@ -30,17 +30,16 @@ module.exports = (sequelize, dataTypes) => {
     tableName: 'carrito'
   };
   const Carrito = sequelize.define(alias, cols, config);
-  /*  Carrito.associate = (models) => {
-    Product.belongsToMany(models.Product, {
-      as: 'products',
-      foreingKey: 'product_id'
+
+  Carrito.associate = (models) => {
+    Carrito.belongsTo(models.Product, {
+      as: 'product',
+      foreignKey: 'product_id'
+    });
+    Carrito.belongsTo(models.User, {
+      as: 'user',
+      foreignKey: 'user_id'
     });
   };
-  Carrito.associate = (models) => {
-    User.belongsToMany(models.User, {
-      as: 'users',
-      foreingKey: 'user_id'
-    });
-  }; */
   return Carrito;
 };
