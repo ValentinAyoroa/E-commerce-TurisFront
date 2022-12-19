@@ -34,8 +34,8 @@
 - 	No cumplir con las tareas asignadas
 - 	No realizar sus tareas en el proyecto 
 
-###NOTA 
-##No se esta llegando a completar con las entregas de los Sprint asignados porque no todos estan trabajando en el proyecto, muy poco interes por el mismo. 
+### NOTA 
+## No se esta llegando a completar con las entregas de los Sprint asignados porque no todos estan trabajando en el proyecto, muy poco interes por el mismo. 
 
 
 
