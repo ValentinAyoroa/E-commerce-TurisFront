@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: false
     },
     total: {
-      type: dataTypes.FLOAT,
+      type: dataTypes.DOUBLE,
       allowNull: false
     },
     product_id: {

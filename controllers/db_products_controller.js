@@ -114,32 +114,42 @@ const dbProductsController = {
         });
         res.render('detalle-producto', { producto: productoEncontrado }); */
   },
-  postCarrito: (req, res) => {
-    const data = localStorage.getItem('data');
-    if (data !== null) {
-      const arr = data.split(',');
-      arr.push(req.params.id);
-      localStorage.setItem('data', arr);
-    } else {
-      localStorage.setItem('data', arr);
-    };
+  postCarrito: async(req, res) => {
+    const { params, body } = req;
 
-    /*   const dataProductos = allProducts();
-      const dataCarro = allProductsCarrito();
-      const productoEncontrado = dataProductos.find(producto => {
-        return producto.id == req.params.id;
-      });
-      const newProduct = {
-                  id: productoEncontrado.id,
-                  titulo: productoEncontrado.titulo,
-                  precio: productoEncontrado.precio,
-                  color: productoEncontrado.color,
-                  imagen: productoEncontrado.imagen,
-                  descripcion: productoEncontrado.descripcion,
-              }; */
-    dataCarro.push(productoEncontrado);
-    writeJson(dataCarro, filePathProductosCarrito);
-    res.redirect('/products/carrito');
+    console.log('body', body);
+    const response = await Carrito.findAll({
+      where: {
+        user_id: 1 // pendiente actualizar usuario del carrito
+      }
+    });
+    const productsCarrito = getDataDB(response);
+
+    const existedProduct = productsCarrito.find((productCarrito) => {
+      return productCarrito.product_id == params.id;
+    });
+    if (existedProduct) { // Productos existe en el carrito del usuario
+      Carrito.update({
+        quantity: existedProduct.quantity + Number(body.quantity),
+        total: existedProduct.total + (body.price * body.quantity)
+      },
+      {
+        where: {
+          id: existedProduct.id
+        }
+      }).then(() => {
+        res.redirect('/products/carrito');
+      }).catch(error => { res.send(error); });
+    } else { // Producto no existe en el carrito del usuario
+      Carrito.create({
+        product_id: params.id,
+        quantity: body.quantity,
+        total: body.quantity * body.price,
+        user_id: 1 // pendiente por actualizar user_id
+      }).then(() => {
+        res.redirect('/products/carrito');
+      }).catch(error => { res.send(error); });
+    }
   },
   deleteProductCarrito: function (req, res) {
     const id = req.params.id;
@@ -183,7 +193,6 @@ const dbProductsController = {
         size: productCarritoResponse.product.size.size
       };
     });
-
     res.render('carrito', { productsCarrito });
   }
 };

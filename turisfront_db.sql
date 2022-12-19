@@ -37,7 +37,7 @@ CREATE TABLE `carrito` (
   `id` int(5) NOT NULL,
   `product_id` int(30) NOT NULL,
   `quantity` int(15) NOT NULL,
-  `total` float(7,2) NOT NULL,
+  `total` double(15,2) NOT NULL,
   `user_id` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
