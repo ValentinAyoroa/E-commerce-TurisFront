@@ -1,3 +1,18 @@
+# Retrospectiva Grupo 16 (Daily-Sprint7)
+## Novedades
+- Se trabajo en la parte de agregar productos duplicados al carrito en La base de datos y calcular el total y la cantidad de un producto en el carrito
+- Se agregan llaves foreneas a la tabla carrito y se lista los productos del carrito
+- Se actualiza los alias de los modelos
+- Se hacen asociaciones del producto
+- Se agrega atributos color y size a la lista de productos
+- Se agrega errror cuando no cargo imagen el usuario al crear un producto.
+
+## FALTANTES
+- Aun falta la parte de eliminar productos del carrito 
+- Agregar o quitar en la pestaña de carrito 
+- Agregar productos al carrito dependiendo del usuario
+- Parte de diseño en el proyecto
+
 # Retrospectiva Grupo 16 (Daily-Sprint6)
 ## Novedades
 - El dia 17 de noviembre nos reunimos para poder trabajar conjuntamente en el desarrollo del Sprint6 , realizamos la creacion del diagrama de la base de datos y el script de estructura en SQL. 

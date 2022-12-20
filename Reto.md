@@ -1,3 +1,44 @@
+# Retrospectiva Grupo 16 (Sprint 7)
+## COMENZAR A HACER
+
+- Organizarnos mejor a la hora de reunirnos y cumplir con la asistencia. 
+- Mostrar interés en el desarrollo y avance del proyecto. 
+- Coordinar reuniones para ponernos de acuerdo sobre los lineamientos generales.
+- Que todos tengan el mismo interes por el avance del proyecto 
+- Que todos los integrantes del grupo trabajen en el proyecto 
+
+
+## HACER MAS
+
+- Que Discord sea el canal principal para tener todo el seguimiento del proyecto en un solo lugar.
+- Estar sincronizados con todos los avances
+- Dedicarle tiempo al proyecto
+
+
+## CONTINUAR HACIENDO
+
+- Mantener el repositorio actualizado
+
+## HACER MENOS
+
+- No Contestar a tiempo los mensajes
+- Mostrar bajo interes por el desarrollo del proyecto 
+- Que solo algunos integrantes del proyecto trabajen en el mismo
+
+
+## DEJAR DE HACER
+
+- 	No mostrar el interés y trabajo necesario por el proyecto 
+- 	No contestar los mensajes
+- 	Empezar a trabajar tarde los Sprint y sin una programación asignada 
+- 	No cumplir con las tareas asignadas
+- 	No realizar sus tareas en el proyecto 
+
+### NOTA 
+## No se esta llegando a completar con las entregas de los Sprint asignados porque no todos estan trabajando en el proyecto, muy poco interes por el mismo. 
+
+
+
 # Retrospectiva Grupo 16 (Sprint 6)
 ## COMENZAR A HACER
 
