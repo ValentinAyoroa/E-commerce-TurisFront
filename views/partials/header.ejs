@@ -22,7 +22,10 @@
                     </li>
                 </a>
                 <% }else{ %>
-                    <li class="welcome">Hola! <%= usuario.nombre %></li>
+                    <li class="welcome">Hola!
+                        <%= usuario.first_name %>
+                            <%= usuario.last_name %>
+                    </li>
                     <a href="/users/profile">
                         <li class="text-navbar"><i class="fas fa-user"></i><a href="/users/profile">Mi perfil</a></li>
                     </a>
@@ -30,13 +33,14 @@
                         <li class="text-navbar"><i class="fas fa-store"></i><a href="/tienda">Tienda</a></li>
                     </a>
                     <a href="/products/carrito">
-                        <li class="text-navbar"><i class="fas fa-shopping-cart"></i><a href="/products/carrito">Carrito</a>
+                        <li class="text-navbar"><i class="fas fa-shopping-cart"></i><a
+                                href="/products/carrito">Carrito</a>
                         </li>
                     </a>
                     <li>
-                    <form action="/users/logout" method="post">
-                        <button class="boton-cerrar-sesion" type="submit">Cerrar sesion</button>
-                    </form>
+                        <form action="/users/logout" method="post">
+                            <button class="boton-cerrar-sesion" type="submit">Cerrar sesion</button>
+                        </form>
                     </li>
                     <% } %>
         </ul>

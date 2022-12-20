@@ -2,7 +2,7 @@ const { validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 const db = require('../database/models');
 
-const User = db.users;
+const { User } = db;
 
 const dbUserController = {
   login: (req, res) => {

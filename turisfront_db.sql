@@ -31,22 +31,19 @@ SET
 --
 -- --------------------------------------------------------
 --
--- Estructura de tabla para la tabla `carrito`
+-- Estructura de tabla para la tabla `size`
 --
-CREATE TABLE `carrito` (
-  `id` int(5) NOT NULL,
-  `product_id` int(30) NOT NULL,
-  `quantity` int(15) NOT NULL,
-  `total` double(15,2) NOT NULL,
-  `user_id` int(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+CREATE TABLE `size` (
+  `id` int(5) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  `size` varchar(10) NOT NULL
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 
 -- --------------------------------------------------------
 --
 -- Estructura de tabla para la tabla `colors`
 --
 CREATE TABLE `colors` (
-  `id` int(5) NOT NULL,
+  `id` int(5) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `name` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -55,9 +52,9 @@ CREATE TABLE `colors` (
 -- Estructura de tabla para la tabla `products`
 --
 CREATE TABLE `products` (
-  `id` int(5) NOT NULL,
+  `id` int(5) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `name` varchar(30) NOT NULL,
-  `price` float(7, 2) NOT NULL,
+  `price` double(15, 2) NOT NULL,
   `description` varchar(30) NOT NULL,
   `image` varchar(255) NOT NULL,
   `color_id` int(30) NOT NULL,
@@ -66,26 +63,30 @@ CREATE TABLE `products` (
 
 -- --------------------------------------------------------
 --
--- Estructura de tabla para la tabla `size`
---
-CREATE TABLE `size` (
-  `id` int(5) NOT NULL,
-  `size` varchar(10) NOT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
-
--- --------------------------------------------------------
---
 -- Estructura de tabla para la tabla `users`
 --
 CREATE TABLE `users` (
-  `id` int(5) NOT NULL,
+  `id` int(5) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `first_name` varchar(30) NOT NULL,
   `last_name` varchar(30) NOT NULL,
   `email` varchar(30) NOT NULL,
   `password` varchar(255) NOT NULL,
   `avatar` varchar(255) NOT NULL,
   `cellphone` int(15) NOT NULL
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+)
+ ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
+-- --------------------------------------------------------
+--
+-- Estructura de tabla para la tabla `carrito`
+--
+CREATE TABLE `carrito` (
+  `id` int(5) AUTO_INCREMENT PRIMARY KEY NOT NULL ,
+  `product_id` int(30) NOT NULL,
+  `quantity` int(15) NOT NULL,
+  `total` double(15,2) NOT NULL,
+  `user_id` int(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Índices para tablas volcadas
@@ -95,74 +96,24 @@ CREATE TABLE `users` (
 --
 ALTER TABLE
   `carrito`
-ADD PRIMARY KEY (`id`),
-ADD FOREIGN KEY (product_id) REFERENCES products (id),
-ADD FOREIGN KEY (user_id) REFERENCES users (id);
---
--- Indices de la tabla `colors`
---
-ALTER TABLE
-  `colors`
-ADD
-  PRIMARY KEY (`id`);
+ADD FOREIGN KEY (product_id) REFERENCES products (id) ON DELETE CASCADE,
+ADD FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE;
 
 --
 -- Indices de la tabla `products`
 --
 ALTER TABLE
   `products`
-ADD PRIMARY KEY (`id`),
-ADD FOREIGN KEY (color_id) REFERENCES colors (id),
-ADD FOREIGN KEY (size_id) REFERENCES size (id);
+ADD FOREIGN KEY (color_id) REFERENCES colors (id) ON DELETE CASCADE,
+ADD FOREIGN KEY (size_id) REFERENCES size (id) ON DELETE CASCADE;
 
---
--- Indices de la tabla `size`
---
-ALTER TABLE
-  `size`
-ADD
-  PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `email` (`email`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
---
--- AUTO_INCREMENT de la tabla `carrito`
---
-ALTER TABLE `carrito`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
-
-
---
--- AUTO_INCREMENT de la tabla `colors`
---
-ALTER TABLE `colors`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT de la tabla `products`
---
-ALTER TABLE `products`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
---
--- AUTO_INCREMENT de la tabla `size`
---
-ALTER TABLE `size`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT de la tabla `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
