@@ -9,7 +9,7 @@
         <%- include("./partials/header.ejs") %>
             <main>
                 <div class="main-carrito-pc">
-                    <p class="titulo-carrito">Mi carrito (2 Item)</p>
+                    <p class="titulo-carrito">Mi carrito (<%= productsCarrito.length %> Item)</p>
                     <div class="bloque-carrito-desktop">
                         <div class="productos-carrito">
                             <% productsCarrito.forEach(productCarrito=> { %>
