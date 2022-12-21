@@ -1,5 +1,4 @@
 function localsMiddleware(req, res, next) {
-  console.log('localsMiddleware');
   res.locals.usuario = null;
 
   if (req.session.usuarioLogueado) {

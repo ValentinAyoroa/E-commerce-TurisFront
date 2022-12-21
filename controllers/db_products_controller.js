@@ -116,11 +116,9 @@ const dbProductsController = {
   },
   postCarrito: async(req, res) => {
     const { params, body } = req;
-
-    console.log('body', body);
     const response = await Carrito.findAll({
       where: {
-        user_id: 1 // pendiente actualizar usuario del carrito
+        user_id: res.locals.usuario.id
       }
     });
     const productsCarrito = getDataDB(response);
@@ -145,7 +143,7 @@ const dbProductsController = {
         product_id: params.id,
         quantity: body.quantity,
         total: body.quantity * body.price,
-        user_id: 1 // pendiente por actualizar user_id
+        user_id: res.locals.usuario.id
       }).then(() => {
         res.redirect('/products/carrito');
       }).catch(error => { res.send(error); });
@@ -178,7 +176,10 @@ const dbProductsController = {
             }
           ]
         }
-      ]
+      ],
+      where: {
+        user_id: res.locals.usuario.id
+      }
     });
     const productsCarritoResponse = getDataDB(response);
 

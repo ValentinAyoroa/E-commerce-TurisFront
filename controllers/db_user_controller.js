@@ -68,7 +68,7 @@ const dbUserController = {
         cellphone: '', // TODO: actualizar  porque no existe campo cellphone en el formulario
         avatar: '' // TODO: actualizar
       }).then(() => {
-        res.redirect('/users/register');
+        res.redirect('/users/login');
       }).catch(error => res.send(error));
     }
   },
