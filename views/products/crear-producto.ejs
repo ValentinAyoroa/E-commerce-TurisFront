@@ -11,34 +11,42 @@
 
     <div class="create-product">
       <h2 class="copy-create">Añadir nuevo producto</h2>
-      <form action='/products/create' enctype="multipart/form-data" method="POST">
+      <form action='/products/create' class='form-register' enctype="multipart/form-data" method="POST">
         <div class="imagen-product">
           <label for="imagen">Ingrese imagenes de su producto</label>
+          <i class="validacion-estado-icono fas fa-check-circle"></i>
           <input type="file" name="imagen" class="imagen-product">
+          <p class="errorFront"></p>
           <% if (locals.errors && locals.errors.imagen) {%>
             <p class="errors">
               <%= errors.imagen.msg %>
             </p>
             <% } %>
         </div>
-        <div>
+        <div id="grupo-titulo" class="grupo-formulario">
           <% if (locals.errors && locals.errors.titulo) {%>
             <p class="errors">
               <%= errors.titulo.msg %>
             </p>
             <% } %>
-              <input type="text" name="titulo" class="titulo-product" placeholder="Ingrese el nombre del producto"
-                required>
+            <label for="titulo" class="label-form">Titulo</label>
+              <i class="validacion-estado-icono fas fa-check-circle"></i>
+              <input type="text" name="titulo" class="inputs estado-input titulo-product"
+                placeholder="Ingrese el nombre del producto" required>
+              <p class="errorFront"></p>
         </div>
-        <div>
+        <div id="grupo-precio" class="grupo-formulario">
           <% if (locals.errors && locals.errors.precio) {%>
             <p class="errors">
               <%= errors.precio.msg %>
             </p>
             <% } %>
-              <input type="number" name="precio" class="precio-product" placeholder="Precio $ARS" required>
+            <label for="precio" class="label-form">Precio</label>
+              <i class="validacion-estado-icono fas fa-check-circle"></i>
+              <input type="number" name="precio" class="inputs estado-input precio-product" placeholder="Precio $ARS" required>
+              <p class="errorFront"></p>
         </div>
-        <div>
+        <div id="grupo-color" class="grupo-formulario">
           <% if (locals.errors && locals.errors.color) {%>
             <p class="errors">
               <%= errors.color.msg %>
@@ -46,7 +54,9 @@
             <% } %>
               <!-- <input type='text' name="color" class="color-product" placeholder="Color del producto"
                                 required> -->
-              <select name="color">
+            <label for="color" class="label-form">Color y talle</label>
+            <br>
+              <select id='color' name="color">
                 <% colors.forEach((color)=>{ %>
                   <option value="<%= color.id %>">
                     <%= color.name %>
@@ -63,14 +73,18 @@
               </select>
 
         </div>
-        <div>
-          <textarea name="descripcion" class="description-product" placeholder="Descripcion del producto"
+        <div id="grupo-descripcion" class="grupo-formulario">
+          <label for="descripcion" class="label-form">Descripcion</label>
+          <i class="validacion-estado-icono fas fa-check-circle"></i>
+          <textarea name="descripcion" class="inputs estado-input description-product" placeholder="Descripcion del producto"
             required></textarea>
+          <p class="errorFront"></p>
           <% if (locals.errors && locals.errors.descripcion) {%>
             <p class="errors">
               <%= errors.descripcion.msg %>
             </p>
             <% } %>
+            <p class="errorFront"></p>
         </div>
         <div class="buttons">
           <button class="submit" type="submit">Publicar</button>
@@ -83,5 +97,6 @@
 <footer>
   <%- include("./partials/footer.ejs") %>
 </footer>
+<script src="/js/productsValidation.js"></script>
 
 </html>

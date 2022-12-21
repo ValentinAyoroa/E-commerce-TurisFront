@@ -62,11 +62,18 @@ const dbProductsController = {
       }).catch(error => res.send(error));
     }
   },
-  getEditProduct: (req, res) => {
+  getEditProduct: async(req, res) => {
     const productId = req.params.id;
+
+    const responseColors = await Color.findAll();
+    const colors = getDataDB(responseColors);
+    
+    const responseSize = await Size.findAll();
+    const sizes = getDataDB(responseSize);
+    
     Product.findByPk(productId)
       .then((product) => {
-        res.render('editar-producto', { producto: product });
+        res.render('editar-producto', { producto: product, colors, sizes });
       }).catch(error => res.send(error));
   },
   putEditProduct: (req, res) => {
