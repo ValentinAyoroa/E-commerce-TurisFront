@@ -12,18 +12,23 @@
                 <div class="register-top">
                     <h2 class="copy-register">Hola! Para seguir ingresa tus datos</h2>
                     <form action="/users/login" method="post" class="form-register">
-                        <div>
-                            <input type="email" name="email" id="email" value= '<%= locals.old && !locals.errors.email ? old.email : "" %>' placeholder="Nombre de usuario o correo">
-
+                        <div id="grupo-email" class="grupo-formulario">
+                            <label for="name" class="label-form">Email</label>
+                            <input type="email" name="email" id="email" class='inputs estado-input'
+                                value='<%= locals.old && !locals.errors.email ? old.email : "" %>'
+                                placeholder="Nombre de usuario o correo">
+                            <p class="errorFront"></p>
                             <% if(locals.errors && locals.errors.email){ %>
                                 <p class="errors">
                                     <%= locals.errors.email.msg %>
                                 </p>
                                 <% } %>
                         </div>
-                        <div>
-                            <input type="password" name="password" id="password" placeholder="Ingresá tu contraseña">
-
+                        <div id="grupo-password" class="grupo-formulario">
+                            <label for="name" class="label-form">Contraseña</label>
+                            <input type="password" name="password" id="password" class='inputs estado-input'
+                                placeholder="Ingresá tu contraseña">
+                            <p class="errorFront"></p>
                             <% if(locals.errors && locals.errors.password){ %>
                                 <p class="errors">
                                     <%= locals.errors.password.msg %>
@@ -67,5 +72,6 @@
             <!--footer-->
             <%- include("./partials/footer.ejs") %>
     </body>
+    <script src="/js/loginValidation.js"></script>
 
 </html>

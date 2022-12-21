@@ -11,6 +11,82 @@ body {
   background-size: cover;
 }
 
+.label-form {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+select{
+  margin-top: 15px;
+}
+
+.grupo-formulario{
+  margin: 10px;
+}
+
+.validacion-estado-icono{
+  margin: 0px 5px 5px 5px;
+  font-size: 14px;
+  opacity: 0;
+  background-color: white;
+  border-radius: 100%;
+}
+
+/*--VALIDACION ICONO--*/
+
+.success-validation .validacion-estado-icono {
+  color: rgba(0, 209, 17, 0.767);
+  opacity: 1;
+}
+
+.error-validation .validacion-estado-icono {
+  color: rgba(255, 0, 0, 0.767);
+  opacity: 1;
+}
+
+.estado-input {
+  width: 100%;
+  max-width: -webkit-fill-available;
+  margin: 10px 0;
+  padding: 0.75rem 1rem;
+  outline: none;
+  border-radius: 10px;
+  background-color: white;
+  transition: .3s ease all;
+  border: 1px solid #a8a8a8;
+}
+
+.estado-input:focus {
+  border: 2px solid #0075FF;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+/*--VALIDACION CAMPOS--*/
+
+.success-validation .estado-input{
+  border: 1px solid rgba(0, 209, 17, 0.767);
+}
+.error-validation .estado-input{
+  border: 1px solid rgba(255, 0, 0, 0.767);
+}
+
+form.form-register p.errors {
+  color: rgba(255, 0, 0, 0.767);
+  font-size: 13px;
+  font-weight: bolder;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+form.form-register p.errorFront {
+  color: rgba(255, 0, 0, 0.767);
+  font-size: 13px;
+  font-weight: bolder;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 p.errors {
   color: rgba(255, 0, 0, 0.767);
   font-size: 13px;

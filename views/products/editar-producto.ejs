@@ -13,47 +13,67 @@
             <div class="edit-product">
                 <div class="imagen-product">
                     <img class="imagen" src=<%=producto.image%>>
+                    <p class="errorFront"></p>
                 </div>
-                <form action='/products/edit/<%=producto.id%>?_method=PUT' method="POST">
-                    <div>
+                <form action='/products/edit/<%=producto.id%>?_method=PUT' class="form-register" method="POST">
+                    <div id="grupo-titulo" class="grupo-formulario">
                         <% if (locals.errors && locals.errors.precio) {%>
                             <p class="errors">
                                 <%= errors.precio.msg %>
                             </p>
                             <% } %>
                                 <label for="titulo">Titulo del producto</label>
-                                <input type="text" name="titulo" class="titulo-product" value="<%=producto.name%>"
-                                    placeholder="Ingrese el nombre del producto">
+                                <i class="validacion-estado-icono fas fa-check-circle"></i>
+                                <input type="text" name="titulo" class="inputs estado-input titulo-product"
+                                    value="<%=producto.name%>" placeholder="Ingrese el nombre del producto">
+                                <p class="errorFront"></p>
+
                     </div>
-                    <div>
+                    <div id="grupo-precio" class="grupo-formulario">
                         <% if (locals.errors && locals.errors.precio) {%>
                             <p class="errors">
                                 <%= errors.precio.msg %>
                             </p>
                             <% } %>
                                 <label for="precio">Precio</label>
-                                <input type="number" name="precio" class="precio-product" value="<%=producto.price%>"
-                                    placeholder="Precio $ARS">
+                                <i class="validacion-estado-icono fas fa-check-circle"></i>
+                                <input type="number" name="precio" class="inputs estado-input precio-product"
+                                    value="<%=producto.price%>" placeholder="Precio $ARS">
+                                <p class="errorFront"></p>
+
                     </div>
-                    <div>
-                        <% if (locals.errors && locals.errors.precio) {%>
-                            <p class="errors">
-                                <%= errors.precio.msg %>
-                            </p>
-                            <% } %>
-                                <label for="color">Color</label>
-                                <input type='text' name="color" class="color-product" value="<%=producto.color%>"
-                                    placeholder="Color del producto">
+                    <div id="grupo-color" class="grupo-formulario">
+                        <label for="color" class="label-form">Color y talle</label>
+                        <br>
+                        <select id='color' name="color">
+                            <% colors.forEach((color)=>{ %>
+                                <option value="<%= color.id %>">
+                                    <%= color.name %>
+                                </option>
+                                <% }) %>
+                        </select>
+
+                        <select name="size">
+                            <% sizes.forEach((size)=>{ %>
+                                <option value="<%= size.id %>">
+                                    <%= size.size %>
+                                </option>
+                                <% }) %>
+                        </select>
                     </div>
-                    <div>
+                    <div id="grupo-descripcion" class="grupo-formulario">
                         <% if (locals.errors && locals.errors.precio) {%>
                             <p class="errors">
                                 <%= errors.precio.msg %>
                             </p>
                             <% } %>
                                 <label for="descripcion">Descripcion</label>
-                                <textarea name="descripcion" class="description-product"
+                                <i class="validacion-estado-icono fas fa-check-circle"></i>
+                                <textarea name="descripcion" class="inputs estado-input description-product"
                                     placeholder="Descripcion del producto"><%=producto.description%></textarea>
+                                <p class="errorFront"></p>
+                                <p class="errorFront"></p>
+
                     </div>
                     <div class="buttons">
                         <button class="submit" type="submit">Editar</button>
@@ -67,5 +87,6 @@
 <footer>
     <%- include("./partials/footer.ejs") %>
 </footer>
+<script src="/js/productsValidation.js"></script>
 
 </html>

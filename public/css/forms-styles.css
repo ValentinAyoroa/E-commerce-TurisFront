@@ -95,7 +95,8 @@ div.register-top {
 }
 
 h2.copy-register {
-  margin: 5% auto 8%;
+  margin:auto;
+  margin-bottom: 30px;
   width: 80%;
   font-size: 1.15em;
   padding-top: 5%;
@@ -110,33 +111,56 @@ form.form-register div {
   margin: auto;
 }
 
-form.form-register div input {
+.label-form {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+
+.validacion-estado-icono{
+  margin: 0px 5px 5px 5px;
+  font-size: 14px;
+  opacity: 0;
+  background-color: white;
+  border-radius: 100%;
+}
+
+/*--VALIDACION ICONO--*/
+
+.success-validation .validacion-estado-icono {
+  color: rgba(0, 209, 17, 0.767);
+  opacity: 1;
+}
+
+.error-validation .validacion-estado-icono {
+  color: rgba(255, 0, 0, 0.767);
+  opacity: 1;
+}
+
+.estado-input {
   width: 100%;
   max-width: -webkit-fill-available;
-  margin-bottom: 20px;
+  margin: 10px 0;
   padding: 0.75rem 1rem;
   outline: none;
   border-radius: 10px;
   background-color: white;
   transition: .3s ease all;
-
-}
-
-form.form-register div input:focus {
-  border: 2px solid #0075FF;
-	outline: none;
-	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
-}
-
-.estado-input{
   border: 1px solid #a8a8a8;
 }
 
-.succes-input{
-  border: 1px solid rgba(0, 209, 17, 0.767);
+.estado-input:focus {
+  border: 2px solid #0075FF;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
 
-.error-input{
+/*--VALIDACION CAMPOS--*/
+
+.success-validation .estado-input{
+  border: 1px solid rgba(0, 209, 17, 0.767);
+}
+.error-validation .estado-input{
   border: 1px solid rgba(255, 0, 0, 0.767);
 }
 
@@ -148,7 +172,7 @@ form.form-register p.errors {
   margin-bottom: 10px;
 }
 
-form.form-register  p.errorFront {
+form.form-register p.errorFront {
   color: rgba(255, 0, 0, 0.767);
   font-size: 13px;
   font-weight: bolder;
