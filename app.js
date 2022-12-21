@@ -10,6 +10,8 @@ const methodOverride = require('method-override');
 const indexRouter = require('./routes/index');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
+const carritoRouter = require('./routes/carritoRouter');
+
 const localsMiddleware = require('./middleware/localsMiddle');
 const recordameMiddleware = require('./middleware/recordameMiddle');
 
@@ -36,6 +38,7 @@ app.use(localsMiddleware);
 app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+app.use('/carrito', carritoRouter);
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('puerto', process.env.PORT || 3030);
