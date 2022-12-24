@@ -23,7 +23,7 @@
 
 ## IMPORTANTE
 -se creo un usuario como administrador con el cual podran loguearse: 
-usuario:sorayasanchez0503@gmail.com
+usuario:admin@gmail.com
 contraseña: 12345
 
 ## FALTANTES
