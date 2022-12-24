@@ -6,11 +6,11 @@
 - Se hacen asociaciones del producto
 - Se agrega atributos color y size a la lista de productos
 - Se agrega errror cuando no cargo imagen el usuario al crear un producto.
+- Eliminar productos del carrito
+- Agregar productos al carrito dependiendo del usuario
 
 ## FALTANTES
-- Aun falta la parte de eliminar productos del carrito 
 - Agregar o quitar en la pestaña de carrito 
-- Agregar productos al carrito dependiendo del usuario
 - Parte de diseño en el proyecto
 
 # Retrospectiva Grupo 16 (Daily-Sprint6)
