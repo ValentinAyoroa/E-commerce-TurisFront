@@ -36,12 +36,19 @@
                         <li class="text-navbar"><i class="fas fa-shopping-cart"></i><a href="/carrito">Carrito</a>
                         </li>
                     </a>
-                    <li>
-                        <form action="/users/logout" method="post">
-                            <button class="boton-cerrar-sesion" type="submit">Cerrar sesion</button>
-                        </form>
-                    </li>
-                    <% } %>
+                    <% if(locals.usuario.email==="admin@gmail.com" ){ %>
+                        <a href="/products/admin">
+                            <li class="text-navbar"><i class="fas fa-cogs"></i><a
+                                    href="/products/admin">Administrador</a>
+                            </li>
+                        </a>
+                        <% } %>
+                            <li>
+                                <form action="/users/logout" method="post">
+                                    <button class="boton-cerrar-sesion" type="submit">Cerrar sesion</button>
+                                </form>
+                            </li>
+                            <% } %>
         </ul>
     </div>
 </header>

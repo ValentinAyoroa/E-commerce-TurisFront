@@ -16,14 +16,18 @@ const dbUserController = {
         old: req.body
       });
     };
-    const userFound = await User.findOne({
+    const userFound = await User.findOne({ // buscar el email del usuario en la base de datos
       where: {
         email: req.body.email
       }
     });
+    if (!userFound) { // validar si el usuario no existe en la base de datos
+      return res.render('login', { errorLogin: 'Credenciales invalidas' });
+    }
+
     const isPasswordEqual = bcrypt.compareSync(req.body.password, userFound?.dataValues.password);
 
-    if (userFound == null || !isPasswordEqual) {
+    if (!isPasswordEqual) { // validar si la password es diferente a la que esta en la base de datos
       res.render('login', { errorLogin: 'Credenciales invalidas' });
     } else {
       req.session.usuarioLogueado = {

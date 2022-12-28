@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--head-->
+<%- include("./partials/head.ejs") %>
+  <link rel="stylesheet" href="/css/carrito-styles.css">
+
+  <body>
+    <%- include("./partials/header.ejs") %>
+      <main>
+        <a href="/products/create">
+          <li class="text-navbar" style="list-style: none;"><i class="fas fa-plus-circle"></i><a
+              href="/products/create">Crear Producto</a>
+          </li>
+        </a>
+      </main>
+      <%- include("./partials/footer.ejs") %>
+  </body>

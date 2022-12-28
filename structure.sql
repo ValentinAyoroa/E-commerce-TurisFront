@@ -2,6 +2,15 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
+
+--
+-- Base de datos: `turisfront_db`
+--
+CREATE DATABASE turisfront_db;
+
+-- Seleccionar base de datos
+USE turisfront_db;
+
 -- Servidor: 127.0.0.1
 -- Tiempo de generación: 01-12-2022 a las 01:01:55
 -- Versión del servidor: 10.4.25-MariaDB
@@ -26,9 +35,7 @@ SET
 /*!40101 SET NAMES utf8mb4 */
 ;
 
---
--- Base de datos: `turisfront_db`
---
+
 -- --------------------------------------------------------
 --
 -- Estructura de tabla para la tabla `size`

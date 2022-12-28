@@ -29,7 +29,8 @@ const dbCarritoProductsController = {
     const productsCarritoResponse = getDataDB(response);
     const productsCarrito = productsCarritoResponse.map((productCarritoResponse) => {
       return {
-        id: productCarritoResponse.id,
+        carritoId: productCarritoResponse.id,
+        productId: productCarritoResponse.product.id,
         name: productCarritoResponse.product.name,
         price: productCarritoResponse.product.price,
         color: productCarritoResponse.product.color.name,
@@ -53,6 +54,7 @@ const dbCarritoProductsController = {
     const existedProduct = productsCarrito.find((productCarrito) => {
       return productCarrito.product_id == params.id;
     });
+
     if (existedProduct) { // Productos existe en el carrito del usuario
       Carrito.update({
         quantity: existedProduct.quantity + Number(body.quantity),
@@ -75,6 +77,30 @@ const dbCarritoProductsController = {
         res.redirect('/carrito');
       }).catch(error => { res.send(error); });
     }
+  },
+  postQuantityProductCarrito: async(req, res) => { // pendiente por implementar
+    const { params, body } = req;
+    const response = await Carrito.findAll({
+      where: {
+        user_id: res.locals.usuario.id
+      }
+    });
+    const productsCarrito = getDataDB(response);
+
+    const existedProduct = productsCarrito.find((productCarrito) => {
+      return productCarrito.product_id == params.id;
+    });
+    Carrito.update({
+      quantity: Number(body.quantity),
+      total: (body.price * body.quantity)
+    },
+    {
+      where: {
+        id: existedProduct.id
+      }
+    }).then(() => {
+      res.redirect('/carrito');
+    }).catch(error => { res.send(error); });
   },
   postDeleteCarritoProduct: (req, res) => {
     const carritoProductId = req.params.id;

@@ -2,15 +2,15 @@ const express = require('express');
 const login = require('../middleware/login');
 const upload = require('../utils/multer');
 const dbProductsController = require('../controllers/db_products_controller');
-const dbCarritoProductsController = require('../controllers/db_carrito_products_controller');
 
 const { productValidation } = require('../validations/productsValidations');
 const { loginValidation } = require('../validations/userValidation');
 
 const router = express.Router();
 
+router.get('/admin', loginValidation, dbProductsController.getProductAdmin);
+
 router.get('/detalle-producto/:id', dbProductsController.getProductById);
-router.post('/detalle-producto/:id', loginValidation, dbCarritoProductsController.postCarrito);
 
 router.get('/edit/:id', loginValidation, dbProductsController.getEditProduct);
 router.put('/edit/:id', productValidation, dbProductsController.putEditProduct);

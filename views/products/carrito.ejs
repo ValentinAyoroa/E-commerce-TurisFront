@@ -3,91 +3,91 @@
 
 <!--head-->
 <%- include("./partials/head.ejs") %>
-    <link rel="stylesheet" href="/css/carrito-styles.css">
+	<link rel="stylesheet" href="/css/carrito-styles.css">
 
-    <body>
-        <%- include("./partials/header.ejs") %>
-            <main>
-                <div class="main-carrito-pc">
-                    <p class="titulo-carrito">Mi carrito (<%= productsCarrito.length %> Item)</p>
-                    <div class="bloque-carrito-desktop">
-                        <div class="productos-carrito">
-                            <% productsCarrito.forEach(productCarrito=> { %>
-                                <div class="bloque-producto">
-                                    <div class="imagen-muestra">
-                                        <img class="imagen-producto-muestra" src="<%= productCarrito.image%>">
-                                    </div>
-                                    <div class="info-producto">
-                                        <p class="titulo">
-                                            <%= productCarrito.name%>
-                                        </p>
-                                        <p class="texto-color-producto">Color: <%= productCarrito.color%>
-                                        </p>
-                                        <div class="stock-disponible">
-                                            <p class="text-stock">Cantidad:</p>
-                                            <button id="menos" type="button">-</button>
-                                            <input type="text" id="contador" class="form-control"
-                                                value="<%= productCarrito.quantity%>" min="1" />
-                                            <button id="mas" type="button">+</button>
-                                            <i id="icono-heart" class="fas fa-heart"></i>
-                                            <form action="/carrito/delete/<%= productCarrito.id %>" method="post">
-                                                <!-- -->
-                                                <button class="borrar" type=" submit">
-                                                    <i class="fas fa-trash"></i>
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="precio">
-                                        <%= productCarrito.total%>
-                                    </div>
+	<body>
+		<%- include("./partials/header.ejs") %>
+			<main>
+				<div class="main-carrito-pc">
+					<p class="titulo-carrito">Mi carrito (<%= productsCarrito.length %> Item)</p>
+					<div class="bloque-carrito-desktop">
+						<div class="productos-carrito">
+							<% productsCarrito.forEach(productCarrito=> { %>
+								<div class="bloque-producto">
+									<div class="imagen-muestra">
+										<img class="imagen-producto-muestra" src="<%= productCarrito.image%>">
+									</div>
+									<div class="info-producto">
+										<p class="titulo">
+											<%= productCarrito.name%>
+										</p>
+										<p class="texto-color-producto">Color: <%= productCarrito.color%>
+										</p>
+										<div class="stock-disponible">
+											<p class="text-stock">Cantidad:</p>
+											<button id="menos" type="button">-</button>
+											<input type="text" name="quantity" id="contador" class="form-control"
+												value="<%= productCarrito.quantity%>" min="1" />
+											<button id="mas" type="button">+</button>
+											<i id="icono-heart" class="fas fa-heart"></i>
+											<form action="/carrito/delete/<%= productCarrito.carritoId %>" method="post">
+												<!-- -->
+												<button class="borrar" type="submit">
+													<i class="fas fa-trash"></i>
+												</button>
+											</form>
+										</div>
+									</div>
+									<div class="precio">
+										<%= productCarrito.total%>
+									</div>
 
-                                </div>
-                                <% }) %>
-                        </div>
+								</div>
+								<% }) %>
+						</div>
 
-                        <div class="panel-compra">
-                            <div class="resumen">
-                                <h2 class="resumen-titulo">Resumen de la compra<i class="fas fa-shipping-fast"></i></h2>
-                            </div>
-                            <div class="resumen-compra">
-                                <div class="lista-agregados">
-                                    <div class="producto-agregado">
-                                        <p class="agregado-nombre">Producto prueba1</p>
-                                        <p class="agregado-precio">$16250</p>
-                                    </div>
-                                    <div class="producto-agregado">
-                                        <p class="agregado-nombre">Producto 2</p>
-                                        <p class="agregado-precio">$6250</p>
-                                    </div>
-                                </div>
+						<div class="panel-compra">
+							<div class="resumen">
+								<h2 class="resumen-titulo">Resumen de la compra<i class="fas fa-shipping-fast"></i></h2>
+							</div>
+							<div class="resumen-compra">
+								<div class="lista-agregados">
+									<div class="producto-agregado">
+										<p class="agregado-nombre">Producto prueba1</p>
+										<p class="agregado-precio">$16250</p>
+									</div>
+									<div class="producto-agregado">
+										<p class="agregado-nombre">Producto 2</p>
+										<p class="agregado-precio">$6250</p>
+									</div>
+								</div>
 
-                                <div class="total">
-                                    <div class="sub-total">
-                                        <h4 class="sub-total-titulo">Subtotal</h4>
-                                        <h4 class="sub-total-monto">$ 12500</h4>
-                                    </div>
-                                    <div class="cuotas">
-                                        <p class="titulo-cuotas">O en 12 cuotas de</p>
-                                        <p class="precio-cuotas">$1200</p>
-                                    </div>
-                                </div>
-                            </div>
+								<div class="total">
+									<div class="sub-total">
+										<h4 class="sub-total-titulo">Subtotal</h4>
+										<h4 class="sub-total-monto">$ 12500</h4>
+									</div>
+									<div class="cuotas">
+										<p class="titulo-cuotas">O en 12 cuotas de</p>
+										<p class="precio-cuotas">$1200</p>
+									</div>
+								</div>
+							</div>
 
-                            <div class="botones">
-                                <button class="boton-comprar" type="submit" value="compra">Finalizar Compra</button>
-                                <button class="boton-carro" type="submit" value="carro"><a href="/">Continua
-                                        Comprando</a></button>
+							<div class="botones">
+								<button class="boton-comprar" type="submit" value="compra">Finalizar Compra</button>
+								<button class="boton-carro" type="submit" value="carro"><a href="/">Continua
+										Comprando</a></button>
 
-                            </div>
-                            <div class="descuento">
-                                <h3>Tienes codigo de descuento?</h3>
-                                <input type="text" placeholder="Ingresa tu codigo de descuento">
-                                <button class="boton-carro" type="submit" value="carro">Aplicar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-            <%- include("./partials/footer.ejs") %>
-    </body>
+							</div>
+							<div class="descuento">
+								<h3>Tienes codigo de descuento?</h3>
+								<input type="text" placeholder="Ingresa tu codigo de descuento">
+								<button class="boton-carro" type="submit" value="carro">Aplicar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+			<%- include("./partials/footer.ejs") %>
+	</body>

@@ -5,6 +5,9 @@ const { validationResult } = require('express-validator');
 const { Product, Color, Size } = db;
 
 const dbProductsController = {
+  getProductAdmin: (req, res) => {
+    res.render('adminProducto');
+  },
   getCreateProduct: async(req, res) => {
     const responseColors = await Color.findAll();
     const colors = getDataDB(responseColors);
