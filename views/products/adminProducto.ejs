@@ -8,11 +8,18 @@
   <body>
     <%- include("./partials/header.ejs") %>
       <main>
-        <a href="/products/create">
-          <li class="text-navbar" style="list-style: none;"><i class="fas fa-plus-circle"></i><a
-              href="/products/create">Crear Producto</a>
-          </li>
-        </a>
+        <div style="display: flex; padding: 20px;">
+          <a href="/products/create">
+            <li class="text-navbar" style="list-style: none;"><i class="fas fa-plus-circle"></i><a
+                href="/products/create">Crear Producto</a>
+            </li>
+          </a>
+          <a href="/products/buscar">
+            <li class="text-navbar" style="list-style: none;"><i class="fas fa-wrench"></i><a
+                href="/products/buscar">Editar o Eliminar Producto</a>
+            </li>
+          </a>
+        </div>
       </main>
       <%- include("./partials/footer.ejs") %>
   </body>

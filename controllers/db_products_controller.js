@@ -1,4 +1,6 @@
 const db = require('../database/models');
+const { Op } = require('sequelize');
+
 const getDataDB = require('../utils/getDataDB');
 const { validationResult } = require('express-validator');
 
@@ -7,6 +9,28 @@ const { Product, Color, Size } = db;
 const dbProductsController = {
   getProductAdmin: (req, res) => {
     res.render('adminProducto');
+  },
+  getFindProduct: async (req, res) => {
+    const { name } = req.query;
+    const response = await Product.findAll({
+      include: [
+        {
+          model: Size,
+          as: 'size'
+        },
+        {
+          model: Color,
+          as: 'color'
+        }
+      ],
+      where: {
+        name: {
+          [Op.like]: `%${name}%`
+        }
+      }
+    });
+    const products = getDataDB(response);
+    res.render('buscarProducto', { products });
   },
   getCreateProduct: async(req, res) => {
     const responseColors = await Color.findAll();
@@ -67,7 +91,10 @@ const dbProductsController = {
       }
     }).then(() => {
       res.redirect('/');
-    }).catch(error => res.send(error));
+    }).catch(error => {
+      console.log(error);
+      res.send(error);
+    });
   },
   getProductById: function (req, res) {
     const productId = req.params.id;

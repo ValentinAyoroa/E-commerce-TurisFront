@@ -8,6 +8,7 @@
 
 <body>
     <%- include("./partials/header.ejs") %>
+
         <div class="edit">
             <h2 class="copy-edit">Editar producto</h2>
             <div class="edit-product">
@@ -15,7 +16,9 @@
                     <img class="imagen" src=<%=producto.image%>>
                     <p class="errorFront"></p>
                 </div>
-                <form action='/products/edit/<%=producto.id%>?_method=PUT' class="form-register" method="POST">
+                <form action="/products/edit/<%=producto.id%>?_method=PUT" class="form-register" method="post">
+                    <input type="hidden" name="_method" value="PUT">
+
                     <div id="grupo-titulo" class="grupo-formulario">
                         <% if (locals.errors && locals.errors.precio) {%>
                             <p class="errors">
@@ -87,6 +90,7 @@
 <footer>
     <%- include("./partials/footer.ejs") %>
 </footer>
-<script src="/js/productsValidation.js"></script>
+<!-- <script src="/js/productsValidation.js"></script> -->
+<!-- se comentaron las validaciones -->
 
 </html>
