@@ -9,6 +9,8 @@
 - Api de usuarios api/users/:id Sprint 8
 - API para obtener todos los productos, Sprint8
 - API para obtener todos los productos api/products/:id, Sprint8
+- Total de productos Dashboard
+- Total de usuarios Dashboard
 
 ## FALTANTES
 - Arreglar estilos cuando las credenciales son invalidas 
@@ -16,6 +18,10 @@
 - Arreglar estilos de buscar productos 
 - Arreglar estilos en el carrito 
 - Arreglar estilos en demas partes del proyecto 
+- Total de color y size 
+- Panel de detalle de último producto o usuario creado.
+- Panel de categorías con el total de productos de cada una.
+- Panel con el listado de productos.
 
  
 # Retrospectiva Grupo 16 (Daily-Sprint7)

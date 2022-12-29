@@ -16,29 +16,38 @@
                         <div id="grupo-name" class="grupo-formulario">
                             <label for="name" class="label-form">Nombre</label>
                             <i class="validacion-estado-icono fas fa-check-circle"></i>
-                            <input type="text" id='name' class='inputs estado-input' name="name" value= '<%= locals.old && !locals.errors.name ? old.name : "" %>'>
+                            <input type="text" id='name' class='inputs estado-input' name="name"
+                                value='<%= locals.old && !locals.errors.name ? old.name : "" %>'>
                             <p class="errorFront"></p>
                             <% if (locals.errors && locals.errors.name) {%>
-                                <p class="errors"><%= errors.name.msg %></p>
-                            <% } %>
+                                <p class="errors">
+                                    <%= errors.name.msg %>
+                                </p>
+                                <% } %>
                         </div>
                         <div id="grupo-surname" class="grupo-formulario">
                             <label for="name" class="label-form">Apellido</label>
                             <i class="validacion-estado-icono fas fa-check-circle"></i>
-                            <input type="text" id="surname" class='inputs estado-input' name="surname" value= '<%= locals.old && !locals.errors.surname ? old.surname : "" %>'>
+                            <input type="text" id="surname" class='inputs estado-input' name="surname"
+                                value='<%= locals.old && !locals.errors.surname ? old.surname : "" %>'>
                             <p class="errorFront"> </p>
                             <% if (locals.errors && locals.errors.surname) {%>
-                                <p class="errors"><%= errors.surname.msg %></p>
-                            <% } %>
+                                <p class="errors">
+                                    <%= errors.surname.msg %>
+                                </p>
+                                <% } %>
                         </div>
                         <div id="grupo-email" class="grupo-formulario">
                             <label for="name" class="label-form">Email</label>
                             <i class="validacion-estado-icono fas fa-check-circle"></i>
-                            <input type="email" id="email" class='inputs estado-input' name="email" value= '<%= locals.old && !locals.errors.email ? old.email : "" %>'>
+                            <input type="email" id="email" class='inputs estado-input' name="email"
+                                value='<%= locals.old && !locals.errors.email ? old.email : "" %>'>
                             <p class="errorFront"></p>
                             <% if (locals.errors && locals.errors.email) {%>
-                                <p class="errors"><%= errors.email.msg %></p>
-                            <% } %>
+                                <p class="errors">
+                                    <%= errors.email.msg %>
+                                </p>
+                                <% } %>
                         </div>
                         <div id="grupo-password" class="grupo-formulario">
                             <label for="name" class="label-form">Contraseña</label>
@@ -46,17 +55,21 @@
                             <input type="password" id="password" class='inputs estado-input' name="password">
                             <p class="errorFront"></p>
                             <% if (locals.errors && locals.errors.password) {%>
-                                <p class="errors"><%= errors.password.msg %></p>
-                            <% } %>
+                                <p class="errors">
+                                    <%= errors.password.msg %>
+                                </p>
+                                <% } %>
                         </div>
                         <div id="grupo-confirm" class="grupo-formulario">
-                            <label for="name" class="label-form">Contraseña</label>
+                            <label for="name" class="label-form">Confirmar Contraseña</label>
                             <i class="validacion-estado-icono fas fa-check-circle"></i>
                             <input type="password" id="confirm" class='inputs estado-input' name="confirm">
                             <p class="errorFront"></p>
                             <% if (locals.errors && locals.errors.confirm) {%>
-                                <p class="errors"><%= errors.confirm.msg %></p>
-                            <% } %>
+                                <p class="errors">
+                                    <%= errors.confirm.msg %>
+                                </p>
+                                <% } %>
                         </div>
                         <div class="button">
                             <p class="errorFront"></p>
@@ -81,8 +94,8 @@
                     </div>
                 </div>
             </div>
-                    <!--footer-->
-                    <%- include("./partials/footer.ejs") %>
+            <!--footer-->
+            <%- include("./partials/footer.ejs") %>
     </body>
     <script src="/js/registerValidation.js"></script>
 
