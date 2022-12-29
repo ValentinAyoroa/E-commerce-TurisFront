@@ -9,4 +9,5 @@ router.get('/users/:id', dbApiController.getUsersId);
 module.exports = router;
 
 // API de productos
-router.get('/products', dbApiController.getPorducts);
+router.get('/products', dbApiController.getProducts);
+router.get('/products/:id', dbApiController.getProductsId);

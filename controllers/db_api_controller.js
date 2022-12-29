@@ -35,7 +35,7 @@ const dbApiController = {
   },
 
   // API de productos
-  getPorducts: async (req, res) => {
+  getProducts: async (req, res) => {
     const products = await Product.findAll({
       include: [
         {
@@ -53,9 +53,7 @@ const dbApiController = {
       return {
         id: product.id,
         name: product.name,
-        price: product.price,
         description: product.description,
-        image: product.image,
         color: product.color.name,
         size: product.size.size,
         detail: `/api/products/${product.id}`
@@ -64,6 +62,35 @@ const dbApiController = {
     });
 
     return res.status(200).json({ count: products.length, products: productsMapped });
+  },
+  getProductsId: async (req, res) => {
+    const productId = req.params.id;
+    const product = await Product.findByPk(productId, {
+      include: [
+        {
+          model: Size,
+          as: 'size'
+        },
+        {
+          model: Color,
+          as: 'color'
+        }
+      ]
+    }).catch(error => console.log(error));
+    if (product) {
+      return res.status(200).json(
+        {
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          description: product.description,
+          image: product.image,
+          color: product.color.name,
+          size: product.size.size
+        });
+    } else {
+      res.json({ error: 'Producto no existe' });
+    }
   }
 
 };
