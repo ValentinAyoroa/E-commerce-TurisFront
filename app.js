@@ -11,6 +11,7 @@ const indexRouter = require('./routes/index');
 const productsRouter = require('./routes/productsRouter');
 const usersRouter = require('./routes/usersRouter');
 const carritoRouter = require('./routes/carritoRouter');
+const apiRouter = require('./routes/apiRouter');
 
 const localsMiddleware = require('./middleware/localsMiddle');
 const recordameMiddleware = require('./middleware/recordameMiddle');
@@ -39,6 +40,9 @@ app.use('/', indexRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 app.use('/carrito', carritoRouter);
+
+// Rutas API para Dashboard en React
+app.use('/api', apiRouter);
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('puerto', process.env.PORT || 3030);
