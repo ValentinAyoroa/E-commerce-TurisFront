@@ -1,3 +1,23 @@
+# Retrospectiva Grupo 16 (Daily-Sprint8)
+## Novedades
+- Se cambio el nombre de turisfront_db por structure.sql, como se indica en el Sprint6 
+- Se agrego la creación de la base de datos (create database…)
+- Separar rutas para el carrito, agregar el boton de administrar en el menu solo para el admin,crear base de datos desde sql
+- Buscar productos, editar o eliminar un producto desde el administrador
+- Agregar validacion del login cuando va la ruta de carrito
+- Api para obtener todos los usuarios, Sprint8
+- Api de usuarios api/users/:id Sprint 8
+- API para obtener todos los productos, Sprint8
+- API para obtener todos los productos api/products/:id, Sprint8
+
+## FALTANTES
+- Arreglar estilos cuando las credenciales son invalidas 
+- Arreglar la parte de cuando estoy en el carrito aparecen ocultos los botones del menu 
+- Arreglar estilos de buscar productos 
+- Arreglar estilos en el carrito 
+- Arreglar estilos en demas partes del proyecto 
+
+ 
 # Retrospectiva Grupo 16 (Daily-Sprint7)
 ## Novedades
 - Se trabajo en la parte de agregar productos duplicados al carrito en La base de datos y calcular el total y la cantidad de un producto en el carrito
