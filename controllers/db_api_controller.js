@@ -1,7 +1,8 @@
 const db = require('../database/models');
-const { User } = db;
+const { User, Product, Color, Size } = db;
 
 const dbApiController = {
+  // API de usuarios
   getUsers: async (req, res) => {
     const users = await User.findAll();
 
@@ -31,7 +32,40 @@ const dbApiController = {
         image: user.avatar,
         cellphone: user.cellphone
       });
+  },
+
+  // API de productos
+  getPorducts: async (req, res) => {
+    const products = await Product.findAll({
+      include: [
+        {
+          model: Size,
+          as: 'size'
+        },
+        {
+          model: Color,
+          as: 'color'
+        }
+      ]
+    });
+
+    const productsMapped = products.map((product) => {
+      return {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        description: product.description,
+        image: product.image,
+        color: product.color.name,
+        size: product.size.size,
+        detail: `/api/products/${product.id}`
+
+      };
+    });
+
+    return res.status(200).json({ count: products.length, products: productsMapped });
   }
+
 };
 
 module.exports = dbApiController;
