@@ -2,6 +2,7 @@
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
@@ -22,6 +23,7 @@ const app = express();
 app.set('views', [path.join(__dirname, 'views'), ('views', path.join(__dirname, 'views/users/')), ('views', path.join(__dirname, 'views/products/'))]);
 app.set('view engine', 'ejs');
 
+app.use(cors());
 app.use(methodOverride('_method'));
 app.use(logger('dev'));
 app.use(express.json());
