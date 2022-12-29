@@ -27,6 +27,12 @@ main {
   padding-bottom: 5px;
 }
 
+form {
+  background-color: rgba(128, 128, 128, 0.212);
+  margin: 1em;
+  border-radius: 6px;
+}
+
 .titulo-producto {
   padding-bottom: 8%;
   padding-top: 3%;
@@ -45,7 +51,6 @@ main {
   margin-left: 1%;
 }
 
-
 .imagen-producto {
   max-width: 50%;
   display: block;
@@ -63,6 +68,7 @@ main {
   margin-right: 10%;
   margin-left: 10%;
   border-radius: 8px;
+  width: 40%;
 }
 
 .imagen-color-producto {
@@ -102,11 +108,23 @@ main {
 
 .stock-disponible {
   display: flex;
-  justify-content: space-between;
   background-color: #ebebeb;
-  margin-right: 10%;
-  margin-left: 10%;
-  border-radius: 8px;
+  border-radius: 6px;
+  width: 40%;
+}
+
+.stock-disponible input {
+  outline: none;
+  border: none;
+  background-color: #ebebeb;
+  text-align: left;
+  padding-left: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  margin-right: 1em;
+  font-size: 18px;
+  border-radius: 6px;
+  width: 100%;
 }
 
 .text-stock {
@@ -151,29 +169,22 @@ main {
   line-height: 30px;
   margin-top: 10%;
   height: 3vh;
-
 }
 
-.boton-carro {
-  background-color: rgba(65, 137, 230, 0.15);
+.boton-carrito {
+  background-color: #fff;
   border-color: transparent;
+  color: #3483fa;
   border-radius: 6px;
   line-height: 30px;
-  margin-top: 3%;
-}
-
-.boton-carro button {
-  display: block;
-  margin: auto;
-  border: none;
-  background: none;
+  margin-top: 1em;
   height: 3vh;
-  color: #0077c0;
 }
 
 .box-informacion {
   border-top: #ebebeb solid 1px;
-  margin-top: 10%;
+  margin: 1em;
+  padding-bottom: 2em;
 }
 
 .informacion-producto {
@@ -399,6 +410,14 @@ main {
 
   .boton-carro:hover {
     background-color: rgba(40, 87, 150, 0.15);
+  }
+  .boton-carrito{
+    cursor: pointer;
+    transition: all 300ms;
+  }
+
+  .boton-carrito:hover{
+    background-color: rgba(99,99,99,0.05)
   }
 
   .boton-comprar {

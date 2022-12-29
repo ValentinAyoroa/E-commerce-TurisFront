@@ -33,12 +33,11 @@
                             </div> -->
                                 <!--   </div> -->
                                 <div class="descripcion-total-producto">
-                                    <form class="boton-carro" action='/carrito/agregarProducto/<%=producto.id%>'
-                                        method="POST">
+                                    <form action='/carrito/agregarProducto/<%=producto.id%>' method="POST">
                                         <div class="precio">
                                             <input name="price" value="<%= producto.price %>" style="display: none;">
 
-                                            <h2 class="precio-total">$ <%=producto.price %><i
+                                            <h2 class="precio-total">$ <%=Number(producto.price) %><i
                                                         class="fas fa-shipping-fast"></i></h2>
                                             <p class="precio-cuotas">en 12x $<%=Number(producto.price / 12).toFixed(2)%>
                                             </p>
@@ -50,27 +49,24 @@
                                         </div>
                                         <div class="stock-disponible">
                                             <input name="quantity" type="number" value="1">
-                                            <!-- <div class="iconos-stock">
-                        <div class="icono-mas">
-                          <i class="fas fa-plus"></i>
-                        </div>
-                        <div class="icono-menos">
-                          <i class="fas fa-minus"></i>
-                        </div>
-                      </div> -->
                                         </div>
                                         <div class="botones-compra-carro">
                                             <button class="boton-comprar" type="submit" value="compra">Comprar</button>
 
-                                            <button type="submit" value="carro">Agregar al carrito</button>
+                                            <button class="boton-carrito" type="submit" value="carro">Agregar al
+                                                carrito</button>
 
                                         </div>
                                         <div class="box-informacion">
                                             <div class="informacion-producto">
                                                 <p class="titulo-informacion">Informacion del producto</p>
                                                 <p class="texto-descripcion">
-                                                    <%=producto.description%>
-                                                </p>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+                                                    impedit est odio necessitatibus sapiente quasi blanditiis, natus
+                                                    pariatur, doloremque, facere repellat dolorum obcaecati omnis fuga
+                                                    aut? Tempora rerum culpa inventore.</p>
+                                                <%=producto.description%>
+                                                    </p>
                                             </div>
                                         </div>
                                     </form>
