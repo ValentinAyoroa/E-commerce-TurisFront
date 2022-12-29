@@ -30,7 +30,8 @@
 												value="<%= productCarrito.quantity%>" min="1" />
 											<button id="mas" type="button">+</button>
 											<i id="icono-heart" class="fas fa-heart"></i>
-											<form action="/carrito/delete/<%= productCarrito.carritoId %>" method="post">
+											<form action="/carrito/delete/<%= productCarrito.carritoId %>"
+												method="post">
 												<!-- -->
 												<button class="borrar" type="submit">
 													<i class="fas fa-trash"></i>
@@ -39,9 +40,8 @@
 										</div>
 									</div>
 									<div class="precio">
-										<%= productCarrito.total%>
+										$ <%= productCarrito.total%>
 									</div>
-
 								</div>
 								<% }) %>
 						</div>
