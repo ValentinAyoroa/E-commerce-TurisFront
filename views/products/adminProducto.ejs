@@ -3,19 +3,26 @@
 
 <!--head-->
 <%- include("./partials/head.ejs") %>
-  <link rel="stylesheet" href="/css/carrito-styles.css">
+  <!--   <link rel="stylesheet" href="/css/carrito-styles.css">
+ -->
+  <link rel="stylesheet" href="/css/admin-product.css">
+
 
   <body>
     <%- include("./partials/header.ejs") %>
+      <h2>Acceso Administrador</h2><br>
       <main>
-        <div style="display: flex; padding: 20px;">
+
+        <div class="icono-crear">
           <a href="/products/create">
-            <li class="text-navbar" style="list-style: none;"><i class="fas fa-plus-circle"></i><a
+            <li class="icono-admin" style="list-style: none;"><i class="fas fa-plus-circle"></i><a
                 href="/products/create">Crear Producto</a>
             </li>
           </a>
+        </div>
+        <div class="icono-editar">
           <a href="/products/buscar">
-            <li class="text-navbar" style="list-style: none;"><i class="fas fa-wrench"></i><a
+            <li class="icono-admin" style="list-style: none;"><i class="fas fa-wrench"></i><a
                 href="/products/buscar">Editar o Eliminar Producto</a>
             </li>
           </a>

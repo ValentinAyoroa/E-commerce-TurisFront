@@ -198,6 +198,10 @@ form {
   color: rgba(0, 0, 0, 0.9);
 }
 
+div.descripcion-total-producto {
+  margin-top: 2em;
+}
+
 .texto-informacion {
   font-size: 16px;
   font-weight: 400;
