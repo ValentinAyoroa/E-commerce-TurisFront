@@ -3,18 +3,19 @@
 
 <!--head-->
 <%- include("./partials/head.ejs") %>
-  <link rel="stylesheet" href="/css/carrito-styles.css">
-  <link rel="stylesheet" href="/css/forms-styles.css">
+  <link rel="stylesheet" href="/css/admin-buscar.css">
+
 
   <body>
     <%- include("./partials/header.ejs") %>
-      <main class="buscar">
+      <main>
         <div class="contenedor-buscar">
-          <h2> Busque producto para editar o eliminar</h2>
-          <form class="formulario-busqueda" action="/products/buscar" method="GET">
-            <input class= 'estado-input ' type="text" name="name" placeholder="Nombre del producto" required>
-            <button class="boton-busqueda" type="submit">Buscar</button>
-          </form>
+          <div class="barra-titulo">
+            <form class="formulario-busqueda" action="/products/buscar" method="GET">
+              <input class='estado-input ' type="text" name="name" placeholder="Nombre del producto" required>
+              <button class="boton-busqueda" type="submit">Buscar</button>
+            </form>
+          </div>
           <section class="productos-destacados">
             <div class="productos">
               <% products.forEach(product=> { %>
@@ -23,29 +24,29 @@
                   <div class="descripcion-producto">
                     <p id="descripcion">
                       <span class="contenedor-descripcion">
-                      <strong>Titulo : </strong>
-                      <%= product.name %><br>
+                        <strong>Titulo : </strong>
+                        <%= product.name %><br>
                       </span>
-                        <span class="contenedor-descripcion">
-                      <strong>Color : </strong>
-                          <%= product.color.name %>
-                        </span><br>
-                        <span class="contenedor-descripcion">
-                      <strong>Talla : </strong>
-                          <%= product.size.size %>
-                        </span><br>
-                        <span class="contenedor-descripcion">
+                      <span class="contenedor-descripcion">
+                        <strong>Color : </strong>
+                        <%= product.color.name %>
+                      </span><br>
+                      <span class="contenedor-descripcion">
+                        <strong>Talla : </strong>
+                        <%= product.size.size %>
+                      </span><br>
+                      <span class="contenedor-descripcion">
                         <strong>Precio : </strong>
-                        </span>
+                      </span>
                       $ <%= product.price %>
                     </p>
                     <div class="botones-submit">
-                    <form action='/products/edit/<%= product.id %>' method="GET">
-                      <button class="submit" type="submit">Editar</button>
-                    </form>
-                    <form action='/products/delete/<%= product.id %>' method="GET">
-                      <button class="delete" type="submit">Eliminar</button>
-                    </form>
+                      <form action='/products/edit/<%= product.id %>' method="GET">
+                        <button class="submit" type="submit">Editar</button>
+                      </form>
+                      <form action='/products/delete/<%= product.id %>' method="GET">
+                        <button class="delete" type="submit">Eliminar</button>
+                      </form>
                     </div>
                   </div>
                 </article>

@@ -311,81 +311,8 @@ button {
   background-color: rgba(40, 87, 150, 0.15);
 }
 
-/* Admin busqueda producto */
-main.buscar{
- width: 60%;
-}
 
-.contenedor-buscar{
-  border-radius: 10px;
-  margin: 20px;
-  padding: 10px 50px 20px 50px;
-  background-color: rgba(255, 255, 255, 0.733);
-  box-shadow: 0 0 8px 0 rgb(0 0 0 / 50%);
-}
 
-.formulario-busqueda{
-  display: flex;
-  width: 100%;
-}
-
-.input-busqueda{
-  width: 75%;
-}
-
-.boton-busqueda{
-  align-self: center;
-  margin-left: 20px;
-  height: 30px;
-  border: 1px solid var(--celeste);
-  border-radius: 5px;
-  color: white;
-  background-color: #3483fa;
-  font-size: 16px;
-  line-height: 1.2;
-  transition: background-color 450ms;
-  width: 20%;
-}
-
-.imagen-producto{
-  border: #0e0e0e 1px solid;
-  border-radius: 10px;
-}
-
-.botones-submit{
-  display: flex;
-  width: 50%;
-}
-
-.submit{
-  align-self: center;
-  margin-right: 30px;
-  height: 30px;
-  border: 1px solid var(--celeste);
-  border-radius: 5px;
-  color: white;
-  background-color: #3483fa;
-  font-size: 16px;
-  line-height: 1.2;
-  transition: background-color 450ms;
-  width: 130%;
-}
-
-.delete{
-  align-self: center;
-  margin-left: 50px;
-  height: 30px;
-  border: 1px solid #720000;
-  border-radius: 5px;
-  color: white;
-  background-color: #c00000;
-  font-size: 16px;
-  line-height: 1.2;
-  transition: background-color 450ms;
-  width: 100%;
-}
-
-/* Fin Panel Compra */
 @media (max-width: 450px) {
   .bloque-carrito-desktop {
     display: flex;
