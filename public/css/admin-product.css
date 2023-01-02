@@ -18,10 +18,11 @@
 }
 
 body {
+    margin: 0;
     background-color: var(--grisClaro);
 }
 
-main {
+.contenedor-crear-editar {
     margin: 5em;
     display: flex;
     justify-content: center;

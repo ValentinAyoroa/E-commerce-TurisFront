@@ -12,20 +12,21 @@
     <%- include("./partials/header.ejs") %>
       <h2>Acceso Administrador</h2><br>
       <main>
-
-        <div class="icono-crear">
-          <a href="/products/create">
-            <li class="icono-admin" style="list-style: none;"><i class="fas fa-plus-circle"></i><a
-                href="/products/create">Crear Producto</a>
-            </li>
-          </a>
-        </div>
-        <div class="icono-editar">
-          <a href="/products/buscar">
-            <li class="icono-admin" style="list-style: none;"><i class="fas fa-wrench"></i><a
-                href="/products/buscar">Editar o Eliminar Producto</a>
-            </li>
-          </a>
+        <div class="contenedor-crear-editar">
+          <div class="icono-crear">
+            <a href="/products/create">
+              <li class="icono-admin" style="list-style: none;"><i class="fas fa-plus-circle"></i><a
+                  href="/products/create">Crear Producto</a>
+              </li>
+            </a>
+          </div>
+          <div class="icono-editar">
+            <a href="/products/buscar">
+              <li class="icono-admin" style="list-style: none;"><i class="fas fa-wrench"></i><a
+                  href="/products/buscar">Editar o Eliminar Producto</a>
+              </li>
+            </a>
+          </div>
         </div>
       </main>
       <%- include("./partials/footer.ejs") %>

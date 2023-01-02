@@ -4,50 +4,55 @@
 <!--head-->
 <%- include("./partials/head.ejs") %>
   <link rel="stylesheet" href="/css/carrito-styles.css">
+  <link rel="stylesheet" href="/css/forms-styles.css">
 
   <body>
     <%- include("./partials/header.ejs") %>
-      <main>
-        <h2> Busque producto para editar o eliminar</h2>
-        <form action="/products/buscar" method="GET">
-          <input type="text" name="name" placeholder="nombre del producto" required>
-          <button type="submit">Buscar</button>
-        </form>
-        <section class="productos-destacados">
-          <div class="productos">
-            <% products.forEach(product=> { %>
-              <article class="caja-producto">
-                <img class="imagen-producto" src="<%= product.image %>">
-                <figure>
-                  <i id="icono-heart" class="fas fa-heart"></i>
-                  <figcaption>Favoritos</figcaption>
-                </figure>
-                <div class="descripcion-producto">
-                  <p id="descripcion">
-                    <%= product.name %><br>
-                      <span>
-                        <%= product.color.name %>
-                      </span><br>
-                      <span>
-                        <%= product.size.size %>
+      <main class="buscar">
+        <div class="contenedor-buscar">
+          <h2> Busque producto para editar o eliminar</h2>
+          <form class="formulario-busqueda" action="/products/buscar" method="GET">
+            <input class= 'estado-input ' type="text" name="name" placeholder="Nombre del producto" required>
+            <button class="boton-busqueda" type="submit">Buscar</button>
+          </form>
+          <section class="productos-destacados">
+            <div class="productos">
+              <% products.forEach(product=> { %>
+                <article class="caja-producto">
+                  <img class="imagen-producto" src="<%= product.image %>">
+                  <div class="descripcion-producto">
+                    <p id="descripcion">
+                      <span class="contenedor-descripcion">
+                      <strong>Titulo : </strong>
+                      <%= product.name %><br>
                       </span>
-                  </p>
-
-                  <h5>
-                    $ <%= product.price %>
-                  </h5>
-
-                  <form action='/products/edit/<%= product.id %>' method="GET">
-                    <button class="submit" type="submit">Editar</button>
-                  </form>
-                  <form action='/products/delete/<%= product.id %>' method="GET">
-                    <button class="submit" type="submit">Eliminar</button>
-                  </form>
-                </div>
-              </article>
-              <% }) %>
-          </div>
-        </section>
+                        <span class="contenedor-descripcion">
+                      <strong>Color : </strong>
+                          <%= product.color.name %>
+                        </span><br>
+                        <span class="contenedor-descripcion">
+                      <strong>Talla : </strong>
+                          <%= product.size.size %>
+                        </span><br>
+                        <span class="contenedor-descripcion">
+                        <strong>Precio : </strong>
+                        </span>
+                      $ <%= product.price %>
+                    </p>
+                    <div class="botones-submit">
+                    <form action='/products/edit/<%= product.id %>' method="GET">
+                      <button class="submit" type="submit">Editar</button>
+                    </form>
+                    <form action='/products/delete/<%= product.id %>' method="GET">
+                      <button class="delete" type="submit">Eliminar</button>
+                    </form>
+                    </div>
+                  </div>
+                </article>
+                <% }) %>
+            </div>
+          </section>
+        </div>
       </main>
       <%- include("./partials/footer.ejs") %>
   </body>
