@@ -28,6 +28,7 @@ body {
 
 article.caja-producto {
     width: 50%;
+    margin-bottom: 1em;
 }
 
 div.barra-titulo {
@@ -35,17 +36,15 @@ div.barra-titulo {
     border-bottom: #eeee 1px solid;
 }
 
-section.productos-destacados{
+section.productos-destacados {
     padding-bottom: 2EM;
-}
-
-div.descripcion-producto {
+    display: block;
+    column-span: all;
+    margin: 2em;
     margin-left: 5em;
 }
 
-div.productos {
-    display: flex;
-    margin: 2em;
+div.descripcion-producto {
     margin-left: 5em;
 }
 
@@ -88,6 +87,7 @@ h2 {
     width: 100%;
 
 }
+
 .boton-busqueda {
     align-self: center;
     margin-left: 20px;
