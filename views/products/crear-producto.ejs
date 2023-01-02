@@ -29,7 +29,7 @@
               <%= errors.titulo.msg %>
             </p>
             <% } %>
-            <label for="titulo" class="label-form">Titulo</label>
+              <label for="titulo" class="label-form">Titulo</label>
               <i class="validacion-estado-icono fas fa-check-circle"></i>
               <input type="text" name="titulo" class="inputs estado-input titulo-product"
                 placeholder="Ingrese el nombre del producto" required>
@@ -41,9 +41,10 @@
               <%= errors.precio.msg %>
             </p>
             <% } %>
-            <label for="precio" class="label-form">Precio</label>
+              <label for="precio" class="label-form">Precio</label>
               <i class="validacion-estado-icono fas fa-check-circle"></i>
-              <input type="number" name="precio" class="inputs estado-input precio-product" placeholder="Precio $ARS" required>
+              <input type="number" name="precio" class="inputs estado-input precio-product" placeholder="Precio $ARS"
+                required>
               <p class="errorFront"></p>
         </div>
         <div id="grupo-color" class="grupo-formulario">
@@ -54,8 +55,8 @@
             <% } %>
               <!-- <input type='text' name="color" class="color-product" placeholder="Color del producto"
                                 required> -->
-            <label for="color" class="label-form">Color y talle</label>
-            <br>
+              <label for="color" class="label-form">Color y talle</label>
+              <br>
               <select id='color' name="color">
                 <% colors.forEach((color)=>{ %>
                   <option value="<%= color.id %>">
@@ -76,15 +77,15 @@
         <div id="grupo-descripcion" class="grupo-formulario">
           <label for="descripcion" class="label-form">Descripcion</label>
           <i class="validacion-estado-icono fas fa-check-circle"></i>
-          <textarea name="descripcion" class="inputs estado-input description-product" placeholder="Descripcion del producto"
-            required></textarea>
+          <textarea name="descripcion" class="inputs estado-input description-product"
+            placeholder="Descripcion del producto" required></textarea>
           <p class="errorFront"></p>
           <% if (locals.errors && locals.errors.descripcion) {%>
             <p class="errors">
               <%= errors.descripcion.msg %>
             </p>
             <% } %>
-            <p class="errorFront"></p>
+              <p class="errorFront"></p>
         </div>
         <div class="buttons">
           <button class="submit" type="submit">Publicar</button>
