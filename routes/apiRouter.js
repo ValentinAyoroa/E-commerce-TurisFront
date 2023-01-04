@@ -11,3 +11,6 @@ module.exports = router;
 // API de productos
 router.get('/products', dbApiController.getProducts);
 router.get('/products/:id', dbApiController.getProductsId);
+
+// API de colores
+router.get('/colors', dbApiController.getColors);

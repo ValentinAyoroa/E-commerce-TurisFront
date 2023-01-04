@@ -91,6 +91,18 @@ const dbApiController = {
     } else {
       res.json({ error: 'Producto no existe' });
     }
+  },
+  getColors: async (req, res) => {
+    const colors = await Color.findAll();
+    const colorsMapped = colors.map((color) => {
+      return {
+        id: color.id,
+        name: color.name,
+        detail: `/api/colors/${color.id}`
+
+      };
+    });
+    return res.status(200).json({ count: colors.length, colors: colorsMapped });
   }
 
 };
