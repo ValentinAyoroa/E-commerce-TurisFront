@@ -25,11 +25,8 @@
 										</p>
 										<div class="stock-disponible">
 											<p class="text-stock">Cantidad:</p>
-											<button id="menos" type="button">-</button>
 											<input type="text" name="quantity" id="contador" class="form-control"
 												value="<%= productCarrito.quantity%>" min="1" />
-											<button id="mas" type="button">+</button>
-											<i id="icono-heart" class="fas fa-heart"></i>
 											<form action="/carrito/delete/<%= productCarrito.carritoId %>"
 												method="post">
 												<!-- -->
@@ -45,7 +42,6 @@
 								</div>
 								<% }) %>
 						</div>
-
 						<div class="panel-compra">
 							<div class="resumen">
 								<h2 class="resumen-titulo">Resumen de la compra<i class="fas fa-shipping-fast"></i></h2>

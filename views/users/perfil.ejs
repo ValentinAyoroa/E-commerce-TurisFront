@@ -5,73 +5,74 @@
 <%- include("./partials/head.ejs") %>
     <link rel="stylesheet" href="/css/perfil.css">
 
-<body>
-    <!--header-->
-    <%- include("./partials/header.ejs") %>
-    <div class="profile">
-        <h2 class="title-profile">Mi perfil</h2>
-        <div class= 'box-user'>
-            <div class="box-profile">
-                <div class="box-image">
-                    <% if(locals.usuario.avatar){ %>
-                    <img src="<%= usuario.avatar %>" >
-                    <% } else{ %>
-                    <img src="/images/users/perfil-default.jpg">
-                    <% } %>
-                    <div class="box-information-image">
-                        <p>
-                            Personaliza tu imagen de perfil. Tu imagen se mostrara cada vez 
-                            que inicies sesion en esta cuenta.
-                        </p>
-                        <form action="/users/profile" enctype="multipart/form-data" method="POST">
-                        <label for="add-image"><span>Cambiar imagen</span></label>
-                        <span class="add-image"><input type="file" name="avatar" id="add-image"></span>
-                        <br>
-                        <button class="confirm" type="submit">Confirmar</button>
-                        <% if (locals.errors && locals.errors.avatar) {%>
-                            <p class="errors"><%= errors.avatar.msg %></p>
-                        <% } %>
-                        </form>
+    <body>
+        <!--header-->
+        <%- include("./partials/header.ejs") %>
+            <div class="profile">
+                <h2 class="title-profile">Mi perfil</h2>
+                <div class='box-user'>
+                    <div class="box-profile">
+                        <div class="box-image">
+                            <% if(locals.usuario.avatar){ %>
+                                <img src="<%= usuario.avatar %>">
+                                <% } else{ %>
+                                    <img src="/images/users/perfil-default.jpg">
+                                    <% } %>
+                                        <div class="box-information-image">
+                                            <p>
+                                                Personaliza tu imagen de perfil. Tu imagen se mostrara cada vez
+                                                que inicies sesion en esta cuenta.
+                                            </p>
+                                            <form action="/users/profile" enctype="multipart/form-data" method="POST">
+                                                <label for="add-image"><span>Cambiar imagen</span></label>
+                                                <span class="add-image"><input type="file" name="avatar"
+                                                        id="add-image"></span>
+                                                <br>
+                                                <button class="confirm" type="submit">Confirmar</button>
+                                                <% if (locals.errors && locals.errors.avatar) {%>
+                                                    <p class="errors">
+                                                        <%= errors.avatar.msg %>
+                                                    </p>
+                                                    <% } %>
+                                            </form>
+                                        </div>
+                        </div>
+                        <div class="space-box"></div>
+                    </div>
+                    <div class="information-profile">
+                        <div class="information-top">
+                            <span class="copy-information">Informacion personal</span>
+                            <a href="/users/profile/edit" class="edit-link"><span class="copy-edit">Editar
+                                    informacion</span></a>
+                        </div>
+                        <ul class="information-list">
+                            <li>Nombre
+                                <span class="information-user">
+                                    <%= usuario.first_name %>
+                                </span>
+                            </li>
+                            <li>Apellido
+                                <span class="information-user">
+                                    <%= usuario.last_name %>
+                                </span>
+                            </li>
+                            <li>Email
+                                <span class="information-user">
+                                    <%= usuario.email %>
+                                </span>
+                            </li>
+                            <li>Celular
+                                <span class="information-user">
+                                    <%= usuario.cellphone ? usuario.cellphone : 'Ninguno' %>
+                                </span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="space-box"></div>
+               
             </div>
-            <div class="information-profile">
-                <div class="information-top">
-                <span class="copy-information">Informacion personal</span>
-                <a href="/users/profile/edit" class="edit-link"><span class="copy-edit">Editar informacion</span></a>
-                </div>
-                <ul class="information-list">
-                    <li>Nombre
-                    <span class="information-user"><%= usuario.first_name %></span>
-                    </li>
-                    <li>Apellido
-                    <span class="information-user"><%= usuario.last_name %></span>
-                    </li>
-                    <li>Email
-                    <span class="information-user"><%= usuario.email %></span>
-                    </li>
-                    <li>Celular
-                    <span class="information-user"><%= usuario.cellphone ? usuario.cellphone : 'Ninguno'%></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <form action="/users/logout"  class="logout" method="post">
-            <button class="logout-button" type="submit">Cerrar sesion</button>
-        </form>
-        <div class="compras-user">
-            <h2 class="title-profile">Mis compras</h2>
-            <div class="box-profile">
-                <div class="box-store">
-                    <p>¡No tienes compras aun!</p>
-                    <p>Cuando realices compras se mostraran aqui.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--footer-->
-    <%- include("./partials/footer.ejs") %>
-</body>
+            <!--footer-->
+            <%- include("./partials/footer.ejs") %>
+    </body>
 
 </html>
