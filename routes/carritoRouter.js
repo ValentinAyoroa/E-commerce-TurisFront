@@ -6,7 +6,7 @@ const { loginValidation } = require('../validations/userValidation');
 const router = express.Router();
 
 router.get('/', login, dbCarritoProductsController.getCarrito);
-router.post('/agregarProducto/:id', loginValidation, dbCarritoProductsController.postCarrito);
+router.post('/agregarProducto/:id', login, dbCarritoProductsController.postCarrito);
 // router.post('/actualizarQuantityProducto/:id/:action', loginValidation, dbCarritoProductsController.postQuantityProductCarrito);
 
 router.post('/delete/:id', login, dbCarritoProductsController.postDeleteCarritoProduct);
