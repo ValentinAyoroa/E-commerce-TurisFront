@@ -52,7 +52,7 @@ const dbApiController = {
     return res.status(200).json(userLast);
   },
   // API de ultimo producto creado
-  getProductsLast: async(req, res) => {
+  getProductLast: async(req, res) => {
     const productLastArray = await Product.findAll({
       limit: 1,
       order: [['id', 'DESC']]
