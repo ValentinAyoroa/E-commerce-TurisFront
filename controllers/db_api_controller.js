@@ -33,6 +33,39 @@ const dbApiController = {
         cellphone: user.cellphone
       });
   },
+  // API de ultimo usuario creado
+  getUserLast: async(req, res) => {
+    const userLastArray = await User.findAll({
+      limit: 1,
+      order: [['id', 'DESC']]
+    });
+
+    if (!userLastArray) {
+      return res.status(404).json({ error: 'Tabla Users vacia' });
+    }
+
+    const userLast = {
+      id: userLastArray[0].id,
+      first_name: userLastArray[0].first_name
+    };
+
+    return res.status(200).json(userLast);
+  },
+  // API de ultimo producto creado
+  getProductsLast: async(req, res) => {
+    const productLastArray = await Product.findAll({
+      limit: 1,
+      order: [['id', 'DESC']]
+    });
+    if (!productLastArray) {
+      return res.status(404).json({ error: 'Tabla Products vacia' });
+    }
+    const productLast = {
+      id: productLastArray[0].id,
+      name: productLastArray[0].name
+    };
+    return res.status(200).json(productLast);
+  },
 
   // API de productos
   getProducts: async (req, res) => {
@@ -92,6 +125,7 @@ const dbApiController = {
       res.json({ error: 'Producto no existe' });
     }
   },
+  // API de colors
   getColors: async (req, res) => {
     const colors = await Color.findAll();
     const colorsMapped = colors.map((color) => {
@@ -103,6 +137,19 @@ const dbApiController = {
       };
     });
     return res.status(200).json({ count: colors.length, colors: colorsMapped });
+  },
+  // API de sizes
+  getSizes: async (req, res) => {
+    const sizes = await Size.findAll();
+    const sizesMapped = sizes.map((size) => {
+      return {
+        id: size.id,
+        name: size.size,
+        detail: `/api/sizes/${size.id}`
+
+      };
+    });
+    return res.status(200).json({ count: sizes.length, sizes: sizesMapped });
   }
 
 };

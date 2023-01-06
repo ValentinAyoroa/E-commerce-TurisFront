@@ -62,7 +62,7 @@ CREATE TABLE `products` (
   `id` int(5) AUTO_INCREMENT PRIMARY KEY NOT NULL,
   `name` varchar(30) NOT NULL,
   `price` double(15, 2) NOT NULL,
-  `description` varchar(30) NOT NULL,
+  `description` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   `color_id` int(30) NOT NULL,
   `size_id` int(30) NOT NULL
