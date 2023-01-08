@@ -172,9 +172,9 @@ form {
 }
 
 .boton-carrito {
-  background-color: #fff;
+  color: #fff;
   border-color: transparent;
-  color: #3483fa;
+  background-color: #3483fa;
   border-radius: 6px;
   line-height: 30px;
   margin-top: 1em;
