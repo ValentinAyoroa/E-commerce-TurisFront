@@ -1,5 +1,4 @@
 /* require('dotenv').config() */
-require('dotenv').config(); // para que funcione las variables de entorno
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
