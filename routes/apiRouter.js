@@ -11,6 +11,7 @@ router.get('/users/:id', dbApiController.getUsersId);
 // API de productos
 router.get('/products', dbApiController.getProducts);
 router.get('/products/last', dbApiController.getProductLast);// API de ultimo producto creado
+router.get('/products/buscar', dbApiController.getProductsBuscar);// API de buscar productos
 router.get('/products/:id', dbApiController.getProductsId);
 
 // API de colores

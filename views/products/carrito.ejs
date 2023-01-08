@@ -27,8 +27,7 @@
 											<p class="text-stock">Cantidad:</p>
 											<input type="text" name="quantity" id="contador" class="form-control"
 												value="<%= productCarrito.quantity%>" min="1" />
-											<form action="/carrito/delete/<%= productCarrito.carritoId %>"
-												method="post">
+											<form action="/carrito/delete/<%= productCarrito.carritoId %>" method="post">
 												<!-- -->
 												<button class="borrar" type="submit">
 													<i class="fas fa-trash"></i>
@@ -48,32 +47,36 @@
 							</div>
 							<div class="resumen-compra">
 								<div class="lista-agregados">
-									<div class="producto-agregado">
-										<p class="agregado-nombre">Producto prueba1</p>
-										<p class="agregado-precio">$16250</p>
-									</div>
-									<div class="producto-agregado">
-										<p class="agregado-nombre">Producto 2</p>
-										<p class="agregado-precio">$6250</p>
-									</div>
+									<% productsCarrito.forEach(productCarrito=> { %>
+										<div class="producto-agregado">
+											<p>
+												<%= productCarrito.name%>
+											</p>
+											<p>$<%= productCarrito.total%>
+											</p>
+										</div>
+										<% }) %>
 								</div>
 
 								<div class="total">
 									<div class="sub-total">
-										<h4 class="sub-total-titulo">Subtotal</h4>
-										<h4 class="sub-total-monto">$ 12500</h4>
-									</div>
-									<div class="cuotas">
-										<p class="titulo-cuotas">O en 12 cuotas de</p>
-										<p class="precio-cuotas">$1200</p>
+										<h4 class="sub-total-titulo">Total a pagar</h4>
+										<h4 class="sub-total-monto">$ <%= productsCarrito.reduce((accumulator, productCarrito)=> {
+												return productCarrito.total + accumulator
+												},0)%> <!-- 0 indica valor inicial del acumulador -->
+										</h4>
 									</div>
 								</div>
 							</div>
 
 							<div class="botones">
-								<button class="boton-comprar" type="submit" value="compra">Finalizar Compra</button>
-								<button class="boton-carro" type="submit" value="carro"><a href="/">Continua
-										Comprando</a></button>
+								<form action='/carrito/finalizarCompra' class="botones" method="POST">
+									<button class="boton-comprar" type="submit" value="compra">Finalizar Compra</button>
+								</form>
+								<form action="/" class="botones" method="get">
+									<button class="boton-carro" type="submit" value="carro">Continua
+										Comprando</button>
+								</form>
 
 							</div>
 							<div class="descuento">

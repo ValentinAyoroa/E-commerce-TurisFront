@@ -1,5 +1,6 @@
 const db = require('../database/models');
 const { User, Product, Color, Size } = db;
+const { Op } = require('sequelize');
 
 const dbApiController = {
   // API de usuarios
@@ -124,6 +125,29 @@ const dbApiController = {
     } else {
       res.json({ error: 'Producto no existe' });
     }
+  },
+  // API de buscar productos
+  getProductsBuscar: async (req, res) => {
+    const { name } = req.query;
+    const products = await Product.findAll({
+      include: [
+        {
+          model: Size,
+          as: 'size'
+        },
+        {
+          model: Color,
+          as: 'color'
+        }
+      ],
+      where: {
+        name: {
+          [Op.like]: `%${name}%`
+        }
+      }
+    });
+
+    return res.status(200).json(products);
   },
   // API de colors
   getColors: async (req, res) => {

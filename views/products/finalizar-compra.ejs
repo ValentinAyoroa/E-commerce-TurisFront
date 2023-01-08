@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/crear-producto.css">
+    <link rel="stylesheet" href="/css/finalizar-compra.css">
+</head>
+
+<body>
+  <%- include("./partials/header.ejs") %>
+    <div class="finalizarCompra">
+      <div class="card-compra">
+        <h1>
+          Compra Finalizada con Exito
+        </h1>
+        <form action="/" method="get">
+          <button class="buttonCompra">Volver a comprar</button>
+        </form>
+      </div>
+    </div>
+</body>
+
+<footer>
+  <%- include("./partials/footer.ejs") %>
+</footer>
+<!-- <script src="/js/productsValidation.js"></script> -->
+
+</html>

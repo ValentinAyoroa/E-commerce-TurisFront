@@ -9,6 +9,7 @@ router.get('/', login, dbCarritoProductsController.getCarrito);
 router.post('/agregarProducto/:id', login, dbCarritoProductsController.postCarrito);
 // router.post('/actualizarQuantityProducto/:id/:action', loginValidation, dbCarritoProductsController.postQuantityProductCarrito);
 
+router.post('/finalizarCompra', login, dbCarritoProductsController.postFinalizarCompra);
 router.post('/delete/:id', login, dbCarritoProductsController.postDeleteCarritoProduct);
 
 module.exports = router;

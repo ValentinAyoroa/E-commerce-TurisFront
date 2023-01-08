@@ -102,6 +102,9 @@ const dbCarritoProductsController = {
       res.redirect('/carrito');
     }).catch(error => { res.send(error); });
   },
+  postFinalizarCompra: (req, res) => {
+    res.render('finalizar-compra');
+  },
   postDeleteCarritoProduct: (req, res) => {
     const carritoProductId = req.params.id;
     Carrito.destroy({
