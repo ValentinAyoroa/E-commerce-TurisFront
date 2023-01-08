@@ -6,7 +6,7 @@
     "start": "node bin/www",
     "dev": "nodemon bin/www",
     "formateador": "eslint --fix ./",
-    "build": ""
+    "build": "npm i"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
