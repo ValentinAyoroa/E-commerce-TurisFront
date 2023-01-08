@@ -34,8 +34,8 @@
 #### https://trello.com/b/E38HGkpr/sprint-1-wireframes
 
 ***
-### URL del proyecto
-####  https://e-commerce-turisfront.herokuapp.com/
+### URL del proyecto en Render
+####  https://turistfront.onrender.com/
 
 ***
 ### URL del proyecto REACT 
