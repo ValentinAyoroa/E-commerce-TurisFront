@@ -8,7 +8,7 @@ const dbUserController = {
   login: (req, res) => {
     res.render('login');
   },
-  processLogin: async(req, res) => {
+  processLogin: async (req, res) => {
     const error = validationResult(req);
     if (!error.isEmpty()) {
       return res.render('login', {
@@ -97,20 +97,20 @@ const dbUserController = {
     }
   },
   upload: (req, res) => {
-    const errors = validationResult(req);
-    if (errors.isEmpty()) {
-      const userId = req.session.usuarioLogueado.id;
-      User.update({
-        email: req.body.email,
-        first_name: req.body.nombre,
-        last_name: req.body.apellido,
-        cellphone: req.body.celular
-      },
+    /*     const errors = validationResult(req);
+     */    /* if (errors.isEmpty()) { */
+    const userId = req.session.usuarioLogueado.id;
+    User.update({
+      email: req.body.email,
+      first_name: req.body.nombre,
+      last_name: req.body.apellido,
+      cellphone: req.body.celular
+    },
       {
         where: {
           id: userId
         }
-      }).then((req, res) => {
+      }/* ).then((req, res) => {
         req.session.usuarioLogueado = {
           first_name: req.body.nombre,
           last_name: req.body.apellido,
@@ -119,12 +119,13 @@ const dbUserController = {
           // falta imagen, estoy medio perdido en este punto con sesssion y como
           // editarlo para adaptarlo a db
         };
-      }).then(() => {
-        res.redirect('/users/profile');
+      } */).then(() => {
+        req.session.destroy();
+        res.redirect('/');
       }).catch(error => res.send(error));
-    } else {
+    /* } else {
       res.render('editar-perfil', { errors: errors.mapped(), old: req.body });
-    }
+    } */
   }
 };
 module.exports = dbUserController;
