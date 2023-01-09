@@ -97,8 +97,6 @@ const dbUserController = {
     }
   },
   upload: (req, res) => {
-    /*     const errors = validationResult(req);
-     */    /* if (errors.isEmpty()) { */
     const userId = req.session.usuarioLogueado.id;
     User.update({
       email: req.body.email,
@@ -110,22 +108,10 @@ const dbUserController = {
         where: {
           id: userId
         }
-      }/* ).then((req, res) => {
-        req.session.usuarioLogueado = {
-          first_name: req.body.nombre,
-          last_name: req.body.apellido,
-          email: userFound.email,
-          cellphone: req.body.celular
-          // falta imagen, estoy medio perdido en este punto con sesssion y como
-          // editarlo para adaptarlo a db
-        };
-      } */).then(() => {
+      }).then(() => {
         req.session.destroy();
         res.redirect('/');
       }).catch(error => res.send(error));
-    /* } else {
-      res.render('editar-perfil', { errors: errors.mapped(), old: req.body });
-    } */
   }
 };
 module.exports = dbUserController;
